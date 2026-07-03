@@ -1,0 +1,5 @@
+# On the Geometric Ergodicity of Metropolis-Hastings Algorithms for Lattice Gaussian Sampling
+
+## Abstract
+
+Sampling from the lattice Gaussian distribution has emerged as an important problem in coding, decoding and cryptography. In this paper, the classic Metropolis-Hastings (MH) algorithm in Markov chain Monte Carlo (MCMC) methods is adopted for lattice Gaussian sampling. Two MH-based algorithms are proposed, which overcome the limitation of Klein’s algorithm. The first one, referred to as the independent Metropolis-Hastings-Klein (MHK) algorithm, establishes a Markov chain via an independent proposal distribution. We show that the Markov chain arising from this independent MHK algorithm is uniformly ergodic, namely, it converges to the stationary distribution exponentially fast regardless of the initial state. Moreover, the rate of convergence is analyzed in terms of the theta series, leading to predictable mixing time. A symmetric Metropolis-Klein (SMK) algorithm is also proposed, which is proven to be geometrically ergodic.

@@ -1,0 +1,5 @@
+# Exponentially Accelerated Sampling of Pauli Strings for Nonstabilizerness
+
+## Abstract
+
+Quantum magic, quantified by nonstabilizerness, measures departures from stabilizer structure and underlies potential quantum speedups. We introduce an efficient classical framework for computing stabilizer Rényi entropies and stabilizer nullity of generic $N$ -qubit wavefunctions. The method combines the fast Walsh-Hadamard transform with an exact partition of Pauli operators, reducing the average cost per sampled Pauli string from $\mathcal{O}(2^{N})$ to $\mathcal{O}(N)$ . We further develop a Monte Carlo estimator with Clifford preconditioning and find that the required number of samples shows no visible growth with $N$ in our benchmarks. Applying the method to $T$ -doped random Clifford circuits, we identify the scrambling ratio $\eta$ (Clifford gates per $T$ gate) as the key parameter governing magic growth. Each $T$ gate approaches its dilute-limit nonstabilizerness power with only modest Clifford scrambling. Our approach enables quantitative studies of magic in highly entangled states and long-time nonequilibrium dynamics.

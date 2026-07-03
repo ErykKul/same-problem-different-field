@@ -1,0 +1,8 @@
+MECHANISM: A large population of identical entities each follows a continuous-time stochastic dynamic driven by an independent Gaussian-increment process, where the drift and the running and terminal costs depend on the population only through the convolution of an isotropic kernel with the empirical distribution of states. The objective is a feedback rule, common to all entities, that minimizes the expected accumulated plus terminal cost. The population law is represented by a finite cloud of interacting sample points, so evaluating the kernel convolution at every point requires summing the kernel over all pairs, which costs order of the squared population size per step. To accelerate this, the positive-definite isotropic kernel is written via its spectral measure as an integral of cosines, and that integral is approximated by drawing a modest number of frequencies and forming a randomized finite feature map whose inner product approximates the kernel. The all-pairs convolution then factorizes into each point's feature vector times a single aggregated feature vector, reducing cost to the population size times the feature count. The feedback rule is parameterized as a layered nonlinear function and trained by stochastic gradient steps that simulate the entity trajectories and differentiate the Monte-Carlo cost estimate. The feature-map error decays as the inverse square root of the feature count.
+DOMAIN: mean-field control of interacting agent populations
+STRUCTURE: N-body or all-pairs
+DATA_OBJECT: point set
+INFERENCE: sampling or Monte-Carlo
+PROBLEM_FORM: control
+DISTRIBUTION: continuous; gaussian
+COMPLEXITY: convergence rate

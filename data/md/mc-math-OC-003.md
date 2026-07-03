@@ -1,0 +1,5 @@
+# Completely Positive Reformulations of Polynomial Optimization Problems with Linear Inequality Constraints
+
+## Abstract
+
+Polynomial optimization encompasses a broad class of problems in which both the objective function and constraints are polynomial functions of the decision variables. In recent years, a substantial body of research has focused on reformulating polynomial optimization problems (POPs) as conic programs over the cone of completely positive tensors (CPTs). In this article, we propose several new completely positive reformulations for a class of POPs with linear inequality constraints. Our approach begins by lifting these problems into a novel convex optimization framework, wherein the variables are represented as combinations of symmetric rank-one tensors. Based on this lifted formulation, we present a general characterization of POPs with linear inequality constraints that can be reformulated as conic programs over the CPT cone. Additionally, we construct the dual formulations of the resulting completely positive programs. Under mild assumptions, we prove that these dual problems are strictly feasible and strong duality holds.

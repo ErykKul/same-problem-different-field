@@ -1,0 +1,8 @@
+MECHANISM: A deep stacked transformation maps an input plus a noise-time index to a vector-valued output via a sequence of additive residual updates, where the cumulative state telescopes into a sum of per-layer increments. For each layer, two complementary diagnostics are computed: a representational score giving the cosine similarity between a pooled, projected hidden state and a fixed reference embedding, and a causal score obtained by an intervention that zeroes one layer's increment and measures the normalized magnitude of the resulting change in the predicted output vector field. The causal scores are computed by forward passes only, without gradients, and averaged over inputs and time indices. Layers are ranked by their causal score, and the top few are selected to form a sparse set. Each selected layer receives a weight proportional to its causal score, normalized to sum to one. A composite training objective is then minimized: the base generative-transport loss plus an interface alignment term plus, for each selected layer, its weighted one-minus-cosine alignment penalty against the reference embedding. Auxiliary lightweight projection heads map hidden states into the reference space. The selection set is fixed once after a short warm-up and shown to be stable across iterations. The procedure is repeated across several backbone variants by re-running the attribution to locate the high-leverage layers per architecture.
+DOMAIN: machine learning, generative audio synthesis
+STRUCTURE: neural network
+DATA_OBJECT: sequence or time-series
+INFERENCE: deterministic optimization
+PROBLEM_FORM: simulation or generation
+DISTRIBUTION: continuous; nonparametric
+COMPLEXITY: not stated

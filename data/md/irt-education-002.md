@@ -1,0 +1,5 @@
+# Scalable Learning of Item Response Theory Models
+
+## Abstract
+
+Item Response Theory (IRT) models aim to assess latent abilities of $n$ examinees along with latent difficulty characteristics of $m$ test items from categorical data that indicates the quality of their corresponding answers. Classical psychometric assessments are based on a relatively small number of examinees and items, say a class of $200$ students solving an exam comprising $10$ problems. More recent global large scale assessments such as PISA, or internet studies, may lead to significantly increased numbers of participants. Additionally, in the context of Machine Learning where algorithms take the role of examinees and data analysis problems take the role of items, both $n$ and $m$ may become very large, challenging the efficiency and scalability of computations. To learn the latent variables in IRT models from large data, we leverage the similarity of these models to logistic regression, which can be approximated accurately using small weighted subsets called coresets . We develop coresets for their use in alternating IRT training algorithms, facilitating scalable learning from large data.

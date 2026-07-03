@@ -1,0 +1,8 @@
+MECHANISM: Each entity is represented as a fixed-length vector of nonnegative counts over a predefined dictionary of discrete features, optionally binarized to presence indicators. A labeled training set of such vectors with known categories is used to fit three alternative discriminant rules and assign each new vector to one of two classes. The first rule is generative: it estimates a prior over classes and, under an assumption that features are conditionally independent given the class, estimates per-class feature parameters by smoothed relative frequencies, then assigns the class maximizing the posterior product. The second rule is a log-linear conditional model in which the class probability is proportional to the exponential of a weighted sum of indicator functions of feature-class pairs; the weights are fit by an iterative scaling procedure that maximizes a constrained-entropy objective matching empirical feature expectations, with a quadratic penalty to limit overfitting. The third rule seeks a separating hyperplane with maximal margin by solving a constrained quadratic optimization whose dual yields the normal vector as a sparse weighted combination of a subset of training vectors. Vectors are length-normalized before the margin fit. Accuracy is estimated by averaging over partitioned hold-out folds. The three rules are compared against count-threshold baselines, and feature variants (presence vs frequency, single vs paired tokens, tagged subsets) are ablated.
+DOMAIN: natural language text classification
+STRUCTURE: numerical optimization
+DATA_OBJECT: sparse matrix
+INFERENCE: maximum likelihood
+PROBLEM_FORM: prediction or classification
+DISTRIBUTION: count; multinomial
+COMPLEXITY: polynomial iterative

@@ -1,0 +1,8 @@
+MECHANISM: The task is to choose a size-limited subset of vertices of a graph that maximizes a set function measuring the expected size of a stochastic spread initiated from that subset, where edge-level transmission probabilities are fixed but unknown and must be learned from outcomes. The set function is monotone and submodular, so exact maximization is hard, and a greedy rule that repeatedly adds the element of largest marginal increase attains a constant-factor guarantee. To avoid recomputing every candidate's marginal increase each round, submodularity is exploited: a max-priority queue stores stale marginal values, and a candidate at the top is re-evaluated against the current subset only when popped, being reinserted with its refreshed value if it is no longer dominant, otherwise committed. Because the set function is observed only through noisy realizations, each candidate addition is evaluated by replaying the stochastic spread a chosen number of times and averaging, with the replay count set to balance exploration cost against suboptimality. The procedure proceeds in phases, growing the subset by one element per phase, then commits to and repeatedly exploits the final subset over the remaining horizon. Performance is measured as cumulative shortfall of accumulated reward against a scaled optimum, with the greedy guarantee as the benchmark. The scheme keeps storage linear in the vertex count and amortized per-round work logarithmic.
+DOMAIN: social network influence and online learning
+STRUCTURE: graph traversal
+DATA_OBJECT: graph or network
+INFERENCE: sampling or Monte-Carlo
+PROBLEM_FORM: optimization
+DISTRIBUTION: count; none
+COMPLEXITY: combinatorial or NP-hard

@@ -1,0 +1,8 @@
+MECHANISM: Two synchronized one-dimensional signal streams recorded per entity under several condition levels are each reduced to fixed-length descriptor vectors and used to predict a discrete condition label. Raw signals are band-pass filtered by convolution to suppress drift and high-frequency content, and from one stream event markers are detected by adaptive thresholding to form an inter-event interval series cleaned by robust outlier rejection. From the interval series, summary dispersion statistics are computed, and from each raw signal a standardized bank of canonical time-series features spanning statistical, dynamical, and entropy-based summaries is extracted into a vector. Supervised classifiers, both ensemble decision-tree models and sequence neural networks trained end-to-end on raw signals, are fit to map features or signals to labels. A cross-modal transfer experiment trains a classifier on descriptors from one stream and tests it on descriptors from the other, in both directions, probing shared structure. Models are scored by accuracy, macro and weighted harmonic precision-recall means, and area under the receiver-operating curve, with confusion matrices for error analysis. Feature-importance rankings compare reliance on a few dispersion statistics versus distributed contributions across the canonical feature bank, and short observation windows are noted to favor the latter.
+DOMAIN: physiological signals and cognitive workload
+STRUCTURE: other: supervised feature classification
+DATA_OBJECT: sequence or time-series
+INFERENCE: frequentist point estimate
+PROBLEM_FORM: prediction or classification
+DISTRIBUTION: continuous; nonparametric
+COMPLEXITY: not stated

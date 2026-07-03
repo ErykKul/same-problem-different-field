@@ -1,0 +1,8 @@
+MECHANISM: Given a one-dimensional set of observations indexed by an ordered coordinate, model the dependent quantity as a zero-mean (or structured-mean) jointly distributed collection whose pairwise dependence is encoded by a covariance built from a sum of parametric kernel functions of coordinate separation. Each kernel component is a damped oscillatory or exponential-decay term controlled by a few hyper-parameters. Form the full covariance matrix by adding component matrices plus a diagonal noise term, then evaluate a multivariate-Gaussian log-likelihood that requires the inverse and log-determinant of this matrix applied to the residual vector. Explore the hyper-parameter space by drawing many correlated samples to approximate the posterior, running multiple parallel chains with burn-in and convergence diagnostics, and summarize each parameter by a central statistic and percentile interval. Compare competing component combinations by estimating each model's marginal likelihood (an integral of likelihood times prior) using importance-sampling over posterior draws, and select via the ratio of these evidences with a fixed threshold. Then attach a deterministic parametric mean function describing a localized dip, jointly fit its parameters together with the covariance hyper-parameters, and compare the recovered parameters against injected ground truth across signal regimes. A structure-exploiting formulation reduces the naive cubic cost of the matrix operations to linear in the number of points.
+DOMAIN: stellar variability and exoplanet transit photometry
+STRUCTURE: kernel method
+DATA_OBJECT: sequence or time-series
+INFERENCE: bayesian posterior
+PROBLEM_FORM: estimation
+DISTRIBUTION: continuous; gaussian
+COMPLEXITY: polynomial iterative

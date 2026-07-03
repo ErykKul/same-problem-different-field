@@ -1,0 +1,8 @@
+MECHANISM: Observed indicator bits over a lattice of checks are mapped to a graph whose vertices are active defects and whose candidate edges represent possible explanations linking pairs of defects. Each vertex and edge is given a feature vector encoding coordinates, type flags, and relative geometry, projected through small multilayer maps and learnable embeddings. A stack of attention-based message-passing layers updates vertex representations from local neighbors, with gating and residual connections, capturing local structure. Concatenated vertex-pair-plus-edge representations are then passed through a global self-attention encoder that weighs competing candidate edges against one another across the whole graph. A final projection with a logistic squashing outputs a probability for each directed edge that it belongs to the true explanation; opposite directions are merged by a maximum. These probabilities are transformed by a negative logarithm into edge costs, and a combinatorial minimum-total-weight perfect matching is solved on the graph to select a consistent set of pairings. The network is trained by minimizing binary cross-entropy against generated ground-truth edge labels plus an entropy penalty that sharpens probabilities toward zero or one. Because the matching step is non-differentiable, this classification surrogate enables gradient training. The pipeline couples learned local-plus-global feature extraction with exact combinatorial pairing. Outputs are corrected configurations.
+DOMAIN: quantum error-correction decoding
+STRUCTURE: neural network
+DATA_OBJECT: graph or network
+INFERENCE: deterministic optimization
+PROBLEM_FORM: reconstruction or denoising
+DISTRIBUTION: binary; nonparametric
+COMPLEXITY: polynomial iterative

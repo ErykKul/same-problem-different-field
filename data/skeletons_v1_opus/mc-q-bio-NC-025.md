@@ -1,0 +1,8 @@
+MECHANISM: For a set of agents and a battery of tasks, two scalar quantities are recorded per task item: a cost measure (a count of internal steps) and an externally measured response duration from a reference population. Costs are log-transformed. A first quantity is the linear correlation coefficient between an agent's log cost and the reference durations across items, summarizing how well an agent's effort tracks external difficulty; differences in these correlations across agent groups are assessed with significance tests. Next, per-agent profile vectors are formed by standardizing log costs within each task and concatenating across tasks; pairwise correlations among these profile vectors build a similarity matrix, and each agent is placed in a plane whose axes are its profile correlation to a reference agent and to the reference population. To compare effort distributions, each item's cost is normalized by a reference agent's task average, and the divergence between two such normalized distributions is computed together with their mean. Finally, an inefficiency index is defined as average cost divided by accuracy, and a one-parameter proportionality between an agent's index and a baseline agent's index is fit by regression through the origin, the slope quantifying a constant inflation factor. All conclusions rest on these correlation, divergence, and slope estimates with accompanying tests.
+DOMAIN: cognitive modeling of language-model reasoning
+STRUCTURE: other: correlation and similarity analysis
+DATA_OBJECT: set or table
+INFERENCE: frequentist point estimate
+PROBLEM_FORM: estimation
+DISTRIBUTION: continuous; none
+COMPLEXITY: closed-form

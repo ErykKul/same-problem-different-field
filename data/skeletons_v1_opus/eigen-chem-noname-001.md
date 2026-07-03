@@ -1,0 +1,8 @@
+MECHANISM: An undirected relational structure over a set of entities is encoded as a symmetric connection matrix whose entries are nonzero for adjacent entities. Some connections are assigned a sign of minus one to represent a phase reversal, yielding a signed symmetric matrix. The eigenvalues and eigenvectors of this matrix are computed; eigenvalues serve as level energies and eigenvector components as amplitudes over entities. The central result is an invariance theorem: relocating the sign-reversed connections along a minimal connectivity-breaking set leaves the spectrum unchanged and at most flips the sign of eigenvectors. This is proven by showing each elementary relocation is a signature similarity transformation, conjugation by a diagonal matrix with plus or minus one entries, which preserves eigenvalues. A sequence of such transformations interconverts all minimal configurations, establishing isospectrality. Derived quantities such as pairwise bond weights are formed as sign-weighted sums of products of occupied eigenvector components. A second procedure rotates a reference set of basis functions to isolate a subsystem, then diagonalizes a projected operator block to obtain a comparable spectrum. Outputs are validated against a higher-fidelity reference by least-squares correlation across many structural variants, recovering a scaling constant as the regression slope.
+DOMAIN: theoretical and computational molecular electronic structure
+STRUCTURE: spectral or transform
+DATA_OBJECT: graph or network
+INFERENCE: deterministic or closed-form
+PROBLEM_FORM: proof or characterization
+DISTRIBUTION: none; none
+COMPLEXITY: closed-form

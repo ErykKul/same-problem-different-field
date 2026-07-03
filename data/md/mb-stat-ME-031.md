@@ -1,0 +1,5 @@
+# mb-stat-ME-031
+
+## Abstract
+
+Aalen’s linear hazard rate regression model is a useful and increasingly popular alternative to Cox’ multiplicative hazard rate model. It postulates that an individual has hazard rate function $h(s)=z_{1}\alpha_{1}(s)+\cdots+z_{r}\alpha_{r}(s)$ in terms of his covariate values $z_{1},\ldots,z_{r}$ . These are typically levels of various hazard factors, and may also be time-dependent. The hazard factor functions $\alpha_{j}(s)$ are the parameters of the model and are estimated from data. This is traditionally accomplished in a fully nonparametric way. This paper develops methodology for estimating the hazard factor functions when some of them are modelled parametrically while the others are left unspecified. Large-sample results are reached inside this partly parametric, partly nonparametric framework, which also enables us to assess the goodness of fit of the model’s parametric components. In addition, these results are used to pinpoint how much precision is gained, using the parametric-nonparametric model, over the standard nonparametric method. A real-data application is included, along with a brief simulation study.

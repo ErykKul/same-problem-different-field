@@ -1,0 +1,8 @@
+MECHANISM: For each measurement channel, repeated trials under several stimulus categories are averaged to obtain per-category response timecourses, both in the raw time domain and in band-limited envelopes obtained by band-pass filtering followed by an analytic-signal magnitude. Channels are first screened for valid responses by testing, at each time index, whether the post-stimulus value differs from a pre-stimulus baseline using a nonparametric signed-rank test with a run-length criterion. Informative time indices are then selected by decomposing a time-by-category averaged matrix into leading orthogonal components and scoring each index by its squared component loadings weighted by explained variance. For each channel and category, a within-category similarity (between two split halves of the same category) and several between-category similarities are computed using a scale-sensitive normalized distance turned into a similarity. An identification score is the fraction of between-category comparisons in which the within-category similarity is larger, and its significance is assessed by repeatedly reshuffling trial labels and comparing the score against the shuffled distribution. To summarize response shapes, the timecourses are partitioned into a small number of groups by a medoid-based clustering that minimizes within-group distances, with the group count chosen by an elbow criterion on the explained-variance curve.
+DOMAIN: cognitive neuroscience, intracranial electrophysiology
+STRUCTURE: other: distance-based pattern analysis
+DATA_OBJECT: sequence or time-series
+INFERENCE: bootstrap or resampling
+PROBLEM_FORM: prediction or classification
+DISTRIBUTION: continuous; nonparametric
+COMPLEXITY: not stated

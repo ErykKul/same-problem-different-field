@@ -1,0 +1,8 @@
+MECHANISM: A dynamical system has several alternative update rules (vector fields or maps), and transitions between rules are allowed only when the state enters designated regions. The goal is to certify that all trajectories converge to a fixed equilibrium by constructing, for each rule, a scalar function over the state space that is positive away from the equilibrium, vanishes there, and strictly decreases along that rule's evolution, with the additional requirement that upon any allowed transition the incoming function value is below the outgoing one. Each candidate function is represented by a multilayer parametric map shifted to vanish at the equilibrium. Training minimizes hinge-type penalties that activate exactly when a required inequality (positivity, decrease, or transition decrease) is violated, averaged over points sampled from the domain and from the transition regions, summed across rules and rule pairs. After each round of gradient-based parameter updates, a logical formula encoding the negation of all required conditions over the domain (excluding a small ball around the equilibrium) is handed to an exact constraint solver, which searches for a violating point. Any returned counterexample is appended to the training sample set, and the optimize-then-verify loop repeats until no violation exists. Success yields functions that formally guarantee convergence into a small neighborhood of the equilibrium under all admissible switching.
+DOMAIN: control theory, stability of switched dynamical systems
+STRUCTURE: neural network
+DATA_OBJECT: continuous function or field
+INFERENCE: deterministic optimization
+PROBLEM_FORM: decision or test
+DISTRIBUTION: none; none
+COMPLEXITY: not stated

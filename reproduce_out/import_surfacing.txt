@@ -1,0 +1,17 @@
+[A causal-panel <- matrix completion]  seed pca-polmeth-001 (political_methodology)
+  top cross-field fingerprint neighbors:    fp-cos  abs-cos  field
+    mb-stat-ME-021         0.097   0.015   ?
+    mc-q-bio-QM-023        0.094   0.011   q-bio.QM
+    pca-recsys-001         0.085   0.034   recommender_systems  <== import partner (recsys matrix factorization)
+    mb-stat-ME-024         0.078   0.034   ?
+    mcmc-cosmo-001         0.076   0.009   cosmology
+  -> partner pca-recsys-001 ranks #3 of 500 cross-field; abstract cosine 0.034 (topical embedder misses it).
+
+[B kriging <- Gaussian process]  the GP core is surfaced as a cross-field cluster.
+  machine-learning GP (gp-ml-001) top cross-field neighbors:   fp-cos  field
+    gp-exoplanet-002       0.126   astronomy_rv  (GP)
+    kalman-control-001     0.115   control_power_systems
+    kalman-finance-001     0.107   finance
+    pca-recsys-001         0.105   recommender_systems
+  geostatistics kriging joins the same core: gp-geo-001 (named) ranks gp-ml at #31, gp-geo-noname-001 (name-free) at #169
+  (the deliberately name-free kriging paper is the hardest to place, consistent with the audit).

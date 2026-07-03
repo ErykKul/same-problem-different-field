@@ -1,0 +1,8 @@
+MECHANISM: A scalar response is modeled as a linear combination of a feature vector plus additive zero-mean noise, with a wide-variance prior on the coefficients and a conjugate prior on the noise variance, so that as observations arrive over time the joint posterior is updated in closed form using conjugate normal-inverse-variance algebra. For each coefficient, the posterior tail mass on one side of zero and the credible interval are computed, and these summaries are mapped to ordered evidential tiers: a tail-mass threshold marks directional evidence, a higher threshold combined with a small divergence between successive posteriors over a rolling window marks a stable association, and a credible interval excluding zero combined with a predictive coverage check marks a robust association. Binary features are handled as a two-group mean contrast whose difference is the coefficient. A supplementary sequence of acceptance thresholds is loosened or tightened with accumulated sample size. A multiplicative plausibility score combines an inverse-tail term, a direction-consistency factor, and an effect-magnitude factor, and a co-occurrence-plus-stronger-effect heuristic flags competing explanatory features and discounts the score. The procedure is exercised on simulated trajectories with injected true and null effects, with detection latency, interval coverage, and false-discovery rate measured, and repeated over many randomized datasets.
+DOMAIN: personal health analytics and uncertainty quantification
+STRUCTURE: dense linear algebra
+DATA_OBJECT: sequence or time-series
+INFERENCE: bayesian posterior
+PROBLEM_FORM: estimation
+DISTRIBUTION: continuous; gaussian
+COMPLEXITY: closed-form

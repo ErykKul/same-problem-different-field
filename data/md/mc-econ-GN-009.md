@@ -1,0 +1,5 @@
+# How Many Mechanisms? Measuring Parsimony in Risky Choice
+
+## Abstract
+
+We study choice among lotteries in which the decision maker chooses from a small library of decision rules. At each menu, the applied rule must make the realized choice a strict improvement under a dominance benchmark on perceived lotteries. We characterize the maximal Herfindahl-Hirschman concentration of rule shares over all locally admissible assignments, and diagnostics that distinguish rules that unify behavior across many menus from rules that mainly act as substitutes. We provide a MIQP formulation, a scalable heuristic, and a finite-sample permutation test of excess concentration relative to a menu-independent random-choice benchmark. Applied to the CPC18 dataset ( $N=686$ subjects, each making $500$ - $700$ repeated binary lottery choices), the mean rule concentration is $0.545$ , and $64.1\%$ of subjects reject random choice at the $1\%$ level. Concentration gains are primarily driven by modal-payoff focusing, salience-thinking, and regret-based comparisons. JEL D91, D11, D81 Keywords : Decision Theory, Revealed Preference, Behavioral Economics.

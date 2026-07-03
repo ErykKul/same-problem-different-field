@@ -1,0 +1,8 @@
+MECHANISM: Each entity is characterized by a single latent scalar trait, and each task by a set of characteristic parameters governing how the trait maps to graded ordinal responses. The probability that an entity attains a given ordinal category on a task is modelled as a normalized exponential of cumulative sums of trait-minus-difficulty contributions scaled by a discrimination factor, a structured logistic form over adjacent categories. Given a partially observed matrix of ordinal scores indexed by entity and task, the trait and task parameters are estimated by maximizing a log-likelihood that sums only over observed cells, omitting missing entries via indicator weights. Because accuracy degrades as the missing fraction grows, missing cells are first filled by a separate learned predictor: an auxiliary supervised model maps each response's raw content directly to a predicted ordinal score, trained on a labelled subset or applied in a zero-shot manner. The completed matrix is then fed back into the likelihood maximization to recover trait estimates. Estimated traits are rescaled to fixed mean and variance to resolve an inherent scale indeterminacy. Accuracy is assessed by squared-error and correlation against full-data estimates, and imputation quality by category agreement. The computation couples a latent-trait likelihood model with an external content-based fill-in step.
+DOMAIN: educational measurement and ability assessment
+STRUCTURE: graphical models
+DATA_OBJECT: set or table
+INFERENCE: maximum likelihood
+PROBLEM_FORM: estimation
+DISTRIBUTION: ordinal; multinomial
+COMPLEXITY: not stated

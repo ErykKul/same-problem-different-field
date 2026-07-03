@@ -1,0 +1,5 @@
+# A Modified Bayesian Criterion for Model Selection in Mixed and Hierarchical Frameworks
+
+## Abstract
+
+. In this work, we propose a modified Bayesian Information Criterion (BIC) specifically designed for mixture models and hierarchical structures. This criterion incorporates the determinant of the Hessian matrix of the log-likelihood function, thereby refining the classical Bayes Factor by accounting for the curvature of the likelihood surface. Such geometric information introduces a more nuanced penalization for model complexity. The proposed approach improves model selection, particularly under small-sample conditions or in the presence of noise variables. Through theoretical derivations and extensive simulation studies—including both linear and linear mixed models—we show that our criterion consistently outperforms traditional methods such as BIC, Akaike Information Criterion (AIC), and related variants. The results suggest that integrating curvature-based information from the likelihood landscape leads to more robust and accurate model discrimination in complex data environments.

@@ -1,0 +1,8 @@
+MECHANISM: The input is a large set of primitive elements, each carrying a position in three-dimensional space plus appearance and shape attributes, together with a small number of viewpoints each annotated with a binary region mask. A deterministic multi-stage filter removes elements not belonging to a target region. Stage one projects every element into each annotated view using the view's pose and intrinsics, discards projections behind the camera or outside bounds, and keeps an element if its projected pixel falls inside the masked region in at least a threshold number of views (a boolean disjunction or a count test). Stage two renders only the surviving elements per view with depth ordering, retaining at each pixel the nearest element (an argmin over depth), decodes that element's color from its appearance coefficients, and discards it if its color deviates from the masked image color beyond a fixed distance threshold in any view where it is frontmost, while conservatively keeping always-occluded elements. Stage three performs geometric outlier removal on the remaining point set: it flags elements whose distance to the set centroid, or whose mean distance to their nearest neighbors, exceeds a chosen percentile, and removes them. All stages use fixed thresholds rather than fitted parameters, and the per-view work is embarrassingly parallel. The output is a much smaller retained subset.
+DOMAIN: 3D scene reconstruction, computer graphics, vision
+STRUCTURE: N-body or all-pairs
+DATA_OBJECT: point set
+INFERENCE: deterministic or closed-form
+PROBLEM_FORM: reconstruction or denoising
+DISTRIBUTION: none; none
+COMPLEXITY: not stated

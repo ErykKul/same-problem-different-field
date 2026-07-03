@@ -1,0 +1,8 @@
+MECHANISM: A high-dimensional parameter vector is partitioned into disjoint blocks, and for each block a local quadratic model of an objective is formed from its gradient sub-vector and a regularized positive-definite surrogate of its curvature sub-block. Minimizing this local quadratic in closed form yields, for each block, a scalar gain equal to a quadratic form of the gradient with the inverse curvature, which measures the maximal achievable second-order decrease from updating that block alone. These gains are normalized into nonnegative weights summing to one. Two resource-allocation problems are then posed over the blocks. The first distributes a continuous budget across blocks to maximize a concave (diminishing-returns) utility weighted by the gains, subject to a single linear budget constraint. The second assigns per-block removal fractions to meet a global removal target while minimizing a convex degradation penalty weighted by the gains. Both are convex separable programs; forming the Lagrangian and imposing stationarity gives each block's optimum as a clipped closed-form function of a single scalar dual multiplier. Because the aggregate constraint function is monotone in the multiplier, the multiplier is found by one-dimensional bisection to a tolerance, recovering all block values at each evaluation. A perturbation analysis bounds the excess cost when the weights drift between two regimes.
+DOMAIN: deep learning model compression and adaptation
+STRUCTURE: numerical optimization
+DATA_OBJECT: dense matrix or tensor
+INFERENCE: deterministic optimization
+PROBLEM_FORM: optimization
+DISTRIBUTION: none; none
+COMPLEXITY: regret bound

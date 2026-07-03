@@ -1,0 +1,5 @@
+# Uncertainty Quantification in Stochastic Economic Dispatch using Gaussian Process Emulation
+
+## Abstract
+
+The increasing penetration of renewable energy resources in power systems, represented as random processes, converts the traditional deterministic economic dispatch problem into a stochastic one. To solve this stochastic economic dispatch, the conventional Monte Carlo method is prohibitively time consuming for medium- and large-scale power systems. To overcome this problem, we propose in this paper a novel Gaussian-process-emulator-based approach to quantify the uncertainty in the stochastic economic dispatch considering wind power penetration. Based on the dimension-reduction results obtained by the Karhunen-Loève expansion, a Gaussian-process emulator is constructed. This surrogate allows us to evaluate the economic dispatch solver at sampled values with a negligible computational cost while maintaining a desirable accuracy. Simulation results conducted on the IEEE 118-bus system reveal that the proposed method has an excellent performance as compared to the traditional Monte Carlo method.

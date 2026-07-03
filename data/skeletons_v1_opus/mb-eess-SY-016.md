@@ -1,0 +1,8 @@
+MECHANISM: A network is represented as a directed graph whose edges are split into parallel lanes and ordered sub-segments, with a binary attribute marking a privileged sub-resource. Mobile agents traverse routes through the graph; their state is a current segment and speed. The system advances in discrete control steps. At each step, for every agent and every nearby target segment, a remaining distance is divided by current speed to predict an arrival time, and a binary indicator flags whether the agent is predicted to reach the segment within a horizon. Summing indicators per segment yields a predicted inflow rate, which is mapped to a predicted traversal time through a fixed monotone congestion function of the load-to-capacity ratio. A protected agent has a symmetric time window around its predicted arrival; any other agent predicted to enter the protected segment within that window triggers hard constraints that force or forbid specific discrete moves. Among feasible candidate agents on a segment, a scalar utility is computed as a weighted sum of normalized predicted time savings, a binary downstream-feasibility flag, and a penalty for recent move frequency; the single highest-utility agent with positive utility is selected to act. When per-step moves are insufficient, a minimal subset of agents is rerouted by a weighted shortest-path search whose edge costs come from the same short-horizon prediction. The whole scheme is evaluated by microscopic simulation.
+DOMAIN: traffic control, connected automated vehicles, transportation
+STRUCTURE: graph traversal
+DATA_OBJECT: graph or network
+INFERENCE: deterministic optimization
+PROBLEM_FORM: control
+DISTRIBUTION: none; none
+COMPLEXITY: not stated

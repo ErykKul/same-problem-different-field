@@ -1,0 +1,5 @@
+# Security Hardening Using FABRIC: Implementing a Unified Compliance Aggregator for Linux Servers
+
+## Abstract
+
+This paper presents a unified framework for evaluating Linux security hardening on the FABRIC testbed through aggregation of heterogeneous security auditing tools. We deploy three Ubuntu 22.04 nodes configured at baseline, partial, and full hardening levels, and evaluate them using Lynis, OpenSCAP, and AIDE across 108 audit runs. To address the lack of a consistent interpretation across tools, we implement a Unified Compliance Aggregator (UCA) that parses tool outputs, normalizes scores to a common 0–100 scale, and combines them into a weighted metric augmented by a customizable rule engine for organization-specific security policies. Experimental results show that full hardening increases OpenSCAP compliance from 39.7 to 71.8, while custom rule compliance improves from 39.3% to 83.6%. The results demonstrate that UCA provides a clearer and more reproducible assessment of security posture than individual tools alone, enabling systematic evaluation of hardening effectiveness in programmable testbed environments.

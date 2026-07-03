@@ -1,0 +1,8 @@
+MECHANISM: An entity set is endowed with weighted directed pairwise connections, forming an operator whose rows are normalized to define a stochastic transition rule over states. A modified dynamics is built by mixing this transition with a state-dependent probability of jumping back to a fixed reference distribution, where the jump probability may vary per state. The long-run occupancy and the just-before-jump occupancy of the resulting chain are defined as limiting frequencies. Each limiting quantity is shown to admit a closed-form expression as a reference vector multiplied by the inverse of an operator of the form identity minus a scaled transition. The derivation solves the fixed-point (stationarity) equation, isolates a normalizing scalar by right-multiplying by a constant vector, and rearranges to obtain the inverse-operator formula. Expanding the inverse as a convergent operator power series gives a path-sum interpretation, where each term aggregates contributions of all walks of a given length. Under symmetry of the connection weights, a reversibility-type identity relates the quantity computed from one reference state to that from another via simple per-state factors. Special parameter regimes are analyzed through a Laurent series expansion of the inverse operator in a small parameter, yielding leading-order asymptotics. These asymptotics reduce the scores to normalized powers of per-state connection totals. The analysis is exact and algebraic throughout.
+DOMAIN: network science, web information retrieval
+STRUCTURE: sparse linear algebra
+DATA_OBJECT: graph or network
+INFERENCE: deterministic or closed-form
+PROBLEM_FORM: ranking or retrieval
+DISTRIBUTION: none; none
+COMPLEXITY: closed-form

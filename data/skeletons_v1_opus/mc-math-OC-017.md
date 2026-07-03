@@ -1,0 +1,8 @@
+MECHANISM: A matrix-shaped parameter is updated iteratively so that the largest singular value of the matrix and the spectral norm of each step both stay at a prescribed scale tied to the matrix dimensions. At each step a search direction is chosen to maximize its inner product with the (momentum-smoothed) gradient subject to the direction having unit spectral norm, with the added constraint that it must not perturb the leading singular value of the current matrix. This is enforced by requiring the direction to lie in the subspace orthogonal to the top left and right singular vectors, implemented by projecting the gradient with rank-one deflations on both sides. The constrained problem then reduces to taking the matrix sign of the projected gradient, i.e. the product of its left and right singular factors, computed via an iterative polynomial approximation of the polar factor. For very wide matrices where the top two singular values nearly coincide, a direct rescaling fallback is used. A probabilistic model treats matrix entries as identically distributed correlated Gaussians, and almost-sure limits of the Frobenius norm, spectral norm, and stable rank are derived across scaling regimes of the correlation and entry variance. A moments-based estimator of the correlation is computed in linear time from entry sums, its scaling exponent fit by a log-log regression, and used to rescale the matrix adaptively when a threshold is crossed.
+DOMAIN: large neural-network optimizer theory
+STRUCTURE: dense linear algebra
+DATA_OBJECT: dense matrix or tensor
+INFERENCE: deterministic optimization
+PROBLEM_FORM: optimization
+DISTRIBUTION: continuous; gaussian
+COMPLEXITY: consistency

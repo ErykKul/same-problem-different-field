@@ -1,0 +1,5 @@
+# A dynamic factor semiparametric model for VaR and expected shortfall driven by realized measures
+
+## Abstract
+
+This paper proposes a semiparametric joint VaR–ES framework driven by realized information, motivated by the economic mechanisms underlying tail risk generation. Building on the CAViaR quantile recursion, the model introduces a dynamic ES–VaR gap to capture time-varying tail severity, while measurement equations transform multiple realized measures into high-frequency risk innovations.These innovations are further aggregated through a dynamic factor model, extracting common high-frequency tail risk factors that affect the quantile level and tail thickness through distinct risk channels. This structure explicitly separates changes in risk levels from the intensification of tail risk.Empirical evidence shows that the proposed model consistently outperforms quantile regression, EVT-based, and GARCH-type benchmarks across multiple loss functions, highlighting the importance of embedding high-frequency information directly into the tail risk generation layer.

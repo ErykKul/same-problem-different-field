@@ -1,0 +1,5 @@
+# Two-Step Regularized HARX to Measure Volatility Spillovers in Multi-Dimensional Systems
+
+## Abstract
+
+We identify volatility spillovers across commodities, equities, and treasuries using a hybrid HARX-ElasticNet framework on daily realized volatility for six futures markets over 2002–2025. Our two step procedure estimates own-volatility dynamics via OLS to preserve persistence, then applies ElasticNet regularization to cross-market spillovers. The sparse network structure that emerges shows equity markets (ES, NQ) act as the primary volatility transmitters, while crude oil (CL) ends up being the largest receiver of cross-market shocks. Agricultural commodities stay isolated from the larger network. A simple univariate HAR model achieves equally performing point forecasts as our model, but our approach reveals network structure that univariate models cannot. Joint Impulse Response Functions trace how shocks propagate through the network. Our contribution is to demonstrate that hybrid estimation methods can identify meaningful spillover pathways while preserving forecast performance.

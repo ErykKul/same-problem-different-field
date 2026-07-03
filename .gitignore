@@ -1,0 +1,14 @@
+# This package SHIPS the derived corpus (data/) and the expected outputs (reproduce_out/)
+# so `python reproduce.py` runs offline with no model and no network. They are part of
+# the deposit. `make data` (optional) rebuilds the full-text corpus from the link lists.
+
+# Local config (copy from example.env) and the local-only fetch symlink:
+.env
+data_link
+
+# Python:
+__pycache__/
+*.pyc
+*.pyo
+*.egg-info/
+.venv/

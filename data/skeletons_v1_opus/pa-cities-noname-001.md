@@ -1,0 +1,8 @@
+MECHANISM: The asymptotic size distribution of a population of entities is derived from a continuous-time stochastic growth model. Each entity's size follows a multiplicative random-growth process, equivalent in continuous form to an exponential of a drifting diffusion, so that the logarithm of size obeys a linear stochastic differential equation. New entities are created over time according to a random arrival process with a possibly time-varying mean rate, and entities are removed either upon their size first falling below a threshold (an absorbing-boundary first-passage event) or by an independent random sudden-exit process with a hazard rate. The evolving density of sizes is governed by a forward diffusion (Kolmogorov) equation with source and sink terms; its steady state is obtained analytically. The central result is that when a balance condition holds, namely that the net of all growth, birth, and death contributions averages to zero, the steady-state density has a power-law tail with a specific canonical exponent, and any imbalance shifts the tail exponent away from this value. The derivation further shows the power-law tail is robust to deviations from strict proportional growth provided the volatility grows proportionally with size and dominates the drift at large sizes, and it characterizes how birth, death, and growth parameters set the tail index. The analysis is a closed-form characterization rather than a fitted estimator.
+DOMAIN: economics and complex systems, size distributions
+STRUCTURE: other: stochastic-process analysis
+DATA_OBJECT: continuous function or field
+INFERENCE: deterministic or closed-form
+PROBLEM_FORM: proof or characterization
+DISTRIBUTION: heavy-tailed; gaussian
+COMPLEXITY: closed-form

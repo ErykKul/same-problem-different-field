@@ -1,0 +1,5 @@
+# Probabilistic modeling of Cherenkov emission from particle showers
+
+## Abstract
+
+Subatomic particles can interact with target nuclei in matter or decay in flight, and an individual high-energy particle can induce a particle shower composed of numerous, lower-energy secondaries. These particle showers broadly exhibit universality across diverse media, including air, water, ice, and other materials, with their development governed by the Standard Model. Full Monte Carlo simulation of particle showers, where each secondary is individually tracked and propagated, can be a computational challenge to perform at scale. Experiments thus resort to parametrized approximations when efficient simulation becomes necessary. Here, we construct distributions of parameters capable of describing the Cherenkov light yield from particle showers in ice or water. Sampling from the distributions allows for a much improved description of event-to-event fluctuations, in amplitude and shape, along the shower axis. Including these effects is essential for a more accurate simulation of signal and background events in current and next-generation neutrino telescopes.

@@ -1,0 +1,8 @@
+MECHANISM: Entities are described by a large matrix of bounded integer counts, modeled as independent binomial draws whose success probabilities form a low-rank product of two nonnegative factor matrices of a chosen rank. Predicted values are obtained by projecting the observed matrix onto an estimated low-dimensional subspace, where the projection is built from the leading eigenvectors of a variance-adjusted second-moment (covariance-type) matrix, equivalently the top singular directions of centered or normalized data; the subspace can alternatively come from externally estimated factor matrices. Residuals are the observed minus predicted entries. Model fit is assessed two ways: an empirical covariance/correlation matrix of the residuals across entities, and a model-implied covariance built from the projection and a diagonal of per-entity dispersions. Under regularity conditions, as the number of features grows, both matrices converge almost surely to explicit limits that coincide exactly when the assumed rank equals the true rank and the subspace is correctly recovered, so their difference converges to zero precisely under a correct model and to a nonzero structured matrix otherwise. The off-diagonal residual correlations also converge to known negative constants determined by group sizes, giving reference values. A nonzero difference, or deviation from these reference values, signals misfit or specific entities poorly represented by the chosen rank.
+DOMAIN: population genetics, ancestry and admixture
+STRUCTURE: spectral or transform
+DATA_OBJECT: dense matrix or tensor
+INFERENCE: deterministic or closed-form
+PROBLEM_FORM: decision or test
+DISTRIBUTION: count; binomial
+COMPLEXITY: consistency

@@ -1,0 +1,12 @@
+MECHANISM: The paper computes a nonlinear functional relationship between a sequence of predictor variables and a target quantity using a recurrent neural network with long short-term memory (LSTM) units. The model approximates the relationship $ r_{t+1} = \mathfrak{f}_{W,b}(x_t) + \varepsilon_{t+1}^r $, where $ \mathfrak{f}_{W,b} $ is a deep neural network with weight matrices $ W $ and bias vector $ b $, and $ x_t $ is a vector of input features. The LSTM architecture introduces memory cells and gating mechanisms (input, forget, and output gates) to capture long-term temporal dependencies by modulating information flow through the network. The model is trained using an adaptive moment estimation (Adam) optimizer with Huber loss and dropout regularization to prevent overfitting. Hyperparameters are tuned adaptively on a validation sample, with optimal settings recalibrated quarterly or annually depending on the investor's rebalancing frequency. Portfolio weights are optimized to maximize the expected utility of cumulative returns over a fixed investment horizon, using a power utility function $ U(r) = \frac{r^{1-\gamma}}{1-\gamma} $ with risk aversion parameter $ \gamma $. The optimization problem involves solving $ \max_{\omega} \mathbb{E}_t[U(r_{p,t+T})] $, where $ r_{p,t+T} $ is the product of compounded returns across time steps, and $ \omega $ represents the allocation to the stock index. The predictive distribution of returns is modeled using an autoregressive process for predictor variables $ x_t $, and the portfolio's Sharpe ratio and certainty-equivalent returns are evaluated under different rebalancing frequencies and transaction cost assumptions. The method compares the economic performance of LSTM networks against linear models and shallow feedforward networks, demonstrating that recurrent architectures yield higher Sharpe ratios and certainty-equivalent returns during recessions and expansions. The analysis also incorporates robustness checks for alternative performance metrics, borrowing constraints, and short-selling limitations.  
+DOMAIN: asset pricing and portfolio optimization  
+STRUCTURE: other: recurrent neural network  
+DATA_OBJECT: sequence or time-series  
+INFERENCE: optimization only  
+PROBLEM_FORM: optimization  
+DISTRIBUTION: none  
+COMPLEXITY: not stated  
+DATA_AVAILABILITY: public-benchmark-used  
+CODE_AVAILABILITY: none  
+PREREGISTRATION: none  
+EVIDENCE_BASIS: empirical-with-released-data

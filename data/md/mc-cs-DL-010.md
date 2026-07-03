@@ -1,0 +1,5 @@
+# Commitment Checklist: Auditing Author Commitments in Peer Review
+
+## Abstract
+
+Peer review author responses often include commitments to add experiments, release code, or clarify content in the final paper. Yet, there is currently no systematic mechanism to ensure authors fulfill these promises. In this position paper, we present a large-scale audit of author commitments using large language models (LLMs) to compare rebuttals against camera-ready versions. Analyzing the commitments from ICLR-2025 and EMNLP-2024, we find that while a majority of promised changes are implemented, a significant share (about 25%) are not, with “missing experiments” and other high-impact items among the most frequently unfulfilled. We demonstrate that LLM-based tools can feasibly detect the promises. Finally, we propose the idea of Author Commitment Checklist, which would alert authors and organizers to unaddressed promises, increasing accountability and strengthening the integrity of the peer review process. We discuss the benefits of this practice and advocate for its adoption in future conferences.

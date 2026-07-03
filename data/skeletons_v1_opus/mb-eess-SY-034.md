@@ -1,0 +1,8 @@
+MECHANISM: A continuous-time dynamical system evolves on the positive orthant, with state derivative equal to a drift term plus a control-multiplied gain term, the control restricted to positive values with a nonzero equilibrium. Starting from a known strict scalar potential function whose derivative along trajectories is negative definite, the goal is to construct a feedback control that both stabilizes the equilibrium and minimizes an infinite-horizon integral cost. A pair of mutually inverse monotone scalar maps is introduced, one contracting toward unity and one expanding away from it; one map reshapes a nominal feedback while the other defines a strictly convex, asymmetric penalty on the control via an integral formula. The candidate control is shown to be the pointwise minimizer of a Hamiltonian, obtained by setting the derivative of the control-dependent terms to zero, using strict convexity to guarantee uniqueness. Substituting the minimizer back makes the stationary optimality partial differential equation hold with the potential as its value function, certifying inverse optimality. Negativity of the potential's derivative under the optimal feedback then yields global asymptotic stability. General constructions and explicit universal feedback formulae are derived for arbitrary dimension, and numerical trajectory simulations illustrate the closed-loop behavior.
+DOMAIN: nonlinear feedback control of positive systems
+STRUCTURE: other: dynamical-system analysis
+DATA_OBJECT: continuous function or field
+INFERENCE: deterministic or closed-form
+PROBLEM_FORM: control
+DISTRIBUTION: none; none
+COMPLEXITY: closed-form

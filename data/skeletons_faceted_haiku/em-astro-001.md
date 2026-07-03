@@ -1,0 +1,8 @@
+MECHANISM: Each entity is summarized by a measured vector over ordered radial bins together with an estimated covariance matrix. A parametric model maps a small set of shared parameters to an expected vector, and a latent positional offset shifts this expected vector by convolving the profile over an angular coordinate. The latent offsets are assumed to follow a one-parameter distribution concentrated near zero. For each entity the likelihood is a two-component mixture: with one probability the observation is drawn from a Gaussian centered on the unshifted model, and with the complementary probability it is drawn from an integral over the latent offset of Gaussians centered on shifted models, weighted by the offset distribution. The per-entity Gaussian densities are evaluated using that entity's covariance matrix. Assuming independence across entities, the joint likelihood is the product of the per-entity mixture likelihoods. Prior distributions are placed on the shared model parameters, the mixing fraction, and the offset-scale parameter. The posterior is explored by a nested-sampling Monte-Carlo algorithm, producing joint posterior contours and marginalized one-dimensional distributions. Nuisance parameters are marginalized to isolate the two mixing parameters of interest. As a baseline, an alternative first averages all entity vectors into one aggregate and fits a single mixture-convolved model to it. Goodness of fit is quantified by a quadratic weighted-residual form against the covariance matrix.
+DOMAIN: observational cosmology; galaxy cluster density profiles
+STRUCTURE: graphical models
+DATA_OBJECT: set or table
+INFERENCE: Bayesian posterior
+PROBLEM_FORM: estimation
+DISTRIBUTION: continuous; Gaussian mixture
+COMPLEXITY: not stated

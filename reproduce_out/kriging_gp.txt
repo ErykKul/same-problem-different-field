@@ -1,0 +1,8 @@
+spatial field: 140 sites (100 train, 40 test); true exponential range 0.18, sill 1.0, nugget 0.04
+
+                                         range   test-RMSE   notes
+  bespoke ordinary kriging (variogram LS): 0.127     0.534    no posterior uncertainty
+  imported GP solver (marginal lik.)     : 0.183     0.521    2-sigma coverage 0.97, learns range/nugget
+
+the two predictors agree to RMSE 0.044 (same BLUP); the import recovers the true range 0.18 by marginal likelihood
+and adds a calibrated posterior variance the bespoke kriging code does not provide.

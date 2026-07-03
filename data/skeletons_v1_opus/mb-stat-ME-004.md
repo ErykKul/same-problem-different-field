@@ -1,0 +1,8 @@
+MECHANISM: A penalty function compares a multi-dimensional prediction to a multi-dimensional observation by taking the squared Euclidean discrepancy and dividing it by the squared discrepancy of the observation from its own component-average, yielding an observation-dependent weighting of a standard squared-error penalty. The expected value of this weighted penalty, over the joint distribution of the observation vector, is analyzed to find its unique minimizer. Using a general theorem on weighted penalties, it is shown that the minimizer is the ratio of the weighted expectation of the observation to the expectation of the weight, i.e. a weight-tilted component-wise average, and that this minimizer is uniquely characterized (strictly elicited) by the penalty. A companion vector-valued function whose expectation vanishes exactly at this target is exhibited, establishing identifiability. The empirical analogue averages the penalty over many observed vectors, and the associated estimator minimizes this average. For a linear predictor this reduces to a weighted least-squares fit with closed-form solution, distinct from the unweighted fit. The construction requires excluding a measure-zero set where the denominator vanishes, and conditions on the assumed family that guarantee this are given. Consistency of the resulting M-estimator for the characterized target follows from the strict minimization property.
+DOMAIN: forecast evaluation and statistical decision theory
+STRUCTURE: dense linear algebra
+DATA_OBJECT: set or table
+INFERENCE: frequentist point estimate
+PROBLEM_FORM: estimation
+DISTRIBUTION: continuous; nonparametric
+COMPLEXITY: consistency

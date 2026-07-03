@@ -1,0 +1,8 @@
+MECHANISM: A set of entities is each described by a fixed battery of ordinal ratings across several response items, together with several categorical attributes and a usage-count covariate. First, the item-response submatrix is summarized by extracting its leading orthogonal direction of maximal variance, retaining a single composite score per entity for each of two parallel rating batteries based on the magnitude of the largest variance component. Loadings of each item onto this direction are reported, and the proportion of total variance captured is computed. Second, entities are partitioned into a small number of disjoint groups by iteratively assigning each entity to the nearest group center in the two-dimensional composite-score space and recomputing centers until assignments stabilize. Group sizes and the conditional distribution of categorical attributes within each group are tabulated. Third, each composite score is regressed linearly on the categorical attributes and the count covariate, yielding coefficient estimates, a coefficient of determination, and an omnibus significance statistic. Pairwise linear correlations between composite scores and between scores and counts are also computed with associated significance levels. Predicted scores for representative attribute combinations are formed by summing fitted coefficients. The whole pipeline is purely associational, mapping descriptive survey measurements into reduced scores, clusters, and fitted linear relations.
+DOMAIN: information-seeking behavior in higher education
+STRUCTURE: dense linear algebra
+DATA_OBJECT: set or table
+INFERENCE: frequentist point estimate
+PROBLEM_FORM: estimation
+DISTRIBUTION: ordinal; gaussian
+COMPLEXITY: closed-form

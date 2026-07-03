@@ -1,0 +1,11 @@
+curated 109 papers, 5812 cross-field pairs, 210 twins (complete labels)
+facet-only AP (TF-IDF):     0.449
+faceted-full retriever AP:  0.557  (= headline)
+
+facet-frontier (k-of-4 core facets agree, on the top-1000 retrieved; complete-label P/R):
+   k>=  precision   recall   kept
+     0      0.183    0.871   1000
+     1      0.207    0.833    847
+     2      0.275    0.676    516
+     3      0.531    0.405    160
+     4      0.939    0.148     33

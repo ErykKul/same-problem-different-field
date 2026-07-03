@@ -1,0 +1,5 @@
+# Cellular Automata: From Structural Principles to Transport and Correlation Methods
+
+## Abstract
+
+Cellular automata (CA) are discrete-time dynamical systems with local update rules on a lattice. Despite their elementary definition, CA support a wide spectrum of macroscopic phenomena central to statistical physics: equilibrium and nonequilibrium phase transitions, transport and hydrodynamic limits, kinetic roughening, self-organized criticality, and complex spatiotemporal correlations. This survey focuses on three tightly connected themes. (i) We present a structural view of CA as shift-commuting maps on configuration spaces, emphasizing rule complexity, reversibility, and conservation laws (including discrete continuity equations). (ii) We organize transport in CA into ballistic, diffusive, and anomalous regimes, and connect microscopic currents to macroscopic laws through Green–Kubo formulas, scaling theory, and universality classes. (iii) We develop correlation-based methods—from structure factors and response formulas to computational mechanics and data-driven inference—that diagnose regimes and enable coarse-graining.

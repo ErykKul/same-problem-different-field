@@ -1,0 +1,8 @@
+MECHANISM: A population of autonomous entities is simulated in discrete time steps over a spatial environment with a routing network and two evolving directed relationship graphs. Each entity carries internal state machines: one tracks a recurring physiological need that builds up at an individual rate drawn from a uniform distribution and advances through ordered threshold-gated stages until a relief action resets it, and another tracks a four-state epidemic progression. At each step, entities move to satisfy needs, become co-located, and form contacts along the network and relationship graphs. A susceptible entity becomes exposed only if several independent uniform random draws each fall below their respective probability parameters and a per-source contact-count cap is not exceeded, making transmission a product of independent factors. Per-entity sojourn times in each epidemic state are obtained by perturbing global base durations with a uniformly sampled smoothing factor, and an entity advances when its elapsed time exceeds its sojourn threshold. While in the active state, an entity emits a quantity computed from a deterministic rise-and-decay curve of the form a power of elapsed time times a decaying exponential. Emitted quantities are deposited at the entity's current spatial unit, aggregated over the network, and tracked through time and space. The whole stochastic process is run repeatedly while sweeping a transmission parameter to study resulting trajectories and spatial patterns.
+DOMAIN: wastewater-based infectious disease surveillance
+STRUCTURE: other: agent-based simulation
+DATA_OBJECT: graph or network
+INFERENCE: sampling or Monte-Carlo
+PROBLEM_FORM: simulation or generation
+DISTRIBUTION: count; nonparametric
+COMPLEXITY: not stated

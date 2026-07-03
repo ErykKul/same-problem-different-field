@@ -1,0 +1,8 @@
+MECHANISM: Given a discretized array of values on a regular multidimensional grid and a lossy approximation of it, the per-cell deviation forms an error vector. The goal is to adjust this error vector so it simultaneously satisfies two magnitude constraints: a bound on each cell's deviation, and a bound on the real and imaginary parts of each component after an orthogonal frequency transform. Because the transform is linear, each frequency deviation is a complex-weighted linear combination of the cell deviations, so the frequency constraints become linear half-space constraints on the error vector; together they define a rotated box, while the per-cell bounds define an axis-aligned box. The two boxes are expressed in two mutually orthogonal bases related by the transform. A point lying in the axis-aligned box is moved into the intersection of the two boxes by alternating projection: transform to the frequency basis, clip each coordinate to its bound, inverse-transform, clip each spatial coordinate to its bound, and repeat until both constraints hold. Convergence is geometric, with rate set by the relative orientation of the boxes. The displacement accumulated along each basis is recorded, split into a binary occupancy mask and the nonzero values, quantized, and entropy-coded to limit overhead. Reconstruction adds the decoded displacements back to the approximation. The projections are parallelized across cells and frequency components, with the forward and inverse transforms dominating cost.
+DOMAIN: scientific data compression, spectral fidelity
+STRUCTURE: numerical optimization
+DATA_OBJECT: grid or lattice
+INFERENCE: deterministic optimization
+PROBLEM_FORM: reconstruction or denoising
+DISTRIBUTION: continuous; none
+COMPLEXITY: convergence rate

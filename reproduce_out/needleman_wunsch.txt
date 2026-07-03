@@ -1,0 +1,17 @@
+BIOLOGY  (protein alignment, the bespoke field's home turf):
+  HEAGAWGHE-E
+  ---PAW-HEAE   score -1
+
+LINGUISTICS (phonetic word alignment, imported aligner):
+  night ~ Nacht       naIt / naxt   score 2
+  father ~ pater      fa-dr / pater   score -1
+  Hund ~ hound        h-und / haUnd   score 1
+
+EDIT DISTANCE = UNIT-COST NEEDLEMAN-WUNSCH (the bespoke tool is the special case):
+  naIt     vs naxt      edit-distance 1  ==  unit-cost-NW 1  OK
+  fadr     vs pater     edit-distance 3  ==  unit-cost-NW 3  OK
+  hund     vs haUnd     edit-distance 2  ==  unit-cost-NW 2  OK
+  kanton   vs canton    edit-distance 1  ==  unit-cost-NW 1  OK
+
+one alignment solver serves both fields; edit distance is its unit-cost special case (verified exact: True).
+importing the biology aligner gives linguistics substitution scores and gap penalties for free.

@@ -1,0 +1,452 @@
+{
+ "0": {
+  "arm": "top",
+  "a": "mb-eess-SY-024",
+  "b": "mc-q-bio-QM-013"
+ },
+ "1": {
+  "arm": "top",
+  "a": "ising-neuro-001",
+  "b": "ising-protein-001"
+ },
+ "2": {
+  "arm": "top",
+  "a": "mc-econ-GN-001",
+  "b": "mc-eess-SY-017"
+ },
+ "3": {
+  "arm": "random",
+  "a": "mb-cs-LG-026",
+  "b": "mc-math-OC-004"
+ },
+ "4": {
+  "arm": "top",
+  "a": "mb-eess-SY-024",
+  "b": "mc-eess-SY-011"
+ },
+ "5": {
+  "arm": "top",
+  "a": "mc-eess-SY-011",
+  "b": "smoke-01"
+ },
+ "6": {
+  "arm": "top",
+  "a": "mb-eess-SY-024",
+  "b": "pca-recsys-distractor-001"
+ },
+ "7": {
+  "arm": "collision",
+  "a": "mb-stat-ME-003",
+  "b": "mc-q-fin-ST-002"
+ },
+ "8": {
+  "arm": "random",
+  "a": "mc-physics-soc-ph-023",
+  "b": "mc-q-fin-ST-016"
+ },
+ "9": {
+  "arm": "random",
+  "a": "diff-finance-001",
+  "b": "mc-cs-SI-004"
+ },
+ "10": {
+  "arm": "random",
+  "a": "eigen-sciento-001",
+  "b": "mc-cond-mat-stat-mech-022"
+ },
+ "11": {
+  "arm": "collision",
+  "a": "mb-cs-LG-013",
+  "b": "mc-eess-SY-020"
+ },
+ "12": {
+  "arm": "random",
+  "a": "dp-fin-001",
+  "b": "mb-cs-LG-033"
+ },
+ "13": {
+  "arm": "collision",
+  "a": "mc-q-fin-ST-002",
+  "b": "mc-stat-ME-024"
+ },
+ "14": {
+  "arm": "top",
+  "a": "hawkes-crime-001",
+  "b": "hawkes-seismology-001"
+ },
+ "15": {
+  "arm": "random",
+  "a": "em-pharma-noname-002",
+  "b": "gp-ml-dist-001"
+ },
+ "16": {
+  "arm": "top",
+  "a": "mc-econ-GN-002",
+  "b": "mc-physics-soc-ph-024"
+ },
+ "17": {
+  "arm": "top",
+  "a": "hmm-genomics-001",
+  "b": "hmm-proteomics-002"
+ },
+ "18": {
+  "arm": "random",
+  "a": "dp-bio-001",
+  "b": "mc-q-fin-ST-022"
+ },
+ "19": {
+  "arm": "random",
+  "a": "replv-linguistics-002",
+  "b": "smoke-01"
+ },
+ "20": {
+  "arm": "top",
+  "a": "kalman-control-001",
+  "b": "kalman-neuro-001"
+ },
+ "21": {
+  "arm": "random",
+  "a": "mb-stat-ME-011",
+  "b": "mc-physics-soc-ph-017"
+ },
+ "22": {
+  "arm": "top",
+  "a": "mc-econ-GN-002",
+  "b": "mc-eess-SY-011"
+ },
+ "23": {
+  "arm": "collision",
+  "a": "mb-eess-SY-034",
+  "b": "mc-math-OC-005"
+ },
+ "24": {
+  "arm": "collision",
+  "a": "mc-physics-soc-ph-009",
+  "b": "pa-cities-noname-001"
+ },
+ "25": {
+  "arm": "collision",
+  "a": "mcmc-cosmo-001",
+  "b": "mcmc-nlp-002"
+ },
+ "26": {
+  "arm": "collision",
+  "a": "eigen-sciento-dist-001",
+  "b": "mc-cs-DL-007"
+ },
+ "27": {
+  "arm": "random",
+  "a": "dp-communications-002",
+  "b": "mb-eess-SY-033"
+ },
+ "28": {
+  "arm": "top",
+  "a": "mb-eess-SY-024",
+  "b": "mc-econ-GN-002"
+ },
+ "29": {
+  "arm": "random",
+  "a": "mb-cs-LG-022",
+  "b": "mc-econ-GN-001"
+ },
+ "30": {
+  "arm": "top",
+  "a": "irt-baseball-002",
+  "b": "irt-sports-001"
+ },
+ "31": {
+  "arm": "random",
+  "a": "mc-cs-CY-001",
+  "b": "mc-physics-soc-ph-018"
+ },
+ "32": {
+  "arm": "collision",
+  "a": "mc-math-OC-013",
+  "b": "mc-stat-ME-018"
+ },
+ "33": {
+  "arm": "collision",
+  "a": "ising-protein-001",
+  "b": "kalman-epidemic-001"
+ },
+ "34": {
+  "arm": "top",
+  "a": "hmm-ecology-002",
+  "b": "hmm-genomics-001"
+ },
+ "35": {
+  "arm": "collision",
+  "a": "diff-finance-001",
+  "b": "mc-cond-mat-stat-mech-015"
+ },
+ "36": {
+  "arm": "top",
+  "a": "kalman-control-001",
+  "b": "kalman-finance-001"
+ },
+ "37": {
+  "arm": "collision",
+  "a": "dp-speech-001",
+  "b": "hmm-ecology-002"
+ },
+ "38": {
+  "arm": "top",
+  "a": "irt-edu-001",
+  "b": "irt-psych-001"
+ },
+ "39": {
+  "arm": "top",
+  "a": "mb-eess-SY-024",
+  "b": "mc-q-bio-QM-015"
+ },
+ "40": {
+  "arm": "random",
+  "a": "mb-stat-ME-004",
+  "b": "mc-econ-GN-011"
+ },
+ "41": {
+  "arm": "collision",
+  "a": "mc-cs-LG-025",
+  "b": "mc-q-bio-NC-013"
+ },
+ "42": {
+  "arm": "collision",
+  "a": "mc-cs-HC-009",
+  "b": "mc-q-fin-ST-005"
+ },
+ "43": {
+  "arm": "random",
+  "a": "mc-astro-ph-IM-007",
+  "b": "mc-cs-LG-018"
+ },
+ "44": {
+  "arm": "collision",
+  "a": "mc-q-bio-QM-023",
+  "b": "mcmc-crypto-002"
+ },
+ "45": {
+  "arm": "collision",
+  "a": "fft-gravwave-002",
+  "b": "mb-stat-ME-027"
+ },
+ "46": {
+  "arm": "top",
+  "a": "mc-eess-SY-017",
+  "b": "mc-physics-soc-ph-024"
+ },
+ "47": {
+  "arm": "random",
+  "a": "kalman-finance-dist-001",
+  "b": "mc-cs-CY-007"
+ },
+ "48": {
+  "arm": "collision",
+  "a": "mc-physics-soc-ph-010",
+  "b": "pa-cities-noname-001"
+ },
+ "49": {
+  "arm": "top",
+  "a": "mb-eess-SY-024",
+  "b": "mc-eess-SY-017"
+ },
+ "50": {
+  "arm": "random",
+  "a": "mc-cs-CY-001",
+  "b": "mc-cs-DL-012"
+ },
+ "51": {
+  "arm": "top",
+  "a": "irt-education-002",
+  "b": "irt-psych-001"
+ },
+ "52": {
+  "arm": "top",
+  "a": "mc-q-bio-QM-015",
+  "b": "replv-evolution-001"
+ },
+ "53": {
+  "arm": "collision",
+  "a": "ising-protein-001",
+  "b": "pca-causal-001"
+ },
+ "54": {
+  "arm": "top",
+  "a": "mc-econ-GN-001",
+  "b": "mc-eess-SY-011"
+ },
+ "55": {
+  "arm": "random",
+  "a": "mb-eess-SY-035",
+  "b": "mc-physics-soc-ph-023"
+ },
+ "56": {
+  "arm": "random",
+  "a": "mb-stat-ME-027",
+  "b": "mcmc-statphys-001"
+ },
+ "57": {
+  "arm": "top",
+  "a": "mc-econ-GN-002",
+  "b": "mc-eess-SY-017"
+ },
+ "58": {
+  "arm": "random",
+  "a": "clf-nlp-distractor-001",
+  "b": "mb-cs-LG-019"
+ },
+ "59": {
+  "arm": "random",
+  "a": "mb-stat-ME-022",
+  "b": "mc-astro-ph-IM-002"
+ },
+ "60": {
+  "arm": "collision",
+  "a": "replv-economics-001",
+  "b": "replv-finance-002"
+ },
+ "61": {
+  "arm": "top",
+  "a": "mb-eess-SY-024",
+  "b": "mc-econ-GN-001"
+ },
+ "62": {
+  "arm": "collision",
+  "a": "mb-cs-LG-016",
+  "b": "mc-math-OC-017"
+ },
+ "63": {
+  "arm": "collision",
+  "a": "mc-math-OC-021",
+  "b": "mc-q-fin-ST-003"
+ },
+ "64": {
+  "arm": "collision",
+  "a": "hawkes-seismology-001",
+  "b": "kalman-epidemic-001"
+ },
+ "65": {
+  "arm": "collision",
+  "a": "dp-speech-001",
+  "b": "hmm-genomics-001"
+ },
+ "66": {
+  "arm": "random",
+  "a": "mc-math-OC-013",
+  "b": "mcmc-statphys-001"
+ },
+ "67": {
+  "arm": "top",
+  "a": "mb-eess-SY-024",
+  "b": "mc-q-bio-NC-001"
+ },
+ "68": {
+  "arm": "collision",
+  "a": "clf-dh-001",
+  "b": "clf-nlp-001"
+ },
+ "69": {
+  "arm": "random",
+  "a": "mb-eess-SY-028",
+  "b": "mc-stat-ME-006"
+ },
+ "70": {
+  "arm": "top",
+  "a": "dp-bio-001",
+  "b": "dp-linguistics-002"
+ },
+ "71": {
+  "arm": "collision",
+  "a": "pa-networks-001",
+  "b": "pa-scientometrics-002"
+ },
+ "72": {
+  "arm": "random",
+  "a": "kalman-control-001",
+  "b": "mb-eess-SY-028"
+ },
+ "73": {
+  "arm": "top",
+  "a": "clf-clin-001",
+  "b": "clf-cybersecurity-002"
+ },
+ "74": {
+  "arm": "collision",
+  "a": "mc-q-bio-QM-023",
+  "b": "mcmc-nlp-002"
+ },
+ "75": {
+  "arm": "random",
+  "a": "mc-q-bio-NC-023",
+  "b": "mc-q-fin-ST-001"
+ },
+ "76": {
+  "arm": "top",
+  "a": "mb-eess-SY-024",
+  "b": "mc-physics-soc-ph-024"
+ },
+ "77": {
+  "arm": "collision",
+  "a": "fft-neuro-002",
+  "b": "mc-q-bio-NC-006"
+ },
+ "78": {
+  "arm": "top",
+  "a": "mc-econ-GN-002",
+  "b": "mc-q-bio-QM-015"
+ },
+ "79": {
+  "arm": "collision",
+  "a": "hmm-genomics-dist-001",
+  "b": "mc-q-bio-QM-016"
+ },
+ "80": {
+  "arm": "random",
+  "a": "kalman-pharma-001",
+  "b": "mb-stat-ME-020"
+ },
+ "81": {
+  "arm": "collision",
+  "a": "kalman-spacecraft-002",
+  "b": "mb-eess-SY-031"
+ },
+ "82": {
+  "arm": "random",
+  "a": "mc-physics-hist-ph-010",
+  "b": "mc-q-bio-NC-004"
+ },
+ "83": {
+  "arm": "random",
+  "a": "mb-cs-LG-007",
+  "b": "mc-cs-LG-007"
+ },
+ "84": {
+  "arm": "collision",
+  "a": "mc-q-bio-QM-023",
+  "b": "mcmc-cosmo-001"
+ },
+ "85": {
+  "arm": "collision",
+  "a": "dp-speech-001",
+  "b": "hmm-proteomics-002"
+ },
+ "86": {
+  "arm": "random",
+  "a": "mc-q-bio-NC-004",
+  "b": "mc-q-bio-QM-023"
+ },
+ "87": {
+  "arm": "top",
+  "a": "mc-physics-soc-ph-024",
+  "b": "mc-q-bio-NC-014"
+ },
+ "88": {
+  "arm": "random",
+  "a": "mc-stat-ME-014",
+  "b": "replv-evolution-001"
+ },
+ "89": {
+  "arm": "random",
+  "a": "mb-stat-ME-016",
+  "b": "mc-cs-SI-002"
+ }
+}

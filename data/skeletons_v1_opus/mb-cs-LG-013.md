@@ -1,0 +1,8 @@
+MECHANISM: Several relational structures over a shared set of nodes are constructed, each a weighted graph with its own edges, plus auxiliary similarity graphs combined by diffusion into one consensus graph. For each node, multiple high-dimensional feature vectors from different sources are independently compressed into low-dimensional latent codes by encoder-decoder pairs trained to reconstruct inputs while regularizing the latent distribution toward a standard prior. Random walks over each graph are turned into token sequences, and a self-attention sequence model is trained by masking tokens and predicting them, yielding a learned embedding per node from a shared lookup table. Structural position features are derived from the smallest nontrivial eigenvectors of the normalized graph Laplacian. Each node's initial representation is a sum of linear projections of its compressed features, its sequence-model embedding, and its spectral position features. A stack of layers then updates each node by attending over its neighbors with multi-head scaled dot-product attention, aggregating neighbor values weighted by softmax-normalized compatibility scores, followed by feed-forward sublayers with residual connections and normalization. The model is trained to predict whether candidate node pairs are connected, scoring concatenated pair embeddings through a small network. Per-node importance is then computed by summing incoming attention weights across all heads and layers, producing a ranking of nodes.
+DOMAIN: disease gene prioritization, computational biology
+STRUCTURE: neural network
+DATA_OBJECT: graph or network
+INFERENCE: deterministic optimization
+PROBLEM_FORM: ranking or retrieval
+DISTRIBUTION: continuous; gaussian
+COMPLEXITY: not stated

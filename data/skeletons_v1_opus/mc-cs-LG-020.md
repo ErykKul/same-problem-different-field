@@ -1,0 +1,8 @@
+MECHANISM: Two parametric nonlinear maps are learned to translate samples between two unpaired collections of high-dimensional array observations drawn from two distinct source distributions. Two paired adversarial critics each output the probability that an array is genuine to its collection, and each map is trained to fool its critic. A cyclic-reconstruction penalty enforces that mapping an observation across and back recovers the original, measured by an elementwise absolute-difference norm. The total objective is a weighted sum of the two adversarial terms and the cyclic term, minimized by stochastic gradient steps over the parameters. After training, the forward map converts an abundant collection into synthetic members of the scarce collection, which are pooled with the few real scarce observations to enlarge a labelled training set. A second parametric model is then trained on the augmented set to predict, for each input array, a set of bounding regions together with category labels, by minimizing a sum of localization, classification, and distribution losses. Quality is assessed by overlap-thresholded precision, recall, and averaged overlap-accuracy summaries on held-out arrays. The pipeline is split into train, validation, and test partitions and compared across differing mixtures of real and synthetic data.
+DOMAIN: industrial visual inspection and image translation
+STRUCTURE: neural network
+DATA_OBJECT: dense matrix or tensor
+INFERENCE: deterministic optimization
+PROBLEM_FORM: prediction or classification
+DISTRIBUTION: continuous; none
+COMPLEXITY: polynomial iterative

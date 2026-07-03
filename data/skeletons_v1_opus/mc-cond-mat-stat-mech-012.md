@@ -1,0 +1,8 @@
+MECHANISM: A one-dimensional ring of two-state sites carries an operator-valued energy function with nearest-neighbor couplings, a uniform field term, and a non-real term encoding loss. The operators are mapped to non-interacting fermionic modes through a nonlocal string transformation, then a discrete Fourier transform brings the energy function into a block-diagonal form with one two-by-two block per wavevector. A rotation of each block analytically diagonalizes the quadratic form, giving complex single-mode dispersion levels in closed form. The ground configuration is selected by minimizing the real part of the dispersion, yielding a closed-form product state and an energy density, whose second derivative with respect to a control parameter flags transitions. Two-point and cross correlation functions along the chain are expressed as expectations of products of mode operators and evaluated as the Pfaffian of an antisymmetric matrix of pairwise contractions. The asymptotic decay of these correlations with separation distinguishes ordered, disordered, and incommensurate-spiral regimes, and a signed combination of cross correlations diagnoses handedness. Bipartite entanglement is obtained from the eigenvalues of the restricted correlation matrix, and its logarithmic growth with subsystem size yields a coefficient identifying the critical universality. Sweeping the control parameters maps the full regime diagram and locates the transition lines.
+DOMAIN: non-Hermitian quantum spin chain statistical mechanics
+STRUCTURE: spectral or transform
+DATA_OBJECT: grid or lattice
+INFERENCE: deterministic or closed-form
+PROBLEM_FORM: proof or characterization
+DISTRIBUTION: none; none
+COMPLEXITY: closed-form

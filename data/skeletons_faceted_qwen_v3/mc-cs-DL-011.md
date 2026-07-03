@@ -1,0 +1,12 @@
+MECHANISM: none
+DOMAIN: materials science and artificial intelligence
+STRUCTURE: none
+DATA_OBJECT: none
+INFERENCE: none
+PROBLEM_FORM: none
+DISTRIBUTION: none
+COMPLEXITY: none
+DATA_AVAILABILITY: none
+CODE_AVAILABILITY: none
+PREREGISTRATION: none
+EVIDENCE_BASIS: none

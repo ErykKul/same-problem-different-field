@@ -1,0 +1,8 @@
+MECHANISM: An entity is modeled as a finite set of latent states linked by allowed transitions, emitting an ordered sequence of observations. Each state carries a transition weight to its successors and an emission weight for each possible observed symbol. A forward recursion accumulates, position by position, the total weight of all partial paths ending in each state, while a backward recursion accumulates the weight of all completions from each state to the end. Combining forward and backward quantities and normalizing by the total sequence weight yields, for every position and state, the relative plausibility of occupying that state. These per-position state plausibilities are then taken as new local scores. A second pass runs a max-times recursion over the same transition structure: for each position and state it keeps the best score of any allowed path reaching it and stores a back pointer to the predecessor that achieved it. After reaching the final position the globally best terminal state is selected and the back pointers are followed in reverse to recover the single best admissible state path. Each state on the recovered path is mapped to its associated label to produce the output labeling. The procedure runs in time proportional to the number of transitions times the sequence length.
+DOMAIN: sequence labeling for biological/protein structure prediction
+STRUCTURE: dynamic programming
+DATA_OBJECT: sequence or time-series
+INFERENCE: deterministic or closed-form
+PROBLEM_FORM: prediction or classification
+DISTRIBUTION: count; multinomial
+COMPLEXITY: polynomial iterative

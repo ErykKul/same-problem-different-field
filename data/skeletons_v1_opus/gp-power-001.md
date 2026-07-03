@@ -1,0 +1,8 @@
+MECHANISM: An expensive black-box map from a high-dimensional random input vector to a scalar output is replaced by a cheap probabilistic surrogate. First the correlated high-dimensional input is compressed: an empirical covariance operator is formed from samples, its eigen-decomposition is computed, and the input is re-expressed as a truncated sum of orthonormal modes weighted by uncorrelated latent coordinates, keeping enough modes to retain a fixed fraction of total variance. The joint density of the retained latent coordinates is estimated nonparametrically and resampled. A small design of input points is drawn by a stratified space-filling scheme, and the expensive map is evaluated at each to form training pairs. The output is modeled as a realization of a process whose finite collections are jointly multivariate-normal with a parametric mean basis and a covariance defined by a parameterized kernel plus a noise term. Kernel and mean hyperparameters are fit by maximizing a marginal log-likelihood, with the mean coefficients given in closed form as a generalized least-squares solution and the remaining parameters found by gradient-based search. Prediction at new inputs uses the conditional-normal formulas, giving a closed-form posterior mean and variance via blocks of the kernel matrix and its inverse. The fitted surrogate is then evaluated over many resampled inputs to approximate the mean and variance of the output far more cheaply than direct repeated simulation.
+DOMAIN: power systems operation under renewable uncertainty
+STRUCTURE: dense linear algebra
+DATA_OBJECT: dense matrix or tensor
+INFERENCE: bayesian posterior
+PROBLEM_FORM: estimation
+DISTRIBUTION: continuous; gaussian
+COMPLEXITY: closed-form

@@ -1,0 +1,5 @@
+# Variation on the theme of Jarzynski's inequality
+
+## Abstract
+
+The Jarzynski equality, which relates equilibrium free-energy difference to an average of non-equilibrium work, plays a central role in modern non-equilibrium statistical thermodynamics. In this paper, we study a weaker consequence of this relation, known as Jarzynski’s inequality, which can be formally obtained from the Jarzynski equality via Jensen’s inequality. We identify and analyze several extensions of Jarzynski’s inequality that go beyond its direct derivation from the Jarzynski equality. In particular, we consider chemical systems both in the linear-response regime and away from linear thermodynamics. Furthermore, by employing functional-integral techniques, we extend Jarzynski’s inequality to many-body statistical systems described by quantum field theory. Salient issues, such as connections of the Jarzynski inequality with the maximum work theorem and the Landau–Lifshitz theory of fluctuations, are also discussed.

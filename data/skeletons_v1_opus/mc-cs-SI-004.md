@@ -1,0 +1,8 @@
+MECHANISM: From the timestamped activity records of a set of entities across many groups, a directed graph is constructed whose nodes are groups and whose edges encode the temporal order in which each entity first appeared in one group versus another. Frequent ordered paths through this graph are enumerated within a bounded depth around a focal node to characterize trajectories. Each node is described textually and mapped to a dense vector; the vectors are partitioned into clusters by an iterative centroid algorithm, with the cluster count chosen by an elbow heuristic, and representative themes are extracted per cluster. Pretrained text classifiers assign each record a continuous harmfulness score, a categorical attribute label, and a discrete emotion label; these are aggregated to per-group and per-transition averages and differences. Standard graph descriptors are computed, including shortest-path-based distances, centralities, and degree-mixing correlation. Per-trajectory score sequences are themselves clustered to summarize typical patterns. Group overlap between subpopulations is quantified by a set-intersection-over-union index, and classifier labels are cross-checked against an external reference for agreement. The computation is largely descriptive aggregation of graph statistics and classifier outputs rather than estimation of a new model.
+DOMAIN: computational social science, online community analysis
+STRUCTURE: graph traversal
+DATA_OBJECT: graph or network
+INFERENCE: deterministic or closed-form
+PROBLEM_FORM: prediction or classification
+DISTRIBUTION: proportion or bounded; none
+COMPLEXITY: not stated

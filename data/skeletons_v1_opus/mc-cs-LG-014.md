@@ -1,0 +1,8 @@
+MECHANISM: A composite on-device system orchestrates interacting agents through a fixed multi-stage workflow, with several quantitative subcomponents. A large teacher model is compressed into a small student model by minimizing a weighted sum of a cross-entropy term against hard labels and a divergence term between temperature-softened teacher and student output distributions. State is compacted by scoring each element by an importance function and retaining only elements above a threshold while summarizing the rest. A scheduler decides task placement by minimizing a weighted sum of latency, energy, and cost subject to a hard upper bound on a risk quantity. A two-party feasibility check evaluates an interval-overlap predicate over encrypted bounds without revealing the values, using homomorphic comparison. An iterative exchange protocol alternates offers, each accompanied by a succinct proof that a private value lies within a private interval, until offers converge within a tolerance and the agreement is set to their midpoint. Decisions are chained into a tamper-evident hash structure whose membership proofs verify in logarithmic time. A safety filter performs short forward rollouts with the student model and accepts an action only if the expected score of a learned critic exceeds a threshold. The whole system is evaluated empirically by success rate, latency, and leakage with ablations removing each component.
+DOMAIN: privacy-preserving automated negotiation agents
+STRUCTURE: neural network
+DATA_OBJECT: set or table
+INFERENCE: deterministic optimization
+PROBLEM_FORM: decision or test
+DISTRIBUTION: continuous; nonparametric
+COMPLEXITY: polynomial iterative

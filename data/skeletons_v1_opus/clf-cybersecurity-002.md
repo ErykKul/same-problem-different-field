@@ -1,0 +1,8 @@
+MECHANISM: Each observation is a fixed-length vector of features paired with one of several discrete category labels. The procedure assumes the features are conditionally independent given the label, so the joint model factorizes into a product of per-feature conditional terms times a category prior. From a labeled training set, the prior of each category is estimated as its relative frequency, and the parameters of each per-feature conditional are estimated by counting or by moment matching, under one of three assumed per-feature conditional forms. To classify a new observation, the procedure computes, for each candidate category, the log of the prior plus the sum over features of the log conditional probability, and selects the category maximizing this score. Working in log-space replaces a product of many small probabilities by a sum, avoiding numerical underflow. Before fitting, a univariate association statistic between each feature and the label is computed and the highest-scoring features are retained, discarding the rest to reduce dimensionality and overfitting. Missing or invalid entries are imputed per-column using that column's mean and dispersion, and categorical labels are expanded into indicator columns. The three assumed conditional forms differ only in how each per-feature term is modeled, and accuracy is compared across them. The whole pipeline is a single forward estimation followed by argmax scoring with no iterative optimization.
+DOMAIN: network intrusion and anomaly detection in cybersecurity
+STRUCTURE: graphical models
+DATA_OBJECT: set or table
+INFERENCE: maximum likelihood
+PROBLEM_FORM: prediction or classification
+DISTRIBUTION: count; multinomial
+COMPLEXITY: closed-form

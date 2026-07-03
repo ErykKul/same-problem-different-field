@@ -1,0 +1,8 @@
+MECHANISM: Observations form a tensor indexed by time step, node, and feature over a fixed graph of nodes with a predefined adjacency. A learned representation is built by concatenating several embeddings. A linear map produces a feature embedding; lookup tables indexed by periodic time-of-cycle positions give temporal embeddings broadcast across nodes. A dynamic weighted adjacency is computed by forming query and key projections of the input and taking a scaled dot-product attention masked by the predefined adjacency (non-edges set to negative infinity before the softmax), then symmetrized; multiplying it by a learnable node matrix yields a structure embedding, concatenated with an adaptive spatial embedding. All embeddings are concatenated into a hidden tensor. A spatial module reduces the time-and-hidden dimensions via two one-dimensional convolutions, applies self-attention across nodes with query, key, value projections and a softmax of scaled dot-products, then up-projects and adds a residual with normalization. A temporal module maps the sequence dimension to the frequency domain by a discrete transform, processes real and imaginary parts with separate fully-connected blocks combined in a complex-multiply pattern, and inverts the transform. A final linear layer regresses the multi-step future tensor. Parameters are trained by gradient descent minimizing absolute-error loss, and ablations remove each component.
+DOMAIN: traffic forecasting, spatio-temporal prediction
+STRUCTURE: neural network
+DATA_OBJECT: graph or network
+INFERENCE: deterministic optimization
+PROBLEM_FORM: prediction or classification
+DISTRIBUTION: continuous; none
+COMPLEXITY: not stated

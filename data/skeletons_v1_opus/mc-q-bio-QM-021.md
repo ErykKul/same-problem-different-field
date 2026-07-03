@@ -1,0 +1,8 @@
+MECHANISM: A natural-language goal is turned into an executable procedure by an orchestrated pipeline of generative language-model components arranged as a staged loop. One stage retrieves reference text and rewrites it into structured steps, optionally split across role-specialized agents that critique and revise each other; a second stage translates the structured steps into an ordered sequence of atomic machine actions in a typed format. The candidate sequence is then run through a physics-based virtual replica that performs collision and reachability checks and presence verification; any detected violation is fed back as a textual message and the generative component regenerates a corrected sequence, iterating until the simulated run completes without error. Output quality is measured against a human-validated reference action set by counting matched, missing, and spurious steps and combining them into a harmonic-mean precision-recall score; the number of correction iterations to convergence is also tabulated. An ablation removes the simulation gate to show that self-critique alone leaves physical violations undetected. There is no estimator, model fit, or mathematical derivation; the only quantitative computation is the matching-based accuracy score over discrete step sets, and the contribution is the closed generate-validate-refine control loop itself.
+DOMAIN: autonomous laboratory protocol generation
+STRUCTURE: finite-state machine
+DATA_OBJECT: sequence or time-series
+INFERENCE: none
+PROBLEM_FORM: simulation or generation
+DISTRIBUTION: proportion or bounded; none
+COMPLEXITY: not stated

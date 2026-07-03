@@ -1,0 +1,8 @@
+synthetic panel: 60 units x 40 periods, true rank 4; treated block 20 units x 8 periods held out as the counterfactual
+
+                                                  counterfactual RMSE
+  bespoke two-way fixed effects (additive)        : 0.795
+  imported SoftImpute matrix completion (rank 26, lam 1.5): 0.247
+
+importing the recsys completion solver cuts counterfactual error by 69% vs the bespoke additive estimator, by using the low-rank structure
+that fixed effects cannot represent (Athey et al.'s result, reproduced offline).

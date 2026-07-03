@@ -1,0 +1,8 @@
+MECHANISM: An evolving state composed of an orientation-type element of a matrix group and an additive bias vector is tracked recursively from noisy vector observations. The state is represented as an element of a matrix Lie group, and estimation error is defined multiplicatively as the group product of estimate-inverse and truth, then mapped to a small vector through the group logarithm. A continuous-time error-dynamics model is linearized about the current estimate, yielding a first-order linear system with a transition Jacobian and a noise-input Jacobian derived via the algebra of the group. Each measurement is written as a nonlinear function of the state; subtracting the predicted observation and applying a first-order approximation gives a linear measurement map in the error coordinates. The recursion alternates a prediction step that integrates the nonlinear mean dynamics and propagates an error-covariance matrix through the linearized transition and process-noise terms, and an update step that forms a gain from covariance and measurement Jacobian, corrects the error estimate from the residual, and injects the correction back onto the group through the exponential map. The covariance is updated with the gain and measurement Jacobian. Distinct error parameterizations (in body versus reference frame) yield structurally similar but algebraically different Jacobians. The construction generalizes to additional parameters by enlarging the group structure.
+DOMAIN: spacecraft attitude estimation
+STRUCTURE: dense linear algebra
+DATA_OBJECT: sequence or time-series
+INFERENCE: bayesian posterior
+PROBLEM_FORM: estimation
+DISTRIBUTION: continuous; gaussian
+COMPLEXITY: closed-form

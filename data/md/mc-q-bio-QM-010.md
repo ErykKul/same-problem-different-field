@@ -1,0 +1,5 @@
+# Apparent Selection Pressure for Dynamic Range and Channel Capacity in Bacterial Chemotactic Sensors
+
+## Abstract
+
+Bacterial chemotactic sensing converts noisy chemical signals into running and tumbling. We analyze the static sensing limits of mixed Tar/Tsr chemoreceptor clusters in individual Escherichia coli cells using a heterogeneous Monod–Wyman–Changeux (MWC) model. By sweeping a seven-dimensional parameter space, we compute three sensing performance metrics—channel capacity, dynamic range, and effective Hill coefficient. Across E. coli–like parameter regimes, we consistently observe pronounced global maxima of channel capacity and global maxima of the related dynamic range, whereas the effective Hill coefficient does not exhibit comparable optimization. The capacity-achieving input distribution is bimodal, which implies that individual cells maximize information by sampling both low- and high-concentration regimes. Together, these results suggest that, at the individual-cell level, channel capacity and dynamic range may be selected for in E. coli receptor clusters.

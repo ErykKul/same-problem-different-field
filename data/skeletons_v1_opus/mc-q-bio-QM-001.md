@@ -1,0 +1,8 @@
+MECHANISM: The goal is to determine which combination of processing steps best recovers latent group structure from a high-dimensional, sparse, noisy table of counts measured on many entities across several batches. A pipeline is assembled in stages: first each count profile is rescaled or variance-stabilized by one of several transformations; then the high-dimensional profiles are projected into a low-dimensional representation by linear factorization or by neighbor-preserving nonlinear embedding; then batch-induced shifts are removed by aligning representations, typically by locating mutual nearest neighbors across batches and correcting offsets, or by iteratively re-clustering and penalizing batch-imbalanced clusters. The corrected low-dimensional points are partitioned into clusters. Each resulting clustering is scored by internal cohesion-versus-separation indices and by agreement with reference labels, and running time is recorded. Every admissible combination of transformation, embedding, and alignment is evaluated across multiple datasets of differing size and composition. The combinations are then ranked per dataset on each score, and a nonparametric rank-based comparison of the score distributions is used to decide which transformations, embeddings, and alignment methods perform best overall and how the optimal choice depends on dataset size.
+DOMAIN: single-cell genomics data analysis
+STRUCTURE: graph or network
+DATA_OBJECT: dense matrix or tensor
+INFERENCE: deterministic or closed-form
+PROBLEM_FORM: ranking or retrieval
+DISTRIBUTION: count; nonparametric
+COMPLEXITY: not stated

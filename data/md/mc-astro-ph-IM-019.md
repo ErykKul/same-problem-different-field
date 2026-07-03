@@ -1,0 +1,5 @@
+# Prospects for identifying pulsar candidates in radio surveys using scintillation
+
+## Abstract
+
+In our previous paper, we developed a technique for identifying pulsar candidates in interferometric radio images using their distinctive scintillation signatures. Building on this technique, the present study simulates a pulsar population using the PsrPopPy Python module to investigate the technique’s limitations and detection capabilities. Among pulsars detectable exclusively by this technique, 50% have duty cycles exceeding the mean value of 0.09 observed in time-domain detections. Our pulsar population simulations revealed a set of observational parameters that optimize pulsar detection. An observation frequency of 1420 MHz and a channel width of 10 kHz emerge as the optimal configuration to maximize the pulsar detection efficiency. By applying a scintillation-based technique to future radio telescopes like DSA-2000, we can detect 56% of normal pulsars and 84% of MSPs in addition to those detected using non-imaging, time-domain surveys. These detected pulsars cannot be verified by time-domain searches.

@@ -1,0 +1,8 @@
+MECHANISM: An unknown nonlinear discrete-time map is approximated by lifting the state through a learned encoder into a higher-dimensional space where the dynamics are linear, with a learned decoder approximating the inverse. The encoder, decoder, and the lifted linear transition and input matrices are fit from trajectory data by gradient descent on a composite loss combining reconstruction error, latent consistency, and multi-step linear prediction error. In the lifted linear space, a finite-horizon quadratic tracking cost is minimized by a backward recursion (solving matrix Riccati equations) to obtain time-varying feedback gains, and a feedforward sequence is recovered via a pseudo-inverse. The closed-loop tracking dynamics are unrolled over the horizon as a single computational graph passing through the encoder once and the decoder once; guaranteed affine lower and upper bounds on this graph's output over an input interval are computed by linear-relaxation bound propagation, yielding a hyper-rectangular over-approximation of the reachable set at each step. To cover the gap between the linearized and true dynamics, a split conformal procedure forms normalized nonconformity scores from a calibration set of error trajectories, takes the empirical (1 minus level) quantile, and inflates the reachable sets by a Minkowski sum with a scaled box, giving a distribution-free probabilistic containment guarantee. Calibration is done once over a distribution of references so the bounds transfer across controllers.
+DOMAIN: reachability analysis, safe control, robotics
+STRUCTURE: neural network
+DATA_OBJECT: sequence or time-series
+INFERENCE: bootstrap or resampling
+PROBLEM_FORM: control
+DISTRIBUTION: continuous; nonparametric
+COMPLEXITY: finite-sample bound

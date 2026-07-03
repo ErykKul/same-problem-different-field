@@ -1,0 +1,5 @@
+# Wave Function Realism and the Mathematization of Nature. A Phenomenological Perspective
+
+## Abstract
+
+This chapter reexamines wave function realism (WFR) through the lens of phenomenology. We begin by situating WFR within the broader debate about the ontology of the quantum state and the temptation to “read off” metaphysics from mathematical formalism. Against this background, we turn to the London–Bauer interpretation (LBI), the most explicit attempt to interpret quantum mechanics through phenomenological categories. On this view, the measurement transition is not a physical discontinuity but a reflective articulation of objectivity, and the wave function formally encodes the horizonal structure of world-givenness. We develop this idea by reconfiguring the notion of realism itself: not as objectivist, but as correlational and transcendental. The resulting picture suggests that quantum mechanics, rather than depicting a world “minus observers,” mathematically articulates the very correlation through which a world becomes manifest at all.

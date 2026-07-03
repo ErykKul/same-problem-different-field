@@ -1,0 +1,8 @@
+MECHANISM: A scalar performance score is defined for an entity from observed quantities via several closed-form expressions. One quantity is modeled as decaying exponentially over an elapsed interval, and a normalized ratio of two rates is formed and reweighted by a function of two structural complexity counts. A second quantity is built from a detection task by taking the difference of two inverse-normal-transformed rates (a hit rate minus a false-alarm rate) to obtain a separation index, then squashing it through a shifted logistic map into a bounded interval. A third quantity compares two information contents by taking one minus the ratio of an entropy of an entity's explanation to an entropy of the underlying object. These three bounded quantities are linearly combined with weights, minus a penalized cost term, to yield an aggregate utility, and a break-even threshold is solved where benefit equals loss. For the planned analysis, a linear mixed-effects model regresses an outcome on a condition indicator and a time covariate with an entity-level random intercept and additive noise, to isolate a fixed-effect coefficient. A power calculation sizes the sample for a target effect under a fixed significance level. The construction is largely definitional and closed-form; no estimates are fit to data in this work.
+DOMAIN: computing education, AI-assisted programming pedagogy
+STRUCTURE: other: closed-form scalar metric construction
+DATA_OBJECT: set or table
+INFERENCE: deterministic or closed-form
+PROBLEM_FORM: other: measurement-instrument design
+DISTRIBUTION: continuous; gaussian
+COMPLEXITY: closed-form

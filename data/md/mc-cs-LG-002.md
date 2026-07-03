@@ -1,0 +1,5 @@
+# Reinforcement Learning with Function Approximation for Non-Markov Processes
+
+## Abstract
+
+We study reinforcement learning methods with linear function approximation under non-Markov state and cost processes. We first consider the policy evaluation method and show that the algorithm converges under suitable ergodicity conditions on the underlying non-Markov processes. Furthermore, we show that the limit corresponds to the fixed point of a joint operator composed of an orthogonal projection and the Bellman operator of an auxiliary Markov decision process. For Q-learning with linear function approximation, as in the Markov setting, convergence is not guaranteed in general. We show, however, that for the special case where the basis functions are chosen based on quantization maps, the convergence can be shown under similar ergodicity conditions. Finally, we apply our results to partially observed Markov decision processes, where finite-memory variables are used as state representations, and we derive explicit error bounds for the limits of the resulting learning algorithms.

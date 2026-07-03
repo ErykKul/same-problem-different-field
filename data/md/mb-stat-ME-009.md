@@ -1,0 +1,5 @@
+# mb-stat-ME-009
+
+## Abstract
+
+Circular variables that represent directions or periodic observations arise in many fields, such as biology and environmental sciences. An important issue when dealing with circular data is how to estimate their dispersion robustly, avoiding undue effects of anomalies. This work extends three robust dispersion measures from the line to the circle. Their robustness is studied via their influence functions and relative bias curves. From these dispersion measures, robust estimators of parameters of circular distributions can be derived. This yields robust estimators for the concentration parameter of the von Mises distribution and the dispersion parameter of the wrapped normal distribution. Their breakdown values and statistical efficiencies are obtained, and they are compared in a simulation study. Building on the best performing estimator, a robust circular anomaly detection procedure is developed, and employed to visualize outliers through a circular violin plot. Three real datasets are analyzed.

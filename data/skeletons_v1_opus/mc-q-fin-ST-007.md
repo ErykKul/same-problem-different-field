@@ -1,0 +1,8 @@
+MECHANISM: A target quantity is modeled as a finite-lag convolution of a driver series with an unknown response kernel plus noise, and the kernel is recovered by solving an ill-posed linear inverse problem. A design matrix of lagged driver values and a response vector are formed, and the kernel is estimated in closed form by minimizing squared error with a quadratic smoothness penalty, i.e. inverting the penalized normal-equations matrix; a tuning weight is set by cross-validation, and a pooled estimate is averaged over random subsamples. Summary functionals of the kernel (cumulative sum, sign, half-life) classify each driver. Separately, the timing of extreme events is modeled as a self-exciting point process whose intensity is a baseline plus exponentially decaying contributions from past events; its parameters are fit by maximizing the point-process likelihood, and a branching ratio summarizes criticality. The fitted intensity is thresholded to split the record into regimes, and the inverse problem is re-solved per regime. Time-irreversibility is quantified by symbolizing the joint driver-response series, estimating a transition matrix and stationary distribution, and computing a directed log-ratio sum, with significance from label-shuffling and block-resampling. Inter-event clustering, dispersion, and conditional recurrence probabilities are also computed, alongside stationarity, long-memory, and lead-lag tests.
+DOMAIN: financial market microstructure, price impact
+STRUCTURE: dense linear algebra
+DATA_OBJECT: sequence or time-series
+INFERENCE: frequentist point estimate
+PROBLEM_FORM: estimation
+DISTRIBUTION: continuous; poisson
+COMPLEXITY: not stated

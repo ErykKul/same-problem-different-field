@@ -1,0 +1,8 @@
+MECHANISM: A collection of one-dimensional ordered observations is modelled as a realization of a stochastic process whose only specification is a covariance function between pairs of points, parameterized by a few scalar hyperparameters. The covariance is built by multiplying a strictly periodic factor by a slowly decaying envelope factor, optionally augmented with an additional oscillatory term controlled by one more scalar. Synthetic ordered sequences are generated from an independent forward model that has its own interpretable generative parameters, and also directly from the assumed process prior. For each sequence, the posterior distribution over the covariance hyperparameters is explored by drawing many correlated samples that target the product of a likelihood and broad bounded priors. Each sample chain is run with multiple walkers, monitored for convergence through an autocorrelation criterion, then trimmed and thinned, and point summaries plus interval bounds are taken from posterior percentiles. The recovered hyperparameters are then compared against the known generative parameters of the forward model, and the standardized residuals are tested for agreement with a unit-variance reference distribution. Correlation coefficients quantify how each hyperparameter tracks each generative quantity. The procedure is repeated under degraded sampling density and added independent noise to assess robustness. The aim is to map estimated covariance parameters onto interpretable generative quantities.
+DOMAIN: stellar activity and exoplanet radial-velocity time series
+STRUCTURE: kernel method
+DATA_OBJECT: sequence or time-series
+INFERENCE: sampling or Monte-Carlo
+PROBLEM_FORM: estimation
+DISTRIBUTION: continuous; gaussian
+COMPLEXITY: not stated

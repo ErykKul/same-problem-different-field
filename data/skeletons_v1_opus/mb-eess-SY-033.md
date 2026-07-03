@@ -1,0 +1,8 @@
+MECHANISM: Several entities evolve in continuous time under control-affine nonlinear dynamics, where some entities are directed and others have unknown, externally driven behavior. The actuation channel of each directed entity is corrupted by an adversarial additive signal that can grow exponentially in time. Safety is encoded by smooth scalar constraint functions that must stay nonnegative, and performance is encoded by smooth quadratic objective functions of the state. For each constraint a first-order condition is formed from its directional derivatives along the drift and the input map plus a class-of-functions margin term, which is affine in the inputs and certifies forward invariance of the feasible region. The unknown entity's dynamics are tracked by an adaptive surrogate whose correction terms are reset from real-time measurements, so all derivative terms in the constraint conditions become computable. At each triggering instant, determined by a rule that fires when measured estimation errors or state deviations exceed thresholds, a small quadratic program minimizes control effort plus slack penalties subject to the affine safety and performance conditions. An additional adaptive compensation term, driven by an integrated error magnitude, is subtracted from the input to counteract the adversarial signal. A scalar energy function is then used to prove that the regulation error converges into a bounded set despite the unbounded disturbance.
+DOMAIN: safe resilient control of connected automated vehicles
+STRUCTURE: numerical optimization
+DATA_OBJECT: continuous function or field
+INFERENCE: deterministic optimization
+PROBLEM_FORM: control
+DISTRIBUTION: none; none
+COMPLEXITY: convergence rate

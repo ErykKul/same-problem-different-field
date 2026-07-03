@@ -1,0 +1,8 @@
+MECHANISM: A nonconvex problem of minimizing a polynomial objective over a feasible region defined by polynomial and linear-inequality constraints is studied. Each polynomial is identified with a symmetric coefficient tensor, and any point is mapped to a symmetric rank-one tensor formed by its repeated outer product, so evaluating a polynomial becomes an inner product between coefficient and lifted tensors. The nonconvex problem is lifted into a higher-dimensional space by replacing the point variable with a tensor variable constrained to the convex hull of lifted feasible points plus a recession-cone term. It is proved that the lifted convex program shares the same optimal value as the original problem and that its optimizers are convex combinations of lifted optimal points. The recession cone of the feasible set is analyzed to certify that the highest-degree homogeneous part is nonnegative along unbounded directions. Under this characterization the convex feasible set is shown to equal a linear section of the cone of completely positive tensors, yielding an equivalent conic linear program. The dual conic program over the copositive cone is constructed, and strict feasibility is established so that strong duality holds under mild conditions. Arguments proceed by contradiction and convex-combination bounding. The work is theoretical characterization rather than numerical execution. Outputs are equivalence and duality theorems.
+DOMAIN: polynomial optimization and conic programming
+STRUCTURE: other: tensor conic lifting
+DATA_OBJECT: dense matrix or tensor
+INFERENCE: deterministic or closed-form
+PROBLEM_FORM: proof or characterization
+DISTRIBUTION: none; none
+COMPLEXITY: combinatorial or NP-hard

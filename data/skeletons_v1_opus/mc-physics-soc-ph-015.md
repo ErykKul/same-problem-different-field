@@ -1,0 +1,8 @@
+MECHANISM: An expensive stochastic simulator maps a subgroup and a multi-dimensional discrete intervention setting to a noisy continuous outcome. Instead of evaluating every subgroup-by-setting combination, a two-level surrogate is built. At the lower level, for a fixed subgroup the simulator outputs at sampled settings are summarized by a linear regression whose coefficients encode the marginal effects of each intervention dimension. At the upper level, each such coefficient is treated as an unknown smooth function of subgroup descriptor features and is modeled by an independent Gaussian process with a kernel built from sums of radial basis functions over spatial and attribute features. Regression-based coefficient estimates serve as heteroscedastic noisy observations whose variance shrinks with the number of simulation replicates, and the posterior mean and variance are obtained in closed form by kernel ridge-type updates with hyperparameters tuned by marginal-likelihood maximization. Predicted outcomes for any setting are formed by plugging posterior coefficient draws into the linear response function. A sequential design loop selects the next subgroup by maximizing a posterior signal-to-noise acquisition, then selects the setting with the widest posterior credible interval, runs more simulations, and refits. This concentrates limited simulation budget where uncertainty is highest. Outputs are subgroup-specific effect estimates with calibrated uncertainty.
+DOMAIN: opioid-intervention policy simulation
+STRUCTURE: kernel method
+DATA_OBJECT: point set
+INFERENCE: bayesian posterior
+PROBLEM_FORM: estimation
+DISTRIBUTION: continuous; gaussian
+COMPLEXITY: polynomial iterative

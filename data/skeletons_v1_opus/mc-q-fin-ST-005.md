@@ -1,0 +1,8 @@
+MECHANISM: Heterogeneous inputs of several modalities, numeric sequences, free text, structured indicator vectors, and a relational graph, are each passed through a modality-specific encoder and projected into a shared embedding space. A transformer encoder-decoder fuses the embeddings through cross-modal attention to form a joint representation, and an auxiliary contrastive objective pulls embeddings of semantically aligned modalities together. Several modular output heads attach to the shared representation: an autoregressive head with a mixture-density output for continuous trajectory forecasts, a head propagating risk over the relational graph via attention to produce scores and discrete warning flags, and a generative head for textual summaries. Training minimizes a weighted sum of a squared-error-plus-quantile forecasting loss, a cross-entropy and squared-error risk loss, and a contrastive alignment loss, optimized by adaptive gradient descent over staged phases of unimodal pretraining, alignment, joint multi-task tuning, and a reinforcement-learning fine-tune whose reward trades predictive accuracy against a stability penalty. Inputs from disparate sources are aligned on a common time axis, normalized, and gap-filled by a recursive linear smoother. Evaluation reports directional accuracy and error magnitude for forecasting, class-imbalanced discrimination metrics for risk, and warning detection scores, each averaged over random seeds and benchmarked against single-task baselines.
+DOMAIN: multimodal financial forecasting and risk
+STRUCTURE: neural network
+DATA_OBJECT: dense matrix or tensor
+INFERENCE: maximum likelihood
+PROBLEM_FORM: prediction or classification
+DISTRIBUTION: continuous; gaussian mixture
+COMPLEXITY: not stated

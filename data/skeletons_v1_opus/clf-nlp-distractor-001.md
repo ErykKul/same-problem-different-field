@@ -1,0 +1,8 @@
+MECHANISM: A collection of short text records, each carrying a categorical binary label, is first normalized by stripping uninformative tokens and reducing surface variants to canonical forms. Each record is then passed through a deep pretrained sequence encoder built from stacked self-attention layers, which maps the variable-length token stream into a fixed-length dense real vector that summarizes contextual co-occurrence structure. In parallel, simpler count-based representations are formed by tabulating token frequencies and frequency-weighted token importance across the corpus, producing high-dimensional sparse vectors. The resulting feature vectors, together with side attributes, become inputs to a family of supervised classifiers, including a probabilistic generative classifier assuming conditional feature independence, a margin-maximizing linear separator, a regularized log-odds linear model, and additive tree ensembles. Each classifier is trained on a labelled subset to estimate a decision rule that separates the two categories, after the majority class is downsampled to balance category counts. A lightweight rule-matching prefilter first removes records matching known patterns, and the remainder are scored by the learned classifiers. Performance is summarized by counts of correct and incorrect assignments per category and by latency. The pipeline is a standard supervised two-class assignment over learned and tabulated feature representations.
+DOMAIN: short-message spam filtering, natural language processing
+STRUCTURE: neural network
+DATA_OBJECT: sequence or time-series
+INFERENCE: maximum likelihood
+PROBLEM_FORM: prediction or classification
+DISTRIBUTION: binary; multinomial
+COMPLEXITY: not stated

@@ -1,0 +1,5 @@
+# Can Optimal Transport Improve Federated Inverse Reinforcement Learning?
+
+## Abstract
+
+In robotics and multi-agent systems, fleets of autonomous agents often operate in subtly different environments while pursuing a common high-level objective. Directly pooling their data to learn a shared reward function is typically impractical due to differences in dynamics, privacy constraints, and limited communication bandwidth. This paper introduces an optimal transport–based approach to federated inverse reinforcement learning (IRL). Each client first performs lightweight Maximum Entropy IRL locally, adhering to its computational and privacy limitations. The resulting reward functions are then fused via a Wasserstein barycenter, which considers their underlying geometric structure. We further prove that this barycentric fusion yields a more faithful global reward estimate than conventional parameter averaging methods in federated learning. Overall, this work provides a principled and communication-efficient framework for deriving a shared reward that generalizes across heterogeneous agents and environments.

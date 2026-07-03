@@ -1,0 +1,5 @@
+# Hamiltonian Monte Carlo for (Physics) Dummies
+
+## Abstract
+
+Sampling-based inference has seen a surge of interest in recent years. Hamiltonian Monte Carlo (HMC) has emerged as a powerful algorithm that leverages concepts from Hamiltonian dynamics to efficiently explore complex target distributions. Variants of HMC are available in popular software packages, enabling off-the-shelf implementations that have greatly benefited the statistics and machine learning communities. At the same time, the availability of such black-box implementations has made it challenging for users to understand the inner workings of HMC, especially when they are unfamiliar with the underlying physical principles. We provide a pedagogical overview of HMC that aims to bridge the gap between its theoretical foundations and practical applicability. This review article seeks to make HMC more accessible to applied researchers by highlighting its advantages, limitations, and role in enabling scalable and exact Bayesian inference for complex models.

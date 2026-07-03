@@ -1,0 +1,8 @@
+MECHANISM: A weighted network of coupled second-order nonlinear oscillators is simulated, each node carrying inertia and damping and interacting with neighbors through a sinusoidal function of phase differences scaled by edge weights; removing one edge perturbs the system, and an inertia-weighted variance of node frequencies integrated over a window quantifies the resulting transient excursion. A parametric policy is built as a spectral graph convolution that propagates node features across the network and, for each edge, emits a Bernoulli gate probability and the mean and spread of a continuous adjustment; an action multiplies the edge weight by an exponential of the gated, sampled adjustment. A scalar reward rewards the reduction in the variance excursion while penalizing the count of activated edges, with a small positive payoff when no intervention is warranted. The policy parameters are optimized by a clipped importance-ratio surrogate objective evaluated on single-step episodes across many edge-removal scenarios, ascending the gradient of expected reward without a separate value baseline. From the trained policy, edges are ranked by how often and how strongly they are adjusted, and the variance objective is re-measured as edges are progressively withheld to identify a minimal effective subset. Transient and steady-state effects are related through a correlation between the excursion reduction and a flow-restoration measure.
+DOMAIN: power-grid stability and network control
+STRUCTURE: graph neural network
+DATA_OBJECT: graph or network
+INFERENCE: sampling or Monte-Carlo
+PROBLEM_FORM: control
+DISTRIBUTION: continuous; gaussian
+COMPLEXITY: polynomial iterative

@@ -1,0 +1,8 @@
+MECHANISM: For each member of a compiled set of objects, several derived quantities are computed in closed form from tabulated measurements. A characteristic angular scale is obtained as a fixed multiple of a length proportional to a measured magnitude divided by a measured distance, and its fractional uncertainty is propagated under either an independent or a perfectly-correlated assumption for the two inputs. A required instrument-separation threshold to resolve that scale follows from the diffraction relation between wavelength and aperture, and an achievable noise level follows from a radiometer-type formula in the system sensitivities, integration time, and bandwidth. Flux measurements taken at scattered frequencies are extrapolated to a common reference frequency along assumed power-law slopes, with separate ascending and descending slopes used to bound two contaminating components and select the most conservative limit. From raw interferometric visibilities, point sources are detected by fitting a fixed-shape two-dimensional kernel to images and thresholding on signal-to-noise, with upper limits from local noise otherwise. The achievable centroiding precision is expressed through a closed-form relation in the fringe spacing and signal-to-noise. Comparing required against achievable precision yields a feasibility verdict and a numerical shortfall factor.
+DOMAIN: black-hole imaging and radio interferometry
+STRUCTURE: other: closed-form scaling relations
+DATA_OBJECT: set or table
+INFERENCE: deterministic or closed-form
+PROBLEM_FORM: decision or test
+DISTRIBUTION: continuous; none
+COMPLEXITY: closed-form

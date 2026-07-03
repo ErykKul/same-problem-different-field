@@ -1,0 +1,8 @@
+MECHANISM: Given a multivariate sequence of observations indexed by time, the goal is to find, for several driver quantities, future trajectories that steer a target quantity toward a prescribed value within a tolerance. For each quantity a one-step recursive predictor is fitted; rolled forward it projects all quantities into the future. To represent uncertainty, several conditional-quantile predictors are fitted per quantity by minimizing an asymmetric piecewise-linear loss, so that a chosen quantile level selects a plausible value. A candidate solution is encoded as a vector whose entries are quantile levels, one per quantity per future step, thereby indexing a particular projected trajectory. A pairwise lagged-regression significance test prunes the set of driver-target links to those whose inclusion significantly improves predictive fit, restricting the search to genuinely informative drivers. A population of candidate vectors is then evolved by repeatedly selecting fitter candidates, recombining pairs, mutating entries, and injecting random newcomers. Fitness aggregates three objectives: distance between the resulting projected target and the goal, dissimilarity between the altered and original sequences, and the negative log-likelihood of the altered trajectory. Iteration continues across generations until a candidate meets the tolerance or a generation budget is exhausted. The surviving candidates give feasible interventions and their associated trajectories.
+DOMAIN: time-series counterfactual explanation, forecasting
+STRUCTURE: numerical optimization
+DATA_OBJECT: sequence or time-series
+INFERENCE: deterministic optimization
+PROBLEM_FORM: simulation or generation
+DISTRIBUTION: continuous; nonparametric
+COMPLEXITY: combinatorial or NP-hard

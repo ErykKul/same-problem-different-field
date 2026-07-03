@@ -1,0 +1,5 @@
+# Euclidean Ideal Point Estimation From Roll-Call Data via Distance-Based Bipartite Network Models
+
+## Abstract
+
+Conventional ideal point models rely on Gaussian or quadratic utility functions that violate the triangle inequality, producing non-metric distances that complicate geometric interpretation and undermine clustering and dispersion-based analyses. We introduce a distance-based alternative that adapts the Latent Space Item Response Model (LSIRM) to roll-call data, treating legislators and bills as nodes in a bipartite network jointly embedded in a Euclidean metric space. Through controlled simulations, Euclidean LSIRM consistently recovers latent coalition structure with superior cluster separation relative to existing methods. Applied to the 118th U.S. House, the model improves vote prediction and yields bill embeddings that clarify cross-cutting issue alignments. The results show that restoring metric structure to ideal point estimation provides a clearer and more coherent inference about party cohesion, factional divisions, and multidimensional legislative behavior.

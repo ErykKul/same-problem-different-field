@@ -1,0 +1,8 @@
+MECHANISM: A value function over a continuous state is computed by backward recursion over a finite sequence of stages. At the terminal stage the function equals a known terminal payoff. At each earlier stage the function is defined as a pointwise combination of an immediate term and the conditional expectation of the next stage's function given the current state. The continuous function is represented at every stage as a finite weighted sum of orthogonal basis polynomials, with coefficients fixed by interpolating the function values at a fixed set of nodal points. Because the function is a linear combination of basis polynomials, the conditional expectation reduces to a precomputed array of expected basis-polynomial values conditioned on each nodal point. These conditional-moment quantities depend only on the transition law and not on the function, so they are computed once in an offline phase by quadrature, transform inversion, or stochastic averaging. In the online phase the recursion only evaluates the combination rule at the nodes and applies a linear map to recover the next coefficient vector. The approximation error is bounded by decomposing it into an interpolation term, a recursion-propagation term, and a moment-estimation term, with explicit decay rates under analyticity assumptions. The same precomputed moments yield many outputs by reusing them with different terminal terms.
+DOMAIN: derivative pricing and optimal stopping in finance
+STRUCTURE: spectral or transform
+DATA_OBJECT: continuous function or field
+INFERENCE: deterministic or closed-form
+PROBLEM_FORM: optimization
+DISTRIBUTION: continuous; nonparametric
+COMPLEXITY: convergence rate

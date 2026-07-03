@@ -1,0 +1,8 @@
+MECHANISM: Many high-dimensional observation vectors are stacked as rows of a data matrix, each paired with a continuous scalar target. An orthogonal transformation is applied to decorrelate the variables: the directions of maximal variance are extracted, giving a loading matrix of orthonormal axes and a score matrix of low-dimensional projections, thereby compressing the inputs. Continuous targets are then predicted from either the raw vectors or the reduced scores by several regressors. A linear predictor fits coefficients by least squares relating intensities to the target. A margin-based regressor fits a flat function tolerating deviations within a tube, formulated as a constrained quadratic program with slack variables and solved through its Lagrangian dual; a kernelized version maps inputs into a higher-dimensional feature space via polynomial or radial-basis kernels to capture nonlinearity. A layered feed-forward network with one hidden layer is trained by error back-propagation using a curvature-aware gradient-descent rule, with transfer functions and hidden-unit counts chosen by trial. Models are trained with leave-one-group-out resampling and assessed on a held-out group. Predictive quality is quantified by mean-squared error and mean absolute error between predicted and reference targets, and the dimensionality-reduction preprocessing is compared against its absence across all regressors.
+DOMAIN: analytical chemistry spectroscopic quantification
+STRUCTURE: dense linear algebra
+DATA_OBJECT: dense matrix or tensor
+INFERENCE: deterministic or closed-form
+PROBLEM_FORM: prediction or classification
+DISTRIBUTION: continuous; none
+COMPLEXITY: closed-form

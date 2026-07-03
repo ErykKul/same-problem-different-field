@@ -1,0 +1,5 @@
+# Stronger Approximation Guarantees for Non-Monotone γ-Weakly DR-Submodular Maximization
+
+## Abstract
+
+Maximizing submodular objectives under constraints is a fundamental problem in machine learning and optimization. We study the maximization of a nonnegative, non-monotone $\gamma$ -weakly DR-submodular function over a down-closed convex body. Our main result is an approximation algorithm whose guarantee depends smoothly on $\gamma$ ; in particular, when $\gamma=1$ (the DR-submodular case) our bound recovers the $0.401$ approximation factor, while for $\gamma<1$ the guarantee degrades gracefully and, it improves upon previously reported bounds for $\gamma$ -weakly DR-submodular maximization under the same constraints. Our approach combines a Frank–Wolfe–guided continuous-greedy framework with a $\gamma$ -aware double-greedy step, yielding a simple yet effective procedure for handling non-monotonicity. This results in state-of-the-art guarantees for non-monotone $\gamma$ -weakly DR-submodular maximization over down-closed convex bodies.

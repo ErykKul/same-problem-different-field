@@ -1,0 +1,8 @@
+MECHANISM: For each step of an ordered series, a fixed-length tuple of summary values is observed, and a binary target is defined by comparing one value of the next step against a value of the current step. From the raw tuples a feature vector is assembled in three groups: the raw current values; windowed statistics over a trailing window, namely extrema-based bands, moving-average-plus-standard-deviation bands, and moving-average-plus-range bands; and within-step log-ratios of the current values. The data are kept in chronological order and split into an earlier training portion and a later test portion, with a one-step-ahead rolling scheme so each prediction uses only past information. Several distinct supervised classifiers, spanning axis-aligned partitioning, distance-based, linear, additive tree ensembles, and a feedforward network, are each fit on the training features to produce a point class prediction on the test features. Separate models are trained for each of several target definitions, holding the feature set fixed. Predictive quality is scored by overall agreement and by a correlation coefficient that corrects for class imbalance. To attribute the prediction to features, a cooperative-game value is computed that averages each feature's marginal contribution over feature subsets, and absolute attributions are aggregated to rank feature importance. Feature groups are added incrementally to assess which group drives performance.
+DOMAIN: financial market index movement forecasting
+STRUCTURE: other: tabular supervised learning
+DATA_OBJECT: set or table
+INFERENCE: frequentist point estimate
+PROBLEM_FORM: prediction or classification
+DISTRIBUTION: binary; none
+COMPLEXITY: polynomial iterative

@@ -1,0 +1,5 @@
+# Objective Estimation of Spatially Variable Parameters of Epidemic Type Aftershock Sequence Model: Application to California
+
+## Abstract
+
+The ETAS model is widely employed to model the spatio-temporal distribution of earthquakes, generally using spatially invariant parameters. We propose an efficient method for the estimation of spatially varying parameters, using the Expectation-Maximization algorithm and spatial Voronoi tessellation ensembles. We use the Bayesian Information Criterion to rank inverted models given their likelihood and complexity and select the best models to compute an ensemble model at any location. Using a synthetic catalog, we check that the proposed method correctly inverts the known parameters. We apply the method to earthquakes in the ANSS catalog within a polygon around California for 1981-2015. The results indicate significant spatial variation of the parameters; the efficiency of earthquakes to trigger future ones positively correlates with surface heat flow, and triggering is mostly dominated by small earthquakes.

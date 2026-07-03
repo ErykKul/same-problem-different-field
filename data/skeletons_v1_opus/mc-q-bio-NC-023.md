@@ -1,0 +1,8 @@
+MECHANISM: A large table of entities is partitioned into a small number of exposure groups, and several real-valued or count outcome quantities are compared across groups. For each outcome, a linear model regresses the outcome on a set of nuisance covariates by ordinary least squares, and the residuals are retained as covariate-adjusted scores. These residuals are mapped through a rank-based transformation that replaces each value by the inverse normal quantile of its rank, producing approximately normal scores. Distributional assumptions (equal variance, normality of residuals) are checked, and a homogeneity-of-variance test decides whether a standard or a heteroscedasticity-robust variant of the group-mean comparison is used. An omnibus test of equality of group means is computed as a ratio of between-group to within-group variance, referred to its sampling distribution to yield a p-value. When the omnibus test rejects, all pairwise group differences are examined with a multiple-comparison-corrected procedure controlling the family-wise error rate. Associations between two categorical factors are separately assessed by comparing observed and expected cell counts with a discrepancy statistic on a contingency table, with standardized residuals indicating which cells drive the association. Group means with confidence intervals are reported, and significance is judged against a fixed threshold; effects are interpreted as associational rather than causal.
+DOMAIN: cognitive neuroscience, psychopharmacology
+STRUCTURE: other: linear models and analysis of variance
+DATA_OBJECT: set or table
+INFERENCE: frequentist point estimate
+PROBLEM_FORM: decision or test
+DISTRIBUTION: continuous; gaussian
+COMPLEXITY: closed-form

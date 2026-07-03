@@ -1,0 +1,5 @@
+# Local Scale Invariance in Quantum Theory: A Non-Hermitian Pilot-Wave Formulation
+
+## Abstract
+
+We show that Weyl’s abandoned idea of local scale invariance has a natural realization at the quantum level in pilot-wave (de Broglie-Bohm) theory. We obtain the Weyl covariant derivative by complexifying the electromagnetic gauge coupling parameter. The resultant non-hermiticity has a natural interpretation in terms of local scale invariance in pilot-wave theory. The conserved current density is modified from $|\psi|^{2}$ to the local scale invariant, trajectory-dependent ratio $|\psi|^{2}/\mathds{1}^{2}[\mathcal{C}]$ , where $\mathds{1}[\mathcal{C}]$ is a scale factor that depends on the pilot-wave trajectory $\mathcal{C}$ in configuration space. Our approach is general, and we implement it for the Schrödinger, Pauli, and Dirac equations coupled to an external electromagnetic field. We also implement it in quantum field theory for the case of a quantized axion field interacting with a quantized electromagnetic field. We discuss the equilibrium probability density and show that the corresponding trajectories are unique.

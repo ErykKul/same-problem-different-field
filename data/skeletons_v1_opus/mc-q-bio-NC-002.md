@@ -1,0 +1,8 @@
+MECHANISM: A two-layer recurrent system couples a large group of visible units to a smaller group of hidden units through a single dense weight matrix, with no within-layer connections. Continuous-time relaxation drives each hidden unit toward a thresholded step function of its weighted input from the visible units, and each visible unit toward a weighted sum of active hidden units. Eliminating the visible units yields an effective fixed-point equation among hidden units whose coupling matrix is the normalized inner-product matrix of the weight columns. When the visible group greatly outnumbers the hidden group this coupling concentrates around the identity plus a vanishing random perturbation, decoupling the hidden units so that, with the threshold set at one half, every binary configuration of hidden units becomes a stable fixed point, giving capacity exponential in the hidden count. A concentration argument bounds the probability that the random perturbation flips any unit, and this bound approaches one exponentially as the visible count grows. A timescale separation argument shows the basins of attraction are large under additive input noise. For learning real correlated patterns the weight matrix and threshold are fit by gradient descent minimizing squared reconstruction error of stored targets, with the step function smoothed for differentiability. Recall from a noisy cue is performed by running the relaxation to its nearest fixed point.
+DOMAIN: associative memory / theoretical neuroscience
+STRUCTURE: neural network
+DATA_OBJECT: dense matrix or tensor
+INFERENCE: deterministic optimization
+PROBLEM_FORM: reconstruction or denoising
+DISTRIBUTION: binary; gaussian
+COMPLEXITY: finite-sample bound

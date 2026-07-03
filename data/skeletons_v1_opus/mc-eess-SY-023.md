@@ -1,0 +1,8 @@
+MECHANISM: For each of several entities, an annual scalar observation is collected over a fixed historical window, and a companion set of compositional shares summing to one is aggregated into two complementary indices characterizing each entity's structural profile. Each entity is classified into one of three categorical profiles by thresholding the averaged indices. The scalar series is preprocessed by interpolating missing values and screening outliers via standardized-score and interquartile diagnostics, and stationarity is checked by differencing and unit-root style tests. Several parametric time-series models are then fit to each series on a training partition: a linear autoregressive-with-differencing-and-moving-average model, its seasonally-extended variant, an additive decomposable trend-changepoint-periodicity model, and an exponentially-weighted smoothing model with trend. Each model's parameters are tuned by grid search and validated by rolling-origin cross-validation that preserves temporal ordering, with accuracy scored by mean absolute error, root-mean-squared error, percentage error, and a coefficient-of-determination. The lowest-error model per entity is selected, retrained on the full history, and used to extrapolate multi-step-ahead point forecasts recursively over a long future horizon, with prediction intervals computed to quantify uncertainty. Forecast trajectories across entities are compared to assess divergence from target endpoints.
+DOMAIN: emissions forecasting and energy systems analysis
+STRUCTURE: other: autoregressive time-series modeling
+DATA_OBJECT: sequence or time-series
+INFERENCE: maximum likelihood
+PROBLEM_FORM: prediction or classification
+DISTRIBUTION: continuous; gaussian
+COMPLEXITY: polynomial iterative

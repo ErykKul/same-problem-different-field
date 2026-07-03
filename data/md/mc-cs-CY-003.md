@@ -1,0 +1,5 @@
+# Mapping Human Anti-collusion Mechanisms to Multi-agent AI Systems
+
+## Abstract
+
+As multi-agent AI systems become increasingly autonomous, evidence shows they can develop collusive strategies similar to those long observed in human markets and institutions. While human domains have accumulated centuries of anti-collusion mechanisms, it remains unclear how these can be adapted to AI settings. This paper addresses that gap by (i) developing a taxonomy of human anti-collusion mechanisms, including sanctions, leniency & whistleblowing, monitoring & auditing, market design, and governance and (ii) mapping them to potential interventions for multi-agent AI systems. For each mechanism, we propose implementation approaches. We also highlight open challenges, such as the attribution problem (difficulty attributing emergent coordination to specific agents), identity fluidity (agents being easily forked or modified), the boundary problem (distinguishing beneficial cooperation from harmful collusion), and adversarial adaptation (agents learning to evade detection). Keywords: Collusion, Multi-Agent AI, AI Safety, Anti-collusion Mechanisms, Human Domains

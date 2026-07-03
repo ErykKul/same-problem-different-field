@@ -1,0 +1,5 @@
+# On IDA-PBC with Maximum Energy Shapeability
+
+## Abstract
+
+Interconnection and Damping Assignment Passivity-Based Control (IDA-PBC) is a well-established stabilization technique for affine nonlinear systems. However, its application is generally hindered by the requirement of solving a set of partial differential equations (PDEs), i.e., the so-called matching equation. This paper introduces the notion of maximum energy shapeability which describes the scenario that the homogeneous part of the matching equation admits $m$ independent solutions with $m$ the dimension of the control input. We demonstrate that the maximum energy shapeability enables a systematic procedure for the IDA-PBC design by transforming the matching equation into a set of easier-to-solve PDEs. Sufficient conditions for maximum energy shapeability are also provided. It is shown that some existing constructive IDA-PBC designs actually implicitly exploit the maximum energy shapeability. The proposed procedure for the IDA-PBC design is illustrated with the magnetic levitation system.

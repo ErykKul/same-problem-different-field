@@ -1,0 +1,8 @@
+MECHANISM: A set of samples of the same substance is prepared at several characteristic length scales, and for each sample two geometric quantities are determined: an outer boundary area per unit mass and a total internal-plus-boundary area per unit mass obtained from a finer structural measurement, whose difference gives an internal interface area. A bulk-relative excess of a measured scalar energy quantity is obtained for each sample by subtracting a bulk reference value from the measured value. This excess is modeled as a linear combination of the two area quantities, with the unknown coefficients being the boundary energy per unit area and the interface energy per unit area. With two unknowns and several samples the system is overdetermined, so coefficients are extracted both by solving the two-equation systems for pairs of samples and by an aggregate linear fit of the excess against the boundary area. The pairwise solutions are averaged and dispersion is summarized as a multiple of the standard deviation. The fit indicates the interface coefficient is near zero, so a final single-coefficient linear regression of the excess on boundary area yields the boundary energy estimate with its uncertainty. The result is a small-dimensional linear parameter estimation from a handful of experimental measurements.
+DOMAIN: mineral surface thermodynamics, planetary materials
+STRUCTURE: dense linear algebra
+DATA_OBJECT: set or table
+INFERENCE: frequentist point estimate
+PROBLEM_FORM: estimation
+DISTRIBUTION: continuous; gaussian
+COMPLEXITY: closed-form

@@ -1,0 +1,5 @@
+# Bitcoin Price Prediction using Machine Learning and Combinatorial Fusion Analysis
+
+## Abstract
+
+In this work, we propose to apply a new model fusion and learning paradigm, known as Combinatorial Fusion Analysis (CFA), to the field of Bitcoin price prediction. Price prediction of financial product has always been a big topic in finance, as the successful prediction of the price can yield significant profit. Every machine learning model has its own strength and weakness, which hinders progress toward robustness. CFA has been used to enhance models by leveraging rank-score characteristic (RSC) function and cognitive diversity in the combination of a moderate set of diverse and relatively well-performed models. Our method utilizes both score and rank combinations as well as other weighted combination techniques. Key metrics such as RMSE and MAPE are used to evaluate our methodology performance. Our proposal presents a notable MAPE performance of 0.19%. The proposed method greatly improves upon individual model performance, as well as outperforms other Bitcoin price prediction models.

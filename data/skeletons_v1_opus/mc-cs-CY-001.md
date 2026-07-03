@@ -1,0 +1,8 @@
+MECHANISM: A population of interacting generative decision-makers is run as a controlled simulation in which each, in turn, selects one column from a fixed two-row payoff array under an enforced antagonistic trade-off, and the selected index is recorded as a behavioral measure that is then compared across conditions by group-wise statistical tests. The core trainable component optimizes a discrete library of candidate text perturbations together with a categorical sampling distribution over them, defined as a softmax over preference logits with a temperature. At each iteration a small group of indices is sampled from the current distribution; for each, a short rollout is executed with the perturbation appended to the agent's stored internal notes, after which a scalar probe in the unit interval is queried and negated to form a reward. A centered relative advantage is computed by subtracting the group-mean reward, and each logit is incremented along its averaged advantage by a learning rate, so persistently advantageous items gain probability. The lowest-reward items are then rewritten into refreshed candidates, alternating parameter updates with text refinement. After convergence the logits and library are frozen and perturbations are sampled at deployment without further optimization. A gating defense that restores or down-weights protected state is evaluated as a counter-condition.
+DOMAIN: language-model agent safety and social bias
+STRUCTURE: other: stochastic policy optimization
+DATA_OBJECT: set or table
+INFERENCE: sampling or Monte-Carlo
+PROBLEM_FORM: optimization
+DISTRIBUTION: ordinal; multinomial
+COMPLEXITY: not stated

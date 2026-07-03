@@ -1,0 +1,8 @@
+MECHANISM: A two-level dynamical system is defined in which a lower level is a vector of continuous quantities evolving by an update map, and an upper level is a collection of functions each determined from the lower level by a fixed bridge map. The construction first characterizes a degenerate regime: when the upper-level functions enter the lower update only through their bridge-determined values, the upper level can be substituted away and is shown, by direct substitution, to be redundant, a property formalized as a short lemma. To escape this regime, an additional symbolic object is introduced: an integer index sequence that selects and composes the upper-level functions into algebraic expressions, where pairs of such expressions define a discrepancy quantity evaluated at auxiliary inputs. The key formal point is that the index sequence is not determined by the lower level, so it can be endowed with its own update law over the discrete symbols. The discrepancy is therefore driven independently by both the lower-level update and the symbolic update, and the lower level is steered to reduce this discrepancy. This yields a coupled pair of laws, one continuous over real-valued states and one discrete over symbol sequences, and it is argued and characterized that only such an independent symbolic law makes upper-to-lower influence non-redundant. The remainder applies this structure conceptually to define when a system exhibits genuine higher-level causal efficacy.
+DOMAIN: cognitive science, philosophy of agency
+STRUCTURE: finite-state machine
+DATA_OBJECT: sequence or time-series
+INFERENCE: deterministic or closed-form
+PROBLEM_FORM: proof or characterization
+DISTRIBUTION: none; none
+COMPLEXITY: not stated

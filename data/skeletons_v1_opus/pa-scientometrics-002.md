@@ -1,0 +1,8 @@
+MECHANISM: A growing relational structure is reconstructed from time-stamped events in which entities acquire new links, and the goal is to characterize the rule governing where new links attach. The model posits that the rate at which an entity gains a link is proportional to the product of an attachment function of its current degree and an entity-specific latent fitness. The attachment function over degree values and the fitness of every entity are estimated jointly and nonparametrically by maximizing the log-likelihood of the observed link-arrival sequence with regularization for smoothness and stability, under normalization constraints fixing a reference value and the mean fitness. The estimated attachment function is then fit to a log-linear power form to extract a single exponent whose sign and magnitude diagnose whether high-degree entities are favored and the resulting tail regime. Aggregate diagnostics are computed over time: a total competitiveness equal to the summed unnormalized attachment-times-fitness over present entities, its per-entity average, and the average fitness, each tracked across consecutive epochs to separate growth driven by new entrants from rising intrinsic quality. The estimation is repeated over disjoint time windows for two distinct relational structures, and the heavy-tailed fitness distributions and exponents are compared.
+DOMAIN: scientometric citation and coauthorship networks
+STRUCTURE: graphical models
+DATA_OBJECT: graph or network
+INFERENCE: maximum likelihood
+PROBLEM_FORM: estimation
+DISTRIBUTION: heavy-tailed; nonparametric
+COMPLEXITY: not stated

@@ -1,0 +1,5 @@
+# Identification and Estimation under Multiple Versions of Treatment: Mixture-of-Experts Approach
+
+## Abstract
+
+The Stable Unit Treatment Value Assumption (SUTVA) includes the condition that there are no multiple versions of treatment in causal inference. Though we could not control the implementation of treatment in observational studies, multiple versions may exist in the treatment. It has been pointed out that ignoring such multiple versions of treatment can lead to biased estimates of causal effects, but a causal inference framework that explicitly deals with the unbiased identification and estimation of version-specific causal effects has not been fully developed yet. Thus, obtaining a deeper understanding for mechanisms of the complex treatments is difficult. In this paper, we introduce the Mixture-of-Experts framework into causal inference and develop a methodology for estimating the causal effects of latent versions. This approach enables explicit estimation of version-specific causal effects even if the versions are not observed. Numerical experiments demonstrate the effectiveness of the proposed method.

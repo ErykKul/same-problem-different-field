@@ -1,0 +1,8 @@
+MECHANISM: A controlled agent interacts with a simulated environment over a bounded sequence of alternating turns, where at each turn a state vector and an exogenous context vector are presented and the agent emits a structured action selected from a small set of typed schemas. The environment advances the continuous state by a discrete-time update rule derived from rigid-body kinematics, integrating velocity and a force/orientation term over a fixed step, and adds zero-mean multivariate Gaussian disturbance with a fixed covariance. A deterministic checker validates each emitted action against schema constraints, alternation rules, and feasibility bounds, and a deterministic observation is synthesized from the updated state with bounded stochastic perturbations. An episode terminates on goal completion, constraint violation, context degradation, or step-budget exhaustion, yielding a binary success outcome. A large corpus of such episodes is generated under fixed seeds, and many candidate agents are run on a fixed subset under deterministic decoding. Each episode is scored on several normalized sub-criteria, and these are combined into a single quality value as a fixed convex weighted sum. Two further efficiency-normalized values are computed by dividing the adjusted quality by elapsed time and by emitted token count. Aggregated scores are used to rank and compare the candidate agents and to quantify degradation under adverse context settings.
+DOMAIN: autonomous aerial vehicle control over communication networks
+STRUCTURE: other: agent-environment simulation loop
+DATA_OBJECT: sequence or time-series
+INFERENCE: deterministic or closed-form
+PROBLEM_FORM: simulation or generation
+DISTRIBUTION: continuous; gaussian
+COMPLEXITY: closed-form

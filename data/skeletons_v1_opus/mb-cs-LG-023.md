@@ -1,0 +1,8 @@
+MECHANISM: Given two finite sets of multi-attribute records drawn from a common population but with mismatched empirical distributions, the goal is to assign nonnegative per-record weights, many forced to zero, so that the reweighted first set matches the second. A discriminative model is trained to separate records of one set from the other, and per-attribute importance scores are extracted from it. These importance scores are mapped to per-attribute weights through a temperature-controlled normalized negative-exponential transform, so that highly discriminating attributes receive small weights. A second discriminative model is then trained repeatedly under a positive-versus-unlabeled labeling scheme using cross-validation, with both record weights and attribute weights applied. At each round the held-out separability is measured by an area-under-curve score, and the records most confidently assigned to the minority set have their weights set to zero. Iteration continues until the separability score drops to chance, indicating the two sets are no longer distinguishable. The final record and attribute weights are returned. Distributional closeness is independently quantified by a weighted kernel-based discrepancy between the two sets using a radial kernel whose per-attribute contributions are also weighted. Downstream predictive accuracy and the count of discarded records are evaluated as a trade-off governed by the temperature.
+DOMAIN: debiasing of non-representative survey and tabular data
+STRUCTURE: other: iterative discriminative reweighting
+DATA_OBJECT: set or table
+INFERENCE: deterministic optimization
+PROBLEM_FORM: other: distribution alignment
+DISTRIBUTION: binary; nonparametric
+COMPLEXITY: polynomial iterative

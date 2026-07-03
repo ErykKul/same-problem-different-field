@@ -1,0 +1,8 @@
+MECHANISM: An observed sequence of discrete symbols from a large alphabet is paired with a parallel hidden sequence of discrete labels from a small alphabet. The hidden process is modeled as a Markov chain whose states encode short fixed-length blocks of consecutive labels, so that transitions enforce local consistency constraints and only legal blocks are retained, reducing the state space. Transition probabilities are estimated as ratios of substring counts in a training corpus. Emission probabilities link a label-block to the central symbol given a flanking window of neighboring symbols; an assumption of conditional independence factorizes the window likelihood into a product of single-position conditional probabilities, yielding a propensity ratio with a window correction. Probabilities are estimated from counts, with a pseudo-count smoothing scheme that blends empirical counts toward a background distribution weighted by the square root of the total count. The window width is treated as a tunable hyperparameter selected by accuracy. Given the model, the hidden labels are inferred two ways: by a forward-backward recursion giving marginal posterior probabilities at each position, and by a dynamic-programming search for the single highest-probability hidden path. The geometric-duration assumption is partially corrected by adjusting a self-transition rate or adding a few extra states.
+DOMAIN: protein secondary structure prediction, structural biology
+STRUCTURE: graphical models
+DATA_OBJECT: sequence or time-series
+INFERENCE: bayesian posterior
+PROBLEM_FORM: prediction or classification
+DISTRIBUTION: count; multinomial
+COMPLEXITY: polynomial iterative

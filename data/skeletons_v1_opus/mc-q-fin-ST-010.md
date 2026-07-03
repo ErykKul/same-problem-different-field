@@ -1,0 +1,8 @@
+MECHANISM: Each entity is scored for a binary adverse outcome over a future horizon by combining the outputs of several pre-existing predictive models that draw on different, asynchronously updated information sources. The continuous probability outputs of the base models are mapped through a log-odds transform and standardized to a common scale, and these transformed outputs are treated as features for a second-stage model. The second stage is a linear-in-log-odds model whose coefficients weight each base-model feature plus a few categorical group indicators, fitted to a labeled binary target. The procedure is split into two temporal layers: a static layer estimates the probability anchored to a fixed annual reference date, and a dynamic layer propagates that estimate to intermediate dates by exponential interpolation between successive anchors. To incorporate higher-frequency signals, one base feature is replaced by an exponentially weighted moving average over recent periods, with the decay parameter calibrated on held-out data. The fitted continuous probabilities are then discretized into ordered categories using a fixed scale, with group-specific additive offsets applied before discretization. The combined estimator is evaluated by discrimination and agreement metrics across temporal, cross-sectional, and resampled partitions of the data, and compared against the individual base models.
+DOMAIN: credit risk scoring in finance
+STRUCTURE: other: generalized linear model
+DATA_OBJECT: set or table
+INFERENCE: maximum likelihood
+PROBLEM_FORM: prediction or classification
+DISTRIBUTION: binary; logistic
+COMPLEXITY: not stated

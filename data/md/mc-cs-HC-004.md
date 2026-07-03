@@ -1,0 +1,5 @@
+# Progressive Ideation using an Agentic AI Framework for Human-AI Co-Creation
+
+## Abstract
+
+. The generation of truly novel and diverse ideas is important for contemporary engineering design, yet it remains a significant cognitive challenge for novice designers. Current ’single-spurt’ AI systems exacerbate this challenge by producing a high volume of semantically clustered ideas. We propose MIDAS (Meta-cognitive Ideation through Distributed Agentic AI System), a novel framework that replaces the single-AI paradigm with a distributed ’team’ of specialized AI agents designed to emulate the human meta-cognitive ideation workflow. This agentic system progressively refines ideas and assesses each one for both global novelty (against existing solutions) and local novelty (against previously generated ideas). MIDAS, therefore, demonstrates a viable and progressive paradigm for true human-AI co-creation, elevating the human designer from a passive filterer to a participatory, active, collaborative partner.

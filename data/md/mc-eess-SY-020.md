@@ -1,0 +1,5 @@
+# Spatially-Coupled Network RNA Velocities: A Control-Theoretic Perspective
+
+## Abstract
+
+RNA velocity is an important model that combines cellular spliced and unspliced RNA counts to infer dynamical properties of various regulatory functions. Despite its wide applicability and many variants used in practice, the model has not been adequately designed to directly account for both intracellular gene regulatory network interactions and spatial intercellular communications. Here, we propose a new RNA velocity approach that jointly and directly captures two new network structures: an intracellular gene regulatory network (GRN) and an intercellular interaction network that captures interactions between (neighboring) cells, with relevance to spatial transcriptomics. We theoretically analyze this two-level network system through the lens of control and consensus theory. In particular, we investigate network equilibria, stability, cellular network consensus, and optimal control approaches for targeted drug intervention.

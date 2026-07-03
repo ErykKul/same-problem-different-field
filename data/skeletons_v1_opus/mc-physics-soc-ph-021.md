@@ -1,0 +1,8 @@
+MECHANISM: The task is to choose a fixed-size subset of nodes from a finite candidate set so as to maximize a benefit while penalizing interaction between chosen nodes. Pairwise distances between candidates are first computed as shortest paths over a weighted graph, and an interaction weight for each pair is derived by exponentially decaying with that distance. The selection is then encoded as a binary vector and the objective is written as a quadratic form: a linear term rewarding the summed per-node benefit, a quadratic term penalizing the summed interaction weights of co-selected pairs, and a quadratic penalty enforcing the cardinality target. Minimizing this energy over binary vectors is the core problem. Three solution strategies are compared on the same instance: a greedy rule that sorts nodes by individual benefit and takes the top ones while ignoring interactions; an exact branch-and-bound search that linearizes the products with auxiliary variables and returns the global optimum; and a stochastic annealing-style sampler that warm-starts from the greedy choice, partially randomizes the state, then relaxes toward low energy and draws many samples. Solutions are scored by total benefit, total interaction penalty, and run time, and the trade-off between benefit and penalty is traced as a frontier over the sampled configurations.
+DOMAIN: urban logistics facility location and supply chain design
+STRUCTURE: other: quadratic binary optimization
+DATA_OBJECT: graph or network
+INFERENCE: deterministic optimization
+PROBLEM_FORM: optimization
+DISTRIBUTION: binary; none
+COMPLEXITY: combinatorial or NP-hard

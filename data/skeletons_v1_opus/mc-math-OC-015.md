@@ -1,0 +1,8 @@
+MECHANISM: A global minimization of a possibly non-convex, non-smooth objective over a Euclidean space or a space of probability measures is recast as a stochastic optimal control problem. A state follows a controlled diffusion driven by additive noise, and the cost combines the terminal objective with a quadratic penalty on the control scaled by a small regularization parameter. Dynamic programming yields a nonlinear Hamilton-Jacobi-Bellman partial differential equation for the value function. An exponential change of variables linearizes this equation into a backward heat equation, whose solution admits a probabilistic representation as a log-expectation of the exponentiated negative objective evaluated along noise paths. Differentiating this representation, via an integration-by-parts identity, gives the optimal feedback control in closed expectation form, which is then simulated by Monte-Carlo sampling of trajectories. For the measure setting, a mean-field control problem governed by a master equation is approximated by a finite interacting-particle system, reducing it to a high-dimensional instance of the same linearizable problem. Convergence theorems establish that, as the regularization parameter vanishes and the particle count grows, the control value approaches the true global minimum, with an explicit error bound of order epsilon times its log plus an inverse-particle term, proven using bridge-process estimates and Holder continuity.
+DOMAIN: stochastic control for global optimization
+STRUCTURE: MCMC sampling
+DATA_OBJECT: continuous function or field
+INFERENCE: sampling or Monte-Carlo
+PROBLEM_FORM: optimization
+DISTRIBUTION: continuous; gaussian
+COMPLEXITY: convergence rate

@@ -1,0 +1,12 @@
+MECHANISM: none
+DOMAIN: computational theory
+STRUCTURE: none
+DATA_OBJECT: none
+INFERENCE: none
+PROBLEM_FORM: characterization
+DISTRIBUTION: none
+COMPLEXITY: none
+DATA_AVAILABILITY: none
+CODE_AVAILABILITY: none
+PREREGISTRATION: none
+EVIDENCE_BASIS: review-or-position

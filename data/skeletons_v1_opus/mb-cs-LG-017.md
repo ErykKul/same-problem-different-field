@@ -1,0 +1,8 @@
+MECHANISM: Start from a pretrained generative parametric model that maps noised inputs and a conditioning token to a predicted perturbation field, learned over many layers with attention-style mixing. The goal is to weaken the model's response to one designated conditioning concept while preserving its behavior on all others. Construct a fixed, broadly spread reference set of alternative conditioning concepts. Define a contrastive objective as the log-ratio (difference of logs) of two expected squared-error terms: one measuring the predictor's deviation when driven toward an alternative-aligned input and one measuring deviation on the target-aligned input under the same conditioning context. Minimizing this objective performs gradient ascent that degrades the target-conditioned prediction while gradient descent spreads probability mass across the diverse alternatives rather than collapsing onto a single substitute. To limit collateral damage, treat the choice of which internal parameter block to update as a discrete selection problem: update each candidate block in isolation, generate outputs, score each by a suppression measure and a retention measure, and pick the block minimizing a combined criterion. Apply all updates only to the selected block while freezing the rest. Evaluate across multiple benchmarks and model families, with ablations isolating the contributions of diversity, the contrastive term, and the localization step.
+DOMAIN: generative image models, concept unlearning
+STRUCTURE: neural network
+DATA_OBJECT: dense matrix or tensor
+INFERENCE: deterministic optimization
+PROBLEM_FORM: optimization
+DISTRIBUTION: continuous; gaussian
+COMPLEXITY: polynomial iterative

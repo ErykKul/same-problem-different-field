@@ -1,0 +1,8 @@
+MECHANISM: A collection of entities each yields one or more observations whose conditional density given a latent parameter vector is assumed known. The goal is to estimate the unknown distribution of the latent parameter vectors by maximizing the product over entities of the marginal likelihood obtained by integrating the conditional density against that distribution. It is exploited that the maximizer is discrete with at most as many support locations as there are entities, reducing an infinite-dimensional problem to finding a finite set of support locations and nonnegative weights summing to one. The procedure alternates two subproblems until the log-likelihood stops improving. First, for a fixed set of candidate locations, it solves a convex problem for the optimal weights using an interior-point scheme that applies a relaxed Newton iteration to the first-order optimality conditions. Second, it improves the locations by an adaptive refinement: low-weight candidates are pruned, then around each surviving location new candidate points are spawned on a shrinking hyper-rectangle and any too close or out of bounds are discarded. Each pass is guaranteed to not decrease the objective. Convergence to a global optimum is checked via a directional-derivative criterion that also bounds the optimality gap. The initial candidate set is a low-discrepancy covering of the bounded parameter region. Resulting weighted support points serve as a prior for subsequent posterior-mean estimates per entity.
+DOMAIN: population pharmacokinetics and pharmacometric modeling
+STRUCTURE: numerical optimization
+DATA_OBJECT: point set
+INFERENCE: maximum likelihood
+PROBLEM_FORM: estimation
+DISTRIBUTION: continuous; nonparametric
+COMPLEXITY: consistency

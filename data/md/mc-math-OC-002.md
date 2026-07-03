@@ -1,0 +1,5 @@
+# The true detection probability versus the subjective detection probability of a uniformly optimal search plan
+
+## Abstract
+
+This article investigates the difference between the true detection probability and the subjective probability of a uniformly optimal search plan. Its main contributions are multi-fold. First, it provides a set of examples to show that, in terms of the true detection probability, the uniformly optimal search plan may or may not be optimal. Secondly, it establishes that the true detection probability of the uniformly optimal search plan based on a composite prior can be less than that of the composite uniformly search plan based on different priors. Next, it argues that an open problem is unsolvable. Finally, it shows that the true detection probability of the uniformly optimal search plan converges to one as the search time approaches infinity. Keywords and phrases: Bayesian learning; composite probability maps; optimal search theory; search and rescue; stationary targets.

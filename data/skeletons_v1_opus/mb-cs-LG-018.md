@@ -1,0 +1,8 @@
+MECHANISM: An agent interacts with an environment over a long sequence of steps, receiving partial observations and emitting discrete tokens that encode either high-level intermediate targets or low-level actions. The decision rule is a parametric sequence model and the joint generation probability is factorized into two conditional stages: a high-level stage that emits a structured set of sub-targets from an instruction, and a low-level stage that, conditioned on the active sub-target, emits actions until a learned termination symbol advances to the next sub-target. Parameters are optimized to maximize expected cumulative scalar reward using a gradient estimator that avoids a learned value baseline. Instead, for a group of sampled outputs the per-sample advantage is computed by standardizing each return against the group mean and standard deviation. The gradient uses a clipped importance-weight ratio between current and previous parameters plus a penalty on divergence from a reference distribution. The two stages are trained in alternating phases: in one phase the high-level stage is sampled and scored by rolling out a frozen low-level stage to give a deterministic return; in the other phase the low-level stage is updated against a fixed high-level output so that return differences reflect only execution. The highest-scoring high-level output is selected to condition the low-level update. This alternation reduces the nonstationarity of jointly optimizing two coupled levels.
+DOMAIN: reinforcement learning for language-model agents
+STRUCTURE: neural network
+DATA_OBJECT: sequence or time-series
+INFERENCE: sampling or Monte-Carlo
+PROBLEM_FORM: control
+DISTRIBUTION: none; multinomial
+COMPLEXITY: polynomial iterative

@@ -1,0 +1,8 @@
+MECHANISM: For each entity, a high-dimensional spatial field sampled repeatedly over time is reduced by fitting a linear model whose regressors encode condition onsets, producing per-condition coefficient maps after standard temporal filtering and nuisance removal. A fixed, externally pretrained weight pattern over the spatial domain is applied to each coefficient map by taking their inner product, yielding one scalar score per entity per condition that summarizes the targeted pattern's expression. Contrast scores are formed as differences between conditions for each entity. Group-level inference proceeds by nonparametric/rank-based two-sample tests comparing the scalar scores across two predefined groups, and by a mixed-design analysis of variance assessing within-condition and between-group factors with multiplicity correction. Associations between the scalar scores and other per-entity continuous measurements are quantified with rank-correlation coefficients and tested for significance. Baseline scores are also correlated against later follow-up measurements to assess predictive association. Auxiliary group comparisons on covariates use rank tests for continuous variables and contingency tests for categorical ones. No new estimator or model is proposed; the computation applies an existing linear predictor via inner product and standard frequentist association/hypothesis testing to summarized per-entity quantities.
+DOMAIN: cognitive neuroscience, neuroimaging of addiction
+STRUCTURE: other: statistical hypothesis testing
+DATA_OBJECT: continuous function or field
+INFERENCE: frequentist point estimate
+PROBLEM_FORM: decision or test
+DISTRIBUTION: continuous; nonparametric
+COMPLEXITY: not stated

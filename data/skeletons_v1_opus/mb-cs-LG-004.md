@@ -1,0 +1,8 @@
+MECHANISM: Each entity is encoded through three parallel representations: a token sequence, a relational graph, and a set of points in continuous space, plus auxiliary scalar covariates. A sequence encoder with self-attention, a message-passing graph encoder, and a continuous-filter spatial encoder each map their input to a fixed-length vector; cross-representation attention with a learned gate fuses them into one shared embedding. The backbone is first trained on unlabeled entities with self-supervised objectives: a contrastive term aligning two augmented views, a masked-feature reconstruction term, and a masked-token prediction term. Supervised training then attaches multiple prediction heads, one per target quantity, each a small tournament of candidate parametric forms (a constrained equation, additive group counts, and a free-form regressor) whose winner is chosen on held-out data. A stack of identity-initialized conditioning blocks injects scalar state variables into the embedding before the heads. Parameters are fit by stochastic gradient descent minimizing an uncertainty-weighted sum of per-target regression losses plus soft cross-target consistency penalties. At inference a single forward pass yields all target predictions, gated by a domain-membership check. Ablations isolate the contribution of each component.
+DOMAIN: molecular property prediction in chemistry
+STRUCTURE: neural network
+DATA_OBJECT: dense matrix or tensor
+INFERENCE: deterministic optimization
+PROBLEM_FORM: prediction or classification
+DISTRIBUTION: continuous; none
+COMPLEXITY: polynomial iterative

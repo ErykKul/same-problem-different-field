@@ -1,0 +1,8 @@
+MECHANISM: Each entity is described by a feature vector mixing static attributes with dynamic counts and rates of logged events aggregated over several trailing time windows. The task is framed as binary classification: predict whether an entity will reach a terminal state within a fixed future horizon. An ensemble of randomized decision trees is trained on historical entities, with each tree partitioning the feature space and the ensemble averaging to output a probability score per entity. A rolling time-ordered validation scheme repeatedly trains only on data preceding each evaluation point to avoid leakage from the future. Entities are then ranked by predicted probability, and the top fixed-size slice is selected; performance is measured as the fraction of correct positives within that slice. Feature influence is summarized by aggregating impurity-reduction importance across trees. Separately, the lowest-probability tail of the ranking is intersected with a rule-based threshold computed from tabulated category-specific time limits to flag stalled entities. Comparison baselines include random selection and a historical-rate ranking. The core computation is supervised tree-ensemble probability estimation followed by threshold-and-rank selection. Outputs are ranked shortlists and flags.
+DOMAIN: criminal-case prioritization and governance
+STRUCTURE: other: decision-tree ensemble
+DATA_OBJECT: set or table
+INFERENCE: frequentist point estimate
+PROBLEM_FORM: ranking or retrieval
+DISTRIBUTION: binary; nonparametric
+COMPLEXITY: not stated

@@ -1,0 +1,8 @@
+MECHANISM: A continuous field mapping a spatial coordinate and a direction to a scalar density and a color vector is approximated by small multilayer networks fed by a trainable multiresolution hash-grid encoding of position plus a fixed basis encoding of direction. To render, rays are cast through sampled pixels, points are sampled along each ray, queried through the networks, and composited by a weighted accumulation (volume integration) into a predicted color. The encoding tables and network weights are fit by minimizing a robust reconstruction loss between predicted and observed ray colors via stochastic first-order gradient descent with adaptive per-parameter step sizes; an auxiliary occupancy grid is periodically refreshed from predicted density to skip empty regions. The contribution is a resource-constrained reduction: hyperparameters controlling table size, batch size, input resolution, and samples per step are swept to shrink memory and per-step operation count, and the computation is restructured with tiling, data-movement overlap, and gradient accumulation to fit a small memory hierarchy. Multiple independent model copies are trained on disjoint local data subsets, then merged by repeated weighted averaging of their parameters into a shared global model that is rebroadcast each round. Performance is measured by reconstruction-fidelity ratios under identically and non-identically partitioned data, and by on-device latency and memory profiling.
+DOMAIN: embedded robotics 3D reconstruction
+STRUCTURE: neural network
+DATA_OBJECT: continuous function or field
+INFERENCE: deterministic optimization
+PROBLEM_FORM: reconstruction or denoising
+DISTRIBUTION: continuous; none
+COMPLEXITY: polynomial iterative

@@ -1,0 +1,8 @@
+MECHANISM: A population is partitioned into several compartments whose sizes evolve by a coupled system of nonlinear ordinary differential equations with a constant inflow, linear outflow terms, and bilinear interaction terms between compartments. It is first proven that solutions stay non-negative and bounded, exhibiting a positively invariant attracting region obtained by bounding the total and applying a comparison argument to the limit supremum. Equilibria are found by setting all derivatives to zero and algebraically eliminating variables, which reduces the system to a single high-degree polynomial in one compartment; existence of a positive interior equilibrium is established via a sign condition on the polynomial's leading and constant coefficients through the intermediate value theorem, alongside simpler boundary equilibria. Local stability of each equilibrium is assessed by forming the Jacobian (variational) matrix evaluated at that point and examining the signs of its eigenvalues, using a characteristic-polynomial coefficient criterion for the interior case. Finally the full nonlinear system is integrated numerically with a fixed-step explicit Runge-Kutta scheme to illustrate the analytical equilibrium and stability conclusions under chosen parameter values. The computation thus combines algebraic equilibrium solving, eigenvalue-based stability characterization, and deterministic time integration.
+DOMAIN: socio-economic dynamics, unemployment modeling
+STRUCTURE: other: ODE dynamical-system analysis
+DATA_OBJECT: continuous function or field
+INFERENCE: deterministic or closed-form
+PROBLEM_FORM: proof or characterization
+DISTRIBUTION: none; none
+COMPLEXITY: not stated

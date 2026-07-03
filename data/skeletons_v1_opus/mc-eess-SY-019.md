@@ -1,0 +1,8 @@
+MECHANISM: An observation is first lifted into an expanded feature space by a fixed bank of sinusoidal maps: each coordinate is projected onto random direction vectors and passed through paired sine and cosine functions, concatenated, optionally with the projection directions left free to be tuned by gradient descent. The expanded features feed an encoder map that compresses an observation to a low-dimensional latent code, followed by a decoder map that reconstructs the observation; parameters of both maps are fitted by minimizing reconstruction error. A probabilistic variant treats the latent code as a distribution: the encoder outputs a mean and variance, a latent sample is drawn by adding scaled standard noise to the mean, and training maximizes a lower bound on the data log-evidence equal to expected reconstruction quality minus the divergence between the approximate latent distribution and a fixed prior. A spectral decomposition of the fitted maps tracks which frequency bands of the target are captured at each training step, showing that the sinusoidal expansion lets low and high bands be learned simultaneously rather than sequentially. After fitting on nominal observations, an unseen observation is scored by its reconstruction error and flagged as anomalous when the error exceeds a threshold. Performance is summarized by precision, recall, and harmonic-mean scores averaged over repeated independent fits. The random and the tuned sinusoidal expansions are compared and found to give similar accuracy.
+DOMAIN: anomaly detection in aviation sensor data
+STRUCTURE: neural network
+DATA_OBJECT: sequence or time-series
+INFERENCE: variational
+PROBLEM_FORM: reconstruction or denoising
+DISTRIBUTION: continuous; gaussian
+COMPLEXITY: not stated

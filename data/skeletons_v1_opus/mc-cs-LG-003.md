@@ -1,0 +1,8 @@
+MECHANISM: A large table of observations is assembled, each row carrying many real-valued and categorical attributes and a discrete multi-level outcome label. The table is cleaned by filtering physically implausible values using an interquartile-range rule and cross-checks, and timestamps are expanded into derived cyclic features. The marginal distributions are summarized (skewness, medians) and pairwise linear associations between attributes and the label are measured by a correlation matrix, finding near-zero associations for several attributes. Because the outcome classes are highly imbalanced, per-class weights inversely reflecting frequency are introduced. A predictive model is fit as an additive ensemble of decision trees, each successive tree fit to reduce the residual gradient of a regularized classification loss on the weighted data. Hyperparameters are chosen by random sampling of configurations evaluated under cross-validation. The fitted model is assessed on held-out rows by accuracy and per-class precision/recall and a confusion table, revealing strong performance on the majority class and weak recovery of rare classes. A model-internal importance score ranks attributes by their cumulative contribution to the tree splits. The analysis concludes that some attributes carry little discriminative signal for the label despite prior expectations.
+DOMAIN: machine learning, traffic accident analytics
+STRUCTURE: other: gradient-boosted decision trees
+DATA_OBJECT: set or table
+INFERENCE: deterministic optimization
+PROBLEM_FORM: prediction or classification
+DISTRIBUTION: ordinal; multinomial
+COMPLEXITY: not stated

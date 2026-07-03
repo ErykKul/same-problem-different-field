@@ -1,0 +1,5 @@
+# Preferential attachment alone is not sufficient to generate scale free random networks
+
+## Abstract
+
+Many networks exhibit scale free behaviour where their degree distribution obeys a power law for large vertex degrees. Models constructed to explain this phenomena have relied on preferential attachment where the networks grow by the addition of both vertices and edges, and the edges attach themselves to a vertex with a probability proportional to its degree. Simulations hint, though not conclusively, that both growth and preferential attachment are necessary for scale free behaviour. We derive analytic expressions for degree distributions for networks that grow by the addition of edges to a fixed number of vertices, based on both linear and non-linear preferential attachment, and show that they fall off exponentially as would be expected for purely random networks. From this we conclude that preferential attachment alone might be necessary but is certainly not a sufficient condition for generating scale free networks.

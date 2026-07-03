@@ -1,0 +1,8 @@
+MECHANISM: An unknown array of values is recovered from incomplete linear measurements taken through a sensing operator that composes a sampling mask, a transform to the measurement domain, and per-channel weighting maps. Recovery minimizes an objective combining a squared data-fidelity term, the discrepancy between the operator applied to the estimate and the measured data, with a sparsity-promoting first-norm penalty on the coefficients of the estimate under redundant analysis transforms applied separately along two axes, each a tight frame; tunable weights balance the relative importance of sparsity along the two axes. The analysis-form problem is recast into an equivalent synthesis-like form using the property that the adjoint composed with the transform is the identity, allowing the nonsmooth term to be handled by its proximal map. The solver is a forward-backward iteration that alternates a gradient step on the data-fidelity term with a pointwise soft-thresholding shrinkage in the transform domain, accelerated by an extrapolated momentum update. Convergence is proven by bounding the Lipschitz constant of the smooth part through an eigenvalue analysis of the operator, showing that when a normalization makes the operator a partial isometry the constant stays within a range guaranteeing a stable step size, and a worst-case decay rate of the objective inverse in the iteration count is established. Sensing weights are estimated from a low-resolution average of all measurements.
+DOMAIN: accelerated magnetic resonance image reconstruction
+STRUCTURE: numerical optimization
+DATA_OBJECT: dense matrix or tensor
+INFERENCE: deterministic optimization
+PROBLEM_FORM: reconstruction or denoising
+DISTRIBUTION: continuous; none
+COMPLEXITY: convergence rate

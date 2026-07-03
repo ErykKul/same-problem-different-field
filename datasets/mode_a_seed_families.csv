@@ -1,0 +1,154 @@
+# =====================================================================
+# Mode A - seed structural families (LABELED).
+# Each family = one shared mathematical core; members are from DIFFERENT fields.
+# role: member = genuine instance | distractor = same field, different math.
+# method_named: yes/no/? - does the paper name the method (keep some 'no' rows;
+#   they test real abstraction vs name-recognition, the "recognition cheat").
+# columns: id,url,family,field,role,method_named,license,note
+#
+# v1 SEED (auto-curated from arXiv, each verified against its abstract).
+# Known gaps to extend (see datasets/README + the chat hand-off):
+#   - method_named=no exemplars per family (the anti-cheat ground truth) - needs
+#     domain knowledge (e.g. a pharmacokinetics paper that is secretly a Kalman
+#     filter but never says so).
+#     Seeded for pharmacology/PK (traced from the vancomycin Bayesian-dosing
+#     lineage; see the anti-cheat block at the bottom); other families still need them.
+#   - rows marked method_named='?' need a quick membership vetting pass.
+#   - more distractors welcome (target 1-2 per member).
+# =====================================================================
+id,url,family,field,role,method_named,license,note
+# --- recursive Bayesian estimation / Kalman filter ---
+kalman-control-001,https://arxiv.org/abs/2012.06069,recursive_bayes_kalman,control_power_systems,member,yes,arXiv,EKF/UKF dynamic state estimation
+kalman-tracking-001,https://arxiv.org/abs/2003.05778,recursive_bayes_kalman,target_tracking,member,yes,arXiv,multi-target particle filter (recursive Bayes)
+kalman-finance-001,https://arxiv.org/abs/2112.04576,recursive_bayes_kalman,finance,member,yes,arXiv,switching filter for Heston stochastic volatility
+kalman-neuro-001,https://arxiv.org/abs/2111.10530,recursive_bayes_kalman,neuroscience,member,yes,arXiv,Kalman filter as gradient descent on free energy
+kalman-pharma-001,https://arxiv.org/abs/1910.01022,recursive_bayes_kalman,pharmacology,member,yes,arXiv,cubature KF for drug/blood-pressure response
+kalman-finance-dist-001,https://arxiv.org/abs/2202.03156,recursive_bayes_kalman,finance,distractor,,arXiv,trap: same field (finance) different math (ML price prediction)
+# --- eigenvector centrality / PageRank / power iteration ---
+eigen-web-001,https://arxiv.org/abs/1408.0719,eigenvector_centrality,web_ir,member,yes,arXiv,personalized PageRank
+eigen-sciento-001,https://arxiv.org/abs/2105.05150,eigenvector_centrality,scientometrics,member,yes,arXiv,Eigenfactor journal ranking
+eigen-ecology-001,https://arxiv.org/abs/1110.5385,eigenvector_centrality,ecology,member,?,arXiv,environ (eigenvector-based) centrality in ecological networks
+eigen-sciento-dist-001,https://arxiv.org/abs/1303.5870,eigenvector_centrality,scientometrics,distractor,,arXiv,trap: same field different math (count-based Scholar metrics)
+# --- Gaussian process / kriging / kernel ridge ---
+gp-ml-001,https://arxiv.org/abs/1406.4905,gaussian_process,machine_learning,member,yes,arXiv,variational GP state-space models
+gp-geo-001,https://arxiv.org/abs/1205.5467,gaussian_process,geostatistics,member,yes,arXiv,Gaussian (Markov) random fields / kriging family
+gp-power-001,https://arxiv.org/abs/1909.09266,gaussian_process,power_systems,member,yes,arXiv,GP surrogate for stochastic economic dispatch
+# --- diffusion / heat equation / Perona-Malik ---
+diff-physics-001,https://arxiv.org/abs/1007.3109,diffusion_heat,physics,member,yes,arXiv,reaction-diffusion pattern formation (lattice Boltzmann)
+diff-finance-001,https://arxiv.org/abs/1510.04370,diffusion_heat,finance,member,?,arXiv,Black-Scholes diffusion PDE option pricing
+diff-fluids-001,https://arxiv.org/abs/1605.04593,diffusion_heat,fluid_dynamics,member,yes,arXiv,Perona-Malik anisotropic diffusion reused as LES closure
+# --- hidden Markov models ---
+hmm-genomics-001,https://arxiv.org/abs/1508.05367,hmm,genomics,member,yes,arXiv,HMM gene sequence classification
+hmm-speech-001,https://arxiv.org/abs/1701.08156,hmm,speech,distractor,yes,arXiv,AUDIT survey/no method (empty fingerprint) | was-member; HMM phoneme recognition
+# --- EM / latent-variable mixtures ---
+em-ml-001,https://arxiv.org/abs/1810.00803,em_latent_mixture,machine_learning,member,yes,arXiv,variational EM for Gaussian mixtures
+em-astro-001,https://arxiv.org/abs/2408.10371,em_latent_mixture,astronomy,member,yes,arXiv,Gaussian mixture model for galaxy cluster profiles
+# --- MCMC / Metropolis-Hastings ---
+mcmc-statphys-001,https://arxiv.org/abs/2007.08593,mcmc_metropolis,statistical_physics,member,yes,arXiv,Metropolis Monte Carlo for spin-1 Ising
+mcmc-phylo-001,https://arxiv.org/abs/2109.07629,mcmc_metropolis,phylogenetics,distractor,yes,arXiv,AUDIT ESS diagnostics not Metropolis kernel | was-member; MCMC for Bayesian phylogenetic inference
+mcmc-cosmo-001,https://arxiv.org/abs/1103.3269,mcmc_metropolis,cosmology,member,yes,arXiv,MCMC cosmological/galaxy parameter estimation
+# --- preferential attachment / power-law generation ---
+pa-networks-001,https://arxiv.org/abs/1202.1498,preferential_attachment,networks,member,yes,arXiv,preferential attachment and scale-free degree distribution
+pa-linguistics-001,https://arxiv.org/abs/1407.4610,preferential_attachment,linguistics,member,?,arXiv,Zipf law of word frequencies (power-law); verify structural fit
+pa-economics-001,https://arxiv.org/abs/physics/0504137,preferential_attachment,economics,member,?,arXiv,stochastic wealth distribution power law (rich-get-richer); verify fit
+# --- replicator dynamics / Lotka-Volterra (mathematically equivalent) ---
+replv-evolution-001,https://arxiv.org/abs/0911.1720,replicator_lotka_volterra,evolution,distractor,yes,arXiv,AUDIT empty fingerprint (review/no method) | was-member; replicator dynamics in evolutionary game theory
+replv-ecology-001,https://arxiv.org/abs/1210.7662,replicator_lotka_volterra,ecology,member,yes,arXiv,competitive Lotka-Volterra dynamics
+replv-economics-001,https://arxiv.org/abs/2203.14669,replicator_lotka_volterra,economics,member,?,arXiv,evolutionary game dynamics in an economics experiment
+# --- distractors (same field as a member, different math) ---
+gp-ml-dist-001,https://arxiv.org/abs/2104.00035,gaussian_process,machine_learning,distractor,,arXiv,trap: CNN training (not a GP)
+diff-physics-dist-001,https://arxiv.org/abs/2101.04596,diffusion_heat,physics,distractor,,arXiv,trap: DFT electronic structure (not a diffusion PDE)
+hmm-genomics-dist-001,https://arxiv.org/abs/2309.11087,hmm,genomics,distractor,,arXiv,trap: transformer DNA alignment (not an HMM)
+em-astro-dist-001,https://arxiv.org/abs/2007.14720,em_latent_mixture,astronomy,distractor,,arXiv,trap: N-body dark-matter simulation (not EM/mixture)
+# --- anti-cheat exemplars: math IS a family's method, but the paper never names it ---
+# (traced from the vancomycin Bayesian-dosing literature: Jelliffe/Schumitzky/Bayard/Neely lineage)
+# VERIFIED 2026-06 by grepping each built md for its family's canonical name. Finding:
+# pure method_named=no is RARE - most renamed-method papers still cite the canonical
+# name in related work (only em-pharma-noname-002 is pristine). Mitigation: the probe
+# distills the METHOD CORE with name-dropping forbidden, so related-work mentions should
+# not leak into the skeleton; confirm at skeleton level (probe_spec threat: recognition cheat).
+# The cleanest pristine cases are domain-siloed clinical/applied papers (often paywalled).
+em-pharma-noname-001,https://pmc.ncbi.nlm.nih.gov/articles/PMC7823953/,em_latent_mixture,pharmacokinetics,member,yes,CC-BY,NPAG sparse-support-point mixing-distribution estimation; names EM/mixture but never SVM/kernel/Kalman; anti-cheat value = its SVM/support-point structure (VET: EM vs SVM)
+em-pharma-noname-002,https://arxiv.org/abs/1303.6700,em_latent_mixture,pharmacokinetics,member,no,arXiv,NPAG/NPB population PK estimation; VERIFIED CLEAN: no EM/GMM/Kalman/SVM mention (the one pristine method_named=no)
+kalman-pharma-noname-001,https://pmc.ncbi.nlm.nih.gov/articles/PMC8520754/,recursive_bayes_kalman,pharmacology,distractor,partial,CC-BY,AUDIT static MAP not recursive filtering | was-member; MAP-Bayesian individual PK estimation (mapbayr); primary framing Bayesian/MAP; mentions Kalman 2x
+gp-geo-noname-001,https://pmc.ncbi.nlm.nih.gov/articles/PMC10413010/,gaussian_process,geostatistics,member,partial,CC-BY-NC-ND,ordinary kriging/cokriging; never says Gaussian process; 'kernel' appears 2x (kriging=GP)
+eigen-chem-noname-001,https://arxiv.org/abs/2409.01689,eigenvector_centrality,chemistry,distractor,partial,arXiv,AUDIT full Huckel eigenspectrum not centrality | was-member; Huckel MO = eigenvectors of molecular-graph adjacency matrix; mentions eigenvector centrality 1x (related work)
+hmm-econ-noname-001,https://arxiv.org/abs/2002.03598,hmm,econometrics,member,yes,arXiv,Markov/regime-switching (=HMM); names hidden Markov 3x; NOT anti-cheat but a valid econometrics cross-domain member
+pa-cities-noname-001,https://arxiv.org/abs/0808.1828,preferential_attachment,cities_economics,member,partial,arXiv,Gibrat proportional-growth -> power law (growth variant); re-distilled from full text (orig skeleton was abstract-only glitch); restored member
+replv-mwu-noname-001,https://arxiv.org/abs/2203.07577,replicator_lotka_volterra,online_learning,member,partial,arXiv,multiplicative/exponential weights (experts); mentions replicator 2x + lotka 1x (MWU=replicator)
+# ===================================================================
+# 15-FAMILY EXPANSION (2026-06): 6 new families incl. the 2 distant domains
+# (political methodology = SVD/IRT; digital-humanities stylometry = naive Bayes).
+# Curated + verified against abstracts by parallel agents.
+# ===================================================================
+pca-genetics-001,https://arxiv.org/abs/2302.04596,pca_svd_lowrank,genetics,member,yes,arXiv,PCA of a genotype matrix for population structure (eigen-decomposition of covariance)
+pca-recsys-001,https://arxiv.org/abs/2012.03433,pca_svd_lowrank,recommender_systems,member,yes,arXiv,Bayesian matrix factorization of a user-item ratings matrix (low-rank / SVD-like)
+pca-psychometrics-001,https://pmc.ncbi.nlm.nih.gov/articles/PMC3290828/,pca_svd_lowrank,psychometrics,member,yes,CC-BY-NC,factor analysis of a correlation matrix (low-rank decomposition)
+pca-polmeth-001,https://arxiv.org/abs/2512.11610,pca_svd_lowrank,political_methodology,member,partial,arXiv,ideal-point/roll-call scaling of legislators (LSIRM); low-rank factorization of a vote matrix; never says SVD/PCA
+pca-recsys-distractor-001,https://arxiv.org/abs/2410.16838,pca_svd_lowrank,recommender_systems,distractor,no,arXiv,trap: neural collaborative filtering (deep net); not low-rank factorization
+clf-dh-001,https://arxiv.org/abs/1208.3001,linear_text_classifier,digital_humanities,member,partial,arXiv,authorship/stylometry via word-frequency distribution profiles; no canonical classifier named (anti-cheat)
+clf-nlp-001,https://arxiv.org/abs/cs/0205070,linear_text_classifier,nlp,member,yes,arXiv,sentiment classification from unigram frequencies; names naive Bayes/maxent/SVM
+clf-gen-001,https://arxiv.org/abs/1910.05421,linear_text_classifier,genomics,member,partial,arXiv,virus genome classification from k-mer frequency vectors; multinomial-Bayes/linear classifiers
+clf-clin-001,https://pmc.ncbi.nlm.nih.gov/articles/PMC9592058/,linear_text_classifier,clinical_text,member,yes,CC-BY,medical report classification from term frequencies; multinomial naive Bayes
+clf-nlp-distractor-001,https://arxiv.org/abs/2406.06578,linear_text_classifier,nlp,distractor,yes,arXiv,trap: SMS spam via BERT transformer (not a linear frequency classifier)
+irt-psych-001,https://arxiv.org/abs/2406.13989,irt_logistic_bradleyterry,psychometrics,member,yes,arXiv,Rasch IRT: item response as logistic of latent trait minus difficulty (MLE)
+irt-sports-001,https://arxiv.org/abs/2001.04226,irt_logistic_bradleyterry,sports_analytics,member,yes,arXiv,Bradley-Terry paired-comparison rating; win prob logistic of strength difference
+irt-ecology-001,https://arxiv.org/abs/2308.02348,irt_logistic_bradleyterry,ecology,distractor,partial,arXiv,AUDIT occupancy GLM not Bradley-Terry | was-member; occupancy model: latent presence via logit link (logistic latent variable)
+irt-edu-001,https://arxiv.org/abs/2506.20119,irt_logistic_bradleyterry,education,member,yes,arXiv,IRT ability estimation; response prob logistic of ability minus difficulty
+irt-sports-distractor-001,https://arxiv.org/abs/1503.01331,eigenvector_centrality,sports_analytics,member,no,arXiv,"PageRank team ranking = dominant eigenvector of the match graph (eigenvector centrality); reclassified from IRT distractor to its true core; remains a topical hard negative for IRT"
+fft-sig-001,https://arxiv.org/abs/1707.04878,fourier_spectral,signal_processing,member,yes,arXiv,Bayesian spectral-density estimation of a stationary series (Whittle likelihood)
+fft-astro-001,https://arxiv.org/abs/1301.4826,fourier_spectral,astronomy,member,yes,arXiv,Lomb-Scargle periodogram for unevenly sampled series
+fft-neuro-001,https://pmc.ncbi.nlm.nih.gov/articles/PMC8215164/,fourier_spectral,neuroscience,distractor,yes,CC-BY,AUDIT spectral-features+phase-sync not PSD estimation | was-member; EEG spectral power via 1024-point Fourier transform
+fft-econ-001,https://arxiv.org/abs/1001.4762,fourier_spectral,economics,member,yes,arXiv,frequency-domain spectral analysis of business-cycle patterns
+fft-astro-distractor-001,https://arxiv.org/abs/2001.07975,gaussian_process,astronomy,member,no,arXiv,"exoplanet transit modeled as a Gaussian process (kernel covariance, celerite SHO kernel); reclassified from Fourier distractor to its true core; remains a topical hard negative for Fourier"
+sparse-mri-001,https://arxiv.org/abs/2007.02937,sparse_l1_lasso,imaging_mri,member,yes,arXiv,MRI reconstruction via compressed sensing / sparse constraint on undersampled k-space
+sparse-genomics-001,https://pmc.ncbi.nlm.nih.gov/articles/PMC5435977/,sparse_l1_lasso,genomics,member,yes,CC-BY,IPF-LASSO: L1-penalized regression selecting few features (multi-omics)
+sparse-signal-001,https://arxiv.org/abs/0904.4774,sparse_l1_lasso,signal_processing,member,yes,arXiv,dictionary identification via l1-minimization for sparse representations
+sparse-finance-001,https://arxiv.org/abs/2412.19462,sparse_l1_lasso,finance,member,partial,arXiv,sparse/cardinality-constrained portfolio (difference-of-convex; not named LASSO)
+sparse-finance-distractor-001,https://arxiv.org/abs/2009.03394,sparse_l1_lasso,finance,distractor,no,arXiv,trap: deep LSTM portfolio prediction (no L1/sparsity)
+dp-bio-001,https://arxiv.org/abs/2205.07610,dynamic_programming_viterbi,bioinformatics,member,yes,arXiv,pairwise sequence alignment via DP recurrence (Needleman-Wunsch/Smith-Waterman style)
+dp-speech-001,https://arxiv.org/abs/q-bio/0501006,dynamic_programming_viterbi,speech_nlp,member,yes,arXiv,Viterbi decoding of most probable state path through a trellis
+dp-or-001,https://arxiv.org/abs/2505.06769,dynamic_programming_viterbi,operations_research,member,yes,arXiv,value iteration via Bellman backward updates over an MDP
+dp-fin-001,https://arxiv.org/abs/1806.05579,dynamic_programming_viterbi,finance,member,yes,arXiv,American option optimal stopping by backward induction / DP time-stepping
+dp-fin-distractor-001,https://arxiv.org/abs/1911.11362,dynamic_programming_viterbi,finance,distractor,no,arXiv,trap: regression-MC + neural-net static hedging (not backward induction)
+# ===================================================================
+# DEEPENING (2026-06): +2 cross-domain members per family (verified OA, agent-curated)
+# ===================================================================
+kalman-glaciology-002,https://arxiv.org/abs/2603.26947,recursive_bayes_kalman,glaciology,member,yes,arXiv,ensemble Kalman filter ice-sheet data assimilation
+kalman-spacecraft-002,https://arxiv.org/abs/2003.12978,recursive_bayes_kalman,aerospace_attitude,member,yes,arXiv,geometric EKF on SE(3) for spacecraft attitude + gyro-bias
+eigen-protein-002,https://arxiv.org/abs/1706.02327,eigenvector_centrality,protein_biochemistry,member,yes,arXiv,eigenvector centrality of an amino-acid mutual-information network (allostery)
+eigen-fmri-002,https://pmc.ncbi.nlm.nih.gov/articles/PMC2860504/,eigenvector_centrality,neuroscience_fmri,member,yes,CC-BY,eigenvector centrality mapping of an fMRI connectivity matrix
+gp-exoplanet-002,https://arxiv.org/abs/2207.12164,gaussian_process,astronomy_rv,member,yes,CC-BY-NC-ND,GP regression with a quasi-periodic kernel for stellar-activity radial velocity
+gp-materials-002,https://arxiv.org/abs/2509.14408,gaussian_process,materials_science,member,yes,arXiv,deep GP surrogate for high-entropy alloy design
+diff-oncology-002,https://arxiv.org/abs/2511.05312,diffusion_heat,oncology,member,yes,arXiv,time-fractional Fisher-KPP reaction-diffusion tumor growth
+diff-anthropology-002,https://arxiv.org/abs/1812.04440,diffusion_heat,anthropology,member,yes,arXiv,reaction-diffusion KPP for Neolithic farmer spread
+hmm-ecology-002,https://arxiv.org/abs/1612.06921,hmm,movement_ecology,member,yes,arXiv,hidden Markov movement model; latent behavioral states from tracks
+hmm-proteomics-002,https://arxiv.org/abs/q-bio/0310026,hmm,structural_biology,member,partial,arXiv,HMM for protein secondary-structure prediction
+em-physics-002,https://arxiv.org/abs/2104.07457,em_latent_mixture,nuclear_physics,member,yes,arXiv,EM on a Gaussian-mixture likelihood for positron emission particle tracking
+em-astronomy-002,https://arxiv.org/abs/1205.6221,em_latent_mixture,astronomy,member,yes,arXiv,Gaussian mixture + EM for pulsar classification
+mcmc-crypto-002,https://arxiv.org/abs/1501.05757,mcmc_metropolis,cryptography,member,yes,arXiv,Metropolis-Hastings lattice Gaussian sampling
+mcmc-nlp-002,https://arxiv.org/abs/2406.00049,mcmc_metropolis,nlp_mt,member,yes,arXiv,Metropolis-Hastings sampling of MT hypotheses from a Gibbs distribution
+pa-scientometrics-002,https://arxiv.org/abs/1710.08688,preferential_attachment,scientometrics,member,yes,arXiv,rich-get-richer citation/coauthorship growth with heavy tails
+pa-web-002,https://arxiv.org/abs/1303.6271,preferential_attachment,web_social,member,yes,arXiv,empirical preferential attachment across 47 web/social datasets
+replv-linguistics-002,https://arxiv.org/abs/2011.11768,replicator_lotka_volterra,sociolinguistics,member,yes,arXiv,replicator-mutator equation for linguistic convergence
+replv-finance-002,https://arxiv.org/abs/2003.00886,replicator_lotka_volterra,finance_systemic_risk,member,yes,CC-BY,replicator dynamics for risky vs risk-free strategy adoption
+pca-popgen-002,https://arxiv.org/abs/1301.4511,pca_svd_lowrank,population_genetics,member,yes,arXiv,PCA/eigenanalysis of SNP genotypes for subpopulation count
+pca-spectroscopy-002,https://arxiv.org/abs/2304.07786,pca_svd_lowrank,analytical_chemistry,member,yes,arXiv,PCA chemometric dimensionality reduction on LIBS spectra
+clf-cybersecurity-002,https://arxiv.org/abs/2308.11834,linear_text_classifier,cybersecurity,member,yes,arXiv,naive Bayes intrusion detection on network traffic features
+clf-neurotech-002,https://pmc.ncbi.nlm.nih.gov/articles/PMC3772882/,linear_text_classifier,eeg_bci,member,yes,CC-BY,linear discriminant analysis classifying EEG features for a BCI
+irt-baseball-002,https://arxiv.org/abs/1712.05879,irt_logistic_bradleyterry,baseball,member,yes,arXiv,Bradley-Terry; win prob is a sigmoid of latent team-strength difference
+irt-education-002,https://arxiv.org/abs/2403.00680,irt_logistic_bradleyterry,education,member,yes,arXiv,IRT logistic latent-variable estimating ability and item difficulty
+fft-neuro-002,https://arxiv.org/abs/1608.03464,fourier_spectral,neuroscience,member,yes,arXiv,EEG periodogram power spectral density for BCI
+fft-gravwave-002,https://arxiv.org/abs/2508.11938,fourier_spectral,gravitational_wave,member,yes,arXiv,Welch periodogram PSD estimation of GW detector noise
+sparse-genomics-002,https://pmc.ncbi.nlm.nih.gov/articles/PMC5860090/,sparse_l1_lasso,genomics,member,yes,CC-BY,LASSO L1-penalized SNP selection in GWAS
+sparse-radioastro-002,https://arxiv.org/abs/0812.4933,sparse_l1_lasso,radio_astronomy,member,yes,arXiv,compressed-sensing L1 sparse image reconstruction in interferometry
+dp-communications-002,https://arxiv.org/abs/2102.07315,dynamic_programming_viterbi,communications,member,yes,arXiv,Viterbi decoding of convolutional codes (best path through a trellis)
+dp-linguistics-002,https://arxiv.org/abs/2509.01654,dynamic_programming_viterbi,computational_linguistics,member,partial,CC-BY,Needleman-Wunsch DP alignment for phonetic word similarity
+pca-causal-001,https://arxiv.org/abs/1710.10251,pca_svd_lowrank,causal_inference,member,yes,arXiv,"Athey et al. matrix completion for causal panel data (low-rank/nuclear-norm imputation); documented import from recommender systems"
+kalman-epidemic-001,https://doi.org/10.1073/pnas.1208772109,recursive_bayes_kalman,epidemiology,member,no,abstract-only,"Shaman & Karspeck flu forecasting via ensemble data assimilation (recursive Bayesian state/parameter estimation); names 'data assimilation', never 'Kalman'; documented import from numerical weather prediction; PNAS abstract-only"
+ising-protein-001,https://arxiv.org/abs/1211.1281,inverse_ising_potts,structural_biology,member,yes,arXiv,"Ekeberg et al. pseudolikelihood inference of pairwise maximum-entropy (Potts) couplings for protein contacts; inverse statistical mechanics shared with statistical physics / neuroscience"
+ising-neuro-001,https://arxiv.org/abs/1205.6438,inverse_ising_potts,neuroscience,member,partial,arXiv,"Stimulus-dependent pairwise maximum-entropy (inverse Ising) model of neural population activity; same inverse statistical mechanics as protein DCA; names 'maximum entropy', not 'Ising'"
+hawkes-crime-001,https://doi.org/10.1198/jasa.2011.ap09546,hawkes_self_exciting,criminology,member,yes,abstract-only,"Mohler et al. self-exciting point process for crime, explicitly imported from seismology; JASA abstract-only"
+hawkes-seismology-001,https://arxiv.org/abs/1706.08922,hawkes_self_exciting,seismology,member,yes,arXiv,"Spatially-variable ETAS (epidemic-type aftershock) estimation; the seismology self-exciting point process crime modeling imports"
+ot-cosmology-001,https://arxiv.org/abs/astro-ph/0109483,optimal_transport,cosmology,member,yes,arXiv,"Frisch et al. reconstruct primordial conditions as an optimal mass-transport assignment; same transport optimization as ML/economics"
+ot-ml-001,https://arxiv.org/abs/1306.0895,optimal_transport,machine_learning,member,yes,arXiv,"Cuturi entropic-regularized optimal transport (Sinkhorn scaling) as a histogram distance; same transport optimization as cosmological reconstruction"

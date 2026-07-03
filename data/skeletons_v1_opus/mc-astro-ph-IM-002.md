@@ -1,0 +1,8 @@
+MECHANISM: Repeated discrete events are accumulated into histograms of a measured amplitude, forming empirical count distributions over a one-dimensional channel axis. Reference inputs with known characteristic amplitudes are used so that peaks appear at predictable locations in the histogram. Each peak is fit with a parametric local shape to estimate its center, width, and area as point estimates with uncertainties. A mapping from the raw amplitude scale to physical units is built by regressing the estimated peak centers against their known reference values, and a low-order functional form for resolution versus amplitude is fit from the peak widths. A closed-form expression relates an angular asymmetry of scattered events to a sensitivity factor, and another closed-form sensitivity figure of merit is computed from source and background rates and an observation time. Leakage of signal into neighboring channels is quantified as fractional ratios to build a coupling map. Noise rates are tabulated as a function of a threshold setting to fix an operating point. The analysis is primarily empirical curve fitting of count spectra combined with algebraic propagation through fixed formulas. Outputs are calibrated scales, resolutions, and sensitivity estimates.
+DOMAIN: hard X-ray polarimetry instrumentation
+STRUCTURE: other: histogram peak fitting
+DATA_OBJECT: sequence or time-series
+INFERENCE: frequentist point estimate
+PROBLEM_FORM: estimation
+DISTRIBUTION: count; gaussian
+COMPLEXITY: polynomial iterative

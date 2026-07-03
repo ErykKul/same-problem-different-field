@@ -1,0 +1,8 @@
+MECHANISM: Given many entities, each described by a very high-dimensional vector of continuous measurements plus a few binary attributes and a categorical label, the task is to predict a continuous response under a small-sample, large-feature regime. The continuous measurements are first log-transformed to stabilize variance, then projected onto a small number of leading orthogonal components via a variance-maximizing linear decomposition computed incrementally, with the decomposition refitted only on training partitions to avoid leakage. The reduced components, the binary attributes, and the categorical context are concatenated into a feature vector. A response predictor is fitted as an ensemble of many randomized partitioning trees with bounded depth and a minimum-leaf constraint, aggregated by averaging, and assessed by cross-validation using correlation and mean absolute error. The frozen predictor is then treated as a deterministic simulator: a feature is toggled and the change in predicted response is recorded as a sensitivity difference, repeated across entities and features to map which perturbations most shift the response. An additive game-theoretic attribution is computed to rank per-feature contributions for individual predictions. A separate synthetic cohort is generated to match prescribed attribute frequencies, scored by the fitted rules, split at the median, and compared by a nonparametric survival-curve estimator with a log-rank separation test.
+DOMAIN: pharmacogenomics, precision oncology drug response
+STRUCTURE: other: tree ensemble
+DATA_OBJECT: dense matrix or tensor
+INFERENCE: frequentist point estimate
+PROBLEM_FORM: prediction or classification
+DISTRIBUTION: continuous; gaussian
+COMPLEXITY: not stated

@@ -1,0 +1,8 @@
+MECHANISM: An ordered scalar sequence is converted into supervised training pairs by sliding a fixed-length window and predicting the next one or several values. Values are standardized using statistics estimated only from the earlier portion to avoid leakage, and the sequence is split chronologically. Several parametric sequence models are fitted under a shared protocol: a gated recurrent model that propagates a hidden and cell state through learned affine maps and elementwise nonlinearities; an attention variant that forms a query as the temporal mean of hidden states, scores each step, normalizes the scores to weights, and returns their weighted combination; a causal convolutional model that aggregates a bounded past window and pools over time; and self-attention encoder stacks that compute query-key-value projections, scaled dot-product weights, residual and normalization layers, and feed-forward sublayers. Each model maps a pooled or context representation through a linear layer to the forecast horizon. Parameters are fitted by gradient descent minimizing squared prediction error with early stopping. At evaluation the models are rolled out two ways: recursively feeding their own predictions, and feeding ground-truth values at each step. Accuracy is measured by root-mean-squared error across both modes and horizons. A deterministic downstream rule converts predicted values into discrete actions by taking the sign of successive differences and detecting changes in that sign.
+DOMAIN: financial time-series forecasting
+STRUCTURE: neural network
+DATA_OBJECT: sequence or time-series
+INFERENCE: deterministic optimization
+PROBLEM_FORM: prediction or classification
+DISTRIBUTION: continuous; none
+COMPLEXITY: not stated

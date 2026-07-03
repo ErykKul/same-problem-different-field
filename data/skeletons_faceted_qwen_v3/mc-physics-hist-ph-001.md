@@ -1,0 +1,12 @@
+MECHANISM: none
+DOMAIN: metaphysics and philosophy of science
+STRUCTURE: none
+DATA_OBJECT: none
+INFERENCE: none
+PROBLEM_FORM: explanation or characterization
+DISTRIBUTION: none
+COMPLEXITY: none
+DATA_AVAILABILITY: none
+CODE_AVAILABILITY: none
+PREREGISTRATION: none
+EVIDENCE_BASIS: review-or-position

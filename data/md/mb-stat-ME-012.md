@@ -1,0 +1,5 @@
+# mb-stat-ME-012
+
+## Abstract
+
+Two–component mixture models are particularly useful for identifying differentially expressed genes, but their performance can deteriorate markedly when the alternative distribution departs from parametric assumptions or symmetry. We propose a semiparametric mixture model in which the null component is standard normal and the alternative follows a skew–normal scale mixture with an unspecified scale mixing distribution. This formulation accommodates skewness and heavy tails, providing a flexible and computationally tractable tool for differential gene–expression analysis without restrictive distributional assumptions. We establish identifiability and consistency of the model and develop an efficient estimation algorithm that incorporates nonparametric maximum likelihood estimation of the scale distribution. Numerical studies show notable improvements over existing parametric and nonparametric approaches for modeling the alternative distribution, and applications to colon cancer and leukemia datasets demonstrate reduced false discovery and false negative rates.

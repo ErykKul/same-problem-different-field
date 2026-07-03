@@ -1,0 +1,8 @@
+MECHANISM: Each entity is first mapped through a fixed pretrained encoder to a moderate-dimensional feature vector, and these representations are held frozen throughout. On top of them a single-layer affine scoring function followed by a squashing nonlinearity is trained to output the probability that an entity does not belong to a designated target class, minimizing a cross-entropy objective on a small labeled set by first-order gradient updates with early stopping. The trained loss on the labeled set is recorded as a reference level. A larger pool of unlabeled entities, drawn from an unknown mixture that may include target, known non-target, and previously unseen sources, is then incorporated: the objective pushes every unlabeled entity toward the non-target class while a hard constraint caps the labeled cross-entropy at a fixed multiple of the reference level. This constrained program is solved through a Lagrangian relaxation, minimizing a weighted sum of the labeled loss and the unlabeled push term with the weight tuned so the labeled loss stays near the cap, preventing the degenerate all-one-class solution. Per-sample loss normalization keeps the procedure stable when the unlabeled pool dwarfs the labeled set. Scoring quality is assessed with threshold-free ranking summaries, and a confidence-thresholded self-labeling variant is compared.
+DOMAIN: synthetic-image provenance attribution
+STRUCTURE: numerical optimization
+DATA_OBJECT: dense matrix or tensor
+INFERENCE: deterministic optimization
+PROBLEM_FORM: prediction or classification
+DISTRIBUTION: binary; logistic
+COMPLEXITY: polynomial iterative

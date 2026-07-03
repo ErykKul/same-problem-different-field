@@ -1,0 +1,8 @@
+MECHANISM: Given labeled observations from two classes, each represented as a feature vector, a linear projection from the high-dimensional feature space to a one-dimensional score is learned by minimizing squared error between a linear function of the augmented inputs and class labels, yielding a weight vector via a closed-form least-squares solution. Each observation is then mapped to a scalar weighted sum through the inner product with the weight vector. For each class, the mean and standard deviation of these scalar scores over the training set are estimated under a per-class Gaussian assumption. For a new observation, its scalar score is standardized into a per-class z-score by subtracting each class mean and dividing by each class standard deviation. The observation is assigned to the class whose standardized deviation is smaller. The induced decision threshold is the abscissa where the two per-class Gaussian densities intersect, expressed in closed form as a function of the two means and two standard deviations. When the two standard deviations are equal this threshold reduces to the midpoint of the class means, recovering the standard rule as a special case. The procedure thus replaces a fixed midpoint threshold with one that adapts to unequal per-class dispersion. Performance is compared against alternative linear and kernel-based discriminants by repeated train-test splits and paired significance tests.
+DOMAIN: neural signal decoding, brain-computer interfaces
+STRUCTURE: dense linear algebra
+DATA_OBJECT: dense matrix or tensor
+INFERENCE: deterministic or closed-form
+PROBLEM_FORM: prediction or classification
+DISTRIBUTION: continuous; gaussian
+COMPLEXITY: closed-form

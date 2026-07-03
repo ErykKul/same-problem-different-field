@@ -1,0 +1,8 @@
+MECHANISM: A heterogeneous collection of interconnected nodes and directed links is encoded as signed incidence tensors whose entries mark which transfer activity draws a conserved quantity from one location and injects it into another. These third-order tensors are flattened into a sparse signed incidence matrix relating activities to stored stocks. A discrete-time balance law is written for every node: the stock at the next step equals the current stock plus inflows minus outflows scaled by a step duration, enforcing exact conservation of the quantity. Exogenous but noisy measurements are introduced as additional linear equality constraints that tie certain activity flows to observed totals, each augmented with an explicit additive error variable. The unknowns are the stocks, the per-activity flows, and the measurement errors over all time steps. A convex separable quadratic objective is minimized, dominated by a weighted sum of squared measurement errors plus small regularizing penalties on flows and stocks to make the solution unique. The problem is a large sparse equality-constrained quadratic program solved by a numerical solver. Boundary, initial, and capacity inequality constraints complete the formulation. The result reconstructs the most plausible internally consistent flows and accumulations across the network from imperfect aggregate data.
+DOMAIN: watershed nutrient transport and systems engineering
+STRUCTURE: sparse linear algebra
+DATA_OBJECT: graph or network
+INFERENCE: deterministic optimization
+PROBLEM_FORM: reconstruction or denoising
+DISTRIBUTION: continuous; gaussian
+COMPLEXITY: polynomial iterative

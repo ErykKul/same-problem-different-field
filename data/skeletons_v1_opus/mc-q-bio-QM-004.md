@@ -1,0 +1,8 @@
+MECHANISM: A pretrained autoregressive sequence-generating model is adapted by gradient fitting so it favors low-cost sequences while staying close to a frozen reference model. Training data are pairs of sequences, a preferred and a dispreferred member, where the dispreferred ones are deliberately constructed as hard near-misses by applying small targeted perturbations that raise a scalar cost computed by an external evaluator. The base alignment objective treats each pair through a logistic link on the difference of two log-probability ratios (trainable versus reference model) for the two members, i.e. a paired-comparison classification loss. The contribution is to multiply each pair's loss by a continuous weight that is a bounded saturating function of the cost gap between the two members, so pairs with large quality gaps drive larger updates and near-ties are suppressed. The resulting gradient is the standard paired-comparison error term modulated by this cost-gap gain, focusing learning on the most severe violations. The authors argue the early-training gradient is locally equivalent to maximizing an implicit reward proportional to the cost gap, that the weighting lowers gradient variance, and that the objective approximates minimizing divergence toward a distribution proportional to the exponential of the negative cost. A low-rank parameter update is used and performance is judged on held-out generations split to avoid near-duplicates.
+DOMAIN: computational protein design, sequence language models
+STRUCTURE: neural network
+DATA_OBJECT: sequence or time-series
+INFERENCE: deterministic optimization
+PROBLEM_FORM: simulation or generation
+DISTRIBUTION: continuous; logistic
+COMPLEXITY: polynomial iterative

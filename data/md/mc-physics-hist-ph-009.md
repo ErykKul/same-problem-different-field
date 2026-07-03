@@ -1,0 +1,5 @@
+# Looking for Work in Quantum Thermodynamics
+
+## Abstract
+
+This paper diagnoses a much-discussed problem in quantum thermodynamics, that of generalizing classical work into the quantum domain. I begin with the no-go theorem of Perarnau-Llobet et al (2017): no universal measurement scheme for quantum work satisfies two intuitive, classically consilient desiderata. I assess this incompatibility as stemming from the measurement problem. Decoherence restores compatibility for all practical purposes, but raises questions about what ‘universality’ should mean and whether any measurement scheme can be ‘universal’. I consider a different standard of universality – in terms of ontology – by defining a trajectory-based notion of quantum work using the quantum potential. While this preserves the classical role of work as the integral of forces over distances, and evades the tension of the no-go theorem, consilience fails elsewhere; no single quantum work concept seems capable of preserving all classical features, raising questions for what it takes for successful generalization of the work concept to quantum thermodynamics.

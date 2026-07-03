@@ -1,0 +1,8 @@
+MECHANISM: A hierarchical model relates per-entity latent deviations to observations through a known nonlinear forward map and fixed population-level parameters. Each entity has a vector of random latent offsets assumed drawn from a zero-mean multivariate normal with a fixed covariance, and observations are generated from a structural model evaluated at those offsets plus a parametric residual-error term with its own fixed covariance. For a single entity, the most probable latent offsets are sought by minimizing a scalar objective equal to a weighted residual sum of squares plus a log-variance term plus a quadratic penalty formed from the inverse prior covariance, which is twice the negative log of the unnormalized posterior. The structural predictions require integrating a system of ordinary differential equations forward in time at candidate parameter values. The objective is minimized over the latent offset vector using a bounded quasi-Newton iterative optimizer, yielding the posterior mode rather than a full posterior. The estimate is the argument minimizing this penalized likelihood, and derived scalar summaries are computed from the optimized offsets via the forward model. Performance is assessed by comparing the optimized offsets and a downstream summary against a reference implementation across many simulated entities, classifying discrepancies by magnitude thresholds. The dominant computation is repeated nonlinear optimization with embedded differential-equation solves.
+DOMAIN: pharmacokinetics, precision dosing
+STRUCTURE: numerical optimization
+DATA_OBJECT: sequence or time-series
+INFERENCE: bayesian posterior
+PROBLEM_FORM: estimation
+DISTRIBUTION: continuous; gaussian
+COMPLEXITY: polynomial iterative

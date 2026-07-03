@@ -1,0 +1,5 @@
+# Stability Verification for Switched Systems using Neural Multiple Lyapunov Functions
+
+## Abstract
+
+Stability analysis of switched systems, characterized by multiple operational modes and switching signals, is challenging due to their nonlinear dynamics. While frameworks such as multiple Lyapunov functions (MLF) provide a foundation for analysis, their computational applicability is limited for systems without favorable structure. This paper investigates stability analysis for switched systems under state-dependent switching conditions. We propose neural multiple Lyapunov functions (NMLF), a unified framework that combines the theoretical guarantees of MLF with the computational efficiency of neural Lyapunov functions (NLF). Our approach leverages a set of tailored loss functions and a counter-example guided inductive synthesis (CEGIS) scheme to train neural networks that rigorously satisfy MLF conditions. Through comprehensive simulations and theoretical analysis, we demonstrate NMLF’s effectiveness and its potential for practical deployment in complex switched systems.

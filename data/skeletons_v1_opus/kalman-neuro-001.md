@@ -1,0 +1,8 @@
+MECHANISM: A hidden continuous quantity evolving over time is estimated recursively from a stream of observations under linear transition and observation maps with additive Gaussian noise. The posterior over the hidden quantity at each step is approximated by a Gaussian parametrized by a mean and a covariance. An objective functional is defined as the expected negative log joint plus the negative entropy of the approximating Gaussian, which upper-bounds the negative log evidence by the nonnegativity of a relative-entropy term. A second-order expansion of the log joint about its mode reduces the functional to a sum of quadratic mismatch terms plus log-determinant terms. The estimator is then obtained by setting the gradients of this functional with respect to the mean and the covariance to zero. The stationary condition on the covariance yields a precision that is the sum of the prior precision and an observation-induced precision, and applying a matrix-inversion identity rewrites it as a multiplicative correction of the prior covariance. The stationary condition on the mean yields a corrected mean equal to the predicted mean plus a gain matrix times the observation residual. A separate prediction step propagates the mean and covariance forward through the linear transition with added process noise. The result is a closed-form recursive update equivalent to the classical linear estimator, here characterized as the fixed point of gradient flow on the functional.
+DOMAIN: state estimation and computational neuroscience
+STRUCTURE: dense linear algebra
+DATA_OBJECT: sequence or time-series
+INFERENCE: variational
+PROBLEM_FORM: estimation
+DISTRIBUTION: continuous; gaussian
+COMPLEXITY: closed-form

@@ -1,0 +1,8 @@
+MECHANISM: A large collection of interacting bodies is initialized on a grid according to a prescribed initial spectrum and then advanced in time under mutual pairwise forces. At each step the force on every body is approximated by hierarchically grouping distant bodies and combining their aggregate contributions with direct near-field interactions, reducing the cost of the all-pairs interaction. The trajectories are integrated over many steps, and snapshots of the body positions are stored. Bound aggregates of bodies are then identified by a phase-space grouping procedure, and ancestral links between aggregates across consecutive snapshots are reconstructed by splitting the domain into overlapping subregions, linking, and de-duplicating. A field quantity is estimated by depositing body masses onto a mesh and applying a fast transform to obtain a spectrum, with a multi-resolution folding scheme to extend the frequency range and an aliasing correction. Summary count-distributions of aggregate sizes are accumulated. A low-parameter analytic relation between an aggregate's size and an internal-structure scalar is then posited, where the scalar is obtained either by fitting a radial profile or by solving an implicit equation involving a peak velocity. The free parameters of this relation are calibrated by minimizing discrepancy against the measured aggregates across many size and epoch bins. Residuals between the calibrated relation and the data are reported.
+DOMAIN: cosmological structure formation and dark matter halos
+STRUCTURE: N-body or all-pairs
+DATA_OBJECT: point set
+INFERENCE: deterministic optimization
+PROBLEM_FORM: simulation or generation
+DISTRIBUTION: continuous; none
+COMPLEXITY: not stated

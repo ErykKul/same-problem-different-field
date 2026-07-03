@@ -1,0 +1,8 @@
+MECHANISM: Several competing objective quantities must be optimized jointly, and the goal is to recover a set of mutually non-dominated trade-off solutions rather than a single optimum. The standard route scalarizes the objectives into a single weighted-sum cost and minimizes it by a slow continuous-time relaxation that gradually transforms an easy initial cost into the target cost, settling toward a low-cost configuration. A known limitation is that sweeping the scalarization weights only recovers trade-off points lying on convex portions of the achievable frontier. The proposed idea is to read out configurations at intermediate times of the relaxation, before full settling, so that the partially-converged states supply additional candidate solutions. Earlier read-out times yield more diverse but less-converged configurations, while later times yield configurations closer to true minima; an intermediate time balances the two. This trade-off is quantified by diversity and dominance metrics over the collected candidate set. Two routes produce the intermediate configurations: a hardware procedure that abruptly freezes and measures, and an idealized numerical simulation of the relaxation dynamics with measurement at a chosen time. The two routes are compared and shown to agree qualitatively. The output is an approximated trade-off frontier assembled from configurations gathered across times.
+DOMAIN: quantum annealing, multi-objective optimization
+STRUCTURE: other: annealing dynamics simulation
+DATA_OBJECT: none
+INFERENCE: none
+PROBLEM_FORM: optimization
+DISTRIBUTION: none; none
+COMPLEXITY: not stated

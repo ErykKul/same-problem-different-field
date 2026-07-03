@@ -1,0 +1,5 @@
+# Comparative Study of Machine Learning Models for Stock Price Prediction
+
+## Abstract
+
+In this work, we apply machine learning techniques to historical stock prices to forecast future prices. To achieve this, we use recursive approaches that are appropriate for handling time series data. In particular, we apply a linear Kalman filter and different varieties of long short-term memory (LSTM) architectures to historical stock prices over a 10-year range (1/1/2011 – 1/1/2021). We quantify the results of these models by computing the error of the predicted values versus the historical (i.e., “true”) values of each stock. We find that of the algorithms we investigated, a simple linear Kalman filter can predict the next-day value of stocks with low-volatility (e.g., Microsoft, ’MSFT’) surprisingly well. However, in the case of high-volatility stocks (e.g., Tesla, ’TSLA’) the more complex LSTM algorithms significantly outperform the Kalman filter. Our results show that we can classify different types of stocks (i.e., clustering) and then train an LSTM for each stock type. This method could be used to automate portfolio generation for a target return rate.

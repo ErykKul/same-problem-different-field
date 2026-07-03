@@ -1,0 +1,8 @@
+MECHANISM: A relational structure of entities and pairwise links is treated through a discrete boundary operator and its adjoint, whose composition is the associated combinatorial second-difference operator. For each entity and each integer radius, an indicator vector marks exactly the entities lying at that geodesic distance. A scalar invariant is defined as the quadratic form of the second-difference operator evaluated on that indicator vector, normalized by the indicator's squared norm. It is shown that this quadratic form equals the number of links leaving the radius-shell to the rest of the structure, so the invariant reduces to the ratio of boundary links to shell size, a purely combinatorial quantity. The special radii recover known per-entity link counts. The invariant is proved to be lower bounded by the structure's isoperimetric constant and upper bounded by the largest eigenvalue of the second-difference operator. Computation proceeds shell by shell: starting from the identity and the link-incidence matrix, successive shells are formed by an exclusive-or of the propagated previous shell with the shell two steps back, and the quadratic form and norm are read off each step. The resulting per-entity values are aggregated into empirical distributions whose skewness is compared against a fixed threshold to separate empirical structures from synthetic ones.
+DOMAIN: complex-network structural invariants and centralities
+STRUCTURE: graph traversal
+DATA_OBJECT: graph or network
+INFERENCE: deterministic or closed-form
+PROBLEM_FORM: proof or characterization
+DISTRIBUTION: heavy-tailed; other: weibull
+COMPLEXITY: closed-form

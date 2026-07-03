@@ -1,0 +1,8 @@
+MECHANISM: For each entity, a long high-frequency numeric trajectory is combined with a small set of static scalar measurements into a multimodal temporal input. The trajectories are resampled to a uniform grid, windowed into fixed-length segments, gaps interpolated or dropped, and continuous values standardized. A self-attention encoder with positional encodings processes the sequence and contextual scalar tokens jointly to produce a fixed-dimensional latent vector per entity; it is trained without labels by masked reconstruction minimizing squared error between input and reconstructed sequence. The learned latent vectors are then clustered by fitting a finite mixture of Gaussian components via likelihood maximization, giving soft probabilistic assignment of each entity to a latent subgroup, with the number of components chosen by an information criterion and a separation score. Cluster stability is checked across reinitializations with an agreement index, and a low-dimensional projection is used for visualization. Interpretation uses attention weights to highlight influential temporal segments and an additive feature-attribution method to rank which scalar inputs most separate subgroups. Subgroup membership is then cross-tabulated against categorical outcomes using rank-based group tests with multiple-comparison correction and association effect sizes. The core is representation learning followed by density-based clustering. Outputs are latent subgroups with attributions.
+DOMAIN: metabolic phenotyping in diabetes
+STRUCTURE: neural network
+DATA_OBJECT: sequence or time-series
+INFERENCE: maximum likelihood
+PROBLEM_FORM: other: clustering
+DISTRIBUTION: continuous; gaussian mixture
+COMPLEXITY: not stated

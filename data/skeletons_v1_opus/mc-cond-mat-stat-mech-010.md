@@ -1,0 +1,8 @@
+MECHANISM: A one-dimensional chain of coupled two-level sites is described by a quadratic operator with nearest-neighbor coupling and pairing terms whose left-going and right-going amplitudes are deliberately unequal, making the governing matrix non-self-adjoint. For the periodic case a discrete transform diagonalizes the operator into a momentum-dependent two-by-two block, whose determinant yields a complex two-band dispersion; the gap-closing condition locates a transition between two phases. For the finite open case the operator is a banded block-tridiagonal matrix that is diagonalized to obtain the complex spectrum and the localized boundary eigenvectors. To capture boundary localization the phase factor is analytically continued to a complex variable, turning the zero-mode condition into a polynomial whose roots come in reciprocal pairs; the product of paired roots equals one, so the two boundary modes share a localization length and their combined density cancels the directional accumulation. A symmetry analysis treats transpose and conjugation as independent operations to classify which discrete symmetries survive, showing one symmetry persists over the whole complex-parameter range and forces excited modes to localize oppositely while protecting the boundary zero modes. A sign-product index over the two high-symmetry momenta defines a two-valued invariant distinguishing the phases. Phase boundaries are mapped analytically in the complex-parameter plane by tracking the gap-closing momenta.
+DOMAIN: condensed matter physics, topological phases
+STRUCTURE: dense linear algebra
+DATA_OBJECT: dense matrix or tensor
+INFERENCE: deterministic or closed-form
+PROBLEM_FORM: proof or characterization
+DISTRIBUTION: none; none
+COMPLEXITY: closed-form

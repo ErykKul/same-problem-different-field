@@ -1,0 +1,8 @@
+MECHANISM: Given a sequence of vector-valued tokens, a stack of layers repeatedly mixes each token with the others by computing, for every ordered pair, an inner-product affinity between two learned linear projections of the tokens, scaled by a constant. These pairwise affinities are normalized along the source axis into nonnegative weights that aggregate a third learned projection of the tokens. The method modifies this mechanism in two ways. First, it injects position dependence into the affinity by rotating the projected query and key vectors at multiple frequencies indexed by feature coordinate, and by adding a learned, distance-dependent scalar offset that is specific to each parallel mixing channel and truncated to zero beyond a fixed window. Second, it relaxes the normalization so that the weights need not sum to one: after the standard normalization, a learned negative offset scaled inversely by the number of attended positions is added, and a rectifier clips the result at zero, producing exactly-zero weights when no source is sufficiently salient. The remaining nonzero weights yield a sparse aggregation. Parameters of the projections, the distance offsets, and the per-channel relaxation offsets are all fit by gradient-based minimization of a sequence-prediction loss over a large corpus. Diagnostics measure how concentrated versus diffuse the weight distribution is and how much mass collapses onto leading positions.
+DOMAIN: sequence modeling and language models
+STRUCTURE: neural network
+DATA_OBJECT: sequence or time-series
+INFERENCE: deterministic optimization
+PROBLEM_FORM: prediction or classification
+DISTRIBUTION: count; multinomial
+COMPLEXITY: not stated

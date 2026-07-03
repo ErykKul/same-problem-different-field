@@ -1,0 +1,8 @@
+MECHANISM: The goal is to generate a discrete sequence of fixed length over a small alphabet that is compatible with a given fixed geometric scaffold of three-dimensional coordinates. Instead of operating on the discrete tokens directly, the method maintains a continuous belief over each position, represented as the parameters of a per-position categorical distribution living on a probability simplex. A forward noising process transmits the true sequence into this parameter space by adding scaled noise whose precision grows with a continuous time variable, so the belief moves from uniform to sharp. A neural network receiver takes the current soft belief and the time index and predicts the per-position distribution; this network uses an attention mechanism that weights interactions by both feature similarity and the Euclidean distances between positions in the fixed coordinate frame, so spatially near positions communicate. Training minimizes a continuous-time reconstruction objective, implemented as a cross-entropy between predicted and true categories integrated over time. Generation starts from the uniform belief and iterates a fixed number of update steps, each adding the network's predicted evidence plus a decaying noise term, progressively sharpening the belief until a sequence is read off. Because the whole pipeline acts on continuous simplex parameters, it is differentiable end to end. Performance is measured by the fraction of positions whose predicted symbol matches the held-out truth.
+DOMAIN: computational protein and antibody sequence design
+STRUCTURE: neural network
+DATA_OBJECT: sequence or time-series
+INFERENCE: bayesian posterior
+PROBLEM_FORM: simulation or generation
+DISTRIBUTION: count; multinomial
+COMPLEXITY: not stated

@@ -1,0 +1,8 @@
+MECHANISM: Panel observations indexed by unit and period are first assembled by reallocating aggregate counts from one set of overlapping regions to another using population-weighted areal interpolation: each source total is split across fine atoms in proportion to their population, then re-summed over target boundaries, preserving mass. The change across periods in a logged outcome is regressed on the change in a logged driver entered in piecewise-linear form, separating positive and negative movements into two regressors, with period intercepts and additional covariates, fit by ordinary least squares with standard errors clustered by unit. An equality test compares the two slope coefficients to detect asymmetry. As a robustness alternative, a multiplicative-mean model is posited in which the conditional mean is an exponential of a linear index times a unit-specific factor; a quasi-differencing moment condition cancels the unit factor and the parameters are estimated by the method of moments. To address endogeneity of the driver, an instrument is built as a weighted combination of aggregate sector growth rates weighted by lagged local sector shares, further interacted with predetermined supply-rigidity indicators, and the system is estimated by instrumental-variable regression with over-identification diagnostics. A small optimization-based theoretical model of agent choice is sketched to rationalize the estimated asymmetry.
+DOMAIN: urban housing and homelessness economics
+STRUCTURE: other: linear regression model
+DATA_OBJECT: set or table
+INFERENCE: frequentist point estimate
+PROBLEM_FORM: estimation
+DISTRIBUTION: continuous; nonparametric
+COMPLEXITY: closed-form

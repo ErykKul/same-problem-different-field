@@ -1,0 +1,8 @@
+MECHANISM: A collection of entities each has a hidden state composed of a continuous part and a binary active/inactive indicator that evolves over discrete time. A factorized transition rule advances each entity independently, switching its indicator on or off with fixed birth and death probabilities and propagating its continuous state through a possibly nonlinear, possibly non-Gaussian stochastic map. Observations at each step depend on the entities only through the sum of nonlinear contributions of the currently active entities, corrupted by general additive noise. The goal is the recursive posterior over all states given all observations so far, obtained by alternating a prediction step that marginalizes the previous posterior through the transition rule and an update step that reweights by the observation likelihood and renormalizes. Because these integrals are intractable, the posterior is represented by a finite weighted ensemble of point samples over the joint discrete-continuous state. Each iteration proposes new sample locations using the current observation, advances them through the transition rule by ancestral sampling, assigns importance weights from the superpositional observation likelihood, and resamples to combat weight degeneracy. Point summaries such as conditional means and thresholded indicator estimates are read off from the weighted ensemble. The accuracy improves as the number of samples grows.
+DOMAIN: multi-object tracking from raw sensor signals
+STRUCTURE: other: sequential Monte-Carlo particle ensemble
+DATA_OBJECT: sequence or time-series
+INFERENCE: sampling or Monte-Carlo
+PROBLEM_FORM: estimation
+DISTRIBUTION: continuous; nonparametric
+COMPLEXITY: not stated

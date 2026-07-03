@@ -1,0 +1,8 @@
+MECHANISM: A configuration of many discrete entities lives on a curved two-dimensional surface, and a total energy is defined as a sum over all pairs of a long-range logarithmic interaction plus a per-entity confining term. The ground state is the arrangement minimizing this energy; numerically it is found by gradient-based descent (conjugate gradients) from an initial guess, and low-lying stationary points (local minima and saddles) above it are sought by perturbing the configuration. Topological defects are introduced by adding or removing localized patterns of entities, and the energy cost of each defect configuration is computed by re-minimization and compared across preparation methods. Analytically, the displacement field induced by a localized defect pair is written in closed form, Fourier-transformed over the lattice, and its elastic energy is evaluated as a quadratic form with a wavevector-dependent stiffness matrix; the resulting integral over the first Brillouin zone is approximated by a radial integral with an infrared cutoff. This shows that the logarithmic part of the direct pair interaction is exactly canceled by the logarithmic part of the elastic relaxation, leaving a defect energy of order unity. A free-energy argument balances a logarithmic isolated-defect energy against a logarithmic configurational entropy to yield a critical threshold independent of system size. Finite-size scaling of the numerically computed defect energies versus the entity count tests the analytic predictions.
+DOMAIN: two-dimensional plasma, condensed matter, statistical mechanics
+STRUCTURE: N-body or all-pairs
+DATA_OBJECT: point set
+INFERENCE: deterministic optimization
+PROBLEM_FORM: optimization
+DISTRIBUTION: none; none
+COMPLEXITY: polynomial iterative

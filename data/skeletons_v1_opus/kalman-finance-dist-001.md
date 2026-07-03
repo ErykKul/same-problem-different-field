@@ -1,0 +1,8 @@
+MECHANISM: The method forecasts the next value of an ordered sequence of observations using two families of recursive estimators and compares their error. The first is a linear recursive state estimator that, at each step, propagates a prediction of the latent quantity and its uncertainty, then combines it with the newest measurement by weighting the two inverse-variance terms so the posterior estimate balances prediction and observation uncertainty; the prediction uncertainty is set proportional to a local empirical variance over a short trailing window. The second family is a parameterized recurrent nonlinear map that maintains an internal memory vector updated each step through learned gating functions that decide what to retain, what to incorporate from the current input, and what to emit. Parameters of the recurrent map are fit by minimizing a squared-error objective over training segments via gradient-based updates, with inputs rescaled to a bounded range and reshaped into fixed-length windows. Variants differ by stacking multiple recurrent layers, processing the sequence in both directions, or prepending a local convolutional feature extractor. Predictions are rescaled back and scored against held-out true values using mean squared error, mean absolute error, and a coefficient-of-determination measure. A trained map is then transferred without refitting to a different sequence with similar variability to test generalization.
+DOMAIN: financial time-series forecasting
+STRUCTURE: neural network
+DATA_OBJECT: sequence or time-series
+INFERENCE: bayesian posterior
+PROBLEM_FORM: prediction or classification
+DISTRIBUTION: continuous; gaussian
+COMPLEXITY: polynomial iterative

@@ -1,0 +1,8 @@
+MECHANISM: A large sparse system of nonlinear algebraic equations is solved by recasting root-finding as integration of a continuous-time dynamical system whose equilibrium is the root. The governing flow sets the Jacobian times the state derivative equal to the negative residual, so trajectories descend toward the solution regardless of their path. Discretizing this flow by an explicit one-step rule recovers a damped iterative update whose step size acts as a damping factor, while an implicit one-step rule requires an inner iterative solve of a nonlinear subproblem at each outer step. Local convergence is analyzed by linearizing each discrete map about the equilibrium and examining the eigenvalues of the resulting matrix pencil, giving stability bounds on the step size and showing the implicit scheme is stable for any positive step. A distorted pencil model captures how ill-conditioning of the Jacobian contracts the stable step-size region. Step-size adaptation is then driven by quantizing the state: each component triggers an update only when it has changed by a fixed increment, and the implied step is that increment divided by the magnitude of the component's derivative. The smallest per-component step is taken as the global step, tying step length directly to state variation and requiring only one tuning constant. The procedure repeats until successive states differ by less than a tolerance, signaling equilibrium.
+DOMAIN: power system / electrical network analysis
+STRUCTURE: sparse linear algebra
+DATA_OBJECT: sparse matrix
+INFERENCE: deterministic optimization
+PROBLEM_FORM: reconstruction or denoising
+DISTRIBUTION: none; none
+COMPLEXITY: convergence rate

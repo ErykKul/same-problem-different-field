@@ -1,0 +1,8 @@
+MECHANISM: A latent quantity evolves as a nonlinear, randomly driven discrete-time state process and is observed only through a noisy nonlinear measurement map with additive Gaussian noise. The goal is to recursively track the hidden state and to estimate the fixed parameters of the dynamics. Several recursive estimators that propagate a predicted state and its error covariance and then correct them against each new observation are run in parallel; they differ in how they linearize or sample the nonlinear maps. A theoretical lower bound on the mean-squared error of any estimator is computed by a recursive update of an information matrix built from expected Hessians of the log-transition and log-observation densities, approximated by averaging gradients over Monte-Carlo samples drawn from the predictive and smoothing distributions. A scalar performance metric is formed by combining each estimator's empirical error covariance with the inverse information bound, bounded into a fixed interval. At each step the estimator whose metric is largest is selected to emit the point estimate, so the active filter switches adaptively over time. Separately, closed-form moment-matching expressions derived from a noncentral-chi-square transition law yield direct estimates of the drift, mean-reversion, volatility-of-volatility, and correlation parameters. The recovered state trajectory and parameters are then fed into a closed-form pricing formula and compared against reference measures.
+DOMAIN: quantitative finance, volatility estimation
+STRUCTURE: graphical models
+DATA_OBJECT: sequence or time-series
+INFERENCE: bayesian posterior
+PROBLEM_FORM: estimation
+DISTRIBUTION: continuous; gaussian
+COMPLEXITY: finite-sample bound

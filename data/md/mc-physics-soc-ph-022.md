@@ -1,0 +1,5 @@
+# Generalization to Political Beliefs from Fine-Tuning on Sports Team Preferences
+
+## Abstract
+
+Fine-tuned LLMs often exhibit unexpected behavior as a result of generalizing beyond the data they’re shown. We present results in which an LLM fine-tuned to prefer either coastal sports teams or Southern sports teams adopt political beliefs that diverge substantially from those of the base model. While we hypothesized that the coastal model would become more liberal and the southern model would become more conservative, we find that their responses are usually similar to each other, without a clear-cut liberal or conservative bias. In addition to asking the models for numerical ratings of agreement with relevant political statements, we ask them to elaborate on their answers that diverge most strongly from the base model, finding varying degrees of willingness to justify themselves. Further work is needed to understand the mechanisms by which fine-tuning on simple, narrow datasets leads to seemingly unrelated changes in model behavior.

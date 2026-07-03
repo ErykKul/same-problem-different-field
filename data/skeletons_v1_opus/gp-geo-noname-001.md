@@ -1,0 +1,8 @@
+MECHANISM: Given observations of a quantity at a set of scattered spatial locations, the goal is to predict the quantity at unobserved locations. First, pairwise differences of observed values are aggregated as a function of the separation distance between locations to produce an empirical measure of how dissimilarity grows with distance. A parametric model of this distance-dependent covariance is fitted to the empirical curve, characterizing the correlation length and the unexplained small-scale variability. Each prediction is then formed as a weighted linear combination of nearby observed values, with weights obtained by solving a small linear system derived from the fitted covariance so that the predictor is unbiased and minimizes error variance. A multivariate extension brings in auxiliary correlated quantities by jointly modeling their cross-covariances and including them in the weighted combination. In parallel, a separate flexible parametric function approximator with stacked weighted-sum-plus-nonlinearity layers is fitted to the same data by iteratively minimizing squared prediction error. Each location is held out in turn and predicted from the remaining ones, and several error summaries are computed to compare the competing predictors. The approach producing the lowest held-out error is selected for generating prediction surfaces over the whole region.
+DOMAIN: environmental geochemistry and spatial pollution mapping
+STRUCTURE: kernel method
+DATA_OBJECT: point set
+INFERENCE: deterministic or closed-form
+PROBLEM_FORM: prediction or classification
+DISTRIBUTION: continuous; gaussian
+COMPLEXITY: not stated

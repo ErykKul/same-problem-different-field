@@ -1,0 +1,8 @@
+MECHANISM: For each of several supervised tasks, an ensemble of tree-based predictive models is fit on an early time slice, and a distribution-free set-valued predictor is calibrated by ranking nonconformity scores on a held-out slice to a chosen miscoverage level. On a later, shifted time slice the empirical containment frequency of the true label within the predicted set is measured, and its drop relative to calibration is recorded. A per-attribute overlap statistic between the value supports of two time slices is computed as the ratio of intersection to union of distinct values. Additive feature-attribution scores are computed on each task, and a concentration index is formed as the share of total attribution carried by the single top attribute. Across the small collection of tasks, monotone rank correlations and their significance are computed between the degradation, the overlap statistic, and the concentration index, supplemented by resampling-based confidence intervals and permutation significance. A paired signed-rank test compares containment under periodic refitting at several cadences against no refitting. A placebo comparison repeats the pipeline on an unshifted earlier interval to separate the effect of interest from ordinary drift. The output is a diagnostic decision rule thresholding the overlap and concentration indices to predict robustness and prescribe refitting.
+DOMAIN: distribution-shift robustness of predictive uncertainty sets
+STRUCTURE: other: empirical statistical analysis
+DATA_OBJECT: set or table
+INFERENCE: frequentist point estimate
+PROBLEM_FORM: decision or test
+DISTRIBUTION: proportion or bounded; nonparametric
+COMPLEXITY: not stated

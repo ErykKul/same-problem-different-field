@@ -1,0 +1,8 @@
+MECHANISM: A population of interacting autonomous generative agents is simulated over discrete time increments on a shared communication medium to observe emergent collective behavior. Each agent holds a fixed background represented as a vector of trait scores and, at each increment, acts only with a prescribed probability, producing a textual message conditioned on the current shared state and its own running memory summary. A distinguished agent injects exogenous events at scheduled steps, and agents periodically register choices that are tallied. Pairs of agents are constrained at setup so their background vectors have a target cosine similarity, ensuring heterogeneity. Runs are repeated with fixed and varied random seeds to separate the effect of agent composition from intrinsic stochasticity. After each run completes, the recorded interaction log is post-hoc annotated by a separate generative judge that assigns each message zero or more labels from a fixed catalog of categories. The analysis is then purely descriptive: counts and relative frequencies of category labels, per-agent action tallies, outcome win counts, and a network of interactions colored by pairwise background similarity. No estimator is fit, no model parameters are inferred, and no theoretical quantity is computed; the contribution is a stochastic multi-agent generation harness plus tabulation of its outputs.
+DOMAIN: multi-agent social simulation and persuasion
+STRUCTURE: other: agent-based simulation
+DATA_OBJECT: graph or network
+INFERENCE: sampling or Monte-Carlo
+PROBLEM_FORM: simulation or generation
+DISTRIBUTION: count; none
+COMPLEXITY: not stated

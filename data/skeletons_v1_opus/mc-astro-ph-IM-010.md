@@ -1,0 +1,8 @@
+MECHANISM: A coupled system of time-dependent transport and conservation equations is evolved numerically on an adaptively refined spatial domain. The unknown fields are discretized in a high-order piecewise-polynomial representation over phase-space cells, while a companion set of fluid fields is represented in a lower-order finite-volume form, with conversion between the two representations at their interface. Time integration uses a mixed implicit-explicit splitting: stiff local coupling terms are treated implicitly while transport terms are advanced explicitly, and physical processes are advanced in separate operator-split substeps. The implicit coupling between the transported quantities and the background medium is a nonlinear algebraic system solved at each step by a nested fixed-point iteration, accelerated by combining a history of previous iterates to speed convergence. A closure relation expresses higher moments in terms of evolved lower moments, and small velocity-dependent corrections are retained to first order. Source and interaction terms, including energy-redistributing scattering and pair processes, are evaluated from tabulated coefficients. The scheme is verified on idealized relaxation and equilibration test problems and on symmetric benchmark configurations, and is executed on parallel accelerator hardware. The overall computation produces the time evolution of the coupled fields.
+DOMAIN: computational astrophysics, radiation-hydrodynamics simulation
+STRUCTURE: structured grid
+DATA_OBJECT: grid or lattice
+INFERENCE: deterministic or closed-form
+PROBLEM_FORM: simulation or generation
+DISTRIBUTION: none; none
+COMPLEXITY: polynomial iterative

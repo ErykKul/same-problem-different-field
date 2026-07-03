@@ -1,0 +1,8 @@
+MECHANISM: Given a collection of entities each described by a sequence of measurements over an index, a pairwise affinity is computed between every pair of entities to form a square symmetric nonnegative matrix. Each entry quantifies a similarity, computed either from a normalized linear association rescaled to be nonnegative, or from a frequency-domain agreement obtained by transforming the cross- and auto-spectra of the two sequences and forming a normalized ratio. The matrix is interpreted as a weighted undirected graph over the entities. The dominant invariant direction of this matrix is sought: the eigenvector associated with the largest eigenvalue, whose components assign to each entity a score proportional to the weighted sum of the scores of all entities linked to it. Nonnegativity guarantees, via a classical positive-matrix theorem, that this leading eigenvalue is real and unique and its eigenvector has nonnegative entries, making the score well defined. The eigenvector is obtained by repeated multiplication of a trial vector by the matrix with renormalization, converging to the leading direction. The resulting per-entity scores are then transformed to follow a normal reference distribution. Groups of score maps are compared by a paired mean-difference test at each entity. Multiplicity is controlled by deriving cluster-extent and cluster-magnitude thresholds from repeated random simulations.
+DOMAIN: functional neuroimaging connectivity, brain network analysis
+STRUCTURE: spectral or transform
+DATA_OBJECT: graph or network
+INFERENCE: deterministic or closed-form
+PROBLEM_FORM: ranking or retrieval
+DISTRIBUTION: continuous; gaussian
+COMPLEXITY: convergence rate

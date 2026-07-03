@@ -1,0 +1,8 @@
+MECHANISM: A high-order array is represented as a contraction of a cyclic chain of small three-index core factors, where each entry of the array is the trace of a product of matrix slices drawn one from each core. Each core is made continuous by generating its slices from a coordinate through a small feed-forward map fed by a shared sinusoidal embedding, so the factors become functions of position rather than fixed tables. A frequency-domain analysis shows that the spectral content of the reconstructed array along each axis is bounded by the spectral content of the corresponding core, and that coordinate-based maps are biased toward low frequencies. To counter this, each core is reparameterized as a learnable latent factor multiplied along its last index by a fixed random basis matrix, and it is proven that this amplifies the gradient response at high frequencies relative to low frequencies, improving conditioning of the optimization. A variance-preserving initialization for the fixed basis is derived, and the overall coordinate-to-value map is shown to be Lipschitz continuous. The parameters of the coordinate maps are then fitted by minimizing a data-fidelity term between the reconstructed array and partial or corrupted observations plus an optional regularizer, using gradient-based optimization. The same formulation handles missing-entry completion, noise removal, resolution increase, and recovery of values at unobserved continuous coordinates.
+DOMAIN: multi-dimensional signal and image recovery
+STRUCTURE: other: low-rank tensor factorization
+DATA_OBJECT: dense matrix or tensor
+INFERENCE: deterministic optimization
+PROBLEM_FORM: reconstruction or denoising
+DISTRIBUTION: continuous; none
+COMPLEXITY: convergence rate

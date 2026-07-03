@@ -1,0 +1,8 @@
+MECHANISM: A scalar sequence is transformed into log-differences, and from these a feature table is engineered comprising several lagged values plus rolling summaries (windowed standard deviations, a windowed mean, and a bounded momentum ratio), all computed using only past entries to avoid leakage. A one-step-ahead value is predicted by an additive ensemble of regression trees fit by gradient boosting with regularization, minimizing squared error. Hyperparameters (tree count, depth, learning rate, subsampling, regularization strengths) are selected by a sequential model-based search over forward-chained cross-validation folds on an initial segment. Out-of-sample evaluation uses rolling-origin validation: the model is refit at each test step on either an expanding or a fixed-length trailing window, predicting the next step, repeated across several lag depths. Predicted log-differences are exponentiated and accumulated against prior levels to reconstruct the original scale. Accuracy is summarized by root-mean-square error, mean absolute error, a coefficient-of-determination, and the fraction of correctly predicted signs. Linear-autoregressive and penalized-linear baselines are tuned analogously, and improvements are tested for significance via a pairwise equal-accuracy test under squared-error loss, a sign-predictability test, a binomial test against chance, and bootstrap confidence intervals. Relative feature contributions are ranked by split gain.
+DOMAIN: financial time-series forecasting
+STRUCTURE: other: boosted decision-tree ensemble
+DATA_OBJECT: sequence or time-series
+INFERENCE: deterministic optimization
+PROBLEM_FORM: prediction or classification
+DISTRIBUTION: continuous; nonparametric
+COMPLEXITY: not stated

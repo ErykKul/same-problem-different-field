@@ -1,0 +1,5 @@
+# Multi-Resolution Analysis of Variable Selection for Road Safety in St. Louis and Its Neighboring Area
+
+## Abstract
+
+Generally, Lasso, Adaptive Lasso, and SCAD are standard approaches in variable selection in the presence of a large number of predictors. In recent years, during intensity function estimation for spatial point processes with a diverging number of predictors, many researchers have considered these penalized methods. But we have discussed a multi-resolution perspective for the variable selection method for spatial point process data. Its advantage is twofold: it not only efficiently selects the predictors but also provides the idea of which points are liable for selecting a predictor at a specific resolution. Actually, our research is motivated by the crime and accident occurrences in St. Louis and its neighborhoods. It is more relevant to select predictors at the local level, and thus we get the idea of which set of predictors is relevant for the occurrences of crime or accident in which parts of St. Louis. We describe the simulation results to justify the accuracy of local-level variable selection during intensity function estimation.
