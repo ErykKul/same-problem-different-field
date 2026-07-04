@@ -29,7 +29,7 @@ Average precision (AP): how cleanly the true cross-domain twins sit at the top o
 | **faceted fingerprint + TF-IDF [Haiku distiller, ours]** | **0.557** |
 
 The faceted fingerprint embedded with a plain bag-of-words (TF-IDF) is the strongest method, more than
-double the abstract. The striking part: the dedicated scientific embedders (SPECTER, SciNCL, SemCSE, and
+double the abstract. The dedicated scientific embedders (SPECTER, SciNCL, SemCSE, and
 SPECTER2 via `src/specter2_local.py`) all fall below the plain abstract+TF-IDF baseline, because they
 encode topical and citation similarity, the wrong signal for cross-domain computational matching. Full
 AUROC and recall@K columns, plus the extended/wild-run table, are written to `reproduce_out/`.
@@ -188,12 +188,12 @@ held-out-family generalization test by `held_out_family.py`, the three-distiller
 facet-agreement / DOMAIN-ablation diagnostics by `perfam.py`, `p1mrr_boot.py`, `facet_agree_ap.py`, and
 `nodomain.py`.
 
-## Citation and archive
+## Status, archive and citation
 
-This repository accompanies the paper *"Same Problem, Different Field: Cross-Domain Solution Import via
-Domain-Stripped Computational Fingerprints"* (under review). A frozen copy will be archived in an
-institutional research data repository with a DOI: `<DOI to be minted at publication>`. If you use this
-benchmark or code, please cite the paper (full citation added at publication).
+This repository is the public record of this work while the accompanying manuscript is under review:
+the full method, every reported number, and everything needed to reproduce them offline. A frozen copy
+is archived on Zenodo with a version DOI (badge added at release); until the paper is out, cite this
+repository by that DOI. The full paper citation will be added here at publication.
 
 ## License
 
