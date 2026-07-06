@@ -1,0 +1,9 @@
+20 patients with observations, 139 concentration measurements
+
+NPMLE (open EM) converged in 29175 iters.
+SPARSE support: 15 support points with weight > 1e-3, out of 5000 grid points (<= 20 patients, the sparse-support property; NPAG found 18).
+                          Ka(/h)  Ke(/h)   V(L)   Tlag(h)  CL=Ke*V(L/h)
+  open NPMLE (this work):  0.639  0.0475  82.2   1.34    3.90
+  NPAG (bespoke, LAPKB) :  0.628  0.0514  77.8   1.19    4.00
+
+individual Bayesian-posterior predictions vs observed: mean abs rel error 11.8%, bias +2.3% (n=139)

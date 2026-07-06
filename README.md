@@ -127,7 +127,7 @@ python src/import_surfacing.py   # the retrieval half: the fingerprint links eac
 
 Four imports across four computational cores (sparse-mixture MLE, low-rank completion, Gaussian-process
 regression, sequence alignment), each reproducible with numpy/scikit-learn only. `import_surfacing.py`
-shows the fingerprint ranks the recsys factorization paper 3rd of 492 cross-field neighbors of the
+shows the fingerprint ranks the recsys factorization paper 3rd of 500 cross-field neighbors of the
 ideal-points paper (abstract cosine 0.03), the retrieval a topical embedder misses.
 
 ## Optional: rebuild or regenerate

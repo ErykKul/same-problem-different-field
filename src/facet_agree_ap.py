@@ -35,9 +35,9 @@ def loglr(cols):
     return sc
 AGc,colc=agmat(CORE); AGa,cola=agmat(ALLF)
 print(f"curated {N}, {len(A)} cross-field pairs, {int(pos.sum())} twins")
-print(f"(a) facet-only TF-IDF AP:             {ap_tfidf:.3f}   <- current paper line 687 value (0.455)")
+print(f"(a) facet-only TF-IDF AP:             {ap_tfidf:.3f}   <- facet block as plain TF-IDF (0.449)")
 print(f"(b) raw agreement-count AP (4 core):  {average_precision_score(pos,AGc):.3f}")
 print(f"(b) raw agreement-count AP (7 all):   {average_precision_score(pos,AGa):.3f}")
 print(f"(c) log-LR-weighted AP (4 core):      {average_precision_score(pos,loglr(colc)):.3f}")
 print(f"(c) log-LR-weighted AP (7 all):       {average_precision_score(pos,loglr(cola)):.3f}")
-print(f"reference: skeleton+TFIDF 0.497, fingerprint+TFIDF 0.565 (so 'weakest' must be < 0.497)")
+print(f"reference: skeleton+TFIDF 0.513, fingerprint+TFIDF 0.557 (so 'weakest' must be < 0.513)")

@@ -18,5 +18,5 @@ def ap(texts):  # e5 retrieval convention: "query: " prefix on both sides (symme
 reps={"abstract":[absr[i] for i in ids],
       "skeleton":[R.faceted_text("skeletons_faceted_haiku",i,mech_only=True) for i in ids],
       "fingerprint":[R.faceted_text("skeletons_faceted_haiku",i) for i in ids]}
-print(f"E5-large-v2 on curated {N} (query-prefix). reference: fingerprint+TFIDF 0.565, abstract+TFIDF 0.253")
+print(f"E5-large-v2 on curated {N} (query-prefix). reference: fingerprint+TFIDF 0.557, abstract+TFIDF 0.222")
 for r,t in reps.items(): print(f"  E5-large-v2  {r:12} AP {ap(t):.3f}",flush=True)

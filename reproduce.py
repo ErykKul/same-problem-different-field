@@ -15,7 +15,7 @@ their native input. SOTA models are loaded from the HuggingFace cache; any that 
 skipped and reported, the rest of the table still prints.
 
 The bundled corpus is the open subset (4 paywalled institutional-access papers excluded). The curated
-headline (faceted-full + TF-IDF, AP 0.565) reproduces exactly; the extended/wild run is the open-subset
+headline (faceted-full + TF-IDF, AP 0.557) reproduces exactly; the extended/wild run is the open-subset
 version. No model and no network are needed: the fingerprints and abstracts ship under data/.
 
   python reproduce.py            # both tables over the bundled data/ (no model, no network)

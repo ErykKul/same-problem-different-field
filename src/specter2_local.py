@@ -56,7 +56,7 @@ reps = {
 }
 print(f"SPECTER2 (local model + proximity adapter) on curated {N}, {len(pos)} cross-field pairs, "
       f"{int(pos.sum())} twins")
-print("reference: abstract+TF-IDF 0.253, fingerprint+TF-IDF 0.565")
+print("reference: abstract+TF-IDF 0.222, fingerprint+TF-IDF 0.557")
 for r, t in reps.items():
     print(f"  SPECTER2  {r:12} AP {ap(t):.3f}", flush=True)
 

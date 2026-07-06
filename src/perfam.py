@@ -1,5 +1,5 @@
 #!/usr/bin/env python3
-"""Per-family cross-domain P@1 (skeleton+TF-IDF) on the curated benchmark (the '15 of 18 families exceed P@1 0.5' result). Run from the package root: python src/perfam.py"""
+"""Per-family cross-domain P@1 (skeleton+TF-IDF) on the curated benchmark (the '17 of 18 families exceed P@1 0.5' result). Run from the package root: python src/perfam.py"""
 import sys
 from pathlib import Path
 import numpy as np

@@ -45,7 +45,7 @@ skipped (needs institutional access): <id>
 ```
 
 and continues with the rest. You still get a strong result on the open subset
-(about 216 of the 236 labelled twins), and the method ranking is unchanged. The
+(about 202 of the 210 labelled twins), and the method ranking is unchanged. The
 full numbers reported in the paper assume every paper is present. If you do have
 institutional access you can download such a paper by hand and point its row at a
 local file (`file:///abs/path.pdf`), which the build fetches via its local-file
