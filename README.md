@@ -100,8 +100,11 @@ same-problem-different-field/
 
 This package ships **derived artifacts only**, so it is license-clean:
 
-- the **fingerprints** (skeletons): domain-stripped, method-name-stripped LLM re-descriptions of each
-  paper's computation. They do not reproduce the source text.
+- the **fingerprints** (stored in the `skeletons_faceted_*` directories, named so for historical reasons):
+  domain-stripped, method-name-stripped LLM re-descriptions of each paper's computation. They do not
+  reproduce the source text. (Terminology: the full *fingerprint* is a **mechanism skeleton**, the MECHANISM
+  field alone (AP 0.513), **plus** its controlled facets (together AP 0.557); 'skeleton' on its own always
+  means the MECHANISM field, not the whole fingerprint.)
 - an **abstract-only** Markdown per paper (title + abstract; never the full body).
 
 The **full-text corpus is not redistributed.** Rebuild it locally from the link lists with `make data`
