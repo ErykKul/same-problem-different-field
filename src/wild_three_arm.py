@@ -17,7 +17,7 @@ Reproducible: deterministic sampling (seed 0). Writes the anonymized pairs (anno
 and the arm key. The blind annotation (3 LLM annotators) and the precision/bootstrap-CI computation are
 separate steps (wild_three_arm_score.py). Run from the package root with the ML venv.
 """
-import sys, json, random
+import os, sys, json, random
 from pathlib import Path
 import numpy as np
 sys.path.insert(0, "."); sys.path.insert(0, "src")
