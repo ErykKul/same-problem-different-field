@@ -1,7 +1,7 @@
 #!/usr/bin/env python3
 """Reproduce the SYSTEM-SURFACING half of the executed imports: the fingerprint links the bespoke-field
 paper to the standard-solver paper across fields, where a topical abstract embedder does not. The
-execution half is in causal_mc.py (A), kriging_gp.py (B), needleman_wunsch.py (C, wild pair 44).
+execution half is in causal_mc.py (A), kriging_gp.py (B), needleman_wunsch.py (C, curated DP/sequence-alignment twin).
 
 Run from the package root with the venv:  python src/import_surfacing.py
 """

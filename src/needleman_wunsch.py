@@ -1,5 +1,5 @@
 #!/usr/bin/env python3
-"""Executed import (paper 1), WILD-surfaced pair (detection-rate top-50, pair id 44, non-curated):
+"""Executed import (paper 1), labeled curated cross-field twin (dp-bio-001 / dp-linguistics-002, mutual nearest neighbor at cos 0.21):
 computational linguistics imports the bioinformatics sequence-alignment solver. The system ranked two
 topically-unrelated papers as a top cross-field pair by fingerprint distance: a bioinformatics GPU
 sequence-alignment paper and a computational-linguistics paper that measures phonetic word similarity
