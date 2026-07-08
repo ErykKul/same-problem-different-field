@@ -187,7 +187,9 @@ precision/recall frontier by `facet_ops.py`, the domain-stripping ablation by `a
 `distill_faceted.py --keep-domain` regenerating the keep-domain arm), the E5-large-v2 baseline by
 `e5_grid.py`, the SPECTER2 baseline (local model + proximity adapter) by `specter2_local.py`, the
 held-out-family generalization test by `held_out_family.py`, the three-distiller comparison by
-`distiller_subset.py`, and the per-family / P@1-MRR /
+`distiller_subset.py`, the non-mathematical-rejection rate by `nonmath_reject.py`, the interventional
+perturbation test by `perturbation_score.py`, the wild three-arm precision by `wild_three_arm_score.py`,
+the two-member-family robustness by `perfam_sens.py`, and the per-family / P@1-MRR /
 facet-agreement / DOMAIN-ablation diagnostics by `perfam.py`, `p1mrr_boot.py`, `facet_agree_ap.py`, and
 `nodomain.py`.
 
