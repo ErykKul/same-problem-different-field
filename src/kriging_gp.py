@@ -7,9 +7,15 @@ solver in place of the bespoke geostatistics one and check it reproduces the kri
 The shared computational problem: best linear unbiased prediction (BLUP) of a spatially correlated
 field from scattered observations under a stationary covariance. Ordinary kriging fits a variogram by
 least squares and solves the kriging system; Gaussian-process regression fits the SAME covariance by
-marginal likelihood and returns the SAME posterior mean, plus a calibrated posterior variance and
-learned hyperparameters for free. We use a Matern(nu=1/2) GP so both sides use the identical
+marginal likelihood and returns the SAME posterior mean, but LEARNS the hyperparameters instead of
+plugging in a least-squares variogram fit. We use a Matern(nu=1/2) GP so both sides use the identical
 (exponential) covariance family, isolating the import to HOW the hyperparameters are chosen.
+
+NOTE (accuracy): ordinary kriging is NOT uncertainty-free -- it defines a plug-in kriging variance, and
+that is one of its selling points. What the plug-in variance conditions on is the fitted variogram, whose
+own parameter uncertainty it ignores; and the compact bespoke implementation below simply does not return
+it. So the import's honest payoff is LEARNED hyperparameters (it recovers the true range) plus a posterior
+variance calibrated by marginal likelihood, NOT uncertainty where the incumbent had none.
 
 Offline, needs only numpy + scikit-learn. Synthetic field with a fixed seed, so it reproduces exactly.
 """
@@ -83,7 +89,7 @@ yk = krige(Xtr, ytr, Xte, nugget, sill, r)
 rmse_k = np.sqrt(((yk - yte) ** 2).mean())
 
 # --- imported standard solver: scikit-learn GP, identical (Matern 1/2 = exponential) covariance,
-#     but hyperparameters by marginal likelihood and a calibrated posterior variance returned ---
+#     but hyperparameters by marginal likelihood and a posterior variance returned ---
 kern = ConstantKernel(1.0, (1e-2, 1e2)) * Matern(0.2, (1e-2, 1.0), nu=0.5) + WhiteKernel(0.05, (1e-3, 1.0))
 gp = GaussianProcessRegressor(kernel=kern, normalize_y=True, n_restarts_optimizer=4, random_state=0).fit(Xtr, ytr)
 yg, ystd = gp.predict(Xte, return_std=True)
@@ -95,9 +101,11 @@ agree = np.sqrt(((yk - yg) ** 2).mean())
 print(f"spatial field: {n} sites ({ntr} train, {n-ntr} test); true exponential range {TRUE_RANGE}, "
       f"sill {TRUE_SILL}, nugget {TRUE_NUGGET}\n")
 print("                                         range   test-RMSE   notes")
-print(f"  bespoke ordinary kriging (variogram LS): {r:.3f}     {rmse_k:.3f}    no posterior uncertainty")
+print(f"  bespoke ordinary kriging (variogram LS): {r:.3f}     {rmse_k:.3f}    plug-in variance, not returned here")
 print(f"  imported GP solver (marginal lik.)     : {gp_range:.3f}     {rmse_g:.3f}    "
       f"2-sigma coverage {cover:.2f}, learns range/nugget")
 print(f"\nthe two predictors agree to RMSE {agree:.3f} (same BLUP); the import recovers the true range "
-      f"{TRUE_RANGE} by marginal likelihood\nand adds a calibrated posterior variance the bespoke "
-      f"kriging code does not provide.")
+      f"{TRUE_RANGE} by marginal likelihood,\nwhere the bespoke side must hand-fit a variogram, and it "
+      f"returns a posterior variance calibrated by the learned\nhyperparameters rather than plugged in "
+      f"from that variogram fit (ordinary kriging does define a plug-in variance;\nthe compact bespoke "
+      f"implementation above simply does not return it).")
