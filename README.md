@@ -171,7 +171,7 @@ distillation prompt is in `src/`, and the method and analysis are in the paper.
 ## Integrity
 
 ```
-sha256sum -c SHA256SUMS                 # 2167 files, all OK
+sha256sum -c SHA256SUMS                 # 2177 files, all OK
 python src/name_free_audit.py           # reproduces the anti-cheat name-free rates
 ```
 
