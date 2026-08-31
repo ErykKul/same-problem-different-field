@@ -6,6 +6,17 @@
 .env
 data_link
 
+# Non-redistributable abstracts (rebuilt locally by src/fetch_restricted.py from
+# data/restricted.csv; sha256-verified against the frozen bytes) and regenerable
+# artifacts that embed abstract text:
+data/md/kalman-epidemic-001.md
+data/md/hawkes-crime-001.md
+data/md/gp-geo-noname-001.md
+data/md/pca-psychometrics-001.md
+data/md/smoke-01.md
+datasets/validity/wild_3arm_pairs.json
+reproduce_out/inspect_top10.txt
+
 # Python:
 __pycache__/
 *.pyc

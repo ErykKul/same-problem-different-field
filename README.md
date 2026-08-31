@@ -9,7 +9,9 @@ This package reduces each paper to a domain-stripped, method-name-stripped **com
 (one cached LLM call per paper) and ranks cross-field **twins** (papers solving the same computational
 problem) with a cheap embedder over those fingerprints. It reproduces the paper's two headline tables.
 
-**It runs offline: no model, no API key, no network.** The fingerprints and abstracts are bundled under
+**It runs offline: no model, no API key, no network** after one small online step: five abstracts are
+not redistributable and are rebuilt locally by `make restricted-data` (sha256-verified; see the
+redistribution section). Everything else, fingerprints and licensed abstracts, is bundled under
 `data/`, so the headline reproduces from `scikit-learn` alone.
 
 ## The headline (curated benchmark: 109 papers, 5,812 cross-field pairs, 210 twins)
@@ -83,7 +85,8 @@ same-problem-different-field/
     skeletons_faceted_haiku/       fingerprints, our config (Haiku distiller)          [501]
     skeletons_v1_opus/             fingerprints, Opus distiller (comparison)           [501]
     skeletons_faceted_qwen_v3/     fingerprints, Qwen3-14b distiller (comparison)      [501]
-    md/                            abstract-only Markdown per paper (title + abstract) [501]
+    md/                            abstract-only Markdown per paper (title + abstract) [496 bundled;
+                                   5 rebuilt locally by make restricted-data, see data/restricted.csv]
     skeletons_keepdomain_qwen/     keep-domain ablation arm (qwen3 distiller)          [109]
     vanco/                         the vancomycin PK example data (gendata.csv, genmodel.txt)
     manifest.jsonl                 per-paper provenance: source URL, license, field, family, role
@@ -98,22 +101,35 @@ same-problem-different-field/
 
 ## What is bundled, and redistribution
 
-This package ships **derived artifacts only**, so it is license-clean:
+This package ships derived artifacts plus abstracts **only where a license covers them**:
 
 - the **fingerprints** (stored in the `skeletons_faceted_*` directories, named so for historical reasons):
   domain-stripped, method-name-stripped LLM re-descriptions of each paper's computation. They do not
   reproduce the source text. (Terminology: the full *fingerprint* is a **mechanism skeleton**, the MECHANISM
   field alone (AP 0.513), **plus** its controlled facets (together AP 0.557); 'skeleton' on its own always
   means the MECHANISM field, not the whole fingerprint.)
-- an **abstract-only** Markdown per paper (title + abstract; never the full body).
+- an **abstract-only** Markdown per paper (title + abstract; never the full body), bundled for 496 of
+  the 501 papers under the licenses that permit it: abstracts of arXiv-hosted papers are descriptive
+  metadata under arXiv's CC0 1.0 grant (https://info.arxiv.org/help/api/tou.html, which defines
+  descriptive metadata to include the abstract and permits storing and sharing it, independent of the
+  e-print's own license), and a small PMC subset is CC BY (each file's source URL and license are in
+  `data/manifest.jsonl`; attribution travels with those records).
+- **five abstracts are not redistributable and do not ship** (two publisher pages with no license, one
+  IEEE paper, and two PMC NC/ND entries handled conservatively). `data/restricted.csv` records their
+  ids, source URLs, and the sha256 of the frozen bytes; `make restricted-data` rebuilds them locally
+  (the one online step) and verifies the checksums, and `reproduce.py` refuses to run on a silently
+  smaller corpus. If a publisher page has changed, the frozen files are available from the author for
+  verification, and in the archived deposit's restricted section.
+- `data/vanco/` is LAPKB's own NPAG example data (the vancomycin model/data pair distributed with
+  their open-source solver, https://github.com/LAPKB), included unchanged for the executed import.
 
 The **full-text corpus is not redistributed.** Rebuild it locally from the link lists with `make data`
 (fetches arXiv + open URLs; paywalled or non-arXiv rows skip cleanly). Each paper's source URL and
 license are recorded in `data/manifest.jsonl`.
 
 The curated benchmark is **109 papers**, all bundled as fingerprints, so the curated headline (faceted
-fingerprint + TF-IDF, AP 0.557) reproduces **exactly**; the extended/wild run reproduces from the
-bundled 501-paper fingerprint set.
+fingerprint + TF-IDF, AP 0.557) reproduces **exactly** once the five restricted abstracts are rebuilt;
+the extended/wild run reproduces from the bundled 501-paper fingerprint set.
 
 ## Executed cross-domain imports
 
@@ -195,12 +211,18 @@ facet-agreement / DOMAIN-ablation diagnostics by `perfam.py`, `p1mrr_boot.py`, `
 
 ## Status, archive and citation
 
-This repository is the public record of this work while the accompanying manuscript is under review:
-the full method, every reported number, and everything needed to reproduce them offline. A frozen copy
-is archived on Zenodo with a version DOI (badge added at release); until the paper is out, cite this
-repository by that DOI. The full paper citation will be added here at publication.
+This repository is the public record of this work: the full method, every reported number, and
+everything needed to reproduce them offline (after the one-time `make restricted-data` rebuild of the
+five non-bundled abstracts). A frozen copy is deposited in the KU Leuven Research Data Repository
+(RDR) with a DOI; cite the paper (JCDL 2026) and the RDR dataset. The full citations will be added
+here at publication.
 
 ## License
 
-Code: Apache-2.0. Derived data (fingerprints, abstract-only Markdown, manifest): CC-BY-4.0, with each
-paper's original source license recorded in `data/manifest.jsonl`.
+**Code**: Apache-2.0 (the `LICENSE` file covers the code only). **Derived data produced by this
+project** (the fingerprints in `data/skeletons*`, the manifest, the link lists, the validity
+artifacts): CC-BY-4.0. **Third-party text keeps its original terms; this package grants no rights
+over it**: abstracts of arXiv-hosted papers are bundled under arXiv's CC0 metadata grant, the PMC
+CC-BY abstracts under CC BY with the source recorded per paper in `data/manifest.jsonl`, and five
+abstracts are not redistributed at all (see the redistribution section). `data/vanco/` is LAPKB's
+NPAG example data, credited above.

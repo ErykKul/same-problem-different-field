@@ -1,7 +1,8 @@
 # Reproduction package: cross-domain method-twin computational fingerprints.
 #
-# The derived corpus (skeletons + abstracts) is BUNDLED under data/, so you can
-# reproduce both tables offline with no model and no network:
+# The derived corpus (skeletons + licensed abstracts) is BUNDLED under data/; five
+# non-redistributable abstracts are rebuilt by `make restricted-data` (one online,
+# sha256-verified step), after which both tables reproduce offline with no model:
 #
 #   make setup       create .venv and install requirements (one time)
 #   make reproduce   print the two tables and write reproduce_out/
@@ -14,15 +15,20 @@
 PY ?= .venv/bin/python
 PIP ?= .venv/bin/pip
 
-.PHONY: help setup data reproduce
+.PHONY: help setup data reproduce restricted-data
 
 help:
-	@echo "The corpus is already bundled; reproduce needs no model and no network."
+	@echo "The corpus is bundled except five non-redistributable abstracts (one online rebuild step);"
+	@echo "after that, reproduce needs no model and no network."
 	@echo "Targets:"
-	@echo "  setup       create .venv and install requirements.txt (one time)"
-	@echo "  reproduce   print the two tables and write reproduce_out/   <- the main one"
-	@echo "  data        OPTIONAL: rebuild the full-text corpus from the link lists"
-	@echo "  help        show this message"
+	@echo "  setup            create .venv and install requirements.txt (one time)"
+	@echo "  restricted-data  rebuild the five non-redistributable abstracts (online; sha256-verified)"
+	@echo "  reproduce        print the two tables and write reproduce_out/   <- the main one"
+	@echo "  data             OPTIONAL: rebuild the full-text corpus from the link lists"
+	@echo "  help             show this message"
+
+restricted-data:
+	$(PY) src/fetch_restricted.py
 
 setup:
 	python3 -m venv .venv

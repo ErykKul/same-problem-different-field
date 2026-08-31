@@ -94,7 +94,9 @@ counts) is recorded in `manifest.jsonl`.
 > **Canonical requirement.** The fingerprint is distilled from each paper's **full text**, not its
 > abstract. An abstract under-determines the mechanism and can yield an empty fingerprint for a paper
 > that does in fact present a method, so full text is mandatory for every member. For redistribution,
-> only abstracts are bundled (copyright); the full text is re-fetchable from the link-lists.
+> only abstracts are bundled, and only where licensed (arXiv CC0 metadata, PMC CC BY; five
+> non-redistributable ones are rebuilt locally via `data/restricted.csv` + `make restricted-data`);
+> the full text is re-fetchable from the link-lists.
 
 ## 6. Fingerprint distillation
 
@@ -191,7 +193,8 @@ needs a model.
 
 - Rebuild the full-text corpus from the link-lists: `make data`.
 - Distill the fingerprints (one cached LLM call per paper): `python src/distill_faceted.py`.
-- Print the scored tables from the bundled skeletons + abstracts, no model and no network required:
+- Print the scored tables from the bundled skeletons + abstracts (after `make restricted-data`, the
+  one online step), no model and no further network required:
   `make reproduce` (i.e. `python reproduce.py`); this also prints the construct-validity and perturbation
   numbers from the shipped outputs.
 - Reproduce only the construct-validity and perturbation numbers, offline: `make validity`.

@@ -17,9 +17,11 @@ skipped and reported, the rest of the table still prints.
 
 The bundled corpus is the open subset (4 paywalled institutional-access papers excluded). The curated
 headline (faceted-full + TF-IDF, AP 0.557) reproduces exactly; the extended/wild run is the open-subset
-version. No model and no network are needed: the fingerprints and abstracts ship under data/.
+version. No model and no network are needed once the five non-redistributable abstracts are rebuilt
+(one online step: python src/fetch_restricted.py, sha256-verified; the rest ships under data/).
 
-  python reproduce.py            # both tables over the bundled data/ (no model, no network)
+  python reproduce.py            # both tables over the bundled data/ (no model; network only for
+                                 # the one-time restricted-abstract rebuild)
   REPRO_DATA=path python reproduce.py
   make reproduce                 # the two tables PLUS the faceted operator (src/facet_select.py,
                                  # per-distiller combined-AP / facet-only AP / clustering ARI; needs ML extras)
@@ -34,6 +36,16 @@ from distill_faceted import parse_facets  # noqa: E402
 from sklearn.metrics import average_precision_score, roc_auc_score  # noqa: E402
 
 DATA = os.environ.get("REPRO_DATA", "data")
+
+# Five abstracts are not redistributable and do not ship (data/restricted.csv records their ids,
+# source URLs, and the sha256 of the frozen bytes). Every table below is computed over the full
+# corpus, so refuse to run with a silently smaller corpus: rebuild them first.
+_missing = [r.split(",")[0] for r in open(os.path.join(DATA, "restricted.csv")).read().splitlines()[1:]
+            if r and not os.path.exists(os.path.join(DATA, "md", r.split(",")[0] + ".md"))]
+if _missing:
+    sys.exit(f"Missing {len(_missing)} non-redistributable abstract file(s): {', '.join(_missing)}.\n"
+             f"Rebuild them first (one online step):  python src/fetch_restricted.py\n"
+             f"(sha256 checksums verify the rebuild; see the README's redistribution section.)")
 # distiller -> skeleton dir (whichever are present). Haiku v1 is our config; Opus/Qwen3 are comparisons.
 DISTILLERS = [("Haiku (ours)", "skeletons_faceted_haiku"),
               ("Opus", "skeletons_v1_opus"),
