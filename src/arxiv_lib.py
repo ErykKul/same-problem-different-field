@@ -15,7 +15,7 @@ import requests
 from bs4 import BeautifulSoup, NavigableString
 from markdownify import markdownify as _md
 
-UA = {"User-Agent": "method-fingerprint-probe/0.1 (research; anonymized for double-blind review)"}
+UA = {"User-Agent": "same-problem-different-field/1.0 (research; https://github.com/ErykKul/same-problem-different-field)"}
 API = "http://export.arxiv.org/api/query"
 ATOM = "{http://www.w3.org/2005/Atom}"
 ARX = "{http://arxiv.org/schemas/atom}"

@@ -7,7 +7,8 @@
            for continuity. Our faceted-full fingerprint + cheap TF-IDF is the strongest method.
   TABLE 2  EXTENDED corpus (the wild run, incomplete labels): this is detection, NOT a scored benchmark.
            The honest metric is recall of the KNOWN twins (it ignores the unlabelled background); AP here is
-           only a lower bound, shown for relative ranking.
+           NOT a score (missing labels shift both the hits and the normalizing positive set), shown only
+           for like-for-like relative ranking on this same corpus.
 
 Methods compared: our faceted fingerprint (per distiller: Haiku / Opus / Qwen3) embedded with TF-IDF, vs
 SOTA scientific/general embedders (SPECTER, SciNCL, SemCSE, SPECTER2, Qwen3-Embedding) on the abstract,
@@ -144,7 +145,7 @@ def table(which, absr, lab, mfield, Ks, out_md):
     abst = [absr[i] for i in ids]
     title = ("CURATED benchmark (complete labels): COMPARE methods. Headline = AP."
              if which == "curated" else
-             "EXTENDED / wild run (incomplete labels): DETECTION. Headline = recall of known twins; AP is a lower bound.")
+             "EXTENDED / wild run (incomplete labels): DETECTION. Headline = recall of known twins; AP is not a score, only a like-for-like comparator.")
     head = f"\n######## TABLE: {which.upper()} -- {N} papers, {len(A):,} cross-field pairs, {P} twins ({P/len(A)*100:.1f}%) ########"
     print(head); print("  " + title)
     cols = "  " + f"{'method':38}{'AP':>7}{'AUROC':>7}" + "".join(f"{'R@'+str(k):>8}" for k in Ks)

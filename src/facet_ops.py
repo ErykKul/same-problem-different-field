@@ -1,6 +1,6 @@
 #!/usr/bin/env python3
-"""Facet-operator on the CURATED benchmark (complete labels -> valid precision/recall, not the wild
-lower bound). Reports: facet-only AP, the faceted-full retriever AP (sanity = headline), and the
+"""Facet-operator on the CURATED benchmark (complete labels -> valid precision/recall, unlike the wild
+run's incomplete-label figures). Reports: facet-only AP, the faceted-full retriever AP (sanity = headline), and the
 precision/recall frontier as more of the four core facets are required to agree (the tunable operator,
 Table tab:frontier in the paper). Needs the ML extras (sentence-transformers) for the per-facet
 agreement step. Run from the package root with the ML venv: python src/facet_ops.py"""

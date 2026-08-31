@@ -1,6 +1,6 @@
 # extended table
 
-EXTENDED / wild run (incomplete labels): DETECTION. Headline = recall of known twins; AP is a lower bound.
+EXTENDED / wild run (incomplete labels): DETECTION. Headline = recall of known twins; AP is not a score, only a like-for-like comparator.
 
 | method | AP | AUROC | R@100 | R@1000 | R@3000 |
 |---|---|---|---|---|---|

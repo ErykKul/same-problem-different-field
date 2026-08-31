@@ -4,8 +4,9 @@
 Two controlled perturbations per paper: RE-SKIN (change the field, keep the computation) and MATH-EDIT
 (keep the field, change the computation). A representation that keys on the COMPUTATION should stay
 invariant under re-skin and move under math-edit; a topical representation (the abstract) should do the
-opposite. We report the 2x2 of cosine self-similarity to the original, for the fingerprint (the distilled
-skeleton) and for the abstract baseline, under each perturbation, plus a paired bootstrap CI on the
+opposite. We report the 2x2 of cosine self-similarity to the original, for the whole fingerprint (the
+mechanism prose plus all facet fields, embedded as one text) and for the abstract baseline, under each
+perturbation, plus a paired bootstrap CI on the
 interaction (fingerprint gap minus abstract gap), the single number that the structure-vs-surface claim
 rides on. Reads the perturbation workflow result (rewrites + skeletons) and the original abstracts.
 """
@@ -47,7 +48,7 @@ ab_r, ab_m = cos_pairs([(open(f"{DATA}/{i}.md", encoding="utf-8").read(), rw[i][
 print(f"interventional perturbation test ({len(ids)} papers): cosine self-similarity to the ORIGINAL")
 print(f"  re-skin = change field, keep computation   |   math-edit = keep field, change computation")
 print(f"  {'':26}{'RE-SKIN':>9}{'MATH-EDIT':>11}")
-print(f"  {'FINGERPRINT (skeleton)':26}{fp_r.mean():>9.3f}{fp_m.mean():>11.3f}   (want high | low: keys on computation)")
+print(f"  {'WHOLE FINGERPRINT':26}{fp_r.mean():>9.3f}{fp_m.mean():>11.3f}   (want high | low: keys on computation)")
 print(f"  {'ABSTRACT (baseline)':26}{ab_r.mean():>9.3f}{ab_m.mean():>11.3f}   (want low | high: keys on field)")
 inter = (fp_r - fp_m) - (ab_r - ab_m)
 boot = np.array([np.random.choice(inter, len(inter), replace=True).mean() for _ in range(5000)])
