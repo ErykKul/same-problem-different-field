@@ -3,4 +3,4 @@ kalman-epidemic-001,10.1073/pnas.1208772109,https://doi.org/10.1073/pnas.1208772
 hawkes-crime-001,10.1198/jasa.2011.ap09546,https://doi.org/10.1198/jasa.2011.ap09546,"publisher page, no redistribution license",a802f2fd04193312e1a88364da60e98c77ad26043bfee7fd9b7f94ce04a71b05
 gp-geo-noname-001,10.1016/j.heliyon.2023.e18511,https://pmc.ncbi.nlm.nih.gov/articles/PMC10413010/,CC-BY-NC-ND 4.0 (conservative: not redistributed),651da953b117a6ae3c43d66d8af8f36949ff0892e210ccfc2b432f437af46897
 pca-psychometrics-001,10.3389/fpsyg.2012.00055,https://pmc.ncbi.nlm.nih.gov/articles/PMC3290828/,CC-BY-NC 4.0 (conservative: not redistributed),b466ae0744de539e37b4531c50135626464388fc38dfddec0bef5ecf826c4ce6
-smoke-01,10.1109/hase.2008.60,https://ieeexplore.ieee.org/document/4708909/,"IEEE, publisher copyright",2f80a56d8f5a4aeeb7322c7107a9ec48bd14410c3095aeddc187fc51426337b1
+smoke-01,10.1109/hase.2008.60,https://lirias.kuleuven.be/retrieve/c4c34b9a-e3d9-4b37-9436-0fdb86a2e28b,author's OA copy in Lirias (the pipeline's actual source); IEEE holds the publisher copyright,2f80a56d8f5a4aeeb7322c7107a9ec48bd14410c3095aeddc187fc51426337b1
