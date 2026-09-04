@@ -165,10 +165,10 @@ You do **not** need either of these to reproduce the tables.
   `--force` to compare your own distiller:
 
   ```
-  # faceted fingerprints (the headline format), e.g. a local ollama model:
-  python src/distill_faceted.py --backend ollama --model qwen3:14b --outdir data/skeletons_faceted_haiku --force
-  # the v1 prompt (used for the Opus column):
-  python src/distill_v1.py     --backend ollama --model qwen2.5:14b-instruct --outdir data/skeletons_v1_opus --force
+  # the eight-facet prompt that produced the bundled Haiku and Opus arms (see MODELS.md):
+  python src/distill_v1.py     --backend ollama --model qwen3:14b --outdir data/skeletons_faceted_haiku --force
+  # the twelve-facet prompt that produced the bundled qwen3 arms (adds four verifiability facets the distance ignores):
+  python src/distill_faceted.py --backend ollama --model qwen3:14b --outdir data/skeletons_faceted_qwen_v3 --force
   python reproduce.py
   ```
 
