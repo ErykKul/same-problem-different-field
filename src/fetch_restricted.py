@@ -7,7 +7,7 @@ license (two publisher pages, one IEEE, and two PMC NC/ND entries handled conser
 their ids, source URLs, and sha256 checksums ship; this script re-fetches each abstract from its
 publisher page and rebuilds `data/md/<id>.md`. The checksums verify whether the rebuilt file matches
 the frozen bytes the paper's numbers were computed from; on drift or fetch failure the frozen files
-are available from the author for verification (and in the archived deposit's restricted section).
+are available from the author for verification.
 
 Run:  python src/fetch_restricted.py        (network; writes only files that are missing)
       python src/fetch_restricted.py --force

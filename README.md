@@ -120,7 +120,7 @@ This package ships derived artifacts plus abstracts **only where a license cover
   ids, source URLs, and the sha256 of the frozen bytes; `make restricted-data` rebuilds them locally
   (the one online step) and verifies the checksums, and `reproduce.py` refuses to run on a silently
   smaller corpus. If a publisher page has changed, the frozen files are available from the author for
-  verification, and in the archived deposit's restricted section.
+  verification.
 - `data/vanco/` is LAPKB's own NPAG example data (the vancomycin model/data pair distributed with
   their open-source solver, https://github.com/LAPKB), included unchanged for the executed import.
 
@@ -187,7 +187,7 @@ distillation prompt is in `src/`, and the method and analysis are in the paper.
 ## Integrity
 
 ```
-sha256sum -c SHA256SUMS                 # 2177 files, all OK
+sha256sum -c SHA256SUMS                 # 2175 files, all OK
 python src/name_free_audit.py           # reproduces the anti-cheat name-free rates
 ```
 
@@ -213,9 +213,15 @@ facet-agreement / DOMAIN-ablation diagnostics by `perfam.py`, `p1mrr_boot.py`, `
 
 This repository is the public record of this work: the full method, every reported number, and
 everything needed to reproduce them offline (after the one-time `make restricted-data` rebuild of the
-five non-bundled abstracts). A frozen copy is deposited in the KU Leuven Research Data Repository
-(RDR) with a DOI; cite the paper (JCDL 2026) and the RDR dataset. The full citations will be added
-here at publication.
+five non-bundled abstracts). A frozen copy (release v1.0.0) is deposited in the KU Leuven Research
+Data Repository (RDR). Please cite both:
+
+- Paper: Eryk Kulikowski. 2026. Same Problem, Different Field: Cross-Domain Solution Import via
+  Domain-Stripped Computational Fingerprints. In *The 2026 ACM/IEEE Joint Conference on Digital
+  Libraries (JCDL '26)*. ACM. https://doi.org/10.1145/3805696.3846016
+- Dataset: Eryk Kulikowski. 2026. Replication Data for: Same Problem, Different Field - Cross-Domain
+  Solution Import via Domain-Stripped Computational Fingerprints. KU Leuven RDR.
+  https://doi.org/10.48804/W3B9WC
 
 ## License
 
