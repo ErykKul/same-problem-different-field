@@ -6,9 +6,9 @@ notes; entries marked "inferred" come from the code defaults of the period rathe
 Hosted-model arms were run through dispatched agent sessions (no raw API access), so temperature is
 the session default. Two distillation prompts exist, both verbatim in the code: the eight-facet prompt in
 `src/distill_v1.py` (MECHANISM, DOMAIN, and the six computational facets) and the later
-twelve-facet prompt in `src/distill_faceted.py`, which adds four verifiability facets that no
-distance or filter in this package reads (the retrieval operator sees the same eight facets from
-either). The Haiku and Opus arms were distilled with the eight-facet prompt, so the Haiku-versus-
+twelve-facet prompt in `src/distill_faceted.py`, which adds four verifiability facets. No facet
+distance or conjunction reads them; the whole-fingerprint TF-IDF text vectors do include those lines for
+the files that carry them (the qwen arms and eight Haiku files). The Haiku and Opus arms were distilled with the eight-facet prompt, so the Haiku-versus-
 Opus comparison holds the prompt fixed and swaps only the model; the local qwen3 arms used the
 twelve-facet prompt. The perturbation prompts are in `src/perturbation_wf.js`; the blind three-arm
 annotation prompt is described in `DATASET.md`.
