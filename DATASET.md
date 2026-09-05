@@ -67,8 +67,8 @@ topic or name. A distractor is one of:
 
 **Anti-cheat exemplars.** Wherever findable, include members that *use* a family's method **without
 naming it**, so a match cannot be name recognition (e.g. an unnamed nonparametric-MLE / support-point
-estimator, kriging as an unnamed Gaussian process, a sports-ranking computation presented without
-the words "eigenvector centrality" or "PageRank").
+estimator, kriging as an unnamed Gaussian process). The sports-ranking paper is NOT such a case: it
+names PageRank in its title (method_named=yes), though its scientometrics twin never says PageRank.
 
 **The rule in one line.** Same computational problem (an importable solver) **and** the paper presents a
 method ⇒ *member*; different computational problem **or** no method ⇒ *distractor*. Each assignment is a

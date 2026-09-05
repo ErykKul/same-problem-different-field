@@ -14,6 +14,20 @@ Model (genmodel.txt): 1-compartment, first-order oral absorption + lag. Params K
 """
 import numpy as np
 
+# NPAG's own result on the same data, read from LAPKB's completed run report shipped beside the data
+# (data/vanco/NP_RF0001.TXT, Pmetrics NPAG engine 1.8, Oct 2015): the final-cycle population means and
+# the number of active support points. NPAG itself is not run here.
+def npag_reference(path="data/vanco/NP_RF0001.TXT"):
+    L = open(path).read().split("\n")
+    start = next(i for i, l in enumerate(L) if "# START CYCLE MEANS" in l)
+    end = next(i for i, l in enumerate(L) if "# START CYCLE STD. DEVS." in l)
+    s0, s1 = int(L[start].split()[0]), int(L[end].split()[0])
+    vals = [float(l) for l in L[s0:s1] if l.strip() and not l.strip().startswith("#")]
+    ka, ke, v, tlag = vals[-4:]
+    nact = int(next(l for l in L if "NACTVE FOR ALL" in l).split()[0])
+    return ka, ke, v, tlag, nact
+
+
 def num(x):
     return None if x in (".", "") else float(x)
 
@@ -91,10 +105,11 @@ mean = w @ G4
 support = sorted([(grid[k], w[k]) for k in range(K) if w[k] > 1e-3], key=lambda x: -x[1])
 print(f"NPMLE (open EM) {'converged' if converged else 'did NOT converge'} in {it + 1} iters.")
 print(f"SPARSE support: {len(support)} support points with weight > 1e-3, out of {K} grid points "
-      f"(<= {N} patients, the sparse-support property; NPAG found 18).")
+      f"(<= {N} patients, the sparse-support property; NPAG found {npag_reference()[4]}).")
 print("                          Ka(/h)  Ke(/h)   V(L)   Tlag(h)  CL=Ke*V(L/h)")
 print(f"  open NPMLE (this work):  {mean[0]:.3f}  {mean[1]:.4f}  {mean[2]:.1f}   {mean[3]:.2f}    {mean[1]*mean[2]:.2f}")
-print(f"  NPAG (bespoke, LAPKB) :  0.628  0.0514  77.8   1.19    4.00")
+ka_r, ke_r, v_r, tlag_r, nact_r = npag_reference()
+print(f"  NPAG (bespoke, LAPKB) :  {ka_r:.3f}  {ke_r:.4f}  {v_r:.1f}   {tlag_r:.2f}    {ke_r*v_r:.2f}")
 
 # individual fit quality: posterior-mean prediction vs observed
 err = []

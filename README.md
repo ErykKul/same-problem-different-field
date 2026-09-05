@@ -121,8 +121,12 @@ This package ships derived artifacts plus abstracts **only where a license cover
   (the one online step) and verifies the checksums, and `reproduce.py` refuses to run on a silently
   smaller corpus. If a publisher page has changed, the frozen files are available from the author for
   verification.
-- `data/vanco/` is LAPKB's own NPAG example data (the vancomycin model/data pair distributed with
-  their open-source solver, https://github.com/LAPKB), included unchanged for the executed import.
+- `data/vanco/` is LAPKB's own NPAG example (distributed with their open-source Pmetrics solver,
+  https://github.com/LAPKB): the example data (an oral-rifapentine study, 20 subjects, data credited by
+  LAPKB to Chuck Peloquin) and model, plus `NP_RF0001.TXT`, LAPKB's completed NPAG run report on that
+  data (engine 1.8, Oct 2015), from which `pk_npml.py` reads NPAG's population means and support count
+  for the comparison row. Included unchanged; the folder name reflects the paper's dosing case, not the
+  example drug.
 
 The **full-text corpus is not redistributed.** Rebuild it locally from the link lists with `make data`
 (fetches arXiv + open URLs; paywalled or non-arXiv rows skip cleanly). Each paper's source URL and
@@ -187,7 +191,7 @@ distillation prompt is in `src/`, and the method and analysis are in the paper.
 ## Integrity
 
 ```
-sha256sum -c SHA256SUMS                 # 2175 files, all OK
+sha256sum -c SHA256SUMS                 # 2176 files, all OK
 python src/name_free_audit.py           # reproduces the anti-cheat name-free rates
 ```
 
