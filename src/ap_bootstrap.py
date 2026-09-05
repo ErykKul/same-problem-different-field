@@ -1,6 +1,6 @@
 #!/usr/bin/env python3
 """Paired bootstrap CIs for the curated-benchmark AP, resampling the curated papers with
-replacement (cluster bootstrap), fixed representation. Run from the package root with the ML venv (loads the SOTA embedders) or the plain venv for the TF-IDF rows.
+replacement (a paired paper-level bootstrap; the family-level cluster bootstrap is family_bootstrap.py), fixed representation. Run from the package root with the ML venv (loads the SOTA embedders) or the plain venv for the TF-IDF rows.
 For each resample: rebuild cross-field pairs among the resampled papers, recompute pooled AP
 per method on the SAME resample (paired). Reports each method's AP [2.5,97.5] and the
 fingerprint-vs-baseline AP difference + 95% CI + two-sided p."""
