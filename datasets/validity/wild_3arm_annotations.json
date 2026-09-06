@@ -1,1 +1,1610 @@
-{"annotators": [{"annotator": "Claude (blind annotation)", "judgments": [{"id": 0, "genuine": false}, {"id": 1, "genuine": true}, {"id": 2, "genuine": false}, {"id": 3, "genuine": false}, {"id": 4, "genuine": false}, {"id": 5, "genuine": false}, {"id": 6, "genuine": false}, {"id": 7, "genuine": false}, {"id": 8, "genuine": false}, {"id": 9, "genuine": false}, {"id": 10, "genuine": false}, {"id": 11, "genuine": false}, {"id": 12, "genuine": false}, {"id": 13, "genuine": true}, {"id": 14, "genuine": true}, {"id": 15, "genuine": false}, {"id": 16, "genuine": false}, {"id": 17, "genuine": true}, {"id": 18, "genuine": false}, {"id": 19, "genuine": false}, {"id": 20, "genuine": true}, {"id": 21, "genuine": false}, {"id": 22, "genuine": false}, {"id": 23, "genuine": true}, {"id": 24, "genuine": true}, {"id": 25, "genuine": false}, {"id": 26, "genuine": false}, {"id": 27, "genuine": false}, {"id": 28, "genuine": false}, {"id": 29, "genuine": false}, {"id": 30, "genuine": true}, {"id": 31, "genuine": false}, {"id": 32, "genuine": false}, {"id": 33, "genuine": false}, {"id": 34, "genuine": true}, {"id": 35, "genuine": false}, {"id": 36, "genuine": false}, {"id": 37, "genuine": true}, {"id": 38, "genuine": true}, {"id": 39, "genuine": false}, {"id": 40, "genuine": false}, {"id": 41, "genuine": false}, {"id": 42, "genuine": false}, {"id": 43, "genuine": false}, {"id": 44, "genuine": false}, {"id": 45, "genuine": true}, {"id": 46, "genuine": false}, {"id": 47, "genuine": false}, {"id": 48, "genuine": true}, {"id": 49, "genuine": false}, {"id": 50, "genuine": false}, {"id": 51, "genuine": true}, {"id": 52, "genuine": false}, {"id": 53, "genuine": true}, {"id": 54, "genuine": false}, {"id": 55, "genuine": false}, {"id": 56, "genuine": false}, {"id": 57, "genuine": false}, {"id": 58, "genuine": false}, {"id": 59, "genuine": false}, {"id": 60, "genuine": false}, {"id": 61, "genuine": false}, {"id": 62, "genuine": false}, {"id": 63, "genuine": false}, {"id": 64, "genuine": true}, {"id": 65, "genuine": true}, {"id": 66, "genuine": false}, {"id": 67, "genuine": false}, {"id": 68, "genuine": false}, {"id": 69, "genuine": false}, {"id": 70, "genuine": true}, {"id": 71, "genuine": true}, {"id": 72, "genuine": false}, {"id": 73, "genuine": false}, {"id": 74, "genuine": false}, {"id": 75, "genuine": false}, {"id": 76, "genuine": false}, {"id": 77, "genuine": false}, {"id": 78, "genuine": false}, {"id": 79, "genuine": false}, {"id": 80, "genuine": false}, {"id": 81, "genuine": true}, {"id": 82, "genuine": false}, {"id": 83, "genuine": false}, {"id": 84, "genuine": true}, {"id": 85, "genuine": true}, {"id": 86, "genuine": false}, {"id": 87, "genuine": false}, {"id": 88, "genuine": false}, {"id": 89, "genuine": false}]}, {"annotator": "claude-sonnet-4-6", "judgments": [{"id": 0, "genuine": false}, {"id": 1, "genuine": true}, {"id": 2, "genuine": false}, {"id": 3, "genuine": false}, {"id": 4, "genuine": false}, {"id": 5, "genuine": false}, {"id": 6, "genuine": false}, {"id": 7, "genuine": false}, {"id": 8, "genuine": false}, {"id": 9, "genuine": false}, {"id": 10, "genuine": false}, {"id": 11, "genuine": false}, {"id": 12, "genuine": false}, {"id": 13, "genuine": false}, {"id": 14, "genuine": true}, {"id": 15, "genuine": false}, {"id": 16, "genuine": false}, {"id": 17, "genuine": true}, {"id": 18, "genuine": false}, {"id": 19, "genuine": false}, {"id": 20, "genuine": true}, {"id": 21, "genuine": false}, {"id": 22, "genuine": false}, {"id": 23, "genuine": false}, {"id": 24, "genuine": false}, {"id": 25, "genuine": false}, {"id": 26, "genuine": false}, {"id": 27, "genuine": false}, {"id": 28, "genuine": false}, {"id": 29, "genuine": false}, {"id": 30, "genuine": false}, {"id": 31, "genuine": false}, {"id": 32, "genuine": true}, {"id": 33, "genuine": false}, {"id": 34, "genuine": true}, {"id": 35, "genuine": false}, {"id": 36, "genuine": true}, {"id": 37, "genuine": true}, {"id": 38, "genuine": true}, {"id": 39, "genuine": false}, {"id": 40, "genuine": false}, {"id": 41, "genuine": false}, {"id": 42, "genuine": false}, {"id": 43, "genuine": false}, {"id": 44, "genuine": false}, {"id": 45, "genuine": true}, {"id": 46, "genuine": false}, {"id": 47, "genuine": false}, {"id": 48, "genuine": false}, {"id": 49, "genuine": false}, {"id": 50, "genuine": false}, {"id": 51, "genuine": true}, {"id": 52, "genuine": false}, {"id": 53, "genuine": false}, {"id": 54, "genuine": false}, {"id": 55, "genuine": false}, {"id": 56, "genuine": false}, {"id": 57, "genuine": false}, {"id": 58, "genuine": false}, {"id": 59, "genuine": false}, {"id": 60, "genuine": false}, {"id": 61, "genuine": false}, {"id": 62, "genuine": true}, {"id": 63, "genuine": false}, {"id": 64, "genuine": false}, {"id": 65, "genuine": true}, {"id": 66, "genuine": false}, {"id": 67, "genuine": false}, {"id": 68, "genuine": true}, {"id": 69, "genuine": false}, {"id": 70, "genuine": true}, {"id": 71, "genuine": true}, {"id": 72, "genuine": false}, {"id": 73, "genuine": false}, {"id": 74, "genuine": false}, {"id": 75, "genuine": false}, {"id": 76, "genuine": false}, {"id": 77, "genuine": false}, {"id": 78, "genuine": false}, {"id": 79, "genuine": false}, {"id": 80, "genuine": false}, {"id": 81, "genuine": true}, {"id": 82, "genuine": false}, {"id": 83, "genuine": false}, {"id": 84, "genuine": false}, {"id": 85, "genuine": true}, {"id": 86, "genuine": false}, {"id": 87, "genuine": false}, {"id": 88, "genuine": false}, {"id": 89, "genuine": false}]}, {"annotator": "claude-opus-cross-domain-strict", "judgments": [{"id": 0, "genuine": false}, {"id": 1, "genuine": true}, {"id": 2, "genuine": false}, {"id": 3, "genuine": false}, {"id": 4, "genuine": false}, {"id": 5, "genuine": false}, {"id": 6, "genuine": false}, {"id": 7, "genuine": false}, {"id": 8, "genuine": false}, {"id": 9, "genuine": false}, {"id": 10, "genuine": false}, {"id": 11, "genuine": false}, {"id": 12, "genuine": false}, {"id": 13, "genuine": false}, {"id": 14, "genuine": true}, {"id": 15, "genuine": false}, {"id": 16, "genuine": false}, {"id": 17, "genuine": true}, {"id": 18, "genuine": false}, {"id": 19, "genuine": false}, {"id": 20, "genuine": true}, {"id": 21, "genuine": false}, {"id": 22, "genuine": false}, {"id": 23, "genuine": false}, {"id": 24, "genuine": false}, {"id": 25, "genuine": false}, {"id": 26, "genuine": false}, {"id": 27, "genuine": false}, {"id": 28, "genuine": false}, {"id": 29, "genuine": false}, {"id": 30, "genuine": true}, {"id": 31, "genuine": false}, {"id": 32, "genuine": false}, {"id": 33, "genuine": false}, {"id": 34, "genuine": false}, {"id": 35, "genuine": false}, {"id": 36, "genuine": true}, {"id": 37, "genuine": false}, {"id": 38, "genuine": true}, {"id": 39, "genuine": false}, {"id": 40, "genuine": false}, {"id": 41, "genuine": false}, {"id": 42, "genuine": false}, {"id": 43, "genuine": false}, {"id": 44, "genuine": false}, {"id": 45, "genuine": false}, {"id": 46, "genuine": false}, {"id": 47, "genuine": false}, {"id": 48, "genuine": false}, {"id": 49, "genuine": false}, {"id": 50, "genuine": false}, {"id": 51, "genuine": true}, {"id": 52, "genuine": false}, {"id": 53, "genuine": false}, {"id": 54, "genuine": false}, {"id": 55, "genuine": false}, {"id": 56, "genuine": false}, {"id": 57, "genuine": false}, {"id": 58, "genuine": false}, {"id": 59, "genuine": false}, {"id": 60, "genuine": false}, {"id": 61, "genuine": false}, {"id": 62, "genuine": false}, {"id": 63, "genuine": false}, {"id": 64, "genuine": false}, {"id": 65, "genuine": true}, {"id": 66, "genuine": false}, {"id": 67, "genuine": false}, {"id": 68, "genuine": false}, {"id": 69, "genuine": false}, {"id": 70, "genuine": true}, {"id": 71, "genuine": true}, {"id": 72, "genuine": false}, {"id": 73, "genuine": false}, {"id": 74, "genuine": false}, {"id": 75, "genuine": false}, {"id": 76, "genuine": false}, {"id": 77, "genuine": false}, {"id": 78, "genuine": false}, {"id": 79, "genuine": false}, {"id": 80, "genuine": false}, {"id": 81, "genuine": true}, {"id": 82, "genuine": false}, {"id": 83, "genuine": false}, {"id": 84, "genuine": false}, {"id": 85, "genuine": true}, {"id": 86, "genuine": false}, {"id": 87, "genuine": false}, {"id": 88, "genuine": false}, {"id": 89, "genuine": false}]}]}
+{
+ "prompt": "datasets/validity/wild_3arm_prompt.md",
+ "annotators": [
+  {
+   "annotator": "claude-haiku-4-5-20251001",
+   "judgments": [
+    {
+     "id": 0,
+     "genuine": false,
+     "reason": "PSD modeling vs foundation models"
+    },
+    {
+     "id": 1,
+     "genuine": false,
+     "reason": "Different statistical models"
+    },
+    {
+     "id": 2,
+     "genuine": false,
+     "reason": "Cooperation modeling vs network settlement"
+    },
+    {
+     "id": 3,
+     "genuine": true,
+     "reason": "Bradley-Terry ranking model same core"
+    },
+    {
+     "id": 4,
+     "genuine": false,
+     "reason": "Different applications of Gaussian mixtures"
+    },
+    {
+     "id": 5,
+     "genuine": false,
+     "reason": "Different mathematical frameworks"
+    },
+    {
+     "id": 6,
+     "genuine": false,
+     "reason": "Random walk modeling vs power laws"
+    },
+    {
+     "id": 7,
+     "genuine": false,
+     "reason": "Different problems, different methods"
+    },
+    {
+     "id": 8,
+     "genuine": true,
+     "reason": "Hawkes/self-exciting processes same core"
+    },
+    {
+     "id": 9,
+     "genuine": false,
+     "reason": "Domain-specific control applications"
+    },
+    {
+     "id": 10,
+     "genuine": false,
+     "reason": "Different problems and methods"
+    },
+    {
+     "id": 11,
+     "genuine": false,
+     "reason": "Different statistical models and applications"
+    },
+    {
+     "id": 12,
+     "genuine": false,
+     "reason": "Different problems and domains"
+    },
+    {
+     "id": 13,
+     "genuine": true,
+     "reason": "Needleman-Wunsch sequence matching same"
+    },
+    {
+     "id": 14,
+     "genuine": false,
+     "reason": "Different mathematical frameworks"
+    },
+    {
+     "id": 15,
+     "genuine": true,
+     "reason": "Both Transformer-based embeddings"
+    },
+    {
+     "id": 16,
+     "genuine": false,
+     "reason": "Different computational problems"
+    },
+    {
+     "id": 17,
+     "genuine": true,
+     "reason": "Power spectral density estimation same core"
+    },
+    {
+     "id": 18,
+     "genuine": false,
+     "reason": "Different sampling and learning problems"
+    },
+    {
+     "id": 19,
+     "genuine": true,
+     "reason": "Kalman filtering state estimation same core"
+    },
+    {
+     "id": 20,
+     "genuine": false,
+     "reason": "Option pricing vs power-law dynamics"
+    },
+    {
+     "id": 21,
+     "genuine": true,
+     "reason": "Compressed sensing reconstruction same core"
+    },
+    {
+     "id": 22,
+     "genuine": false,
+     "reason": "Different computational problems"
+    },
+    {
+     "id": 23,
+     "genuine": false,
+     "reason": "Different problems entirely"
+    },
+    {
+     "id": 24,
+     "genuine": false,
+     "reason": "Related theories but different problems"
+    },
+    {
+     "id": 25,
+     "genuine": false,
+     "reason": "Different clinical trial design problems"
+    },
+    {
+     "id": 26,
+     "genuine": true,
+     "reason": "Item Response Theory models, same core"
+    },
+    {
+     "id": 27,
+     "genuine": true,
+     "reason": "Manifold attitude estimation same core"
+    },
+    {
+     "id": 28,
+     "genuine": false,
+     "reason": "Different optimization and theoretical frameworks"
+    },
+    {
+     "id": 29,
+     "genuine": true,
+     "reason": "Ensemble Kalman filtering same core"
+    },
+    {
+     "id": 30,
+     "genuine": false,
+     "reason": "Different application domains and problems"
+    },
+    {
+     "id": 31,
+     "genuine": true,
+     "reason": "Preferential attachment network model same"
+    },
+    {
+     "id": 32,
+     "genuine": false,
+     "reason": "Different optimization and policy problems"
+    },
+    {
+     "id": 33,
+     "genuine": false,
+     "reason": "Different problems entirely"
+    },
+    {
+     "id": 34,
+     "genuine": false,
+     "reason": "Different sequence models, different inference"
+    },
+    {
+     "id": 35,
+     "genuine": false,
+     "reason": "MDP value iteration vs lead-lag analysis"
+    },
+    {
+     "id": 36,
+     "genuine": false,
+     "reason": "Different problems and frameworks"
+    },
+    {
+     "id": 37,
+     "genuine": false,
+     "reason": "Different optimization problems"
+    },
+    {
+     "id": 38,
+     "genuine": false,
+     "reason": "Different optimization and estimation"
+    },
+    {
+     "id": 39,
+     "genuine": false,
+     "reason": "Different density/spectral problems"
+    },
+    {
+     "id": 40,
+     "genuine": false,
+     "reason": "Different computational problems"
+    },
+    {
+     "id": 41,
+     "genuine": true,
+     "reason": "State-space Kalman filtering same core"
+    },
+    {
+     "id": 42,
+     "genuine": false,
+     "reason": "Broad paradigm: deep learning time series"
+    },
+    {
+     "id": 43,
+     "genuine": false,
+     "reason": "Different control and optimization problems"
+    },
+    {
+     "id": 44,
+     "genuine": false,
+     "reason": "Different statistical inference methods"
+    },
+    {
+     "id": 45,
+     "genuine": true,
+     "reason": "Both spectral density estimation"
+    },
+    {
+     "id": 46,
+     "genuine": false,
+     "reason": "Different problem formulations"
+    },
+    {
+     "id": 47,
+     "genuine": false,
+     "reason": "Different deep learning applications"
+    },
+    {
+     "id": 48,
+     "genuine": true,
+     "reason": "Viterbi algorithm sequence decoding same"
+    },
+    {
+     "id": 49,
+     "genuine": false,
+     "reason": "Causal analysis vs inverse reconstruction"
+    },
+    {
+     "id": 50,
+     "genuine": false,
+     "reason": "Different sequence models and problems"
+    },
+    {
+     "id": 51,
+     "genuine": false,
+     "reason": "Different problems and methods"
+    },
+    {
+     "id": 52,
+     "genuine": true,
+     "reason": "Both Bayesian optimization with surrogates"
+    },
+    {
+     "id": 53,
+     "genuine": true,
+     "reason": "HMM biological sequence analysis same core"
+    },
+    {
+     "id": 54,
+     "genuine": false,
+     "reason": "Different control/estimation problems"
+    },
+    {
+     "id": 55,
+     "genuine": true,
+     "reason": "State-space Kalman filtering same core"
+    },
+    {
+     "id": 56,
+     "genuine": false,
+     "reason": "Time series forecasting vs game theory"
+    },
+    {
+     "id": 57,
+     "genuine": false,
+     "reason": "Different classification methods and domains"
+    },
+    {
+     "id": 58,
+     "genuine": false,
+     "reason": "Related but different control/optimization"
+    },
+    {
+     "id": 59,
+     "genuine": true,
+     "reason": "SGD convergence analysis same algorithm"
+    },
+    {
+     "id": 60,
+     "genuine": false,
+     "reason": "Different problems entirely"
+    },
+    {
+     "id": 61,
+     "genuine": false,
+     "reason": "Different AI interpretability approaches"
+    },
+    {
+     "id": 62,
+     "genuine": false,
+     "reason": "Different prediction tasks and models"
+    },
+    {
+     "id": 63,
+     "genuine": false,
+     "reason": "Different time series problems"
+    },
+    {
+     "id": 64,
+     "genuine": false,
+     "reason": "PSD estimation vs denoising different"
+    },
+    {
+     "id": 65,
+     "genuine": false,
+     "reason": "Different text classification problems"
+    },
+    {
+     "id": 66,
+     "genuine": true,
+     "reason": "HMM Viterbi/posterior decoding same core"
+    },
+    {
+     "id": 67,
+     "genuine": false,
+     "reason": "Different problems and methods"
+    },
+    {
+     "id": 68,
+     "genuine": false,
+     "reason": "Different deep learning applications"
+    },
+    {
+     "id": 69,
+     "genuine": false,
+     "reason": "Survival analysis but different methods"
+    },
+    {
+     "id": 70,
+     "genuine": false,
+     "reason": "Factor analysis vs MCMC sampling"
+    },
+    {
+     "id": 71,
+     "genuine": false,
+     "reason": "Different applications of transport theory"
+    },
+    {
+     "id": 72,
+     "genuine": true,
+     "reason": "Item Response Theory/Rasch model same core"
+    },
+    {
+     "id": 73,
+     "genuine": false,
+     "reason": "Related theories but different problems"
+    },
+    {
+     "id": 74,
+     "genuine": false,
+     "reason": "Different problems and methods"
+    },
+    {
+     "id": 75,
+     "genuine": false,
+     "reason": "Factor analysis vs MCMC estimation"
+    },
+    {
+     "id": 76,
+     "genuine": false,
+     "reason": "Different problems and frameworks"
+    },
+    {
+     "id": 77,
+     "genuine": false,
+     "reason": "Different mathematical models"
+    },
+    {
+     "id": 78,
+     "genuine": false,
+     "reason": "Different inference and learning problems"
+    },
+    {
+     "id": 79,
+     "genuine": false,
+     "reason": "Different computational problems"
+    },
+    {
+     "id": 80,
+     "genuine": false,
+     "reason": "Spectral analysis but different problem types"
+    },
+    {
+     "id": 81,
+     "genuine": false,
+     "reason": "Different optimization and causal problems"
+    },
+    {
+     "id": 82,
+     "genuine": false,
+     "reason": "Similar problem different algorithms"
+    },
+    {
+     "id": 83,
+     "genuine": true,
+     "reason": "Markov switching state-space model same"
+    },
+    {
+     "id": 84,
+     "genuine": false,
+     "reason": "Different neural network theory frameworks"
+    },
+    {
+     "id": 85,
+     "genuine": false,
+     "reason": "Different problems entirely"
+    },
+    {
+     "id": 86,
+     "genuine": false,
+     "reason": "Broad paradigm: time series forecasting"
+    },
+    {
+     "id": 87,
+     "genuine": false,
+     "reason": "Different computational problems"
+    },
+    {
+     "id": 88,
+     "genuine": true,
+     "reason": "Wavelet spectral estimation same core"
+    },
+    {
+     "id": 89,
+     "genuine": false,
+     "reason": "Different modeling frameworks"
+    },
+    {
+     "id": 90,
+     "genuine": false,
+     "reason": "Different optimization frameworks"
+    },
+    {
+     "id": 91,
+     "genuine": false,
+     "reason": "Different statistical inference problems"
+    },
+    {
+     "id": 92,
+     "genuine": false,
+     "reason": "Physics experiment vs epidemiology"
+    },
+    {
+     "id": 93,
+     "genuine": true,
+     "reason": "Maximum entropy inverse inference same"
+    },
+    {
+     "id": 94,
+     "genuine": false,
+     "reason": "Different problems and frameworks"
+    },
+    {
+     "id": 95,
+     "genuine": false,
+     "reason": "Different problems and methodologies"
+    },
+    {
+     "id": 96,
+     "genuine": false,
+     "reason": "Different problems and methods"
+    },
+    {
+     "id": 97,
+     "genuine": false,
+     "reason": "Different network modeling problems"
+    },
+    {
+     "id": 98,
+     "genuine": false,
+     "reason": "Different control strategies"
+    },
+    {
+     "id": 99,
+     "genuine": false,
+     "reason": "Different statistical and learning problems"
+    },
+    {
+     "id": 100,
+     "genuine": false,
+     "reason": "Physics experiment vs social modeling"
+    },
+    {
+     "id": 101,
+     "genuine": false,
+     "reason": "Broad paradigm: time series forecasting"
+    },
+    {
+     "id": 102,
+     "genuine": false,
+     "reason": "Option pricing vs lead-lag analysis"
+    },
+    {
+     "id": 103,
+     "genuine": false,
+     "reason": "Different problems and algorithms"
+    },
+    {
+     "id": 104,
+     "genuine": false,
+     "reason": "Factor analysis vs translation quality metrics"
+    },
+    {
+     "id": 105,
+     "genuine": false,
+     "reason": "Different problems entirely"
+    }
+   ]
+  },
+  {
+   "annotator": "claude-sonnet-5",
+   "judgments": [
+    {
+     "id": 0,
+     "genuine": false,
+     "reason": "Parametric analytic EEG noise spectrum model vs deep learning foundation model; different cores"
+    },
+    {
+     "id": 1,
+     "genuine": false,
+     "reason": "Bradley-Terry ranking model vs spatial occupancy detection model; different cores."
+    },
+    {
+     "id": 2,
+     "genuine": true,
+     "reason": "Both model two-strategy (cooperate/defect) dynamics via fixed-point/evolutionary game analysis"
+    },
+    {
+     "id": 3,
+     "genuine": true,
+     "reason": "Both fit Bradley-Terry paired-comparison models to sports ranking data."
+    },
+    {
+     "id": 4,
+     "genuine": true,
+     "reason": "Both fit Gaussian mixture models via ML/EM for classification or localization."
+    },
+    {
+     "id": 5,
+     "genuine": false,
+     "reason": "Power-law transport chain model vs BSDEs with default jumps; unrelated."
+    },
+    {
+     "id": 6,
+     "genuine": true,
+     "reason": "Both derive power-law distributions from random growth/random-walk stochastic processes"
+    },
+    {
+     "id": 7,
+     "genuine": false,
+     "reason": "Credit-risk PD calibration vs kernel-regression route smoothing; unrelated cores."
+    },
+    {
+     "id": 8,
+     "genuine": true,
+     "reason": "Both fit self-exciting point processes (ETAS) to spatiotemporal event clustering."
+    },
+    {
+     "id": 9,
+     "genuine": false,
+     "reason": "Both grid-inverter control topics but no shared specific algorithm stated."
+    },
+    {
+     "id": 10,
+     "genuine": false,
+     "reason": "NTK generalization theory vs MLP-based spectral density estimator; unrelated cores."
+    },
+    {
+     "id": 11,
+     "genuine": false,
+     "reason": "Gene mixture model vs tree-based wage decomposition; different specific methods."
+    },
+    {
+     "id": 12,
+     "genuine": false,
+     "reason": "Composite wavelet denoising transforms vs basket-trial monitoring; unrelated cores."
+    },
+    {
+     "id": 13,
+     "genuine": true,
+     "reason": "Both apply the Needleman-Wunsch sequence-alignment DP algorithm on GPU."
+    },
+    {
+     "id": 14,
+     "genuine": true,
+     "reason": "Both use evolutionary-game replicator dynamics for population strategy adoption."
+    },
+    {
+     "id": 15,
+     "genuine": false,
+     "reason": "Embedding-based sequence alignment search vs multimodal phenotyping embeddings; different tasks"
+    },
+    {
+     "id": 16,
+     "genuine": false,
+     "reason": "LLM layer-pruning MDL framework vs spectral causal analysis; unrelated cores."
+    },
+    {
+     "id": 17,
+     "genuine": true,
+     "reason": "Both estimate power spectral density of (non)stationary noise/time series."
+    },
+    {
+     "id": 18,
+     "genuine": false,
+     "reason": "GFlowNet flow-balance training vs federated OT-based IRL; unrelated cores."
+    },
+    {
+     "id": 19,
+     "genuine": false,
+     "reason": "Power-system estimation method unspecified; insufficient info to match core."
+    },
+    {
+     "id": 20,
+     "genuine": false,
+     "reason": "Funding-cost option pricing PDE vs power-law derivation from option chains; different tasks"
+    },
+    {
+     "id": 21,
+     "genuine": true,
+     "reason": "Both solve compressed-sensing sparse reconstruction from undersampled Fourier measurements."
+    },
+    {
+     "id": 22,
+     "genuine": false,
+     "reason": "NTK generalization theory vs HMM-regime Granger causality; unrelated cores."
+    },
+    {
+     "id": 23,
+     "genuine": false,
+     "reason": "Spectral-preserving compression vs credit-risk meta-learning; unrelated cores."
+    },
+    {
+     "id": 24,
+     "genuine": true,
+     "reason": "Both use kernel/NTK operator theory for neural-network learning dynamics."
+    },
+    {
+     "id": 25,
+     "genuine": false,
+     "reason": "Bayes-factor sample-size calc vs basket-trial monitoring; different specific methods."
+    },
+    {
+     "id": 26,
+     "genuine": true,
+     "reason": "Both fit IRT/Rasch models estimating item and ability parameters via MLE."
+    },
+    {
+     "id": 27,
+     "genuine": true,
+     "reason": "Both estimate spacecraft attitude and gyro bias via nonlinear Lie-group filters."
+    },
+    {
+     "id": 28,
+     "genuine": false,
+     "reason": "DR-optimization certification vs collective-organization geometry essay; no shared solver."
+    },
+    {
+     "id": 29,
+     "genuine": false,
+     "reason": "Power-system estimation method unspecified vs EnKF ice-sheet assimilation; insufficient info."
+    },
+    {
+     "id": 30,
+     "genuine": false,
+     "reason": "EEG representation learning vs multimodal stock-prediction LLM; unrelated cores."
+    },
+    {
+     "id": 31,
+     "genuine": true,
+     "reason": "Both fit/test preferential-attachment network growth models on real networks."
+    },
+    {
+     "id": 32,
+     "genuine": false,
+     "reason": "Search-plan detection-probability theory vs equitable pollution policy design; unrelated."
+    },
+    {
+     "id": 33,
+     "genuine": false,
+     "reason": "CO2 forecasting vs neural credit-assignment noise correlation; unrelated cores."
+    },
+    {
+     "id": 34,
+     "genuine": true,
+     "reason": "Both fit Markov-switching/HMM models to infer discrete hidden states from sequences."
+    },
+    {
+     "id": 35,
+     "genuine": false,
+     "reason": "MDP value iteration vs point-process lead-lag timing; no shared computational core"
+    },
+    {
+     "id": 36,
+     "genuine": false,
+     "reason": "Opinion-dynamics kinetic PDE vs trading-strategy overfitting metric; unrelated cores."
+    },
+    {
+     "id": 37,
+     "genuine": false,
+     "reason": "BNN QUBO training vs urban logistics facility optimization; unrelated cores."
+    },
+    {
+     "id": 38,
+     "genuine": false,
+     "reason": "Gammatone filter estimation vs DR-optimization certification; unrelated cores."
+    },
+    {
+     "id": 39,
+     "genuine": false,
+     "reason": "Circular KDE bias correction vs functional-time-series spectral estimator; unrelated."
+    },
+    {
+     "id": 40,
+     "genuine": false,
+     "reason": "Entropic optimal transport vs matrix completion; different specific solvers."
+    },
+    {
+     "id": 41,
+     "genuine": false,
+     "reason": "Power-system estimation method unspecified vs Heston filtering; insufficient info."
+    },
+    {
+     "id": 42,
+     "genuine": false,
+     "reason": "Stock price time-series forecasting vs protein interaction mutation prediction; unrelated"
+    },
+    {
+     "id": 43,
+     "genuine": false,
+     "reason": "Switched-system Lyapunov stability vs MIMO beamforming optimization; unrelated cores."
+    },
+    {
+     "id": 44,
+     "genuine": false,
+     "reason": "Bayesian envelope dimension reduction vs modified BIC criterion; different cores."
+    },
+    {
+     "id": 45,
+     "genuine": true,
+     "reason": "Both estimate time-series spectral density via flexible nonparametric/neural function priors"
+    },
+    {
+     "id": 46,
+     "genuine": false,
+     "reason": "Rare-event MD sampling vs point-process lead-lag finance; different cores."
+    },
+    {
+     "id": 47,
+     "genuine": false,
+     "reason": "CycleGAN IR image augmentation vs kernel-regression route smoothing; unrelated."
+    },
+    {
+     "id": 48,
+     "genuine": true,
+     "reason": "Both examine Viterbi decoding algorithms (channel decoding vs HMM sequences)."
+    },
+    {
+     "id": 49,
+     "genuine": false,
+     "reason": "Operator-theoretic causal spectral analysis vs compressed-sensing interferometric imaging; unrelated"
+    },
+    {
+     "id": 50,
+     "genuine": true,
+     "reason": "Both use Markov/HMM-family hidden-state models for sequential data."
+    },
+    {
+     "id": 51,
+     "genuine": false,
+     "reason": "Audio flow-matching layer alignment vs attention-collapse theory; unrelated cores."
+    },
+    {
+     "id": 52,
+     "genuine": true,
+     "reason": "Both are Bayesian optimization with GP-based surrogates over structured design spaces"
+    },
+    {
+     "id": 53,
+     "genuine": true,
+     "reason": "Both use HMMs for sequence-state labeling (genes vs protein structure)."
+    },
+    {
+     "id": 54,
+     "genuine": false,
+     "reason": "Attitude/misalignment Bayesian estimation vs MPC momentum management; different cores."
+    },
+    {
+     "id": 55,
+     "genuine": true,
+     "reason": "Both estimate dynamical state-space parameters via Kalman-filter theory."
+    },
+    {
+     "id": 56,
+     "genuine": false,
+     "reason": "CO2 forecasting vs multilayer cooperation game model; unrelated cores."
+    },
+    {
+     "id": 57,
+     "genuine": false,
+     "reason": "EMR summarization/retrieval vs Bayesian intrusion detection; unrelated cores."
+    },
+    {
+     "id": 58,
+     "genuine": false,
+     "reason": "RL policy-evaluation fixed points vs stochastic-control HJB; different cores."
+    },
+    {
+     "id": 59,
+     "genuine": true,
+     "reason": "Both analyze SGD final-iterate behavior under dependent/Markovian noise."
+    },
+    {
+     "id": 60,
+     "genuine": false,
+     "reason": "Newton-flow power-flow solving vs random survival forests; unrelated cores."
+    },
+    {
+     "id": 61,
+     "genuine": false,
+     "reason": "World-model drug-response RL agent vs SQL pathology-reasoning agent; unrelated."
+    },
+    {
+     "id": 62,
+     "genuine": false,
+     "reason": "Different deep-learning forecasting tasks; no shared specific algorithmic core."
+    },
+    {
+     "id": 63,
+     "genuine": false,
+     "reason": "Spectral causal-analysis framework vs low-rank network autoregression; different methods."
+    },
+    {
+     "id": 64,
+     "genuine": false,
+     "reason": "PSD estimation via wavelet smoothing vs constructing new wavelet transform matrices; different core"
+    },
+    {
+     "id": 65,
+     "genuine": false,
+     "reason": "Document retrieval/summarization vs sentiment classification; method unspecified, insufficient info."
+    },
+    {
+     "id": 66,
+     "genuine": true,
+     "reason": "Both apply Viterbi/posterior HMM decoding algorithms to biological sequence data."
+    },
+    {
+     "id": 67,
+     "genuine": false,
+     "reason": "LLM multi-agent trading vs covariance-matrix MLE theory; unrelated cores."
+    },
+    {
+     "id": 68,
+     "genuine": false,
+     "reason": "GW CNN signal detection vs kernel confounder detection; unrelated cores."
+    },
+    {
+     "id": 69,
+     "genuine": false,
+     "reason": "Net-survival correction estimator vs random survival forests; different methods."
+    },
+    {
+     "id": 70,
+     "genuine": false,
+     "reason": "Factor analysis genomic prediction vs lattice Gaussian MCMC sampling; unrelated methods"
+    },
+    {
+     "id": 71,
+     "genuine": false,
+     "reason": "Physical anomalous-transport statistics vs optimal-transport multi-agent control; different senses."
+    },
+    {
+     "id": 72,
+     "genuine": true,
+     "reason": "Both estimate IRT/Rasch item and ability parameters via likelihood methods."
+    },
+    {
+     "id": 73,
+     "genuine": false,
+     "reason": "NTK generalization theory vs RKHS confounder detection; different specific problems."
+    },
+    {
+     "id": 74,
+     "genuine": false,
+     "reason": "Group Stepdown SLOPE selection vs spectral causal-analysis framework; unrelated cores."
+    },
+    {
+     "id": 75,
+     "genuine": false,
+     "reason": "Factor analysis genomic prediction vs MCMC SED parameter fitting; different computational cores"
+    },
+    {
+     "id": 76,
+     "genuine": false,
+     "reason": "Swarm-exploration RL vs spectral causal-analysis framework; unrelated cores."
+    },
+    {
+     "id": 77,
+     "genuine": false,
+     "reason": "Quantum Ising phase transition vs SIRS vaccination game model; unrelated."
+    },
+    {
+     "id": 78,
+     "genuine": false,
+     "reason": "Sparse NUTS MCMC preconditioning vs Procrustes factor analysis; unrelated cores."
+    },
+    {
+     "id": 79,
+     "genuine": false,
+     "reason": "NTK generalization theory vs muP spectral scaling conditions; different objects."
+    },
+    {
+     "id": 80,
+     "genuine": false,
+     "reason": "Both use generic spectral analysis; no shared specific estimator or model."
+    },
+    {
+     "id": 81,
+     "genuine": false,
+     "reason": "Stochastic-control HJB optimization vs point-process lead-lag finance; unrelated cores."
+    },
+    {
+     "id": 82,
+     "genuine": false,
+     "reason": "Both rank disease genes on networks but via different specific algorithms."
+    },
+    {
+     "id": 83,
+     "genuine": true,
+     "reason": "Both fit Markov-switching state models with transition-matrix-governed regimes."
+    },
+    {
+     "id": 84,
+     "genuine": false,
+     "reason": "Kernel feature-learning theory vs biological noise-correlation credit assignment; unrelated."
+    },
+    {
+     "id": 85,
+     "genuine": false,
+     "reason": "Spin-glass Parisi formula vs 3D Gaussian-splatting artifact removal; unrelated."
+    },
+    {
+     "id": 86,
+     "genuine": true,
+     "reason": "Both forecast financial time series using recurrent/attention neural network architectures"
+    },
+    {
+     "id": 87,
+     "genuine": false,
+     "reason": "Network controllability theory vs associative-memory capacity; unrelated cores."
+    },
+    {
+     "id": 88,
+     "genuine": true,
+     "reason": "Both estimate wavelet-based periodograms/spectral density of time series."
+    },
+    {
+     "id": 89,
+     "genuine": false,
+     "reason": "Cultural-dynamics modelling survey vs dance-synchronization study; survey, unrelated."
+    },
+    {
+     "id": 90,
+     "genuine": false,
+     "reason": "Flow-matching black-box optimization vs qualitative system-dynamics policy model; unrelated."
+    },
+    {
+     "id": 91,
+     "genuine": false,
+     "reason": "ETAS spatial estimation vs protein-contact inverse inference; different cores."
+    },
+    {
+     "id": 92,
+     "genuine": false,
+     "reason": "Shapiro time-delay physics vs wastewater epidemiology modeling; unrelated cores."
+    },
+    {
+     "id": 93,
+     "genuine": true,
+     "reason": "Both fit pairwise maximum-entropy (Ising) models to neural and protein correlation data."
+    },
+    {
+     "id": 94,
+     "genuine": false,
+     "reason": "Semantic-comm RL coding vs viscoelastic contact PDE; unrelated cores."
+    },
+    {
+     "id": 95,
+     "genuine": false,
+     "reason": "Hierarchical agentic RL planning vs hypergraph redundancy theory; unrelated cores."
+    },
+    {
+     "id": 96,
+     "genuine": false,
+     "reason": "Bayesian factor model vs penalized spatial point-process selection; unrelated cores."
+    },
+    {
+     "id": 97,
+     "genuine": false,
+     "reason": "Attention-based gene prioritization vs RNA-velocity network model; different methods."
+    },
+    {
+     "id": 98,
+     "genuine": false,
+     "reason": "Both nonlinear control-affine stabilization but via different specific procedures."
+    },
+    {
+     "id": 99,
+     "genuine": false,
+     "reason": "Bayesian factor model for distributions vs few-shot personalization theory; unrelated."
+    },
+    {
+     "id": 100,
+     "genuine": false,
+     "reason": "Shapiro time-delay physics experiment vs collective-organization essay; unrelated."
+    },
+    {
+     "id": 101,
+     "genuine": false,
+     "reason": "Only shared paradigm is generic time-series forecasting; no specific method match given"
+    },
+    {
+     "id": 102,
+     "genuine": false,
+     "reason": "Chebyshev option pricing vs point-process lead-lag analysis; different computational cores"
+    },
+    {
+     "id": 103,
+     "genuine": false,
+     "reason": "Drug-repurposing knowledge graph vs heterophilic community search; different cores."
+    },
+    {
+     "id": 104,
+     "genuine": false,
+     "reason": "Factor analysis/Procrustes genomic prediction vs MT reranking diversity; unrelated methods"
+    },
+    {
+     "id": 105,
+     "genuine": false,
+     "reason": "Power-grid Fiedler connectivity metric vs health-analytics Bayesian confidence; unrelated."
+    }
+   ]
+  },
+  {
+   "annotator": "claude-opus-5",
+   "judgments": [
+    {
+     "id": 0,
+     "genuine": false,
+     "reason": "Shared EEG topic only; parametric PSD model versus deep foundation model"
+    },
+    {
+     "id": 1,
+     "genuine": false,
+     "reason": "Bradley-Terry paired comparisons versus spatially varying coefficient occupancy models."
+    },
+    {
+     "id": 2,
+     "genuine": true,
+     "reason": "Both analyze two-strategy adaptive population dynamics and equilibria in large groups"
+    },
+    {
+     "id": 3,
+     "genuine": true,
+     "reason": "Both hierarchical Bayesian Bradley-Terry paired-comparison ranking; identical estimator."
+    },
+    {
+     "id": 4,
+     "genuine": true,
+     "reason": "Both maximize Gaussian mixture likelihoods (EM) for classification/localization."
+    },
+    {
+     "id": 5,
+     "genuine": false,
+     "reason": "Power-law emergence in recursive payoffs versus BSDEs with defaults."
+    },
+    {
+     "id": 6,
+     "genuine": true,
+     "reason": "Both derive power-law stationary distributions from stochastic proportional-growth/random-walk processes"
+    },
+    {
+     "id": 7,
+     "genuine": false,
+     "reason": "Credit scoring meta-learning versus kernel regression path design; unrelated cores."
+    },
+    {
+     "id": 8,
+     "genuine": true,
+     "reason": "Both fit self-exciting spatiotemporal point processes (ETAS/Hawkes); direct import."
+    },
+    {
+     "id": 9,
+     "genuine": false,
+     "reason": "Shared application topic (inverters) only; control problems and methods differ."
+    },
+    {
+     "id": 10,
+     "genuine": false,
+     "reason": "Kernel generalization theory versus functional time series spectral density estimator."
+    },
+    {
+     "id": 11,
+     "genuine": false,
+     "reason": "Semiparametric mixture for gene expression versus tree-based wage decomposition."
+    },
+    {
+     "id": 12,
+     "genuine": false,
+     "reason": "Wavelet denoising transforms versus Bayesian basket trial monitoring; unrelated."
+    },
+    {
+     "id": 13,
+     "genuine": true,
+     "reason": "Both GPU-parallel Needleman-Wunsch style dynamic programming sequence alignment."
+    },
+    {
+     "id": 14,
+     "genuine": true,
+     "reason": "Both evolutionary game dynamics with two strategies and equilibrium stability analysis."
+    },
+    {
+     "id": 15,
+     "genuine": false,
+     "reason": "Shared ground only transformer embeddings; alignment search versus phenotype classification"
+    },
+    {
+     "id": 16,
+     "genuine": false,
+     "reason": "MDL layer allocation versus spectral causal operators; no shared core."
+    },
+    {
+     "id": 17,
+     "genuine": true,
+     "reason": "Both estimate spectral density of stationary noise; estimators interchangeable."
+    },
+    {
+     "id": 18,
+     "genuine": false,
+     "reason": "GFlowNet flow balance versus federated inverse RL; different estimation targets."
+    },
+    {
+     "id": 19,
+     "genuine": true,
+     "reason": "Both Kalman-type hidden state estimation in noisy linear dynamical systems."
+    },
+    {
+     "id": 20,
+     "genuine": false,
+     "reason": "Funding-cost hedging PDE versus power-law emergence in iterated payouts"
+    },
+    {
+     "id": 21,
+     "genuine": true,
+     "reason": "Both compressed-sensing sparse reconstruction from undersampled Fourier data via convex optimization."
+    },
+    {
+     "id": 22,
+     "genuine": false,
+     "reason": "Kernel generalization theory versus regime-switching Granger causality; unrelated."
+    },
+    {
+     "id": 23,
+     "genuine": false,
+     "reason": "Spectral-preserving compression versus credit risk meta-learning; no shared core."
+    },
+    {
+     "id": 24,
+     "genuine": true,
+     "reason": "Both kernel/NTK analyses of wide networks with spectral regularization."
+    },
+    {
+     "id": 25,
+     "genuine": true,
+     "reason": "Both compute Bayesian operating characteristics/monitoring rules for binomial trial designs."
+    },
+    {
+     "id": 26,
+     "genuine": true,
+     "reason": "Both estimate IRT item/ability parameters; Rasch estimator transfers directly."
+    },
+    {
+     "id": 27,
+     "genuine": true,
+     "reason": "Both attitude/bias estimation on SO(3)/SE(3) geometric filters and observers."
+    },
+    {
+     "id": 28,
+     "genuine": false,
+     "reason": "Wasserstein robust risk certification versus vague geometric collective-organization claims."
+    },
+    {
+     "id": 29,
+     "genuine": true,
+     "reason": "Both ensemble/Kalman filtering for joint state and parameter estimation."
+    },
+    {
+     "id": 30,
+     "genuine": false,
+     "reason": "EEG representation learning versus financial multimodal LLM; only deep learning."
+    },
+    {
+     "id": 31,
+     "genuine": true,
+     "reason": "Both estimate preferential attachment exponents in growing empirical networks."
+    },
+    {
+     "id": 32,
+     "genuine": false,
+     "reason": "Optimal search plan detection probability versus equitable pollution policy inference."
+    },
+    {
+     "id": 33,
+     "genuine": false,
+     "reason": "CO2 forecasting versus perturbation-based gradient estimation; no shared core."
+    },
+    {
+     "id": 34,
+     "genuine": true,
+     "reason": "Both infer latent discrete Markov states via HMM; same decoding/fitting machinery."
+    },
+    {
+     "id": 35,
+     "genuine": false,
+     "reason": "MDP value iteration versus point-process lead-lag estimation; unrelated cores"
+    },
+    {
+     "id": 36,
+     "genuine": false,
+     "reason": "Kinetic opinion dynamics PDE versus trading strategy objective function."
+    },
+    {
+     "id": 37,
+     "genuine": false,
+     "reason": "QUBO binary network training versus supply chain facility design; unestablished overlap."
+    },
+    {
+     "id": 38,
+     "genuine": false,
+     "reason": "Auditory filter constant fitting versus Wasserstein robust risk certification."
+    },
+    {
+     "id": 39,
+     "genuine": false,
+     "reason": "Circular kernel density estimation versus functional spectral density; different objects."
+    },
+    {
+     "id": 40,
+     "genuine": false,
+     "reason": "Entropic optimal transport versus matrix completion imputation; different cores."
+    },
+    {
+     "id": 41,
+     "genuine": true,
+     "reason": "Both estimate hidden dynamics via state-space Bayesian filtering from noisy measurements."
+    },
+    {
+     "id": 42,
+     "genuine": false,
+     "reason": "Stock forecasting versus protein mutation effect prediction; only generic deep learning"
+    },
+    {
+     "id": 43,
+     "genuine": false,
+     "reason": "Neural Lyapunov stability versus metasurface beamforming energy efficiency."
+    },
+    {
+     "id": 44,
+     "genuine": false,
+     "reason": "Variational inference for envelope models versus BIC model-selection criterion."
+    },
+    {
+     "id": 45,
+     "genuine": true,
+     "reason": "Identical estimand: spectral density of stationary time series; estimators interchangeable"
+    },
+    {
+     "id": 46,
+     "genuine": false,
+     "reason": "Rare-event trajectory sampling versus point-process lead-lag estimation; unrelated."
+    },
+    {
+     "id": 47,
+     "genuine": false,
+     "reason": "CycleGAN image translation versus kernel regression waypoint alignment; unrelated."
+    },
+    {
+     "id": 48,
+     "genuine": true,
+     "reason": "Both concern Viterbi/posterior decoding of hidden state sequences."
+    },
+    {
+     "id": 49,
+     "genuine": false,
+     "reason": "Spectral causality operators versus compressed-sensing image reconstruction; different cores"
+    },
+    {
+     "id": 50,
+     "genuine": true,
+     "reason": "Both hidden Markov latent state segmentation of sequential observations."
+    },
+    {
+     "id": 51,
+     "genuine": false,
+     "reason": "Layer selection for representation alignment versus attention collapse; different problems."
+    },
+    {
+     "id": 52,
+     "genuine": true,
+     "reason": "Both: GP-surrogate Bayesian optimization over structured design spaces; acquisition machinery transfers"
+    },
+    {
+     "id": 53,
+     "genuine": true,
+     "reason": "Both HMM state labeling of biological sequences; same decoding procedure."
+    },
+    {
+     "id": 54,
+     "genuine": false,
+     "reason": "Multiple-model adaptive estimation versus model predictive momentum control; different cores."
+    },
+    {
+     "id": 55,
+     "genuine": true,
+     "reason": "Both Bayesian filtering for state-space parameter/hidden-state estimation; Kalman machinery shared."
+    },
+    {
+     "id": 56,
+     "genuine": false,
+     "reason": "CO2 time-series forecasting versus evolutionary game on multilayer networks."
+    },
+    {
+     "id": 57,
+     "genuine": false,
+     "reason": "Only broad shared ground: supervised classification; A's method unspecified."
+    },
+    {
+     "id": 58,
+     "genuine": false,
+     "reason": "TD/Q-learning convergence versus HJB regularized global optimization; different cores."
+    },
+    {
+     "id": 59,
+     "genuine": true,
+     "reason": "Both analyze stochastic gradient methods under dependent Markovian/martingale noise."
+    },
+    {
+     "id": 60,
+     "genuine": false,
+     "reason": "Newton flow power flow solver versus random survival forests; unrelated."
+    },
+    {
+     "id": 61,
+     "genuine": false,
+     "reason": "Two agentic LLM frameworks; shared paradigm and topic, no common solver."
+    },
+    {
+     "id": 62,
+     "genuine": false,
+     "reason": "Only shared paradigm: deep learning prediction; different objects and procedures."
+    },
+    {
+     "id": 63,
+     "genuine": false,
+     "reason": "Spectral causal criterion versus reduced-rank network autoregression estimation; different cores."
+    },
+    {
+     "id": 64,
+     "genuine": true,
+     "reason": "Both use orthogonal wavelet transforms and shrinkage; B's bases plug into A"
+    },
+    {
+     "id": 65,
+     "genuine": true,
+     "reason": "Both supervised document classification from text; standard classifiers transfer directly."
+    },
+    {
+     "id": 66,
+     "genuine": true,
+     "reason": "Both apply HMM decoding to biological sequence labeling; identical algorithmic core."
+    },
+    {
+     "id": 67,
+     "genuine": false,
+     "reason": "LLM multi-agent trading versus structured covariance matrix estimation."
+    },
+    {
+     "id": 68,
+     "genuine": false,
+     "reason": "CNN signal detection versus kernel confounder detection; only broad ML."
+    },
+    {
+     "id": 69,
+     "genuine": false,
+     "reason": "Relative/net survival estimator versus unsupervised survival forests; different cores."
+    },
+    {
+     "id": 70,
+     "genuine": false,
+     "reason": "Procrustes factor analysis versus lattice Gaussian MCMC sampling; unrelated"
+    },
+    {
+     "id": 71,
+     "genuine": false,
+     "reason": "Anomalous diffusion of flight trajectories versus optimal transport control; only wordplay."
+    },
+    {
+     "id": 72,
+     "genuine": true,
+     "reason": "Both estimate IRT/Rasch item and ability parameters from binary responses."
+    },
+    {
+     "id": 73,
+     "genuine": false,
+     "reason": "Kernel generalization rates versus RKHS confounder detection test; different problems."
+    },
+    {
+     "id": 74,
+     "genuine": false,
+     "reason": "Group SLOPE error-rate control versus spectral causal operators; unrelated."
+    },
+    {
+     "id": 75,
+     "genuine": false,
+     "reason": "Factor analysis for genomic prediction versus MCMC SED parameter fitting"
+    },
+    {
+     "id": 76,
+     "genuine": false,
+     "reason": "Swarm exploration RL versus spectral causal operator framework; unrelated."
+    },
+    {
+     "id": 77,
+     "genuine": false,
+     "reason": "Ising fidelity susceptibility versus epidemic vaccination game; unrelated cores."
+    },
+    {
+     "id": 78,
+     "genuine": false,
+     "reason": "Sparse-precision HMC preconditioning versus factor analytic genomic prediction."
+    },
+    {
+     "id": 79,
+     "genuine": false,
+     "reason": "Generalization rates for random features versus enforcing muP spectral conditions."
+    },
+    {
+     "id": 80,
+     "genuine": true,
+     "reason": "Both model and estimate power spectral density of noisy stationary series."
+    },
+    {
+     "id": 81,
+     "genuine": false,
+     "reason": "HJB stochastic control optimization versus point process lead-lag measures."
+    },
+    {
+     "id": 82,
+     "genuine": true,
+     "reason": "Both rank/prioritize genes on multi-network graphs; ranking procedures interchangeable."
+    },
+    {
+     "id": 83,
+     "genuine": true,
+     "reason": "Both Markov-switching latent regime models with discrete state transition estimation."
+    },
+    {
+     "id": 84,
+     "genuine": false,
+     "reason": "Kernel alignment dynamics versus perturbation-based gradient estimation; different procedures."
+    },
+    {
+     "id": 85,
+     "genuine": false,
+     "reason": "Parisi formula cavity method versus Gaussian splatting floater removal."
+    },
+    {
+     "id": 86,
+     "genuine": true,
+     "reason": "Same task and model families: recurrent/attention forecasting of stock price series"
+    },
+    {
+     "id": 87,
+     "genuine": false,
+     "reason": "Network controllability/observability versus associative memory capacity; different objects."
+    },
+    {
+     "id": 88,
+     "genuine": true,
+     "reason": "Both wavelet-based periodogram/spectral density estimation; direct method transfer."
+    },
+    {
+     "id": 89,
+     "genuine": false,
+     "reason": "Survey chapter on modelling; no computational method of its own."
+    },
+    {
+     "id": 90,
+     "genuine": false,
+     "reason": "Discrete flow matching optimization versus system dynamics policy simulation."
+    },
+    {
+     "id": 91,
+     "genuine": false,
+     "reason": "ETAS parameter estimation versus inverse-statistical-mechanics contact prediction; different cores."
+    },
+    {
+     "id": 92,
+     "genuine": false,
+     "reason": "Interferometric relativity test versus wastewater epidemiology with mobility."
+    },
+    {
+     "id": 93,
+     "genuine": true,
+     "reason": "Both fit pairwise maximum entropy (inverse Ising) models separating direct couplings."
+    },
+    {
+     "id": 94,
+     "genuine": false,
+     "reason": "RL error protection versus variational inequality contact problem; unrelated."
+    },
+    {
+     "id": 95,
+     "genuine": false,
+     "reason": "Hierarchical agentic RL versus hypergraph redundancy information theory."
+    },
+    {
+     "id": 96,
+     "genuine": false,
+     "reason": "Bayesian factor model versus penalized spatial point process variable selection."
+    },
+    {
+     "id": 97,
+     "genuine": false,
+     "reason": "Attention-based node ranking versus RNA velocity dynamical inference; different cores."
+    },
+    {
+     "id": 98,
+     "genuine": true,
+     "reason": "Both derive stabilizing feedback from value/Lyapunov functions for control-affine systems."
+    },
+    {
+     "id": 99,
+     "genuine": false,
+     "reason": "Bayesian latent factor model versus few-shot black-box personalization theory."
+    },
+    {
+     "id": 100,
+     "genuine": false,
+     "reason": "Interferometric delay measurement versus geometric collective organization; unrelated."
+    },
+    {
+     "id": 101,
+     "genuine": false,
+     "reason": "Only shared paradigm is time-series forecasting; B's method not specified"
+    },
+    {
+     "id": 102,
+     "genuine": false,
+     "reason": "Chebyshev dynamic-programming option pricing versus point-process cross-counts; different problems"
+    },
+    {
+     "id": 103,
+     "genuine": false,
+     "reason": "Knowledge-graph link prediction versus heterophilic community search; different tasks."
+    },
+    {
+     "id": 104,
+     "genuine": false,
+     "reason": "Factor-analytic genomic prediction versus MT reranking; no shared computational core"
+    },
+    {
+     "id": 105,
+     "genuine": false,
+     "reason": "Laplacian spectral connectivity metric versus progressive Bayesian health inference."
+    }
+   ]
+  }
+ ]
+}

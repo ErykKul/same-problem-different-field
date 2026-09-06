@@ -1,64 +1,54 @@
 #!/usr/bin/env python3
-"""Score the three-arm wild import-candidacy study from the blind annotations + the arm key.
-
-Reports, per arm (system-top / random / single-facet-collision): the precision = fraction of pairs a
-MAJORITY of the three blind annotators judged a genuine cross-domain import candidate, a paired
-bootstrap 95% CI, the per-annotator yes-counts, and the overall Fleiss kappa (3 raters).
-
-Inputs (scratchpad): wild_3arm_annotations.json = {annotators:[{annotator,judgments:[{id,genuine}]}]}
-(the blind-annotation workflow result), and wild_3arm_key.json = {id:{arm,a,b}} (from wild_three_arm.py).
+"""Score the wild three-arm import-candidacy study offline from the shipped files under datasets/validity/:
+wild_3arm_key.json (pairs, arms, ranks, planted-twin flags, corpus meta) and wild_3arm_annotations.json
+(three blind LLM judges; prompt in wild_3arm_prompt.md). Reports, per view, the judged precision at
+k = 5, 10, 20, 30 (majority of three), per-judge yes counts, a bootstrap CI at k = 30, the seeded view split
+into planted twins and unlabeled pairs, Fleiss kappa over all judged pairs, and the ranked confirmed pairs of
+the unseeded view. The unseeded view has no recall or AP: the positives among 80k pairs are unknown, so
+"precision" there is only what the judges confirmed among the k surfaced pairs. Pairs that contain a paper
+from the deliberately non-mathematical set count as not genuine regardless of votes (reported separately).
 """
-import json
-import os
+import json, sys
 import numpy as np
-
-np.random.seed(0)
-# Ship the blind-annotation result + arm key in the package so the scoring reproduces offline; fall back
-# to the scratchpad when regenerating live. (Generating the annotations needs an LLM; scoring does not.)
-PKG = os.path.join(os.path.dirname(os.path.dirname(os.path.abspath(__file__))), "datasets", "validity")
-SCRATCH = os.environ.get("SCRATCH_DIR", ".")
-
-
-def _load(name):
-    p = os.path.join(PKG, name)
-    return json.load(open(p if os.path.exists(p) else os.path.join(SCRATCH, name)))
-
-
-ann = _load("wild_3arm_annotations.json")["annotators"]
-key = _load("wild_3arm_key.json")
-arm = {int(i): key[i]["arm"] for i in key}
-
-votes = {}  # id -> list of bool, one per annotator
+V = "datasets/validity"
+key = json.load(open(f"{V}/wild_3arm_key.json")); meta, pairs = key["meta"], key["pairs"]
+ann = json.load(open(f"{V}/wild_3arm_annotations.json"))["annotators"]
+names = [a["annotator"] for a in ann]
+votes = {int(j["id"]): [] for j in ann[0]["judgments"]}
 for a in ann:
-    for j in a["judgments"]:
-        votes.setdefault(int(j["id"]), []).append(bool(j["genuine"]))
-ids = sorted(votes)
-nrat = len(ann)
-maj = {i: sum(votes[i]) >= (nrat // 2 + 1) for i in ids}
-
-
-def prec_ci(arm_name, B=5000):
-    x = np.array([1.0 if maj[i] else 0.0 for i in ids if arm[i] == arm_name])
-    if len(x) == 0:
-        return float("nan"), 0, 0, 0
-    boot = np.array([np.random.choice(x, len(x), replace=True).mean() for _ in range(B)])
-    return x.mean(), np.percentile(boot, 2.5), np.percentile(boot, 97.5), len(x)
-
-
-print(f"three-arm wild import-candidacy precision ({nrat} blind annotators, majority vote)")
-print(f"  {'arm':12}{'precision':>10}{'95% CI':>18}{'n':>5}   per-annotator yes")
-for a in ["top", "random", "collision"]:
-    p, lo, hi, n = prec_ci(a)
-    pa = [sum(1 for j in ad["judgments"] if arm[int(j["id"])] == a and j["genuine"]) for ad in ann]
-    print(f"  {a:12}{p:>10.3f}   [{lo:.3f}, {hi:.3f}]{n:>5}   {pa}")
-
-# Fleiss kappa (binary, nrat raters)
-N = len(ids)
-M = np.zeros((N, 2))
-for idx, i in enumerate(ids):
-    y = sum(votes[i]); M[idx] = [y, nrat - y]
-Pi = ((M ** 2).sum(1) - nrat) / (nrat * (nrat - 1))
-pj = M.sum(0) / (N * nrat)
-Pe = (pj ** 2).sum()
-kappa = (Pi.mean() - Pe) / (1 - Pe) if (1 - Pe) > 0 else float("nan")
-print(f"  Fleiss kappa ({nrat} raters): {kappa:.3f}")
+    for j in a["judgments"]: votes[int(j["id"])].append(bool(j["genuine"]))
+ids = sorted(int(i) for i in pairs); n_j = len(ann)
+maj = {i: sum(votes[i]) > n_j / 2 for i in ids}
+def arm(name): return sorted([i for i in ids if name in pairs[str(i)]["arms"]], key=lambda i: pairs[str(i)]["rank"])
+def ci(x, B=5000, seed=0):
+    rng = np.random.default_rng(seed); x = np.array(x, float); m = [rng.choice(x, len(x)).mean() for _ in range(B)]
+    return np.percentile(m, 2.5), np.percentile(m, 97.5)
+def line(label, sub):
+    if not sub: return
+    x = [1.0 if maj[i] else 0.0 for i in sub]; lo, hi = ci(x)
+    adj = [1.0 if (maj[i] and not pairs[str(i)]["nonmath_pair"]) else 0.0 for i in sub]
+    pj = "/".join(str(sum(votes[i][r] for i in sub)) for r in range(n_j))
+    print(f"  {label:36}{len(sub):>4}{np.mean(x):>8.3f}  [{lo:.2f}, {hi:.2f}]  {pj:>10}   nonmath-adjusted {np.mean(adj):.3f} ({sum(pairs[str(i)]['nonmath_pair'] for i in sub)} such pairs)")
+def at_k(sub, ks=(5, 10, 20, 30)):
+    return "  ".join(f"P@{k}={np.mean([maj[i] for i in sub[:k]]):.2f}" for k in ks if len(sub) >= k)
+print(f"wild three-arm study: {n_j} blind judges ({', '.join(names)}), {len(ids)} distinct pairs")
+print(f"corpus {meta['corpus']}, skipped STRUCTURE=none {meta['skipped_structure_none']}, pool {meta['pool']}, cross-field pairs {meta['cross_field_pairs']}")
+print(f"DETECTION (seeded view): planted twins present {meta['planted_twins_present']}/{meta['planted_twins_total']}, recall of known twins in top 1000 = {meta['recall_at_1000']:.3f}")
+print(f"  {'view / subset':36}{'n':>4}{'judged':>8}  {'95% CI':14} {'yes per judge':>10}")
+s = arm("seeded"); line("seeded top 30 (planted pairs included)", s)
+line("  planted twins", [i for i in s if pairs[str(i)]["planted_twin"]]); line("  unlabeled", [i for i in s if not pairs[str(i)]["planted_twin"]])
+u = arm("unseeded"); line("unseeded top 30 (planted pairs excluded)", u)
+line("  benchmark paper with wild paper", [i for i in u if pairs[str(i)]["benchmark_a"] != pairs[str(i)]["benchmark_b"]])
+line("  wild with wild", [i for i in u if not (pairs[str(i)]["benchmark_a"] or pairs[str(i)]["benchmark_b"])])
+line("both-wild top 30 (stricter sub-view)", arm("bothwild")); line("random 30 (chance control)", arm("random"))
+print(f"\nDISCOVERY (unseeded view), judged precision at k: {at_k(u)}   | random: {at_k(arm('random'))}")
+M = np.array([[sum(votes[i]), n_j - sum(votes[i])] for i in ids]); P_i = ((M ** 2).sum(1) - n_j) / (n_j * (n_j - 1))
+p = M.sum(0) / M.sum(); kappa = (P_i.mean() - (p ** 2).sum()) / (1 - (p ** 2).sum())
+print(f"Fleiss kappa over all {len(ids)} pairs: {kappa:.3f}")
+print("\nunseeded view: confirmed pairs by rank (rank in the planted-excluded ranking; votes of 3):")
+for i in u:
+    if maj[i]:
+        q = pairs[str(i)]; print(f"  #{q['rank_unseeded']:>2} {sum(votes[i])}/3 cos {q['cosine']:.3f}  {q['a']}  <->  {q['b']}")
+print("\nseeded view: planted twins in the top 30 NOT confirmed:")
+for i in s:
+    if pairs[str(i)]["planted_twin"] and not maj[i]: print(f"  {sum(votes[i])}/3  {pairs[str(i)]['a']} <-> {pairs[str(i)]['b']}")

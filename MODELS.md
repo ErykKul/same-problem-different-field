@@ -10,8 +10,8 @@ twelve-facet prompt in `src/distill_faceted.py`, which adds four verifiability f
 distance or conjunction reads them; the whole-fingerprint TF-IDF text vectors do include those lines for
 the files that carry them (the qwen arms and eight Haiku files). The Haiku and Opus arms were distilled with the eight-facet prompt, so the Haiku-versus-
 Opus comparison holds the prompt fixed and swaps only the model; the local qwen3 arms used the
-twelve-facet prompt. The perturbation prompts are in `src/perturbation_wf.js`; the blind three-arm
-annotation prompt is described in `DATASET.md`.
+twelve-facet prompt. The perturbation prompts are in `src/perturbation_wf.js`; the blind judging prompt of the wild three-arm study is
+`datasets/validity/wild_3arm_prompt.md` (verbatim, as read by the judges).
 
 | Arm | Artifact | Model identifier | Prompt | Run date |
 |---|---|---|---|---|
@@ -19,12 +19,16 @@ annotation prompt is described in `DATASET.md`.
 | Distiller, comparison (Opus) | `data/skeletons_v1_opus/` | claude-opus-4-8 (inferred: the period's code default) | eight-facet prompt (`distill_v1.py`), identical to the Haiku arm | 2026-06-25/26 (agent waves; complete by 06-27) |
 | Distiller, comparison (local) | `data/skeletons_faceted_qwen_v3/` | qwen3:14b via ollama on a remote RTX 4070 Ti (`qwen_v3.log`: `[distill_faceted:ollama/qwen3:14b] ok=497 fail=0`) | twelve-facet prompt (`distill_faceted.py`) | 2026-06-26 (overnight, ~7 h) |
 | Keep-domain ablation | `data/skeletons_keepdomain_qwen/` | qwen3:14b (same run family) | twelve-facet prompt, keep-domain variant | 2026-06-26/27 |
-| Wild annotator 1 (distiller model) | `datasets/validity/wild_3arm_annotations.json`, `Claude (blind annotation)` | claude-haiku-4-5-20251001 (the distiller arm; the other two are the non-distiller annotators) | blind three-arm annotation | 2026-06-29 |
-| Wild annotator 2 | same, `claude-sonnet-4-6` | claude-sonnet-4-6 | same | 2026-06-29 |
-| Wild annotator 3 | same, `claude-opus-cross-domain-strict` (run label) | claude-opus-4-8 (inferred), strict variant | same | 2026-06-29 |
+| Wild judge 1 (distiller model) | `datasets/validity/wild_3arm_annotations.json` | claude-haiku-4-5-20251001 | blind judging prompt `datasets/validity/wild_3arm_prompt.md` | 2026-09-06 (the June 29 run used the same model; superseded) |
+| Wild judge 2 | same | claude-sonnet-5 (June 29 run: claude-sonnet-4-6; superseded) | same | 2026-09-06 |
+| Wild judge 3 | same | claude-opus-5 (June 29 run: claude-opus-4-8, inferred; superseded) | same | 2026-09-06 |
 | Perturbation rewriter | `datasets/validity/perturbation.json` (`reskin`, `math`) | Sonnet (agent alias `sonnet`; claude-sonnet-4-6 in this period), deliberately a different model from the distiller | `src/perturbation_wf.js` (Rewrite phase) | 2026-06-29 |
 | Perturbation re-distiller | same (`s_orig`, `s_reskin`, `s_math`) | Haiku (agent alias `haiku`; claude-haiku-4-5-20251001) | `src/perturbation_wf.js` (Distill phase) | 2026-06-29 |
 
 Note. `src/distill_faceted.py` still lists `qwen2.5:14b-instruct` as its ollama default; that
 model was used only for an unshipped v1-prompt arm that timed out. Anyone regenerating the local
 arm should pass `--model qwen3:14b`.
+
+Note. The wild three-arm study was re-run on 2026-09-06 with the STRUCTURE-none skip rule, the seeded /
+unseeded views, and a written prompt; all 106 pairs were judged fresh. The June 29 judgments (Sonnet 4.6,
+Opus 4.8) are superseded and remain in git history only.

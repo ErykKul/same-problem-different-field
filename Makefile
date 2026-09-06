@@ -44,7 +44,7 @@ reproduce:
 		$(PY) src/facet_select.py --skdir data/$$d 2>/dev/null | grep -A4 "FACETED SUMMARY" || true; \
 	done
 	@echo ""
-	@echo "######## CONSTRUCT VALIDITY: three-arm blind wild precision (top vs random vs single-facet collision) ########"
+	@echo "######## CONSTRUCT VALIDITY: wild three-arm study (seeded detection / unseeded discovery / random) ########"
 	$(PY) src/wild_three_arm_score.py
 	@echo ""
 	@echo "######## PERTURBATION: interventional structure-vs-surface 2x2 (fingerprint vs abstract) ########"

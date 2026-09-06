@@ -191,7 +191,7 @@ distillation prompt is in `src/`, and the method and analysis are in the paper.
 ## Integrity
 
 ```
-sha256sum -c SHA256SUMS                 # 2176 files, all OK
+sha256sum -c SHA256SUMS                 # 2179 files, all OK
 python src/name_free_audit.py           # reproduces the anti-cheat name-free rates
 ```
 
@@ -207,8 +207,8 @@ precision/recall frontier by `facet_ops.py`, the domain-stripping ablation by `a
 `distill_faceted.py --keep-domain` regenerating the keep-domain arm), the E5-large-v2 baseline by
 `e5_grid.py`, the SPECTER2 baseline (local model + proximity adapter) by `specter2_local.py`, the
 held-out-family generalization test by `held_out_family.py`, the three-distiller comparison by
-`distiller_subset.py`, the non-mathematical-rejection rate by `nonmath_reject.py`, the interventional
-perturbation test by `perturbation_score.py`, the wild three-arm precision by `wild_three_arm_score.py`,
+`distiller_subset.py`, the STRUCTURE-none skip rule report by `nonmath_reject.py`, the interventional
+perturbation test by `perturbation_score.py`, the wild three-arm study (detection and discovery views) by `wild_three_arm_score.py`,
 the two-member-family robustness by `perfam_sens.py`, and the per-family / P@1-MRR /
 facet-agreement / DOMAIN-ablation diagnostics by `perfam.py`, `p1mrr_boot.py`, `facet_agree_ap.py`, and
 `nodomain.py`.

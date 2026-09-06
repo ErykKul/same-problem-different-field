@@ -1,452 +1,1513 @@
 {
- "0": {
-  "arm": "top",
-  "a": "mb-eess-SY-024",
-  "b": "mc-q-bio-QM-013"
- },
- "1": {
-  "arm": "top",
-  "a": "ising-neuro-001",
-  "b": "ising-protein-001"
- },
- "2": {
-  "arm": "top",
-  "a": "mc-econ-GN-001",
-  "b": "mc-eess-SY-017"
- },
- "3": {
-  "arm": "random",
-  "a": "mb-cs-LG-026",
-  "b": "mc-math-OC-004"
- },
- "4": {
-  "arm": "top",
-  "a": "mb-eess-SY-024",
-  "b": "mc-eess-SY-011"
- },
- "5": {
-  "arm": "top",
-  "a": "mc-eess-SY-011",
-  "b": "smoke-01"
- },
- "6": {
-  "arm": "top",
-  "a": "mb-eess-SY-024",
-  "b": "pca-recsys-distractor-001"
- },
- "7": {
-  "arm": "collision",
-  "a": "mb-stat-ME-003",
-  "b": "mc-q-fin-ST-002"
- },
- "8": {
-  "arm": "random",
-  "a": "mc-physics-soc-ph-023",
-  "b": "mc-q-fin-ST-016"
- },
- "9": {
-  "arm": "random",
-  "a": "diff-finance-001",
-  "b": "mc-cs-SI-004"
- },
- "10": {
-  "arm": "random",
-  "a": "eigen-sciento-001",
-  "b": "mc-cond-mat-stat-mech-022"
- },
- "11": {
-  "arm": "collision",
-  "a": "mb-cs-LG-013",
-  "b": "mc-eess-SY-020"
- },
- "12": {
-  "arm": "random",
-  "a": "dp-fin-001",
-  "b": "mb-cs-LG-033"
- },
- "13": {
-  "arm": "collision",
-  "a": "mc-q-fin-ST-002",
-  "b": "mc-stat-ME-024"
- },
- "14": {
-  "arm": "top",
-  "a": "hawkes-crime-001",
-  "b": "hawkes-seismology-001"
- },
- "15": {
-  "arm": "random",
-  "a": "em-pharma-noname-002",
-  "b": "gp-ml-dist-001"
- },
- "16": {
-  "arm": "top",
-  "a": "mc-econ-GN-002",
-  "b": "mc-physics-soc-ph-024"
- },
- "17": {
-  "arm": "top",
-  "a": "hmm-genomics-001",
-  "b": "hmm-proteomics-002"
- },
- "18": {
-  "arm": "random",
-  "a": "dp-bio-001",
-  "b": "mc-q-fin-ST-022"
- },
- "19": {
-  "arm": "random",
-  "a": "replv-linguistics-002",
-  "b": "smoke-01"
- },
- "20": {
-  "arm": "top",
-  "a": "kalman-control-001",
-  "b": "kalman-neuro-001"
- },
- "21": {
-  "arm": "random",
-  "a": "mb-stat-ME-011",
-  "b": "mc-physics-soc-ph-017"
- },
- "22": {
-  "arm": "top",
-  "a": "mc-econ-GN-002",
-  "b": "mc-eess-SY-011"
- },
- "23": {
-  "arm": "collision",
-  "a": "mb-eess-SY-034",
-  "b": "mc-math-OC-005"
- },
- "24": {
-  "arm": "collision",
-  "a": "mc-physics-soc-ph-009",
-  "b": "pa-cities-noname-001"
- },
- "25": {
-  "arm": "collision",
-  "a": "mcmc-cosmo-001",
-  "b": "mcmc-nlp-002"
- },
- "26": {
-  "arm": "collision",
-  "a": "eigen-sciento-dist-001",
-  "b": "mc-cs-DL-007"
- },
- "27": {
-  "arm": "random",
-  "a": "dp-communications-002",
-  "b": "mb-eess-SY-033"
- },
- "28": {
-  "arm": "top",
-  "a": "mb-eess-SY-024",
-  "b": "mc-econ-GN-002"
- },
- "29": {
-  "arm": "random",
-  "a": "mb-cs-LG-022",
-  "b": "mc-econ-GN-001"
- },
- "30": {
-  "arm": "top",
-  "a": "irt-baseball-002",
-  "b": "irt-sports-001"
- },
- "31": {
-  "arm": "random",
-  "a": "mc-cs-CY-001",
-  "b": "mc-physics-soc-ph-018"
- },
- "32": {
-  "arm": "collision",
-  "a": "mc-math-OC-013",
-  "b": "mc-stat-ME-018"
- },
- "33": {
-  "arm": "collision",
-  "a": "ising-protein-001",
-  "b": "kalman-epidemic-001"
- },
- "34": {
-  "arm": "top",
-  "a": "hmm-ecology-002",
-  "b": "hmm-genomics-001"
- },
- "35": {
-  "arm": "collision",
-  "a": "diff-finance-001",
-  "b": "mc-cond-mat-stat-mech-015"
- },
- "36": {
-  "arm": "top",
-  "a": "kalman-control-001",
-  "b": "kalman-finance-001"
- },
- "37": {
-  "arm": "collision",
-  "a": "dp-speech-001",
-  "b": "hmm-ecology-002"
- },
- "38": {
-  "arm": "top",
-  "a": "irt-edu-001",
-  "b": "irt-psych-001"
- },
- "39": {
-  "arm": "top",
-  "a": "mb-eess-SY-024",
-  "b": "mc-q-bio-QM-015"
- },
- "40": {
-  "arm": "random",
-  "a": "mb-stat-ME-004",
-  "b": "mc-econ-GN-011"
- },
- "41": {
-  "arm": "collision",
-  "a": "mc-cs-LG-025",
-  "b": "mc-q-bio-NC-013"
- },
- "42": {
-  "arm": "collision",
-  "a": "mc-cs-HC-009",
-  "b": "mc-q-fin-ST-005"
- },
- "43": {
-  "arm": "random",
-  "a": "mc-astro-ph-IM-007",
-  "b": "mc-cs-LG-018"
- },
- "44": {
-  "arm": "collision",
-  "a": "mc-q-bio-QM-023",
-  "b": "mcmc-crypto-002"
- },
- "45": {
-  "arm": "collision",
-  "a": "fft-gravwave-002",
-  "b": "mb-stat-ME-027"
- },
- "46": {
-  "arm": "top",
-  "a": "mc-eess-SY-017",
-  "b": "mc-physics-soc-ph-024"
- },
- "47": {
-  "arm": "random",
-  "a": "kalman-finance-dist-001",
-  "b": "mc-cs-CY-007"
- },
- "48": {
-  "arm": "collision",
-  "a": "mc-physics-soc-ph-010",
-  "b": "pa-cities-noname-001"
- },
- "49": {
-  "arm": "top",
-  "a": "mb-eess-SY-024",
-  "b": "mc-eess-SY-017"
- },
- "50": {
-  "arm": "random",
-  "a": "mc-cs-CY-001",
-  "b": "mc-cs-DL-012"
- },
- "51": {
-  "arm": "top",
-  "a": "irt-education-002",
-  "b": "irt-psych-001"
- },
- "52": {
-  "arm": "top",
-  "a": "mc-q-bio-QM-015",
-  "b": "replv-evolution-001"
- },
- "53": {
-  "arm": "collision",
-  "a": "ising-protein-001",
-  "b": "pca-causal-001"
- },
- "54": {
-  "arm": "top",
-  "a": "mc-econ-GN-001",
-  "b": "mc-eess-SY-011"
- },
- "55": {
-  "arm": "random",
-  "a": "mb-eess-SY-035",
-  "b": "mc-physics-soc-ph-023"
- },
- "56": {
-  "arm": "random",
-  "a": "mb-stat-ME-027",
-  "b": "mcmc-statphys-001"
- },
- "57": {
-  "arm": "top",
-  "a": "mc-econ-GN-002",
-  "b": "mc-eess-SY-017"
- },
- "58": {
-  "arm": "random",
-  "a": "clf-nlp-distractor-001",
-  "b": "mb-cs-LG-019"
- },
- "59": {
-  "arm": "random",
-  "a": "mb-stat-ME-022",
-  "b": "mc-astro-ph-IM-002"
- },
- "60": {
-  "arm": "collision",
-  "a": "replv-economics-001",
-  "b": "replv-finance-002"
- },
- "61": {
-  "arm": "top",
-  "a": "mb-eess-SY-024",
-  "b": "mc-econ-GN-001"
- },
- "62": {
-  "arm": "collision",
-  "a": "mb-cs-LG-016",
-  "b": "mc-math-OC-017"
- },
- "63": {
-  "arm": "collision",
-  "a": "mc-math-OC-021",
-  "b": "mc-q-fin-ST-003"
- },
- "64": {
-  "arm": "collision",
-  "a": "hawkes-seismology-001",
-  "b": "kalman-epidemic-001"
- },
- "65": {
-  "arm": "collision",
-  "a": "dp-speech-001",
-  "b": "hmm-genomics-001"
- },
- "66": {
-  "arm": "random",
-  "a": "mc-math-OC-013",
-  "b": "mcmc-statphys-001"
- },
- "67": {
-  "arm": "top",
-  "a": "mb-eess-SY-024",
-  "b": "mc-q-bio-NC-001"
- },
- "68": {
-  "arm": "collision",
-  "a": "clf-dh-001",
-  "b": "clf-nlp-001"
- },
- "69": {
-  "arm": "random",
-  "a": "mb-eess-SY-028",
-  "b": "mc-stat-ME-006"
- },
- "70": {
-  "arm": "top",
-  "a": "dp-bio-001",
-  "b": "dp-linguistics-002"
- },
- "71": {
-  "arm": "collision",
-  "a": "pa-networks-001",
-  "b": "pa-scientometrics-002"
- },
- "72": {
-  "arm": "random",
-  "a": "kalman-control-001",
-  "b": "mb-eess-SY-028"
- },
- "73": {
-  "arm": "top",
-  "a": "clf-clin-001",
-  "b": "clf-cybersecurity-002"
- },
- "74": {
-  "arm": "collision",
-  "a": "mc-q-bio-QM-023",
-  "b": "mcmc-nlp-002"
- },
- "75": {
-  "arm": "random",
-  "a": "mc-q-bio-NC-023",
-  "b": "mc-q-fin-ST-001"
- },
- "76": {
-  "arm": "top",
-  "a": "mb-eess-SY-024",
-  "b": "mc-physics-soc-ph-024"
- },
- "77": {
-  "arm": "collision",
-  "a": "fft-neuro-002",
-  "b": "mc-q-bio-NC-006"
- },
- "78": {
-  "arm": "top",
-  "a": "mc-econ-GN-002",
-  "b": "mc-q-bio-QM-015"
- },
- "79": {
-  "arm": "collision",
-  "a": "hmm-genomics-dist-001",
-  "b": "mc-q-bio-QM-016"
- },
- "80": {
-  "arm": "random",
-  "a": "kalman-pharma-001",
-  "b": "mb-stat-ME-020"
- },
- "81": {
-  "arm": "collision",
-  "a": "kalman-spacecraft-002",
-  "b": "mb-eess-SY-031"
- },
- "82": {
-  "arm": "random",
-  "a": "mc-physics-hist-ph-010",
-  "b": "mc-q-bio-NC-004"
- },
- "83": {
-  "arm": "random",
-  "a": "mb-cs-LG-007",
-  "b": "mc-cs-LG-007"
- },
- "84": {
-  "arm": "collision",
-  "a": "mc-q-bio-QM-023",
-  "b": "mcmc-cosmo-001"
- },
- "85": {
-  "arm": "collision",
-  "a": "dp-speech-001",
-  "b": "hmm-proteomics-002"
- },
- "86": {
-  "arm": "random",
-  "a": "mc-q-bio-NC-004",
-  "b": "mc-q-bio-QM-023"
- },
- "87": {
-  "arm": "top",
-  "a": "mc-physics-soc-ph-024",
-  "b": "mc-q-bio-NC-014"
- },
- "88": {
-  "arm": "random",
-  "a": "mc-stat-ME-014",
-  "b": "replv-evolution-001"
- },
- "89": {
-  "arm": "random",
-  "a": "mb-stat-ME-016",
-  "b": "mc-cs-SI-002"
+ "meta": {
+  "corpus": 501,
+  "skipped_structure_none": 80,
+  "pool": 421,
+  "cross_field_pairs": 82786,
+  "planted_twins_present": 206,
+  "planted_twins_total": 210,
+  "recall_at_1000": 0.619,
+  "K": 30,
+  "nonmath_passing_skip": 24
+ },
+ "pairs": {
+  "0": {
+   "a": "fft-neuro-002",
+   "b": "mc-q-bio-NC-006",
+   "arms": [
+    "unseeded"
+   ],
+   "rank": 41,
+   "rank_unseeded": 7,
+   "cosine": 0.1373,
+   "planted_twin": false,
+   "benchmark_a": true,
+   "benchmark_b": false,
+   "nonmath_pair": false
+  },
+  "1": {
+   "a": "irt-baseball-002",
+   "b": "irt-ecology-001",
+   "arms": [
+    "seeded"
+   ],
+   "rank": 28,
+   "rank_unseeded": null,
+   "cosine": 0.1491,
+   "planted_twin": false,
+   "benchmark_a": true,
+   "benchmark_b": true,
+   "nonmath_pair": false
+  },
+  "2": {
+   "a": "mc-physics-soc-ph-017",
+   "b": "replv-finance-002",
+   "arms": [
+    "unseeded"
+   ],
+   "rank": 31,
+   "rank_unseeded": 4,
+   "cosine": 0.1467,
+   "planted_twin": false,
+   "benchmark_a": false,
+   "benchmark_b": true,
+   "nonmath_pair": false
+  },
+  "3": {
+   "a": "irt-baseball-002",
+   "b": "irt-sports-001",
+   "arms": [
+    "seeded"
+   ],
+   "rank": 2,
+   "rank_unseeded": null,
+   "cosine": 0.4015,
+   "planted_twin": true,
+   "benchmark_a": true,
+   "benchmark_b": true,
+   "nonmath_pair": false
+  },
+  "4": {
+   "a": "em-astronomy-002",
+   "b": "em-physics-002",
+   "arms": [
+    "seeded"
+   ],
+   "rank": 16,
+   "rank_unseeded": null,
+   "cosine": 0.1702,
+   "planted_twin": true,
+   "benchmark_a": true,
+   "benchmark_b": true,
+   "nonmath_pair": false
+  },
+  "5": {
+   "a": "mc-cond-mat-stat-mech-015",
+   "b": "mc-math-OC-016",
+   "arms": [
+    "bothwild"
+   ],
+   "rank": 132,
+   "rank_unseeded": 53,
+   "cosine": 0.1066,
+   "planted_twin": false,
+   "benchmark_a": false,
+   "benchmark_b": false,
+   "nonmath_pair": false
+  },
+  "6": {
+   "a": "mc-physics-soc-ph-009",
+   "b": "pa-cities-noname-001",
+   "arms": [
+    "unseeded"
+   ],
+   "rank": 73,
+   "rank_unseeded": 20,
+   "cosine": 0.1211,
+   "planted_twin": false,
+   "benchmark_a": false,
+   "benchmark_b": true,
+   "nonmath_pair": false
+  },
+  "7": {
+   "a": "mc-q-fin-ST-010",
+   "b": "mc-stat-ME-017",
+   "arms": [
+    "random"
+   ],
+   "rank": 65990,
+   "rank_unseeded": 61389,
+   "cosine": 0.0083,
+   "planted_twin": false,
+   "benchmark_a": false,
+   "benchmark_b": false,
+   "nonmath_pair": false
+  },
+  "8": {
+   "a": "hawkes-crime-001",
+   "b": "hawkes-seismology-001",
+   "arms": [
+    "seeded"
+   ],
+   "rank": 1,
+   "rank_unseeded": null,
+   "cosine": 0.4065,
+   "planted_twin": true,
+   "benchmark_a": true,
+   "benchmark_b": true,
+   "nonmath_pair": false
+  },
+  "9": {
+   "a": "mb-eess-SY-018",
+   "b": "mc-eess-SY-004",
+   "arms": [
+    "bothwild"
+   ],
+   "rank": 136,
+   "rank_unseeded": 56,
+   "cosine": 0.1052,
+   "planted_twin": false,
+   "benchmark_a": false,
+   "benchmark_b": false,
+   "nonmath_pair": false
+  },
+  "10": {
+   "a": "mb-cs-LG-016",
+   "b": "mc-stat-ME-004",
+   "arms": [
+    "bothwild"
+   ],
+   "rank": 137,
+   "rank_unseeded": 57,
+   "cosine": 0.1052,
+   "planted_twin": false,
+   "benchmark_a": false,
+   "benchmark_b": false,
+   "nonmath_pair": false
+  },
+  "11": {
+   "a": "mb-stat-ME-012",
+   "b": "mc-econ-GN-005",
+   "arms": [
+    "random"
+   ],
+   "rank": 71875,
+   "rank_unseeded": 67008,
+   "cosine": 0.0065,
+   "planted_twin": false,
+   "benchmark_a": false,
+   "benchmark_b": false,
+   "nonmath_pair": true
+  },
+  "12": {
+   "a": "mb-stat-ME-027",
+   "b": "mc-stat-ME-007",
+   "arms": [
+    "random"
+   ],
+   "rank": 80663,
+   "rank_unseeded": 75527,
+   "cosine": 0.0031,
+   "planted_twin": false,
+   "benchmark_a": false,
+   "benchmark_b": false,
+   "nonmath_pair": false
+  },
+  "13": {
+   "a": "dp-bio-001",
+   "b": "dp-linguistics-002",
+   "arms": [
+    "seeded"
+   ],
+   "rank": 10,
+   "rank_unseeded": null,
+   "cosine": 0.2063,
+   "planted_twin": true,
+   "benchmark_a": true,
+   "benchmark_b": true,
+   "nonmath_pair": false
+  },
+  "14": {
+   "a": "replv-finance-002",
+   "b": "replv-linguistics-002",
+   "arms": [
+    "seeded"
+   ],
+   "rank": 15,
+   "rank_unseeded": null,
+   "cosine": 0.1716,
+   "planted_twin": true,
+   "benchmark_a": true,
+   "benchmark_b": true,
+   "nonmath_pair": false
+  },
+  "15": {
+   "a": "hmm-genomics-dist-001",
+   "b": "mc-q-bio-QM-016",
+   "arms": [
+    "unseeded"
+   ],
+   "rank": 77,
+   "rank_unseeded": 21,
+   "cosine": 0.1199,
+   "planted_twin": false,
+   "benchmark_a": true,
+   "benchmark_b": false,
+   "nonmath_pair": false
+  },
+  "16": {
+   "a": "mb-cs-LG-010",
+   "b": "mc-q-fin-ST-002",
+   "arms": [
+    "bothwild"
+   ],
+   "rank": 116,
+   "rank_unseeded": 45,
+   "cosine": 0.11,
+   "planted_twin": false,
+   "benchmark_a": false,
+   "benchmark_b": false,
+   "nonmath_pair": false
+  },
+  "17": {
+   "a": "fft-gravwave-002",
+   "b": "fft-sig-001",
+   "arms": [
+    "seeded"
+   ],
+   "rank": 23,
+   "rank_unseeded": null,
+   "cosine": 0.1539,
+   "planted_twin": true,
+   "benchmark_a": true,
+   "benchmark_b": true,
+   "nonmath_pair": false
+  },
+  "18": {
+   "a": "mb-cs-LG-029",
+   "b": "mc-eess-SY-005",
+   "arms": [
+    "random"
+   ],
+   "rank": 2047,
+   "rank_unseeded": 1694,
+   "cosine": 0.0523,
+   "planted_twin": false,
+   "benchmark_a": false,
+   "benchmark_b": false,
+   "nonmath_pair": false
+  },
+  "19": {
+   "a": "kalman-control-001",
+   "b": "kalman-neuro-001",
+   "arms": [
+    "seeded"
+   ],
+   "rank": 11,
+   "rank_unseeded": null,
+   "cosine": 0.1976,
+   "planted_twin": true,
+   "benchmark_a": true,
+   "benchmark_b": true,
+   "nonmath_pair": false
+  },
+  "20": {
+   "a": "diff-finance-001",
+   "b": "mc-cond-mat-stat-mech-015",
+   "arms": [
+    "unseeded"
+   ],
+   "rank": 84,
+   "rank_unseeded": 26,
+   "cosine": 0.1175,
+   "planted_twin": false,
+   "benchmark_a": true,
+   "benchmark_b": false,
+   "nonmath_pair": false
+  },
+  "21": {
+   "a": "sparse-mri-001",
+   "b": "sparse-radioastro-002",
+   "arms": [
+    "seeded"
+   ],
+   "rank": 27,
+   "rank_unseeded": null,
+   "cosine": 0.1498,
+   "planted_twin": true,
+   "benchmark_a": true,
+   "benchmark_b": true,
+   "nonmath_pair": false
+  },
+  "22": {
+   "a": "mb-cs-LG-016",
+   "b": "mc-q-fin-ST-004",
+   "arms": [
+    "unseeded",
+    "bothwild"
+   ],
+   "rank": 79,
+   "rank_unseeded": 22,
+   "cosine": 0.1197,
+   "planted_twin": false,
+   "benchmark_a": false,
+   "benchmark_b": false,
+   "nonmath_pair": false
+  },
+  "23": {
+   "a": "mc-astro-ph-IM-016",
+   "b": "mc-q-fin-ST-010",
+   "arms": [
+    "random"
+   ],
+   "rank": 16735,
+   "rank_unseeded": 15002,
+   "cosine": 0.0267,
+   "planted_twin": false,
+   "benchmark_a": false,
+   "benchmark_b": false,
+   "nonmath_pair": false
+  },
+  "24": {
+   "a": "mb-cs-LG-016",
+   "b": "mc-cs-LG-025",
+   "arms": [
+    "bothwild"
+   ],
+   "rank": 104,
+   "rank_unseeded": 39,
+   "cosine": 0.1128,
+   "planted_twin": false,
+   "benchmark_a": false,
+   "benchmark_b": false,
+   "nonmath_pair": false
+  },
+  "25": {
+   "a": "mb-stat-ME-015",
+   "b": "mc-stat-ME-007",
+   "arms": [
+    "unseeded",
+    "bothwild"
+   ],
+   "rank": 69,
+   "rank_unseeded": 18,
+   "cosine": 0.1222,
+   "planted_twin": false,
+   "benchmark_a": false,
+   "benchmark_b": false,
+   "nonmath_pair": false
+  },
+  "26": {
+   "a": "irt-edu-001",
+   "b": "irt-psych-001",
+   "arms": [
+    "seeded"
+   ],
+   "rank": 9,
+   "rank_unseeded": null,
+   "cosine": 0.2127,
+   "planted_twin": true,
+   "benchmark_a": true,
+   "benchmark_b": true,
+   "nonmath_pair": false
+  },
+  "27": {
+   "a": "kalman-spacecraft-002",
+   "b": "mb-eess-SY-031",
+   "arms": [
+    "seeded",
+    "unseeded"
+   ],
+   "rank": 17,
+   "rank_unseeded": 1,
+   "cosine": 0.1702,
+   "planted_twin": false,
+   "benchmark_a": true,
+   "benchmark_b": false,
+   "nonmath_pair": false
+  },
+  "28": {
+   "a": "mc-math-OC-018",
+   "b": "mc-physics-soc-ph-012",
+   "arms": [
+    "bothwild"
+   ],
+   "rank": 92,
+   "rank_unseeded": 31,
+   "cosine": 0.1143,
+   "planted_twin": false,
+   "benchmark_a": false,
+   "benchmark_b": false,
+   "nonmath_pair": false
+  },
+  "29": {
+   "a": "kalman-control-001",
+   "b": "kalman-glaciology-002",
+   "arms": [
+    "seeded"
+   ],
+   "rank": 14,
+   "rank_unseeded": null,
+   "cosine": 0.1748,
+   "planted_twin": true,
+   "benchmark_a": true,
+   "benchmark_b": true,
+   "nonmath_pair": false
+  },
+  "30": {
+   "a": "mc-cs-HC-009",
+   "b": "mc-q-fin-ST-005",
+   "arms": [
+    "bothwild"
+   ],
+   "rank": 129,
+   "rank_unseeded": 51,
+   "cosine": 0.1068,
+   "planted_twin": false,
+   "benchmark_a": false,
+   "benchmark_b": false,
+   "nonmath_pair": true
+  },
+  "31": {
+   "a": "pa-scientometrics-002",
+   "b": "pa-web-002",
+   "arms": [
+    "seeded"
+   ],
+   "rank": 19,
+   "rank_unseeded": null,
+   "cosine": 0.1663,
+   "planted_twin": true,
+   "benchmark_a": true,
+   "benchmark_b": true,
+   "nonmath_pair": false
+  },
+  "32": {
+   "a": "mc-math-OC-002",
+   "b": "mc-stat-ME-009",
+   "arms": [
+    "random"
+   ],
+   "rank": 22117,
+   "rank_unseeded": 19995,
+   "cosine": 0.0234,
+   "planted_twin": false,
+   "benchmark_a": false,
+   "benchmark_b": false,
+   "nonmath_pair": false
+  },
+  "33": {
+   "a": "mc-eess-SY-023",
+   "b": "mc-q-bio-NC-013",
+   "arms": [
+    "random"
+   ],
+   "rank": 55481,
+   "rank_unseeded": 51434,
+   "cosine": 0.0113,
+   "planted_twin": false,
+   "benchmark_a": false,
+   "benchmark_b": false,
+   "nonmath_pair": false
+  },
+  "34": {
+   "a": "hmm-ecology-002",
+   "b": "hmm-genomics-001",
+   "arms": [
+    "seeded"
+   ],
+   "rank": 8,
+   "rank_unseeded": null,
+   "cosine": 0.2139,
+   "planted_twin": true,
+   "benchmark_a": true,
+   "benchmark_b": true,
+   "nonmath_pair": false
+  },
+  "35": {
+   "a": "dp-or-001",
+   "b": "mc-q-fin-ST-003",
+   "arms": [
+    "unseeded"
+   ],
+   "rank": 51,
+   "rank_unseeded": 11,
+   "cosine": 0.1298,
+   "planted_twin": false,
+   "benchmark_a": true,
+   "benchmark_b": false,
+   "nonmath_pair": false
+  },
+  "36": {
+   "a": "mc-physics-soc-ph-020",
+   "b": "mc-q-fin-ST-023",
+   "arms": [
+    "random"
+   ],
+   "rank": 50528,
+   "rank_unseeded": 46736,
+   "cosine": 0.0128,
+   "planted_twin": false,
+   "benchmark_a": false,
+   "benchmark_b": false,
+   "nonmath_pair": false
+  },
+  "37": {
+   "a": "mc-math-OC-004",
+   "b": "mc-physics-soc-ph-021",
+   "arms": [
+    "seeded",
+    "unseeded",
+    "bothwild"
+   ],
+   "rank": 25,
+   "rank_unseeded": 3,
+   "cosine": 0.1518,
+   "planted_twin": false,
+   "benchmark_a": false,
+   "benchmark_b": false,
+   "nonmath_pair": false
+  },
+  "38": {
+   "a": "mc-eess-SY-001",
+   "b": "mc-math-OC-018",
+   "arms": [
+    "random"
+   ],
+   "rank": 4248,
+   "rank_unseeded": 3636,
+   "cosine": 0.0431,
+   "planted_twin": false,
+   "benchmark_a": false,
+   "benchmark_b": false,
+   "nonmath_pair": false
+  },
+  "39": {
+   "a": "mb-stat-ME-013",
+   "b": "mc-stat-ME-004",
+   "arms": [
+    "unseeded",
+    "bothwild"
+   ],
+   "rank": 83,
+   "rank_unseeded": 25,
+   "cosine": 0.1185,
+   "planted_twin": false,
+   "benchmark_a": false,
+   "benchmark_b": false,
+   "nonmath_pair": false
+  },
+  "40": {
+   "a": "ot-ml-001",
+   "b": "pca-causal-001",
+   "arms": [
+    "seeded"
+   ],
+   "rank": 20,
+   "rank_unseeded": null,
+   "cosine": 0.1609,
+   "planted_twin": false,
+   "benchmark_a": true,
+   "benchmark_b": true,
+   "nonmath_pair": false
+  },
+  "41": {
+   "a": "kalman-control-001",
+   "b": "kalman-finance-001",
+   "arms": [
+    "seeded"
+   ],
+   "rank": 4,
+   "rank_unseeded": null,
+   "cosine": 0.3131,
+   "planted_twin": true,
+   "benchmark_a": true,
+   "benchmark_b": true,
+   "nonmath_pair": false
+  },
+  "42": {
+   "a": "kalman-finance-dist-001",
+   "b": "mc-q-bio-QM-020",
+   "arms": [
+    "unseeded"
+   ],
+   "rank": 57,
+   "rank_unseeded": 14,
+   "cosine": 0.1278,
+   "planted_twin": false,
+   "benchmark_a": true,
+   "benchmark_b": false,
+   "nonmath_pair": false
+  },
+  "43": {
+   "a": "mc-eess-SY-012",
+   "b": "mc-math-OC-012",
+   "arms": [
+    "random"
+   ],
+   "rank": 34769,
+   "rank_unseeded": 31836,
+   "cosine": 0.0179,
+   "planted_twin": false,
+   "benchmark_a": false,
+   "benchmark_b": false,
+   "nonmath_pair": false
+  },
+  "44": {
+   "a": "mb-stat-ME-002",
+   "b": "mc-stat-ME-014",
+   "arms": [
+    "unseeded",
+    "bothwild"
+   ],
+   "rank": 81,
+   "rank_unseeded": 23,
+   "cosine": 0.1189,
+   "planted_twin": false,
+   "benchmark_a": false,
+   "benchmark_b": false,
+   "nonmath_pair": false
+  },
+  "45": {
+   "a": "fft-sig-001",
+   "b": "mc-stat-ME-004",
+   "arms": [
+    "unseeded"
+   ],
+   "rank": 54,
+   "rank_unseeded": 13,
+   "cosine": 0.129,
+   "planted_twin": false,
+   "benchmark_a": true,
+   "benchmark_b": false,
+   "nonmath_pair": false
+  },
+  "46": {
+   "a": "mc-math-OC-021",
+   "b": "mc-q-fin-ST-003",
+   "arms": [
+    "bothwild"
+   ],
+   "rank": 106,
+   "rank_unseeded": 40,
+   "cosine": 0.1124,
+   "planted_twin": false,
+   "benchmark_a": false,
+   "benchmark_b": false,
+   "nonmath_pair": false
+  },
+  "47": {
+   "a": "mc-cs-LG-020",
+   "b": "mc-stat-ME-017",
+   "arms": [
+    "random"
+   ],
+   "rank": 33039,
+   "rank_unseeded": 30223,
+   "cosine": 0.0185,
+   "planted_twin": false,
+   "benchmark_a": false,
+   "benchmark_b": false,
+   "nonmath_pair": false
+  },
+  "48": {
+   "a": "dp-communications-002",
+   "b": "dp-speech-001",
+   "arms": [
+    "seeded"
+   ],
+   "rank": 26,
+   "rank_unseeded": null,
+   "cosine": 0.1504,
+   "planted_twin": true,
+   "benchmark_a": true,
+   "benchmark_b": true,
+   "nonmath_pair": false
+  },
+  "49": {
+   "a": "mc-q-fin-ST-002",
+   "b": "sparse-radioastro-002",
+   "arms": [
+    "unseeded"
+   ],
+   "rank": 91,
+   "rank_unseeded": 30,
+   "cosine": 0.1146,
+   "planted_twin": false,
+   "benchmark_a": false,
+   "benchmark_b": true,
+   "nonmath_pair": false
+  },
+  "50": {
+   "a": "hmm-ecology-002",
+   "b": "hmm-proteomics-002",
+   "arms": [
+    "seeded"
+   ],
+   "rank": 18,
+   "rank_unseeded": null,
+   "cosine": 0.1671,
+   "planted_twin": true,
+   "benchmark_a": true,
+   "benchmark_b": true,
+   "nonmath_pair": false
+  },
+  "51": {
+   "a": "mb-cs-LG-022",
+   "b": "mc-cs-LG-023",
+   "arms": [
+    "random"
+   ],
+   "rank": 38030,
+   "rank_unseeded": 34905,
+   "cosine": 0.0167,
+   "planted_twin": false,
+   "benchmark_a": false,
+   "benchmark_b": false,
+   "nonmath_pair": false
+  },
+  "52": {
+   "a": "gp-materials-002",
+   "b": "mb-cs-LG-011",
+   "arms": [
+    "unseeded"
+   ],
+   "rank": 72,
+   "rank_unseeded": 19,
+   "cosine": 0.1218,
+   "planted_twin": false,
+   "benchmark_a": true,
+   "benchmark_b": false,
+   "nonmath_pair": false
+  },
+  "53": {
+   "a": "hmm-genomics-001",
+   "b": "hmm-proteomics-002",
+   "arms": [
+    "seeded"
+   ],
+   "rank": 5,
+   "rank_unseeded": null,
+   "cosine": 0.2863,
+   "planted_twin": true,
+   "benchmark_a": true,
+   "benchmark_b": true,
+   "nonmath_pair": false
+  },
+  "54": {
+   "a": "mc-eess-SY-024",
+   "b": "mc-math-OC-006",
+   "arms": [
+    "unseeded",
+    "bothwild"
+   ],
+   "rank": 90,
+   "rank_unseeded": 29,
+   "cosine": 0.1149,
+   "planted_twin": false,
+   "benchmark_a": false,
+   "benchmark_b": false,
+   "nonmath_pair": false
+  },
+  "55": {
+   "a": "kalman-finance-001",
+   "b": "kalman-neuro-001",
+   "arms": [
+    "seeded"
+   ],
+   "rank": 22,
+   "rank_unseeded": null,
+   "cosine": 0.1599,
+   "planted_twin": true,
+   "benchmark_a": true,
+   "benchmark_b": true,
+   "nonmath_pair": false
+  },
+  "56": {
+   "a": "mc-eess-SY-023",
+   "b": "mc-physics-soc-ph-005",
+   "arms": [
+    "random"
+   ],
+   "rank": 54842,
+   "rank_unseeded": 50835,
+   "cosine": 0.0115,
+   "planted_twin": false,
+   "benchmark_a": false,
+   "benchmark_b": false,
+   "nonmath_pair": false
+  },
+  "57": {
+   "a": "clf-clin-001",
+   "b": "clf-cybersecurity-002",
+   "arms": [
+    "seeded"
+   ],
+   "rank": 7,
+   "rank_unseeded": null,
+   "cosine": 0.2219,
+   "planted_twin": true,
+   "benchmark_a": true,
+   "benchmark_b": true,
+   "nonmath_pair": false
+  },
+  "58": {
+   "a": "mc-cs-LG-002",
+   "b": "mc-math-OC-015",
+   "arms": [
+    "bothwild"
+   ],
+   "rank": 138,
+   "rank_unseeded": 58,
+   "cosine": 0.1048,
+   "planted_twin": false,
+   "benchmark_a": false,
+   "benchmark_b": false,
+   "nonmath_pair": false
+  },
+  "59": {
+   "a": "mc-math-OC-013",
+   "b": "mc-stat-ME-018",
+   "arms": [
+    "unseeded",
+    "bothwild"
+   ],
+   "rank": 62,
+   "rank_unseeded": 16,
+   "cosine": 0.1263,
+   "planted_twin": false,
+   "benchmark_a": false,
+   "benchmark_b": false,
+   "nonmath_pair": false
+  },
+  "60": {
+   "a": "mb-eess-SY-029",
+   "b": "mc-stat-ME-019",
+   "arms": [
+    "random"
+   ],
+   "rank": 76625,
+   "rank_unseeded": 71577,
+   "cosine": 0.0049,
+   "planted_twin": false,
+   "benchmark_a": false,
+   "benchmark_b": false,
+   "nonmath_pair": false
+  },
+  "61": {
+   "a": "mb-q-bio-QM-001",
+   "b": "mc-q-bio-QM-008",
+   "arms": [
+    "bothwild"
+   ],
+   "rank": 115,
+   "rank_unseeded": 44,
+   "cosine": 0.1104,
+   "planted_twin": false,
+   "benchmark_a": false,
+   "benchmark_b": false,
+   "nonmath_pair": false
+  },
+  "62": {
+   "a": "mc-cs-LG-012",
+   "b": "mc-q-bio-QM-020",
+   "arms": [
+    "bothwild"
+   ],
+   "rank": 97,
+   "rank_unseeded": 34,
+   "cosine": 0.1136,
+   "planted_twin": false,
+   "benchmark_a": false,
+   "benchmark_b": false,
+   "nonmath_pair": false
+  },
+  "63": {
+   "a": "mc-q-fin-ST-002",
+   "b": "mc-stat-ME-024",
+   "arms": [
+    "bothwild"
+   ],
+   "rank": 119,
+   "rank_unseeded": 46,
+   "cosine": 0.1093,
+   "planted_twin": false,
+   "benchmark_a": false,
+   "benchmark_b": false,
+   "nonmath_pair": false
+  },
+  "64": {
+   "a": "fft-gravwave-002",
+   "b": "mb-stat-ME-027",
+   "arms": [
+    "unseeded"
+   ],
+   "rank": 43,
+   "rank_unseeded": 8,
+   "cosine": 0.1355,
+   "planted_twin": false,
+   "benchmark_a": true,
+   "benchmark_b": false,
+   "nonmath_pair": false
+  },
+  "65": {
+   "a": "clf-clin-001",
+   "b": "clf-nlp-001",
+   "arms": [
+    "seeded"
+   ],
+   "rank": 13,
+   "rank_unseeded": null,
+   "cosine": 0.1753,
+   "planted_twin": true,
+   "benchmark_a": true,
+   "benchmark_b": true,
+   "nonmath_pair": false
+  },
+  "66": {
+   "a": "dp-speech-001",
+   "b": "hmm-genomics-001",
+   "arms": [
+    "seeded"
+   ],
+   "rank": 12,
+   "rank_unseeded": null,
+   "cosine": 0.1888,
+   "planted_twin": false,
+   "benchmark_a": true,
+   "benchmark_b": true,
+   "nonmath_pair": false
+  },
+  "67": {
+   "a": "mc-q-fin-ST-024",
+   "b": "mc-stat-ME-003",
+   "arms": [
+    "random"
+   ],
+   "rank": 63584,
+   "rank_unseeded": 59096,
+   "cosine": 0.009,
+   "planted_twin": false,
+   "benchmark_a": false,
+   "benchmark_b": false,
+   "nonmath_pair": false
+  },
+  "68": {
+   "a": "mc-astro-ph-IM-011",
+   "b": "mc-cs-LG-013",
+   "arms": [
+    "random"
+   ],
+   "rank": 38996,
+   "rank_unseeded": 35820,
+   "cosine": 0.0164,
+   "planted_twin": false,
+   "benchmark_a": false,
+   "benchmark_b": false,
+   "nonmath_pair": false
+  },
+  "69": {
+   "a": "mb-stat-ME-006",
+   "b": "mc-stat-ME-019",
+   "arms": [
+    "bothwild"
+   ],
+   "rank": 131,
+   "rank_unseeded": 52,
+   "cosine": 0.1067,
+   "planted_twin": false,
+   "benchmark_a": false,
+   "benchmark_b": false,
+   "nonmath_pair": false
+  },
+  "70": {
+   "a": "mc-q-bio-QM-023",
+   "b": "mcmc-crypto-002",
+   "arms": [
+    "unseeded"
+   ],
+   "rank": 52,
+   "rank_unseeded": 12,
+   "cosine": 0.1296,
+   "planted_twin": false,
+   "benchmark_a": false,
+   "benchmark_b": true,
+   "nonmath_pair": false
+  },
+  "71": {
+   "a": "mc-cond-mat-stat-mech-018",
+   "b": "mc-eess-SY-010",
+   "arms": [
+    "random"
+   ],
+   "rank": 5641,
+   "rank_unseeded": 4876,
+   "cosine": 0.0397,
+   "planted_twin": false,
+   "benchmark_a": false,
+   "benchmark_b": false,
+   "nonmath_pair": false
+  },
+  "72": {
+   "a": "irt-education-002",
+   "b": "irt-psych-001",
+   "arms": [
+    "seeded"
+   ],
+   "rank": 3,
+   "rank_unseeded": null,
+   "cosine": 0.3192,
+   "planted_twin": true,
+   "benchmark_a": true,
+   "benchmark_b": true,
+   "nonmath_pair": false
+  },
+  "73": {
+   "a": "mb-cs-LG-016",
+   "b": "mc-cs-LG-013",
+   "arms": [
+    "bothwild"
+   ],
+   "rank": 101,
+   "rank_unseeded": 37,
+   "cosine": 0.1131,
+   "planted_twin": false,
+   "benchmark_a": false,
+   "benchmark_b": false,
+   "nonmath_pair": false
+  },
+  "74": {
+   "a": "mb-stat-ME-003",
+   "b": "mc-q-fin-ST-002",
+   "arms": [
+    "unseeded",
+    "bothwild"
+   ],
+   "rank": 82,
+   "rank_unseeded": 24,
+   "cosine": 0.1185,
+   "planted_twin": false,
+   "benchmark_a": false,
+   "benchmark_b": false,
+   "nonmath_pair": false
+  },
+  "75": {
+   "a": "mc-q-bio-QM-023",
+   "b": "mcmc-cosmo-001",
+   "arms": [
+    "unseeded"
+   ],
+   "rank": 36,
+   "rank_unseeded": 5,
+   "cosine": 0.1412,
+   "planted_twin": false,
+   "benchmark_a": false,
+   "benchmark_b": true,
+   "nonmath_pair": false
+  },
+  "76": {
+   "a": "mc-eess-SY-015",
+   "b": "mc-q-fin-ST-002",
+   "arms": [
+    "random"
+   ],
+   "rank": 57954,
+   "rank_unseeded": 53761,
+   "cosine": 0.0106,
+   "planted_twin": false,
+   "benchmark_a": false,
+   "benchmark_b": false,
+   "nonmath_pair": false
+  },
+  "77": {
+   "a": "mc-cond-mat-stat-mech-024",
+   "b": "mc-physics-soc-ph-007",
+   "arms": [
+    "random"
+   ],
+   "rank": 43346,
+   "rank_unseeded": 39941,
+   "cosine": 0.015,
+   "planted_twin": false,
+   "benchmark_a": false,
+   "benchmark_b": false,
+   "nonmath_pair": false
+  },
+  "78": {
+   "a": "mb-stat-ME-021",
+   "b": "mc-q-bio-QM-023",
+   "arms": [
+    "unseeded",
+    "bothwild"
+   ],
+   "rank": 45,
+   "rank_unseeded": 10,
+   "cosine": 0.1344,
+   "planted_twin": false,
+   "benchmark_a": false,
+   "benchmark_b": false,
+   "nonmath_pair": false
+  },
+  "79": {
+   "a": "mb-cs-LG-016",
+   "b": "mc-math-OC-017",
+   "arms": [
+    "bothwild"
+   ],
+   "rank": 94,
+   "rank_unseeded": 32,
+   "cosine": 0.1138,
+   "planted_twin": false,
+   "benchmark_a": false,
+   "benchmark_b": false,
+   "nonmath_pair": false
+  },
+  "80": {
+   "a": "fft-econ-001",
+   "b": "fft-neuro-002",
+   "arms": [
+    "seeded"
+   ],
+   "rank": 30,
+   "rank_unseeded": null,
+   "cosine": 0.1474,
+   "planted_twin": true,
+   "benchmark_a": true,
+   "benchmark_b": true,
+   "nonmath_pair": false
+  },
+  "81": {
+   "a": "mc-math-OC-015",
+   "b": "mc-q-fin-ST-003",
+   "arms": [
+    "bothwild"
+   ],
+   "rank": 99,
+   "rank_unseeded": 36,
+   "cosine": 0.1135,
+   "planted_twin": false,
+   "benchmark_a": false,
+   "benchmark_b": false,
+   "nonmath_pair": false
+  },
+  "82": {
+   "a": "mb-cs-LG-013",
+   "b": "mc-q-bio-QM-007",
+   "arms": [
+    "unseeded",
+    "bothwild"
+   ],
+   "rank": 39,
+   "rank_unseeded": 6,
+   "cosine": 0.1392,
+   "planted_twin": false,
+   "benchmark_a": false,
+   "benchmark_b": false,
+   "nonmath_pair": false
+  },
+  "83": {
+   "a": "hmm-ecology-002",
+   "b": "hmm-econ-noname-001",
+   "arms": [
+    "seeded"
+   ],
+   "rank": 21,
+   "rank_unseeded": null,
+   "cosine": 0.1604,
+   "planted_twin": true,
+   "benchmark_a": true,
+   "benchmark_b": true,
+   "nonmath_pair": false
+  },
+  "84": {
+   "a": "mc-cs-LG-025",
+   "b": "mc-q-bio-NC-013",
+   "arms": [
+    "bothwild"
+   ],
+   "rank": 123,
+   "rank_unseeded": 48,
+   "cosine": 0.1086,
+   "planted_twin": false,
+   "benchmark_a": false,
+   "benchmark_b": false,
+   "nonmath_pair": false
+  },
+  "85": {
+   "a": "mc-cond-mat-stat-mech-005",
+   "b": "mc-cs-LG-015",
+   "arms": [
+    "random"
+   ],
+   "rank": 39169,
+   "rank_unseeded": 35983,
+   "cosine": 0.0163,
+   "planted_twin": false,
+   "benchmark_a": false,
+   "benchmark_b": false,
+   "nonmath_pair": false
+  },
+  "86": {
+   "a": "kalman-finance-dist-001",
+   "b": "mc-cs-LG-012",
+   "arms": [
+    "unseeded"
+   ],
+   "rank": 44,
+   "rank_unseeded": 9,
+   "cosine": 0.1349,
+   "planted_twin": false,
+   "benchmark_a": true,
+   "benchmark_b": false,
+   "nonmath_pair": false
+  },
+  "87": {
+   "a": "mc-eess-SY-002",
+   "b": "mc-q-bio-NC-002",
+   "arms": [
+    "random"
+   ],
+   "rank": 19872,
+   "rank_unseeded": 17909,
+   "cosine": 0.0247,
+   "planted_twin": false,
+   "benchmark_a": false,
+   "benchmark_b": false,
+   "nonmath_pair": false
+  },
+  "88": {
+   "a": "fft-gravwave-002",
+   "b": "mc-stat-ME-006",
+   "arms": [
+    "seeded",
+    "unseeded"
+   ],
+   "rank": 24,
+   "rank_unseeded": 2,
+   "cosine": 0.1531,
+   "planted_twin": false,
+   "benchmark_a": true,
+   "benchmark_b": false,
+   "nonmath_pair": false
+  },
+  "89": {
+   "a": "mc-physics-soc-ph-003",
+   "b": "mc-q-bio-NC-016",
+   "arms": [
+    "random"
+   ],
+   "rank": 46912,
+   "rank_unseeded": 43319,
+   "cosine": 0.0139,
+   "planted_twin": false,
+   "benchmark_a": false,
+   "benchmark_b": false,
+   "nonmath_pair": false
+  },
+  "90": {
+   "a": "mb-cs-LG-005",
+   "b": "mc-physics-soc-ph-002",
+   "arms": [
+    "random"
+   ],
+   "rank": 46206,
+   "rank_unseeded": 42658,
+   "cosine": 0.0141,
+   "planted_twin": false,
+   "benchmark_a": false,
+   "benchmark_b": false,
+   "nonmath_pair": false
+  },
+  "91": {
+   "a": "hawkes-seismology-001",
+   "b": "ising-protein-001",
+   "arms": [
+    "seeded"
+   ],
+   "rank": 29,
+   "rank_unseeded": null,
+   "cosine": 0.1479,
+   "planted_twin": false,
+   "benchmark_a": true,
+   "benchmark_b": true,
+   "nonmath_pair": false
+  },
+  "92": {
+   "a": "mc-astro-ph-IM-001",
+   "b": "mc-physics-soc-ph-008",
+   "arms": [
+    "random"
+   ],
+   "rank": 79221,
+   "rank_unseeded": 74110,
+   "cosine": 0.0038,
+   "planted_twin": false,
+   "benchmark_a": false,
+   "benchmark_b": false,
+   "nonmath_pair": false
+  },
+  "93": {
+   "a": "ising-neuro-001",
+   "b": "ising-protein-001",
+   "arms": [
+    "seeded"
+   ],
+   "rank": 6,
+   "rank_unseeded": null,
+   "cosine": 0.2663,
+   "planted_twin": true,
+   "benchmark_a": true,
+   "benchmark_b": true,
+   "nonmath_pair": false
+  },
+  "94": {
+   "a": "mc-cs-LG-009",
+   "b": "mc-math-OC-007",
+   "arms": [
+    "random"
+   ],
+   "rank": 54107,
+   "rank_unseeded": 50124,
+   "cosine": 0.0117,
+   "planted_twin": false,
+   "benchmark_a": false,
+   "benchmark_b": false,
+   "nonmath_pair": false
+  },
+  "95": {
+   "a": "mb-cs-LG-018",
+   "b": "mc-physics-soc-ph-014",
+   "arms": [
+    "random"
+   ],
+   "rank": 78522,
+   "rank_unseeded": 73422,
+   "cosine": 0.0041,
+   "planted_twin": false,
+   "benchmark_a": false,
+   "benchmark_b": false,
+   "nonmath_pair": false
+  },
+  "96": {
+   "a": "mb-stat-ME-024",
+   "b": "mc-stat-ME-001",
+   "arms": [
+    "random"
+   ],
+   "rank": 31987,
+   "rank_unseeded": 29243,
+   "cosine": 0.0189,
+   "planted_twin": false,
+   "benchmark_a": false,
+   "benchmark_b": false,
+   "nonmath_pair": false
+  },
+  "97": {
+   "a": "mb-cs-LG-013",
+   "b": "mc-eess-SY-020",
+   "arms": [
+    "unseeded",
+    "bothwild"
+   ],
+   "rank": 59,
+   "rank_unseeded": 15,
+   "cosine": 0.1266,
+   "planted_twin": false,
+   "benchmark_a": false,
+   "benchmark_b": false,
+   "nonmath_pair": false
+  },
+  "98": {
+   "a": "mb-eess-SY-034",
+   "b": "mc-math-OC-005",
+   "arms": [
+    "bothwild"
+   ],
+   "rank": 96,
+   "rank_unseeded": 33,
+   "cosine": 0.1137,
+   "planted_twin": false,
+   "benchmark_a": false,
+   "benchmark_b": false,
+   "nonmath_pair": false
+  },
+  "99": {
+   "a": "mb-stat-ME-024",
+   "b": "mc-stat-ME-021",
+   "arms": [
+    "random"
+   ],
+   "rank": 43142,
+   "rank_unseeded": 39747,
+   "cosine": 0.015,
+   "planted_twin": false,
+   "benchmark_a": false,
+   "benchmark_b": false,
+   "nonmath_pair": false
+  },
+  "100": {
+   "a": "mc-astro-ph-IM-001",
+   "b": "mc-physics-soc-ph-012",
+   "arms": [
+    "random"
+   ],
+   "rank": 43188,
+   "rank_unseeded": 39791,
+   "cosine": 0.015,
+   "planted_twin": false,
+   "benchmark_a": false,
+   "benchmark_b": false,
+   "nonmath_pair": false
+  },
+  "101": {
+   "a": "kalman-finance-dist-001",
+   "b": "mc-eess-SY-023",
+   "arms": [
+    "unseeded"
+   ],
+   "rank": 85,
+   "rank_unseeded": 27,
+   "cosine": 0.1167,
+   "planted_twin": false,
+   "benchmark_a": true,
+   "benchmark_b": false,
+   "nonmath_pair": false
+  },
+  "102": {
+   "a": "dp-fin-001",
+   "b": "mc-q-fin-ST-003",
+   "arms": [
+    "unseeded"
+   ],
+   "rank": 64,
+   "rank_unseeded": 17,
+   "cosine": 0.1252,
+   "planted_twin": false,
+   "benchmark_a": true,
+   "benchmark_b": false,
+   "nonmath_pair": false
+  },
+  "103": {
+   "a": "mb-q-bio-QM-003",
+   "b": "mc-cs-SI-006",
+   "arms": [
+    "bothwild"
+   ],
+   "rank": 122,
+   "rank_unseeded": 47,
+   "cosine": 0.1088,
+   "planted_twin": false,
+   "benchmark_a": false,
+   "benchmark_b": false,
+   "nonmath_pair": true
+  },
+  "104": {
+   "a": "mc-q-bio-QM-023",
+   "b": "mcmc-nlp-002",
+   "arms": [
+    "unseeded"
+   ],
+   "rank": 87,
+   "rank_unseeded": 28,
+   "cosine": 0.1158,
+   "planted_twin": false,
+   "benchmark_a": false,
+   "benchmark_b": true,
+   "nonmath_pair": false
+  },
+  "105": {
+   "a": "mb-eess-SY-020",
+   "b": "mc-q-bio-QM-012",
+   "arms": [
+    "random"
+   ],
+   "rank": 69715,
+   "rank_unseeded": 64935,
+   "cosine": 0.0072,
+   "planted_twin": false,
+   "benchmark_a": false,
+   "benchmark_b": false,
+   "nonmath_pair": false
+  }
  }
 }

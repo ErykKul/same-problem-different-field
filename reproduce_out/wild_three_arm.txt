@@ -1,0 +1,30 @@
+wild three-arm study: 3 blind judges (claude-haiku-4-5-20251001, claude-sonnet-5, claude-opus-5), 106 distinct pairs
+corpus 501, skipped STRUCTURE=none 80, pool 421, cross-field pairs 82786
+DETECTION (seeded view): planted twins present 206/210, recall of known twins in top 1000 = 0.619
+  view / subset                          n  judged  95% CI         yes per judge
+  seeded top 30 (planted pairs included)  30   0.767  [0.60, 0.90]    19/20/25   nonmath-adjusted 0.767 (0 such pairs)
+    planted twins                       23   0.870  [0.74, 1.00]    16/17/22   nonmath-adjusted 0.870 (0 such pairs)
+    unlabeled                            7   0.429  [0.14, 0.71]       3/3/3   nonmath-adjusted 0.429 (0 such pairs)
+  unseeded top 30 (planted pairs excluded)  30   0.267  [0.10, 0.43]      6/8/11   nonmath-adjusted 0.267 (0 such pairs)
+    benchmark paper with wild paper     19   0.368  [0.16, 0.58]       5/7/8   nonmath-adjusted 0.368 (0 such pairs)
+    wild with wild                      11   0.091  [0.00, 0.27]       1/1/3   nonmath-adjusted 0.091 (0 such pairs)
+  both-wild top 30 (stricter sub-view)  30   0.067  [0.00, 0.17]       1/2/5   nonmath-adjusted 0.067 (2 such pairs)
+  random 30 (chance control)            30   0.000  [0.00, 0.00]       0/0/0   nonmath-adjusted 0.000 (1 such pairs)
+
+DISCOVERY (unseeded view), judged precision at k: P@5=0.60  P@10=0.40  P@20=0.40  P@30=0.27   | random: P@5=0.00  P@10=0.00  P@20=0.00  P@30=0.00
+Fleiss kappa over all 106 pairs: 0.713
+
+unseeded view: confirmed pairs by rank (rank in the planted-excluded ranking; votes of 3):
+  # 1 3/3 cos 0.170  kalman-spacecraft-002  <->  mb-eess-SY-031
+  # 2 3/3 cos 0.153  fft-gravwave-002  <->  mc-stat-ME-006
+  # 4 2/3 cos 0.147  mc-physics-soc-ph-017  <->  replv-finance-002
+  # 9 2/3 cos 0.135  kalman-finance-dist-001  <->  mc-cs-LG-012
+  #13 3/3 cos 0.129  fft-sig-001  <->  mc-stat-ME-004
+  #16 3/3 cos 0.126  mc-math-OC-013  <->  mc-stat-ME-018
+  #19 3/3 cos 0.122  gp-materials-002  <->  mb-cs-LG-011
+  #20 2/3 cos 0.121  mc-physics-soc-ph-009  <->  pa-cities-noname-001
+
+seeded view: planted twins in the top 30 NOT confirmed:
+  0/3  clf-clin-001 <-> clf-cybersecurity-002
+  1/3  clf-clin-001 <-> clf-nlp-001
+  1/3  fft-econ-001 <-> fft-neuro-002

@@ -1,0 +1,7 @@
+corpus 501; skipped by STRUCTURE=none: 80 (benchmark members 1, distractors 5, deliberately non-mathematical 40, other wild 34)
+deliberately non-mathematical papers: 64; caught by the rule 40; passing 24
+  benchmark member skipped (distiller wrote STRUCTURE none): replv-ecology-001
+passing non-mathematical papers appearing in judged top lists: 3 pairs:
+  ['random']: mb-stat-ME-012 <-> mc-econ-GN-005
+  ['bothwild']: mc-cs-HC-009 <-> mc-q-fin-ST-005
+  ['bothwild']: mb-q-bio-QM-003 <-> mc-cs-SI-006

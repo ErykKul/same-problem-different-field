@@ -177,17 +177,24 @@ Two experiments test the operator beyond the curated pool; both ship their LLM o
 `datasets/validity/` so the scoring reproduces offline (`make validity`), while regenerating the outputs
 needs a model.
 
-- **Three-arm wild precision** (`src/wild_three_arm.py` builds the pairs; `src/wild_three_arm_score.py`
-  scores). Three blind annotators judge 90 cross-field wild pairs, 30 each from the system top, a random
-  control, and single-facet-collision hard negatives (highest-similarity pairs sharing exactly one core
-  facet). The metric is majority-vote precision per arm with a bootstrap CI, plus Fleiss kappa. This is
-  prospective precision on unlabeled pairs, the non-circularity check the closed pool cannot give.
+- **Wild three-arm study** (`src/wild_three_arm.py` builds the pairs; `src/wild_three_arm_score.py`
+  scores offline). Candidates with STRUCTURE "none" are skipped (80 of 501); all remaining cross-field
+  pairs are ranked once. Three views of that ranking are judged blind by three LLM judges reading
+  `datasets/validity/wild_3arm_prompt.md`: the top 30 with the benchmark's planted twins included
+  (detection: are known twins re-found among unrelated papers), the top 30 with benchmark-with-benchmark
+  pairs excluded (discovery: judged precision at k on unlabeled pairs; no recall or AP, the positives are
+  unknown), and 30 random pairs (chance control). Majority of three; Fleiss kappa over all judged pairs. A
+  pair containing a paper from the deliberately non-mathematical set counts as not genuine regardless of votes.
 - **Interventional perturbation** (`src/perturbation_wf.js` rewrites and distills;
   `src/perturbation_score.py` scores). Each paper is rewritten two ways, a re-skin (new field, same
   computation) and a math-edit (same field, new computation); the fingerprint and the abstract are scored
   for cosine self-similarity to the original under each. The fingerprint should stay invariant under the
   re-skin and move under the math-edit; the abstract should do the reverse. The reported statistic is the
   interaction (a double dissociation).
+
+**Provenance manifest.** `data/manifest.jsonl` has one row per corpus paper (501). For the 87 mode-B arXiv papers the
+`field` column is left empty and the arXiv primary category is recorded under `category`: every reported number
+treats those papers as unknown-field in cross-field pairing, and filling `field` would change the pair set.
 
 ## 9. Reproduction
 
