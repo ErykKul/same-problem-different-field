@@ -1,0 +1,3 @@
+skip removes 6 curated papers: ['eigen-sciento-dist-001', 'gp-ml-dist-001', 'hmm-speech-001', 'pca-recsys-distractor-001', 'replv-ecology-001', 'replv-evolution-001'] (roles: ['distractor', 'distractor', 'distractor', 'distractor', 'member', 'distractor'])
+all 109 papers (as reported)     papers 109, cross-field pairs 5812, twins 210: AP abstract+TF-IDF 0.222 | skeleton+TF-IDF 0.513 | whole fingerprint+TF-IDF 0.557
+candidate skip applied           papers 103, cross-field pairs 5187, twins 206: AP abstract+TF-IDF 0.237 | skeleton+TF-IDF 0.521 | whole fingerprint+TF-IDF 0.625
