@@ -73,8 +73,10 @@ table still prints. The "ours" rows (the headline) need only `scikit-learn`, no 
   methods**. AP is the headline; AUROC is kept only for continuity (at low prevalence a high AUROC is
   nearly free).
 - **Extended / wild run** (incomplete labels): this is **detection**, not a scored benchmark. The honest
-  metric is recall of the *known* twins (it ignores the unlabelled background); AP there is a lower
-  bound, shown only for relative ranking.
+  metric is recall of the *known* twins (it ignores the unlabelled background); measured precision there is a
+  lower bound (an unlabeled true pair counted as wrong can only lower it), but AP is not a score, since
+  missing positives shift both the ranked hits and the normalizing positive set; the extended table is
+  shown for relative ranking only.
 
 ## What is in the package
 
