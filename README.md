@@ -184,7 +184,8 @@ You do **not** need either of these to reproduce the tables.
   hosted API call, so the bundled fingerprints are the authoritative ones.
 
 ## How it works (one paragraph)
-F
+
+Each paper is distilled once (cached) into a faceted computational fingerprint: a free-text "mechanism
 skeleton" that says what the paper computes and how, with the domain vocabulary and canonical method
 names removed, plus a few controlled computational facets (structure or motif, data object, inference,
 problem form, outcome distribution, complexity). A tunable distance over the fingerprint retrieves
