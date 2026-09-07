@@ -25,29 +25,29 @@ authority for every label (its `note` column carries the audit verdict per paper
 
 ## The audit as recorded (2026-06-29)
 
-## Clean (members all fit)
+### Clean (members all fit)
 - `hawkes_self_exciting`, `inverse_ising_potts` (CONSISTENT)
 - `gaussian_process` (MOSTLY; kriging/GMRF are defensible GP aliases), `optimal_transport` (MOSTLY)
 - `diffusion_heat`, `dynamic_programming_viterbi`, `linear_text_classifier`: members fit; the only flag is the
   planted DISTRACTOR (by design, correctly separable) -- `diff-physics-dist-001`, `dp-fin-distractor-001`,
   `clf-nlp-distractor-001`.
 
-## Tier 1 -- clear bugs: empty / survey skeletons (no computation at all)
+### Tier 1 -- clear bugs: empty / survey skeletons (no computation at all)
 - `hmm-speech-001` (hmm): a literature survey, all facets 'none', no instantiated computation.
 - `pa-cities-noname-001` (preferential_attachment): empty fingerprint (MECHANISM/STRUCTURE/DATA all none).
 - `replv-evolution-001` (replicator_lotka_volterra): empty skeleton, describes no computation.
 
-## Tier 2 -- mechanism mismatch: member solves a materially different computation
+### Tier 2 -- mechanism mismatch: member solves a materially different computation
 - `eigen-chem-noname-001` (eigenvector_centrality): full Huckel eigenSPECTRUM (MO energies), not leading-eigenvector centrality.
 - `irt-ecology-001` (irt): spatial logistic occupancy GLM, not the Bradley-Terry ability-minus-difficulty structure.
 - `mcmc-phylo-001` (mcmc_metropolis): MCMC convergence DIAGNOSTICS (ESS), not the Metropolis kernel itself.
-- `kalman-pharma-noname-001` (recursive_bayes_kalman): batch/static MAP (L-BFGS); its own fingerprint says "not filtering" -- not recursive filtering. [Consistent with the SVPK finding: individual PK fitting IS MAP, not a Kalman filter.]
+- `kalman-pharma-noname-001` (recursive_bayes_kalman): batch/static MAP (L-BFGS); its own fingerprint says "not filtering" -- not recursive filtering.
 - `pa-linguistics-001` (preferential_attachment): sample-space-collapse process, explicitly an ALTERNATIVE to preferential attachment.
 - `replv-mwu-noname-001` (replicator_lotka_volterra): online-learning regret (MWU) via DP/Brownian closed form, no replicator ODE.
 - `sparse-finance-001` (sparse_l1_lasso): L0 best-subset (NP-hard, difference-of-convex), not L1-LASSO (the convex relaxation).
 - `fft-neuro-001` (fourier_spectral): cross-channel PHASE synchronization (Hilbert) + spectral entropy, not single-series PSD.
 
-## Tier 3 -- granularity / SHOWCASE touchpoints
+### Tier 3 -- granularity / SHOWCASE touchpoints
 - `em_latent_mixture` (MIXED) = the VANCO family. PK (NPAG) = NPMLE of a mixing distribution (interior-point +
   adaptive grid); ML/physics = EM responsibility loop for a Gaussian mixture; `em-astro-001` weak. Same PROBLEM
   (latent-mixture estimation), different ALGORITHMS. Defensible under "same problem"; flagged at mechanism level.
@@ -56,9 +56,10 @@ authority for every label (its `note` column carries the audit verdict per paper
   the related-work "ideal-point estimator = recsys matrix factorization" line. The agent flags it as a metric-
   DISTANCE latent-space model (Euclidean distance inside a logit), which the fingerprint explicitly contrasts
   with the inner-product/low-rank form. So the "ideal-points = low-rank factorization" framing for THIS paper
-  needs a look (the general claim holds for IRT-style ideal points; this specific paper may be the distance form).
+  is stated as a candidate, not an identity (the general claim holds for IRT-style ideal points; this specific
+  paper may be the distance form).
 
-## Re-read under the SOLUTION-IMPORT thesis (this narrows the genuine errors)
+### Re-read under the SOLUTION-IMPORT thesis (this narrows the genuine errors)
 The agents judged at the FINEST mechanism level. But solution-import wants the **same PROBLEM**, where a
 *different* mechanism is the entire value of importing (you have problem P solved by a bespoke M1; you find
 another field solving P by a standard M2; you import M2). And the fingerprint matches at the mechanism-CLASS
@@ -72,7 +73,7 @@ level (it ranks NPMLE and EM together at cos 0.088). So the agents over-flag rel
   L0-vs-L1, `pca-polmeth-001` distance-vs-inner-product, `pa-linguistics-001` collapse-vs-PA. Same problem,
   different mechanism = the import case. These are CANDIDATES, which is exactly how the paper frames imports.
 
-## Implications (as noted then; all applied, see Outcome above)
+### Implications (as noted then; all applied, see Outcome above)
 - Drop or demote the empty/survey skeletons; demote the members that do not share the problem; keep the
   same-problem/different-mechanism members as candidates, which is how the paper frames imports.
 - State the ideal-points/recommender pairing as a candidate ("can be cast as"), not an identity.

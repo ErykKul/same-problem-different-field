@@ -21,11 +21,11 @@ ground truth precisely because the swap is already known to work.
 
 Two corpora with distinct jobs that are never conflated.
 
-**Curated retrieval benchmark (the scored benchmark).** ~100 papers across ~18 method families. The
+**Curated retrieval benchmark (the scored benchmark).** 109 papers across 18 method families. The
 candidate pool is closed and the labels are complete, so ranking metrics (P@1, P@5, MRR, AUROC, AP,
 clustering ARI) are trustworthy. This is the only corpus on which methods are compared.
 
-**Scale / noise corpus (the wild run).** ~500 papers: the curated members embedded in a large
+**Scale / noise corpus (the wild run).** 501 papers: the curated members embedded in a large
 unlabeled background of in-the-wild and randomly sampled papers, a deliberate fraction of which are
 non-mathematical. Only the families are labeled, so precision and AP are **not** validation here. Its
 two jobs are detection (does the distance surface known twins among the noise?) and the
@@ -88,8 +88,9 @@ build step fetches each row and normalizes it to Markdown with YAML front-matter
 - **Paywalled / institutional-only resolvers** (a bare DOI/handle with no open copy, or a row flagged as
   needing access) are skipped cleanly; the open subset carries the headline result.
 
-Provenance (final source URL, SHA-256 of the fetched bytes, retrieval timestamp, byte and character
-counts) is recorded in `manifest.jsonl`.
+Provenance per paper (id, title, source URL, licence, field, family, role, whether the method is named;
+the wild rows carry their arXiv category) is recorded in `data/manifest.jsonl`; the link-lists and
+`SHA256SUMS` carry the fetch targets and the checksums of the shipped bytes.
 
 > **Canonical requirement.** The fingerprint is distilled from each paper's **full text**, not its
 > abstract. An abstract under-determines the mechanism and can yield an empty fingerprint for a paper
@@ -183,7 +184,8 @@ needs a model.
   `datasets/validity/wild_3arm_prompt.md`: the top 30 with the benchmark's planted twins included
   (detection: are known twins re-found among unrelated papers), the top 30 with benchmark-with-benchmark
   pairs excluded (discovery: judged precision at k on unlabeled pairs; no recall or AP, the positives are
-  unknown), and 30 random pairs (chance control). Majority of three; Fleiss kappa over all judged pairs. A
+  unknown), its stricter sub-view of the top 30 pairs with no benchmark paper at all, and 30 random pairs
+  (chance control): 106 distinct pairs. Majority of three; Fleiss kappa over all judged pairs. A
   pair containing a paper from the deliberately non-mathematical set counts as not genuine regardless of votes.
 - **Interventional perturbation** (`src/perturbation_wf.js` rewrites and distills;
   `src/perturbation_score.py` scores). Each paper is rewritten two ways, a re-skin (new field, same
@@ -199,7 +201,9 @@ treats those papers as unknown-field in cross-field pairing, and filling `field`
 ## 9. Reproduction
 
 - Rebuild the full-text corpus from the link-lists: `make data`.
-- Distill the fingerprints (one cached LLM call per paper): `python src/distill_faceted.py`.
+- Distill the fingerprints (one cached LLM call per paper): `python src/distill_v1.py` (the eight-facet
+  prompt of the shipped Haiku and Opus arms); `src/distill_faceted.py` is the twelve-facet prompt of the
+  local qwen3 arm.
 - Print the scored tables from the bundled skeletons + abstracts (after `make restricted-data`, the
   one online step), no model and no further network required:
   `make reproduce` (i.e. `python reproduce.py`); this also prints the construct-validity and perturbation

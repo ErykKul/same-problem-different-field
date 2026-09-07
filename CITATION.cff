@@ -36,9 +36,9 @@ keywords:
   - benchmark
 license: CC-BY-4.0
 license-url: "https://creativecommons.org/licenses/by/4.0/"
-repository-code: "https://github.com/erykkul/same-problem-different-field"
+repository-code: "https://github.com/ErykKul/same-problem-different-field"
 version: "1.0.0"
-date-released: "2026-09-05"
+date-released: "2026-09-07"
 identifiers:
   - type: doi
     value: "10.48804/W3B9WC"

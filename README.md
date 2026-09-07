@@ -32,7 +32,7 @@ Average precision (AP): how cleanly the true cross-domain twins sit at the top o
 
 The faceted fingerprint embedded with a plain bag-of-words (TF-IDF) is the strongest method, more than
 double the abstract. The dedicated scientific embedders (SPECTER, SciNCL, SemCSE, and
-SPECTER2 via `src/specter2_local.py`) all fall below the plain abstract+TF-IDF baseline, because they
+SPECTER2, abstract AP 0.182 via `src/specter2_local.py`) all fall below the plain abstract+TF-IDF baseline, because they
 encode topical and citation similarity, the wrong signal for cross-domain computational matching. Full
 AUROC and recall@K columns, plus the extended/wild-run table, are written to `reproduce_out/`.
 
