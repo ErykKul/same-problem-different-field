@@ -62,7 +62,7 @@ authority for every label (its `note` column carries the audit verdict per paper
 The agents judged at the FINEST mechanism level. But solution-import wants the **same PROBLEM**, where a
 *different* mechanism is the entire value of importing (you have problem P solved by a bespoke M1; you find
 another field solving P by a standard M2; you import M2). And the fingerprint matches at the mechanism-CLASS
-level (it ranks NPMLE and EM together at cos 0.088). So the agents over-flag relative to both. Triage:
+level (it ranks NPMLE and EM together at cos 0.088). So the agents over-flag relative to both. The reading adopted:
 
 - **Genuine errors (act):** the 3 empty/survey skeletons (no computation), plus the members that do not share
   the PROBLEM at all -- `eigen-chem-noname-001` (full spectrum, not a ranking), `irt-ecology-001` (occupancy
