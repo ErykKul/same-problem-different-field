@@ -36,10 +36,11 @@ SPECTER2 via `src/specter2_local.py`) all fall below the plain abstract+TF-IDF b
 encode topical and citation similarity, the wrong signal for cross-domain computational matching. Full
 AUROC and recall@K columns, plus the extended/wild-run table, are written to `reproduce_out/`.
 
-**Benchmark versions.** The headline above is the grown **109-paper** benchmark: documented cross-domain
-imports from the paper's introduction were added (inverse Ising/Potts, self-exciting Hawkes, and optimal
-transport as new families; matrix completion and data assimilation as new members of the existing
-low-rank and Kalman families).
+**Benchmark composition.** The headline above is the **109-paper** benchmark: 18 method families, among them
+the documented cross-domain imports of the paper's introduction (inverse Ising/Potts, self-exciting Hawkes, and
+optimal transport as families; matrix completion and data assimilation as members of the low-rank and Kalman
+families). Future versions are released as tags of this repository and as versions of the RDR dataset under
+the same DOI.
 All three distillers cover the full 109 papers, so `reproduce.py`'s faceted Haiku / Opus / qwen3-14b
 rows (AP 0.557 / 0.533 / 0.396) are the three-distiller robustness comparison reported in the paper.
 Labels follow the label-by-core audit (`FAMILY_AUDIT.md`; every benchmark paper is labelled by the
